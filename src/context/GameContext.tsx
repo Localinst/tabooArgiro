@@ -224,7 +224,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const shuffleCards = () => {
-    // Utilizziamo solo le carte non ancora usate
+    // Verifichiamo se ci sono carte disponibili
     if (availableCards.length === 0) {
       toast({
         title: "Attenzione",
@@ -236,39 +236,62 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return [];
     }
     
-    // Create a copy and shuffle
-    const shuffled = [...availableCards].sort(() => Math.random() - 0.5);
+    // Filtriamo le carte per assicurarci di escludere tutte quelle già utilizzate
+    const unusedCards = allTabooCards.filter(card => !usedCardIds.includes(card.id));
+    
+    // Mescoliamo le carte non utilizzate
+    const shuffled = [...unusedCards].sort(() => Math.random() - 0.5);
     setCards(shuffled);
+    
+    console.log(`Mazzo mescolato: ${shuffled.length} carte disponibili, ${usedCardIds.length} già utilizzate`);
     return shuffled;
   };
 
   const drawCard = () => {
+    // Verifichiamo prima se ci sono ancora carte disponibili
+    if (availableCards.length === 0) {
+      toast({
+        title: "Attenzione",
+        description: "Tutte le carte sono state utilizzate! Puoi resettare la lista delle carte utilizzate dalle impostazioni.",
+        variant: "destructive"
+      });
+      setCurrentCard(null);
+      return;
+    }
+    
     if (cards.length === 0) {
-      // Se non ci sono più carte disponibili
-      if (availableCards.length === 0) {
-        toast({
-          title: "Attenzione",
-          description: "Tutte le carte sono state utilizzate! Puoi resettare la lista delle carte utilizzate dalle impostazioni.",
-          variant: "destructive"
-        });
-        setCurrentCard(null);
-        return;
-      }
-      
-      // If we've gone through all cards, reshuffle
+      // Se il mazzo è vuoto, rimescoliamo le carte disponibili
       const newDeck = shuffleCards();
       if (newDeck.length > 0) {
         const nextCard = newDeck[0];
-        setCurrentCard(nextCard);
-        // Aggiungi l'ID alla lista delle carte utilizzate
-        setUsedCardIds(prev => [...prev, nextCard.id]);
+        // Verifichiamo che la carta non sia già stata utilizzata
+        if (!usedCardIds.includes(nextCard.id)) {
+          setCurrentCard(nextCard);
+          // Rimuoviamo la carta dal mazzo
+          setCards(prevCards => prevCards.slice(1));
+          // Aggiungiamo l'ID alla lista delle carte utilizzate
+          setUsedCardIds(prev => [...prev, nextCard.id]);
+        } else {
+          // Se la carta è già stata utilizzata, ritentiamo
+          console.warn("Carta già utilizzata trovata, ritento...");
+          drawCard();
+        }
       }
     } else {
       const nextCard = cards[0];
-      setCurrentCard(nextCard);
-      setCards(prevCards => prevCards.slice(1));
-      // Aggiungi l'ID alla lista delle carte utilizzate
-      setUsedCardIds(prev => [...prev, nextCard.id]);
+      // Verifichiamo che la carta non sia già stata utilizzata
+      if (!usedCardIds.includes(nextCard.id)) {
+        setCurrentCard(nextCard);
+        // Rimuoviamo la carta dal mazzo
+        setCards(prevCards => prevCards.slice(1));
+        // Aggiungiamo l'ID alla lista delle carte utilizzate
+        setUsedCardIds(prev => [...prev, nextCard.id]);
+      } else {
+        // Se la carta è già stata utilizzata, la rimuoviamo e ritentiamo
+        console.warn("Carta già utilizzata trovata, ritento...");
+        setCards(prevCards => prevCards.slice(1));
+        drawCard();
+      }
     }
   };
 
@@ -454,22 +477,29 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }
 
  const nextTeam = () => {
-  const totalPlayers = teams[0].players.length; // Assumiamo squadre bilanciate
-  setCurrentPlayerIndex(prevPlayerIndex => {
-    const nextPlayerIndex = (prevPlayerIndex ) % totalPlayers;
-    setCurrentTeam(prevTeam => (prevTeam + 1) % teams.length); // Alterna team ogni turno
-    return nextPlayerIndex;
-  });
+  // Otteniamo i contatori attuali per evitare problemi di sincronia negli aggiornamenti di stato
+  const nextTeamIndex = (currentTeam + 1) % teams.length;
+  
+  // Incrementiamo il giocatore solo quando completiamo un ciclo di tutte le squadre
+  let nextPlayerIndex = currentPlayerIndex;
+  if (nextTeamIndex === 0) {
+    // Se torniamo alla prima squadra, incrementiamo l'indice del giocatore
+    nextPlayerIndex = (currentPlayerIndex + 1) % Math.max(1, teams[0].players.length);
+  }
+  
+  // Aggiorniamo gli stati
+  setCurrentTeam(nextTeamIndex);
+  setCurrentPlayerIndex(nextPlayerIndex);
  
-    // Mostra la schermata del turno del giocatore
-    setShowPlayerTurn(true);
-    
-    // Resetta i pass usati all'inizio di ogni turno
-    setPassesUsed(0);
-    
-    drawCard();
-    setTimeLeft(roundTime);
-  };
+  // Mostra la schermata del turno del giocatore
+  setShowPlayerTurn(true);
+  
+  // Resetta i pass usati all'inizio di ogni turno
+  setPassesUsed(0);
+  
+  drawCard();
+  setTimeLeft(roundTime);
+};
 
   const correctAnswer = () => {
     if (!isPlaying) return;
@@ -530,6 +560,14 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Non resettiamo currentTeam per mantenere il turno tra le partite
     setCurrentPlayerIndex(0); // Reset dell'indice del giocatore
     setShowPlayerTurn(false); // Nascondi la schermata del turno
+    
+    // Verifica che non ci siano duplicati nella lista delle carte utilizzate
+    const uniqueUsedIds = [...new Set(usedCardIds)];
+    if (uniqueUsedIds.length !== usedCardIds.length) {
+      console.warn(`Riparati ${usedCardIds.length - uniqueUsedIds.length} ID duplicati nella lista usedCardIds`);
+      setUsedCardIds(uniqueUsedIds);
+    }
+    
     shuffleCards();
     setCurrentCard(null);
     setIsPlaying(false);
