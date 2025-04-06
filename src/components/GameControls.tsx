@@ -3,6 +3,7 @@ import React from 'react';
 import { useGameContext } from '../context/GameContext';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const GameControls: React.FC = () => {
   const { 
@@ -15,6 +16,8 @@ const GameControls: React.FC = () => {
     roundTime,
     setRoundTime
   } = useGameContext();
+  
+  const isMobile = useIsMobile();
 
   return (
     <div className="w-full space-y-4">
@@ -39,7 +42,7 @@ const GameControls: React.FC = () => {
             </Select>
           </div>
           <Button 
-            className="w-full bg-taboo-primary hover:bg-taboo-primary/90 text-white"
+            className="w-full bg-taboo-primary hover:bg-taboo-primary/90 text-white py-5"
             onClick={startGame}
           >
             Inizia Gioco
@@ -50,19 +53,22 @@ const GameControls: React.FC = () => {
           <div className="grid grid-cols-2 gap-3">
             <Button 
               className="w-full bg-taboo-correct hover:bg-taboo-correct/90 text-white"
+              size={isMobile ? "sm" : "default"}
               onClick={correctAnswer}
             >
               Corretto ✓
             </Button>
             <Button 
               className="w-full bg-taboo-wrong hover:bg-taboo-wrong/90 text-white"
+              size={isMobile ? "sm" : "default"}
               onClick={tabooUsed}
             >
-              Taboo Usato ✕
+              Taboo ✕
             </Button>
           </div>
           <Button 
             variant="outline"
+            size={isMobile ? "sm" : "default"}
             className="w-full border-taboo-secondary text-taboo-secondary"
             onClick={skipCard}
           >
@@ -70,6 +76,7 @@ const GameControls: React.FC = () => {
           </Button>
           <Button 
             variant="outline"
+            size={isMobile ? "sm" : "default"}
             className="w-full border-taboo-primary/30 text-taboo-primary/70"
             onClick={endGame}
           >

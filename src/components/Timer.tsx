@@ -27,8 +27,7 @@ const Timer: React.FC = () => {
       </div>
       <Progress 
         value={percentage} 
-        className="h-3 bg-gray-200"
-        // Use custom style for the Progress component
+        className={cn("h-3 bg-gray-200", getColorClass())}
       />
     </div>
   );
