@@ -451,28 +451,16 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         description: `Pareggio tra ${winners.map(w => w.name).join(', ')} con ${maxScore} punti!`
       });
     }
-  };
+  }
 
-  const nextTeam = () => {
-    // Aggiorna l'indice del giocatore corrente, ma solo se la squadra ha giocatori
-    if (teams[currentTeam].players.length > 0) {
-      // Passa al giocatore successivo nella stessa squadra
-      setCurrentPlayerIndex(prevIndex => {
-        const nextIndex = (prevIndex + 1) % teams[currentTeam].players.length;
-        // Se torniamo al primo giocatore, passa alla squadra successiva
-        if (nextIndex === 0) {
-          const nextTeamIndex = (currentTeam + 1) % teams.length;
-          setCurrentTeam(nextTeamIndex);
-        }
-        return nextIndex;
-      });
-    } else {
-      // Se la squadra non ha giocatori, passa direttamente alla squadra successiva
-      const nextTeamIndex = (currentTeam + 1) % teams.length;
-      setCurrentTeam(nextTeamIndex);
-      setCurrentPlayerIndex(0);
-    }
-    
+ const nextTeam = () => {
+  const totalPlayers = teams[0].players.length; // Assumiamo squadre bilanciate
+  setCurrentPlayerIndex(prevPlayerIndex => {
+    const nextPlayerIndex = (prevPlayerIndex + 1) % totalPlayers;
+    setCurrentTeam(prevTeam => (prevTeam + 1) % teams.length); // Alterna team ogni turno
+    return nextPlayerIndex;
+  });
+ 
     // Mostra la schermata del turno del giocatore
     setShowPlayerTurn(true);
     
