@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -7,11 +6,12 @@ import GameCard from '../components/GameCard';
 import Timer from '../components/Timer';
 import ScoreBoard from '../components/ScoreBoard';
 import GameControls from '../components/GameControls';
+import GameSetup from '../components/GameSetup';
 import { useGameContext } from '../context/GameContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const GameContent: React.FC = () => {
-  const { currentCard, isPlaying } = useGameContext();
+  const { currentCard, isPlaying, gameSetupComplete } = useGameContext();
   const isMobile = useIsMobile();
 
   return (
@@ -28,17 +28,23 @@ const GameContent: React.FC = () => {
           </Link>
         </header>
 
-        <div className={`${isMobile ? "space-y-4" : "grid md:grid-cols-3 gap-6"}`}>
-          <div className={`${isMobile ? "" : "md:col-span-2"} space-y-4 md:space-y-6`}>
-            <GameCard card={currentCard} />
-            {isPlaying && <Timer />}
-            <GameControls />
+        {!gameSetupComplete ? (
+          // Mostra la configurazione del gioco
+          <GameSetup />
+        ) : (
+          // Mostra il gioco
+          <div className={`${isMobile ? "space-y-4" : "grid md:grid-cols-3 gap-6"}`}>
+            <div className={`${isMobile ? "" : "md:col-span-2"} space-y-4 md:space-y-6`}>
+              <GameCard card={currentCard} />
+              {isPlaying && <Timer />}
+              <GameControls />
+            </div>
+            
+            <div className={`${isMobile ? "mt-6" : ""}`}>
+              <ScoreBoard />
+            </div>
           </div>
-          
-          <div className={`${isMobile ? "mt-6" : ""}`}>
-            <ScoreBoard />
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );

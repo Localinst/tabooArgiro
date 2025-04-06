@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { TabooCard } from '../data/words';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { useGameContext } from '../context/GameContext';
 
 interface GameCardProps {
   card: TabooCard | null;
@@ -11,6 +11,10 @@ interface GameCardProps {
 
 const GameCard: React.FC<GameCardProps> = ({ card }) => {
   const isMobile = useIsMobile();
+  const { teams, currentTeam } = useGameContext();
+  
+  // Ottieni il punteggio della squadra attuale
+  const currentScore = teams[currentTeam]?.score || 0;
 
   if (!card) {
     return (
@@ -27,7 +31,13 @@ const GameCard: React.FC<GameCardProps> = ({ card }) => {
 
   return (
     <Card className="w-full mx-auto shadow-lg border-2 border-taboo-primary bg-taboo-card">
-      <CardHeader className="text-center border-b border-taboo-primary/20 bg-taboo-primary/5">
+      <CardHeader className="text-center border-b border-taboo-primary/20 bg-taboo-primary/5 relative">
+        {/* Punteggio della squadra corrente */}
+        <div className="absolute top-3 right-3">
+          <Badge className="bg-taboo-primary text-white font-bold text-lg px-3 py-1">
+            {currentScore}
+          </Badge>
+        </div>
         <CardTitle className={`${isMobile ? "text-2xl" : "text-3xl"} font-bold text-taboo-primary`}>{card.word}</CardTitle>
       </CardHeader>
       <CardContent className={`${isMobile ? "p-4" : "p-8"}`}>
