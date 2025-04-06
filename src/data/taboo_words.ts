@@ -6459,5 +6459,1655 @@ export const tabooCards: TabooCard[] = [
       "ATTREZZO",
       "TERRA"
     ]
+  },
+  {
+    "id": 588,
+    "word": "MEMERATO",
+    "tabooWords": [
+      "INTERNET",
+      "BATTUTA",
+      "VIRALE",
+      "TORMENTONE",
+      "OBSOLETO"
+    ]
+  },
+  {
+    "id": 589,
+    "word": "SPOTTARE",
+    "tabooWords": [
+      "RICONOSCERE",
+      "VEDERE",
+      "NOTARE",
+      "INDIVIDUARE",
+      "BECCARE"
+    ]
+  },
+  {
+    "id": 590,
+    "word": "ZIOPERA",
+    "tabooWords": [
+      "ESCLAMAZIONE",
+      "SLANG",
+      "GIOVANI",
+      "STUPORE",
+      "SORPRESA"
+    ]
+  },
+  {
+    "id": 591,
+    "word": "DISSING",
+    "tabooWords": [
+      "INSULTO",
+      "RAP",
+      "BATTAGLIA",
+      "SFIDA",
+      "PROVOCARE"
+    ]
+  },
+  {
+    "id": 592,
+    "word": "INSTAGRAMMABILE",
+    "tabooWords": [
+      "FOTO",
+      "SOCIAL",
+      "PERFETTO",
+      "SCATTO",
+      "ESTETICA"
+    ]
+  },
+  {
+    "id": 593,
+    "word": "FERRAGNI",
+    "tabooWords": [
+      "INFLUENCER",
+      "IMPRENDITRICE",
+      "MODA",
+      "CHIARA",
+      "FEDEZ"
+    ]
+  },
+  {
+    "id": 594,
+    "word": "GASATO",
+    "tabooWords": [
+      "ENTUSIASTA",
+      "ECCITATO",
+      "MOTIVATO",
+      "POMPATO",
+      "ENERGIA"
+    ]
+  },
+  {
+    "id": 595,
+    "word": "SCAMMATO",
+    "tabooWords": [
+      "TRUFFA",
+      "INGANNATO",
+      "ONLINE",
+      "FREGATO",
+      "SOLDI"
+    ]
+  },
+  {
+    "id": 596,
+    "word": "BERLUSCONI",
+    "tabooWords": [
+      "POLITICA",
+      "MEDIASET",
+      "SILVIO",
+      "PREMIER",
+      "MILANO"
+    ]
+  },
+  {
+    "id": 597,
+    "word": "NETFLIX",
+    "tabooWords": [
+      "SERIE",
+      "STREAMING",
+      "PIATTAFORMA",
+      "GUARDARE",
+      "ABBONAMENTO"
+    ]
+  },
+  {
+    "id": 598,
+    "word": "PERACOTTARO",
+    "tabooWords": [
+      "ROMANO",
+      "CAFONE",
+      "GREZZO",
+      "ARROGANTE",
+      "PACCHIANO"
+    ]
+  },
+  {
+    "id": 599,
+    "word": "KYOTO",
+    "tabooWords": [
+      "GIAPPONE",
+      "CITTÀ",
+      "ANTICA",
+      "TEMPIO",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 600,
+    "word": "PARACULATA",
+    "tabooWords": [
+      "FURBATA",
+      "ESCAMOTAGE",
+      "SCAPPATOIA",
+      "FURBIZIA",
+      "ITALIANO"
+    ]
+  },
+  {
+    "id": 601,
+    "word": "XILOGRAFIA",
+    "tabooWords": [
+      "INCISIONE",
+      "LEGNO",
+      "STAMPA",
+      "ANTICA",
+      "ARTE"
+    ]
+  },
+  {
+    "id": 602,
+    "word": "SHAKERARE",
+    "tabooWords": [
+      "COCKTAIL",
+      "MISCELARE",
+      "BEVANDE",
+      "BERE",
+      "BARISTA"
+    ]
+  },
+  {
+    "id": 603,
+    "word": "DRAGARSI",
+    "tabooWords": [
+      "TRAVESTIMENTO",
+      "TRUCCO",
+      "ESAGERATO",
+      "RUPAUL",
+      "SPETTACOLO"
+    ]
+  },
+  {
+    "id": 604,
+    "word": "ZINGARATA",
+    "tabooWords": [
+      "VACANZA",
+      "AMICI",
+      "SCAMPAGNATA",
+      "DIVERTIMENTO",
+      "GOLIARDICA"
+    ]
+  },
+  {
+    "id": 605,
+    "word": "FELPATO",
+    "tabooWords": [
+      "SILENZIOSO",
+      "CAUTO",
+      "MORBIDO",
+      "DISCRETO",
+      "ATTENTO"
+    ]
+  },
+  {
+    "id": 606,
+    "word": "SHIPPARE",
+    "tabooWords": [
+      "COPPIA",
+      "RELAZIONE",
+      "PERSONAGGI",
+      "FICTION",
+      "DESIDERARE"
+    ]
+  },
+  {
+    "id": 607,
+    "word": "ZUCKERBERG",
+    "tabooWords": [
+      "FACEBOOK",
+      "META",
+      "MARK",
+      "SOCIALE",
+      "MILIARDARIO"
+    ]
+  },
+  {
+    "id": 608,
+    "word": "FOMO",
+    "tabooWords": [
+      "PAURA",
+      "PERDERE",
+      "OCCASIONE",
+      "ANSIA",
+      "ESCLUSO"
+    ]
+  },
+  {
+    "id": 609,
+    "word": "APERICENA",
+    "tabooWords": [
+      "APERITIVO",
+      "CENA",
+      "DRINK",
+      "SOCIALIZZARE",
+      "BUFFET"
+    ]
+  },
+  {
+    "id": 610,
+    "word": "FUFFA",
+    "tabooWords": [
+      "INCONSISTENTE",
+      "INUTILE",
+      "QUALITÀ",
+      "SCARSA",
+      "INGANNEVOLE"
+    ]
+  },
+  {
+    "id": 611,
+    "word": "PARTENOPEO",
+    "tabooWords": [
+      "NAPOLI",
+      "NAPOLETANO",
+      "CAMPANIA",
+      "GOLFO",
+      "SUD"
+    ]
+  },
+  {
+    "id": 612,
+    "word": "ZOOLANDER",
+    "tabooWords": [
+      "FILM",
+      "MODA",
+      "COMICO",
+      "BLUE",
+      "STEEL"
+    ]
+  },
+  {
+    "id": 613,
+    "word": "CRACKARE",
+    "tabooWords": [
+      "PASSWORD",
+      "HACKER",
+      "VIOLARE",
+      "SOFTWARE",
+      "SICUREZZA"
+    ]
+  },
+  {
+    "id": 614,
+    "word": "ONOMATOPEA",
+    "tabooWords": [
+      "SUONO",
+      "PAROLA",
+      "RIPRODURRE",
+      "VERSIONE",
+      "LINGUISTICA"
+    ]
+  },
+  {
+    "id": 615,
+    "word": "TAMARRO",
+    "tabooWords": [
+      "CAFONE",
+      "VOLGARE",
+      "ESAGERATO",
+      "PACCHIANO",
+      "KITSCH"
+    ]
+  },
+  {
+    "id": 616,
+    "word": "ACCHIAPPARE",
+    "tabooWords": [
+      "PRENDERE",
+      "CONQUISTARE",
+      "AFFERRARE",
+      "RAGGIUNGERE",
+      "CATTURARE"
+    ]
+  },
+  {
+    "id": 617,
+    "word": "STALKARE",
+    "tabooWords": [
+      "SPIARE",
+      "SEGUIRE",
+      "OSSESSIONE",
+      "SOCIAL",
+      "CONTROLLARE"
+    ]
+  },
+  {
+    "id": 618,
+    "word": "ROSICONE",
+    "tabooWords": [
+      "INVIDIA",
+      "GELOSO",
+      "RABBIA",
+      "LAMENTARSI",
+      "INCAZZATO"
+    ]
+  },
+  {
+    "id": 619,
+    "word": "FOTOGENICO",
+    "tabooWords": [
+      "BELLO",
+      "IMMAGINE",
+      "FOTO",
+      "APPARIRE",
+      "TELECAMERA"
+    ]
+  },
+  {
+    "id": 620,
+    "word": "BINGE-WATCHING",
+    "tabooWords": [
+      "SERIE",
+      "MARATONA",
+      "EPISODI",
+      "GUARDARE",
+      "DIPENDENZA"
+    ]
+  },
+  {
+    "id": 621,
+    "word": "PROCRASTINARE",
+    "tabooWords": [
+      "RIMANDARE",
+      "PIGRIZIA",
+      "DOVERE",
+      "TEMPO",
+      "POSTICIPARE"
+    ]
+  },
+  {
+    "id": 622,
+    "word": "FREUD",
+    "tabooWords": [
+      "PSICANALISI",
+      "INCONSCIO",
+      "SIGMUND",
+      "PSICOLOGIA",
+      "VIENNA"
+    ]
+  },
+  {
+    "id": 623,
+    "word": "EDIMBURGO",
+    "tabooWords": [
+      "SCOZIA",
+      "CITTÀ",
+      "CASTELLO",
+      "FESTIVAL",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 624,
+    "word": "PESCIAROLO",
+    "tabooWords": [
+      "MERCATO",
+      "ROMANO",
+      "PESCE",
+      "DIALETTO",
+      "VENDITORE"
+    ]
+  },
+  {
+    "id": 625,
+    "word": "FLIXARE",
+    "tabooWords": [
+      "GUARDARE",
+      "STREAMING",
+      "SERIE",
+      "TELEVISIONE",
+      "EPISODI"
+    ]
+  },
+  {
+    "id": 626,
+    "word": "SUPERCALIFRAGILISTICHESPIRALIDOSO",
+    "tabooWords": [
+      "MARY",
+      "POPPINS",
+      "LUNGA",
+      "ASSURDA",
+      "DIFFICILE"
+    ]
+  },
+  {
+    "id": 627,
+    "word": "MANSPLAINING",
+    "tabooWords": [
+      "UOMO",
+      "SPIEGARE",
+      "CONDISCENDENTE",
+      "FEMMINISMO",
+      "SUPERIORE"
+    ]
+  },
+  {
+    "id": 628,
+    "word": "MOLARE",
+    "tabooWords": [
+      "PIACERE",
+      "FIGO",
+      "APPREZZARE",
+      "GIOVANI",
+      "SLANG"
+    ]
+  },
+  {
+    "id": 629,
+    "word": "DASPO",
+    "tabooWords": [
+      "STADIO",
+      "DIVIETO",
+      "CALCIO",
+      "TIFOSI",
+      "POLIZIA"
+    ]
+  },
+  {
+    "id": 630,
+    "word": "SHAZAMMARE",
+    "tabooWords": [
+      "CANZONE",
+      "RICONOSCERE",
+      "APPLICAZIONE",
+      "MUSICA",
+      "TITOLO"
+    ]
+  },
+  {
+    "id": 631,
+    "word": "TOKIO",
+    "tabooWords": [
+      "GIAPPONE",
+      "CAPITALE",
+      "CITTÀ",
+      "ASIA",
+      "OLIMPIADI"
+    ]
+  },
+  {
+    "id": 632,
+    "word": "DICKPIC",
+    "tabooWords": [
+      "FOTO",
+      "INTIMA",
+      "MASCHILE",
+      "INAPPROPRIATA",
+      "MESSAGGIO"
+    ]
+  },
+  {
+    "id": 633,
+    "word": "SERENDIPIA",
+    "tabooWords": [
+      "CASO",
+      "FORTUNATO",
+      "SCOPERTA",
+      "INATTESA",
+      "FELICE"
+    ]
+  },
+  {
+    "id": 634,
+    "word": "ZELIG",
+    "tabooWords": [
+      "COMICO",
+      "PROGRAMMA",
+      "TELEVISIONE",
+      "CABARET",
+      "RISATE"
+    ]
+  },
+  {
+    "id": 635,
+    "word": "HACKATHON",
+    "tabooWords": [
+      "INFORMATICA",
+      "PROGRAMMAZIONE",
+      "COMPETIZIONE",
+      "TEAM",
+      "SVILUPPATORI"
+    ]
+  },
+  {
+    "id": 636,
+    "word": "PUSHER",
+    "tabooWords": [
+      "DROGA",
+      "VENDERE",
+      "SPACCIARE",
+      "ILLEGALE",
+      "STRADA"
+    ]
+  },
+  {
+    "id": 637,
+    "word": "BRADIPO",
+    "tabooWords": [
+      "ANIMALE",
+      "LENTO",
+      "PIGRO",
+      "TROPICALE",
+      "ALBERO"
+    ]
+  },
+  {
+    "id": 638,
+    "word": "TORMENTONE",
+    "tabooWords": [
+      "CANZONE",
+      "ESTATE",
+      "RIPETITIVO",
+      "ORECCHIABILE",
+      "HIT"
+    ]
+  },
+  {
+    "id": 639,
+    "word": "TARANTINO",
+    "tabooWords": [
+      "REGISTA",
+      "FILM",
+      "QUENTIN",
+      "VIOLENTO",
+      "PULP"
+    ]
+  },
+  {
+    "id": 640,
+    "word": "FLEXARE",
+    "tabooWords": [
+      "OSTENTARE",
+      "MOSTRARE",
+      "VANTARSI",
+      "RICCHEZZA",
+      "ESIBIRE"
+    ]
+  },
+  {
+    "id": 641,
+    "word": "SGAMARE",
+    "tabooWords": [
+      "SCOPRIRE",
+      "BECCARE",
+      "SORPRENDERE",
+      "COGLIERE",
+      "FURBIZIA"
+    ]
+  },
+  {
+    "id": 642,
+    "word": "ZECCA",
+    "tabooWords": [
+      "INSETTO",
+      "SANGUE",
+      "PARASSITA",
+      "BOSCO",
+      "MORSO"
+    ]
+  },
+  {
+    "id": 643,
+    "word": "DICKTATORSHIP",
+    "tabooWords": [
+      "MASCHILISMO",
+      "OPPRESSIONE",
+      "POTERE",
+      "PATRIARCATO",
+      "CONTROLLO"
+    ]
+  },
+  {
+    "id": 644,
+    "word": "STICAZZI",
+    "tabooWords": [
+      "INDIFFERENZA",
+      "ROMANO",
+      "IGNORARE",
+      "PROBLEMA",
+      "DISINTERESSE"
+    ]
+  },
+  {
+    "id": 645,
+    "word": "ZIZZANIA",
+    "tabooWords": [
+      "DISCORDIA",
+      "SEMINARE",
+      "DIVISIONE",
+      "CONFLITTO",
+      "DISPUTA"
+    ]
+  },
+  {
+    "id": 646,
+    "word": "ZERBINARE",
+    "tabooWords": [
+      "SOTTOMESSO",
+      "AMORE",
+      "DIGNITÀ",
+      "STRISCIARE",
+      "ADORARE"
+    ]
+  },
+  {
+    "id": 647,
+    "word": "KUBRICK",
+    "tabooWords": [
+      "REGISTA",
+      "FILM",
+      "STANLEY",
+      "ARANCIA",
+      "SHINING"
+    ]
+  },
+  {
+    "id": 648,
+    "word": "SERENDIPICO",
+    "tabooWords": [
+      "CASUALE",
+      "FORTUNATO",
+      "INATTESO",
+      "POSITIVO",
+      "SCOPERTA"
+    ]
+  },
+  {
+    "id": 649,
+    "word": "XENOFOBO",
+    "tabooWords": [
+      "STRANIERO",
+      "PAURA",
+      "ODIO",
+      "RAZZISMO",
+      "INTOLLERANZA"
+    ]
+  },
+  {
+    "id": 650,
+    "word": "ZUCCHINA",
+    "tabooWords": [
+      "VERDURA",
+      "VERDE",
+      "ORTAGGIO",
+      "CUCINARE",
+      "LUNGA"
+    ]
+  },
+  {
+    "id": 651,
+    "word": "PRAGA",
+    "tabooWords": [
+      "REPUBBLICA",
+      "CECA",
+      "CITTÀ",
+      "PONTE",
+      "EUROPEO"
+    ]
+  },
+  {
+    "id": 652,
+    "word": "BALOTELLATA",
+    "tabooWords": [
+      "CALCIO",
+      "MARIO",
+      "COMPORTAMENTO",
+      "ASSURDO",
+      "IMPREVEDIBILE"
+    ]
+  },
+  {
+    "id": 653,
+    "word": "YUPPIE",
+    "tabooWords": [
+      "GIOVANE",
+      "CARRIERA",
+      "ANNI",
+      "OTTANTA",
+      "AMBIZIOSO"
+    ]
+  },
+  {
+    "id": 654,
+    "word": "TRUMPIANO",
+    "tabooWords": [
+      "POLITICA",
+      "AMERICA",
+      "DONALD",
+      "ESTREMO",
+      "POPULISTA"
+    ]
+  },
+  {
+    "id": 655,
+    "word": "ZOOMBOOMER",
+    "tabooWords": [
+      "ANZIANO",
+      "TECNOLOGIA",
+      "INCAPACE",
+      "GOFFO",
+      "VIDEOCHIAMATA"
+    ]
+  },
+  {
+    "id": 656,
+    "word": "MASTERCHEF",
+    "tabooWords": [
+      "CUCINA",
+      "PROGRAMMA",
+      "TELEVISIONE",
+      "CONCORRENTI",
+      "GIUDICI"
+    ]
+  },
+  {
+    "id": 657,
+    "word": "ZAPPING",
+    "tabooWords": [
+      "TELECOMANDO",
+      "CAMBIARE",
+      "CANALE",
+      "TELEVISIONE",
+      "SALTARE"
+    ]
+  },
+  {
+    "id": 658,
+    "word": "ZEPPOLA",
+    "tabooWords": [
+      "DOLCE",
+      "FRITTO",
+      "NAPOLI",
+      "SAN",
+      "GIUSEPPE"
+    ]
+  },
+  {
+    "id": 659,
+    "word": "ZERBINO",
+    "tabooWords": [
+      "PORTA",
+      "PULIRE",
+      "SCARPE",
+      "ENTRATA",
+      "SPORCO"
+    ]
+  },
+  {
+    "id": 660,
+    "word": "ONIRONAUTA",
+    "tabooWords": [
+      "SOGNO",
+      "VIAGGIARE",
+      "LUCIDO",
+      "CONTROLLO",
+      "SONNO"
+    ]
+  },
+  {
+    "id": 661,
+    "word": "SHARARE",
+    "tabooWords": [
+      "CONDIVIDERE",
+      "POST",
+      "SOCIAL",
+      "PUBBLICARE",
+      "INOLTRARE"
+    ]
+  },
+  {
+    "id": 662,
+    "word": "ASTOLFO",
+    "tabooWords": [
+      "PALADINO",
+      "ORLANDO",
+      "FURIOSO",
+      "IPPOGRIFO",
+      "POEMA"
+    ]
+  },
+  {
+    "id": 663,
+    "word": "ZOOMATA",
+    "tabooWords": [
+      "INGRANDIRE",
+      "VIDEOCAMERA",
+      "DETTAGLIO",
+      "AVVICINARE",
+      "LENTE"
+    ]
+  },
+  {
+    "id": 664,
+    "word": "AMARCORD",
+    "tabooWords": [
+      "RICORDO",
+      "FELLINI",
+      "NOSTALGIA",
+      "PASSATO",
+      "RIMEMBRANZA"
+    ]
+  },
+  {
+    "id": 665,
+    "word": "VATICANO",
+    "tabooWords": [
+      "PAPA",
+      "CITTÀ",
+      "STATO",
+      "ROMA",
+      "CHIESA"
+    ]
+  },
+  {
+    "id": 666,
+    "word": "NERDARE",
+    "tabooWords": [
+      "OSSESSIONE",
+      "GIOCHI",
+      "TECNOLOGIA",
+      "CULTURA",
+      "GEEK"
+    ]
+  },
+  {
+    "id": 667,
+    "word": "ZUMBA",
+    "tabooWords": [
+      "BALLO",
+      "FITNESS",
+      "LEZIONE",
+      "MUSICA",
+      "LATINO"
+    ]
+  },
+  {
+    "id": 668,
+    "word": "ANACOLUTO",
+    "tabooWords": [
+      "GRAMMATICA",
+      "ERRORE",
+      "SINTASSI",
+      "PERIODO",
+      "INCOMPLETO"
+    ]
+  },
+  {
+    "id": 669,
+    "word": "SHARKNADO",
+    "tabooWords": [
+      "FILM",
+      "SQUALI",
+      "TORNADO",
+      "ASSURDO",
+      "CATASTROFE"
+    ]
+  },
+  {
+    "id": 670,
+    "word": "EDOARDIANO",
+    "tabooWords": [
+      "EPOCA",
+      "INGHILTERRA",
+      "STILE",
+      "VITTORIANO",
+      "STORICO"
+    ]
+  },
+  {
+    "id": 671,
+    "word": "TRIGGERARE",
+    "tabooWords": [
+      "SCATENARE",
+      "REAZIONE",
+      "EMOTIVA",
+      "IRRITARE",
+      "SENSIBILE"
+    ]
+  },
+  {
+    "id": 672,
+    "word": "SBATTI",
+    "tabooWords": [
+      "FATICA",
+      "PROBLEMI",
+      "NOIA",
+      "IMPEGNO",
+      "SECCATURA"
+    ]
+  },
+  {
+    "id": 673,
+    "word": "YAKUZA",
+    "tabooWords": [
+      "MAFIA",
+      "GIAPPONE",
+      "TATUAGGI",
+      "CRIMINALE",
+      "ORGANIZZAZIONE"
+    ]
+  },
+  {
+    "id": 674,
+    "word": "ZERBINAGGIO",
+    "tabooWords": [
+      "SOTTOMISSIONE",
+      "DIGNITÀ",
+      "RELAZIONE",
+      "ACCETTARE",
+      "TAPPETINO"
+    ]
+  },
+  {
+    "id": 675,
+    "word": "BACKPACKER",
+    "tabooWords": [
+      "ZAINO",
+      "VIAGGIATORE",
+      "ECONOMIA",
+      "AVVENTURA",
+      "OSTELLO"
+    ]
+  },
+  {
+    "id": 676,
+    "word": "TWERKARE",
+    "tabooWords": [
+      "BALLARE",
+      "MOVIMENTO",
+      "SEDERE",
+      "TWERKING",
+      "MUSICA"
+    ]
+  },
+  {
+    "id": 677,
+    "word": "ORWELLIANO",
+    "tabooWords": [
+      "DISTOPIA",
+      "CONTROLLO",
+      "GEORGE",
+      "GRANDE",
+      "FRATELLO"
+    ]
+  },
+  {
+    "id": 678,
+    "word": "SCLERATO",
+    "tabooWords": [
+      "NERVOSO",
+      "ARRABBIATO",
+      "PAZZIA",
+      "FUORI",
+      "CONTROLLO"
+    ]
+  },
+  {
+    "id": 679,
+    "word": "BANNARE",
+    "tabooWords": [
+      "ESCLUDERE",
+      "SOCIAL",
+      "BLOCCARE",
+      "GRUPPO",
+      "VIETARE"
+    ]
+  },
+  {
+    "id": 680,
+    "word": "PACIUGO",
+    "tabooWords": [
+      "CONFUSIONE",
+      "DISORDINE",
+      "PASTICCIO",
+      "MISCUGLIO",
+      "CAOS"
+    ]
+  },
+  {
+    "id": 681,
+    "word": "DEBRANDING",
+    "tabooWords": [
+      "MARCHIO",
+      "RIDURRE",
+      "MINIMALISMO",
+      "LOGO",
+      "MARKETING"
+    ]
+  },
+  {
+    "id": 682,
+    "word": "FLOPPARE",
+    "tabooWords": [
+      "FALLIRE",
+      "INSUCCESSO",
+      "FIASCO",
+      "RISULTATO",
+      "SCARSO"
+    ]
+  },
+  {
+    "id": 683,
+    "word": "TAFAZZIANO",
+    "tabooWords": [
+      "AUTOLESIONISMO",
+      "AUTOSABOTAGGIO",
+      "PERSONAGGIO",
+      "COMICO",
+      "BOTTIGLIA"
+    ]
+  },
+  {
+    "id": 684,
+    "word": "BOOMER",
+    "tabooWords": [
+      "GENERAZIONE",
+      "ANZIANI",
+      "ATTEGGIAMENTO",
+      "SUPERATO",
+      "OK"
+    ]
+  },
+  {
+    "id": 685,
+    "word": "GUFATA",
+    "tabooWords": [
+      "SFORTUNA",
+      "AUGURIO",
+      "MALOCCHIO",
+      "NEGATIVO",
+      "ATTIRARE"
+    ]
+  },
+  {
+    "id": 686,
+    "word": "IPERBOLE",
+    "tabooWords": [
+      "ESAGERAZIONE",
+      "FIGURA",
+      "RETORICA",
+      "ESTREMO",
+      "ECCESSO"
+    ]
+  },
+  {
+    "id": 687,
+    "word": "QUIRINALE",
+    "tabooWords": [
+      "PRESIDENTE",
+      "PALAZZO",
+      "ROMA",
+      "REPUBBLICA",
+      "COLLE"
+    ]
+  },
+  {
+    "id": 688,
+    "word": "LOCKDOWN",
+    "tabooWords": [
+      "PANDEMIA",
+      "CHIUSURA",
+      "RESTRIZIONE",
+      "CASA",
+      "COVID"
+    ]
+  },
+  {
+    "id": 689,
+    "word": "LAPALISSIANO",
+    "tabooWords": [
+      "OVVIO",
+      "SCONTATO",
+      "BANALE",
+      "EVIDENTE",
+      "TAUTOLOGIA"
+    ]
+  },
+  {
+    "id": 690,
+    "word": "ZUZZURELLONE",
+    "tabooWords": [
+      "BURLONE",
+      "MATTACCHIONE",
+      "SCHERZOSO",
+      "VIVACE",
+      "SIMPATICO"
+    ]
+  },
+  {
+    "id": 691,
+    "word": "TAMARREIDE",
+    "tabooWords": [
+      "RACCOLTA",
+      "TAMARRO",
+      "COMPORTAMENTI",
+      "CULTURA",
+      "CAFONE"
+    ]
+  },
+  {
+    "id": 692,
+    "word": "YAWNING",
+    "tabooWords": [
+      "SBADIGLIO",
+      "NOIA",
+      "SONNOLENZA",
+      "CONTAGIOSO",
+      "BOCCA"
+    ]
+  },
+  {
+    "id": 693,
+    "word": "SBOCCIARE",
+    "tabooWords": [
+      "ALCOL",
+      "BERE",
+      "UBRIACARSI",
+      "FESTA",
+      "BOTTIGLIA"
+    ]
+  },
+  {
+    "id": 694,
+    "word": "WALLARE",
+    "tabooWords": [
+      "IGNORARE",
+      "MESSAGGI",
+      "VISUALIZZARE",
+      "RISPONDERE",
+      "CHAT"
+    ]
+  },
+  {
+    "id": 695,
+    "word": "YOUTUBER",
+    "tabooWords": [
+      "VIDEO",
+      "CREATORE",
+      "CONTENUTI",
+      "PIATTAFORMA",
+      "FOLLOWERS"
+    ]
+  },
+  {
+    "id": 696,
+    "word": "POSTARE",
+    "tabooWords": [
+      "PUBBLICARE",
+      "SOCIAL",
+      "CONDIVIDERE",
+      "FOTO",
+      "ONLINE"
+    ]
+  },
+  {
+    "id": 697,
+    "word": "XENOFILIA",
+    "tabooWords": [
+      "STRANIERO",
+      "AMORE",
+      "CULTURA",
+      "DIVERSO",
+      "ATTRAZIONE"
+    ]
+  },
+  {
+    "id": 698,
+    "word": "ZEROCALCARE",
+    "tabooWords": [
+      "FUMETTI",
+      "ROMANO",
+      "MICHELE",
+      "REBIBBIA",
+      "STRISCE"
+    ]
+  },
+  {
+    "id": 699,
+    "word": "WANDERLUST",
+    "tabooWords": [
+      "VIAGGIARE",
+      "DESIDERIO",
+      "ESPLORARE",
+      "MONDO",
+      "AVVENTURA"
+    ]
+  },
+  {
+    "id": 700,
+    "word": "VEGANESIMO",
+    "tabooWords": [
+      "ALIMENTAZIONE",
+      "ANIMALI",
+      "CARNE",
+      "VEGETALE",
+      "ETICA"
+    ]
+  },
+  {
+    "id": 701,
+    "word": "SEGGIOLATA",
+    "tabooWords": [
+      "COLPO",
+      "SEDIA",
+      "WRESTLING",
+      "LOTTA",
+      "SPETTACOLARE"
+    ]
+  },
+  {
+    "id": 702,
+    "word": "WONKA",
+    "tabooWords": [
+      "CIOCCOLATO",
+      "FABBRICA",
+      "FILM",
+      "JOHNNY",
+      "DEPP"
+    ]
+  },
+  {
+    "id": 703,
+    "word": "WALLAPPARSI",
+    "tabooWords": [
+      "IGNORARE",
+      "CHAT",
+      "RISPONDERE",
+      "VISUALIZZARE",
+      "TELEFONO"
+    ]
+  },
+  {
+    "id": 704,
+    "word": "UBRIACHEZZA",
+    "tabooWords": [
+      "ALCOL",
+      "STATO",
+      "BARCOLLARE",
+      "CONTROLLO",
+      "SBRONZA"
+    ]
+  },
+  {
+    "id": 705,
+    "word": "STONKS",
+    "tabooWords": [
+      "MEME",
+      "ECONOMIA",
+      "GUADAGNO",
+      "CRESCITA",
+      "INVESTIMENTO"
+    ]
+  },
+  {
+    "id": 706,
+    "word": "ZIMBABWE",
+    "tabooWords": [
+      "AFRICA",
+      "NAZIONE",
+      "MUGABE",
+      "HARARE",
+      "INFLAZIONE"
+    ]
+  },
+  {
+    "id": 707,
+    "word": "WEBETE",
+    "tabooWords": [
+      "WEB",
+      "IDIOTA",
+      "IGNORANTE",
+      "COMMENTO",
+      "INTERNET"
+    ]
+  },
+  {
+    "id": 708,
+    "word": "ZENEIZE",
+    "tabooWords": [
+      "GENOVA",
+      "DIALETTO",
+      "LIGURIA",
+      "GENOVESE",
+      "REGIONE"
+    ]
+  },
+  {
+    "id": 709,
+    "word": "YAMAMOTO",
+    "tabooWords": [
+      "STILISTA",
+      "GIAPPONESE",
+      "MODA",
+      "YOHJI",
+      "NERO"
+    ]
+  },
+  {
+    "id": 710,
+    "word": "XILOFOBO",
+    "tabooWords": [
+      "LEGNO",
+      "PAURA",
+      "FOBIA",
+      "MATERIALE",
+      "TERRORE"
+    ]
+  },
+  {
+    "id": 711,
+    "word": "WAFFLE",
+    "tabooWords": [
+      "DOLCE",
+      "BELGIO",
+      "COLAZIONE",
+      "GAUFRE",
+      "QUADRETTI"
+    ]
+  },
+  {
+    "id": 712,
+    "word": "ZOOLANDER",
+    "tabooWords": [
+      "MODELLO",
+      "FILM",
+      "COMICO",
+      "BEN",
+      "STILLER"
+    ]
+  },
+  {
+    "id": 713,
+    "word": "XANAX",
+    "tabooWords": [
+      "ANSIA",
+      "FARMACO",
+      "TRANQUILLANTE",
+      "MEDICINA",
+      "BENZODIAZEPINE"
+    ]
+  },
+  {
+    "id": 714,
+    "word": "ZOTIKO",
+    "tabooWords": [
+      "VILLANO",
+      "ROZZO",
+      "SCORTESE",
+      "MALEDUCATO",
+      "GREZZO"
+    ]
+  },
+  {
+    "id": 715,
+    "word": "ZANZARIERA",
+    "tabooWords": [
+      "ESTATE",
+      "PROTEZIONE",
+      "INSETTI",
+      "LETTO",
+      "FINESTRA"
+    ]
+  },
+  {
+    "id": 716,
+    "word": "WASABI",
+    "tabooWords": [
+      "GIAPPONESE",
+      "PICCANTE",
+      "VERDE",
+      "SUSHI",
+      "SALSA"
+    ]
+  },
+  {
+    "id": 717,
+    "word": "FANTOZZI",
+    "tabooWords": [
+      "RAGIONIERE",
+      "FILM",
+      "COMICO",
+      "VILLAGGIO",
+      "SFORTUNATO"
+    ]
+  },
+  {
+    "id": 718,
+    "word": "XEROCOPIARE",
+    "tabooWords": [
+      "FOTOCOPIA",
+      "COPIARE",
+      "UFFICIO",
+      "CARTA",
+      "MACCHINA"
+    ]
+  },
+  {
+    "id": 719,
+    "word": "WAGYU",
+    "tabooWords": [
+      "CARNE",
+      "GIAPPONESE",
+      "MANZO",
+      "COSTOSA",
+      "MAREZZATURA"
+    ]
+  },
+  {
+    "id": 720,
+    "word": "XENOGLOSSOFOBIA",
+    "tabooWords": [
+      "LINGUE",
+      "STRANIERE",
+      "PAURA",
+      "PARLARE",
+      "FOBIA"
+    ]
+  },
+  {
+    "id": 721,
+    "word": "ZIPPO",
+    "tabooWords": [
+      "ACCENDINO",
+      "FIAMMA",
+      "METAL",
+      "BENZINA",
+      "COLLEZIONE"
+    ]
+  },
+  {
+    "id": 722,
+    "word": "WHATSAPPARE",
+    "tabooWords": [
+      "MESSAGGIARE",
+      "APPLICAZIONE",
+      "CHAT",
+      "TELEFONO",
+      "COMUNICARE"
+    ]
+  },
+  {
+    "id": 723,
+    "word": "ZUMATA",
+    "tabooWords": [
+      "INGRANDIMENTO",
+      "ZOOM",
+      "DETTAGLIO",
+      "AVVICINARE",
+      "FOTOCAMERA"
+    ]
+  },
+  {
+    "id": 724,
+    "word": "WATERLOO",
+    "tabooWords": [
+      "NAPOLEONE",
+      "SCONFITTA",
+      "BATTAGLIA",
+      "STORIA",
+      "BELGIO"
+    ]
+  },
+  {
+    "id": 725,
+    "word": "XENOESTROGENI",
+    "tabooWords": [
+      "CHIMICA",
+      "ORMONI",
+      "INQUINAMENTO",
+      "SALUTE",
+      "ESTROGENI"
+    ]
+  },
+  {
+    "id": 726,
+    "word": "ZOCCOLAGGINE",
+    "tabooWords": [
+      "VOLGARE",
+      "COMPORTAMENTO",
+      "PROVOCANTE",
+      "ATTEGGIAMENTO",
+      "ESAGERATO"
+    ]
+  },
+  {
+    "id": 727,
+    "word": "WINDOWSIANO",
+    "tabooWords": [
+      "MICROSOFT",
+      "COMPUTER",
+      "SISTEMA",
+      "OPERATIVO",
+      "GATES"
+    ]
+  },
+  {
+    "id": 728,
+    "word": "ZAPATEADO",
+    "tabooWords": [
+      "DANZA",
+      "SPAGNOLA",
+      "SCARPE",
+      "FLAMENCO",
+      "RITMO"
+    ]
+  },
+  {
+    "id": 729,
+    "word": "WELTANSCHAUUNG",
+    "tabooWords": [
+      "VISIONE",
+      "MONDO",
+      "FILOSOFIA",
+      "CONCETTO",
+      "TEDESCO"
+    ]
+  },
+  {
+    "id": 730,
+    "word": "ZOTICO",
+    "tabooWords": [
+      "MALEDUCATO",
+      "ROZZO",
+      "CAMPAGNOLO",
+      "GREZZO",
+      "VILLANO"
+    ]
+  },
+  {
+    "id": 731,
+    "word": "WRESTLING",
+    "tabooWords": [
+      "LOTTA",
+      "SPETTACOLO",
+      "RING",
+      "WWE",
+      "FINTA"
+    ]
+  },
+  {
+    "id": 732,
+    "word": "ZAMPIRONI",
+    "tabooWords": [
+      "ZANZARE",
+      "INCENSO",
+      "ESTATE",
+      "SPIRALE",
+      "BRUCIARE"
+    ]
+  },
+  {
+    "id": 733,
+    "word": "WURSTEL",
+    "tabooWords": [
+      "SALSICCIA",
+      "TEDESCO",
+      "CARNE",
+      "HOTDOG",
+      "VIENNA"
+    ]
+  },
+  {
+    "id": 734,
+    "word": "ZEPPOLINA",
+    "tabooWords": [
+      "DOLCE",
+      "FRITTO",
+      "CARNEVALE",
+      "ZUCCHERO",
+      "PICCOLO"
+    ]
+  },
+  {
+    "id": 735,
+    "word": "WONKISMO",
+    "tabooWords": [
+      "STRANO",
+      "BIZZARRO",
+      "CIOCCOLATO",
+      "FABBRICA",
+      "ECCENTRICO"
+    ]
+  },
+  {
+    "id": 736,
+    "word": "ZINGARESCO",
+    "tabooWords": [
+      "GITANO",
+      "NOMADE",
+      "COLORATO",
+      "CULTURA",
+      "ROM"
+    ]
+  },
+  {
+    "id": 737,
+    "word": "WOODSTOCK",
+    "tabooWords": [
+      "FESTIVAL",
+      "MUSICA",
+      "ANNI",
+      "SESSANTA",
+      "HIPPIE"
+    ]
   }
 ];
