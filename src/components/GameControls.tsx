@@ -60,24 +60,7 @@ const GameControls: React.FC = () => {
       
       {!isPlaying ? (
         <div className="space-y-4">
-          <div className="flex items-center space-x-2">
-            <label className="text-sm font-medium">Tempo per turno:</label>
-            <Select 
-              value={roundTime.toString()} 
-              onValueChange={(value) => setRoundTime(parseInt(value))}
-            >
-              <SelectTrigger className="w-24">
-                <SelectValue placeholder="60s" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="30">30s</SelectItem>
-                <SelectItem value="45">45s</SelectItem>
-                <SelectItem value="60">60s</SelectItem>
-                <SelectItem value="90">90s</SelectItem>
-                <SelectItem value="120">120s</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+          
           
           <div className="text-center text-sm mb-2 p-2 bg-taboo-primary/10 rounded-md">
             Tocca a <span className="font-semibold">{teams[currentTeam].name}</span> iniziare

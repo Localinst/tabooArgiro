@@ -34,44 +34,52 @@ interface GameSettings {
   roundTime: number;           // Tempo in secondi per ogni turno
 }
 
-interface GameContextType {
+type GameContextType = {
+  players: Player[];
   teams: Team[];
   currentTeam: number;
-  currentCard: TabooCard | null;
+  currentPlayerIndex: number;
+  showPlayerTurn: boolean;
+  setShowPlayerTurn: (show: boolean) => void;
+  startRoundAfterPlayerScreen: () => void;
   cards: TabooCard[];
+  currentCard: TabooCard | null;
   roundTime: number;
-  isPlaying: boolean;
   timeLeft: number;
+  isPlaying: boolean;
   passesUsed: number;
   gameSettings: GameSettings;
-  players: Player[];
   gameSetupComplete: boolean;
-  addTeam: (name: string) => void;
-  removeTeam: (id: number) => void;
-  startGame: () => void;
-  endGame: () => void;
-  nextTeam: () => void;
-  correctAnswer: () => void;
-  skipCard: () => void;
-  tabooUsed: () => void;
-  setRoundTime: (time: number) => void;
-  resetGame: () => void;
-  resetGameCompletely: () => void;
-  resetUsedCards: () => void;
   usedCardsCount: number;
   availableCardsCount: number;
+  addTeam: (name: string) => void;
+  removeTeam: (id: number) => void;
   addPlayer: (name: string) => number;
   removePlayer: (id: number) => void;
   assignPlayersToTeams: (teamAssignments: Record<number, number[]>) => void;
   updateGameSettings: (settings: Partial<GameSettings>) => void;
   completeGameSetup: () => boolean;
-}
+  startGame: () => void;
+  endRound: () => void;
+  endGame: () => void;
+  correctAnswer: () => void;
+  skipCard: () => void;
+  tabooUsed: () => void;
+  resetGame: () => void;
+  resetGameCompletely: () => void;
+  resetUsedCards: () => void;
+  setRoundTime: (time: number) => void;
+};
 
 const defaultContext: GameContextType = {
   teams: [],
   currentTeam: 0,
-  currentCard: null,
+  currentPlayerIndex: 0,
+  showPlayerTurn: false,
+  setShowPlayerTurn: () => {},
+  startRoundAfterPlayerScreen: () => {},
   cards: [],
+  currentCard: null,
   roundTime: 60,
   isPlaying: false,
   timeLeft: 0,
@@ -85,25 +93,25 @@ const defaultContext: GameContextType = {
   },
   players: [],
   gameSetupComplete: false,
-  addTeam: () => {},
-  removeTeam: () => {},
-  startGame: () => {},
-  endGame: () => {},
-  nextTeam: () => {},
-  correctAnswer: () => {},
-  skipCard: () => {},
-  tabooUsed: () => {},
-  setRoundTime: () => {},
-  resetGame: () => {},
-  resetGameCompletely: () => {},
-  resetUsedCards: () => {},
   usedCardsCount: 0,
   availableCardsCount: 0,
+  addTeam: () => {},
+  removeTeam: () => {},
   addPlayer: () => 0,
   removePlayer: () => {},
   assignPlayersToTeams: () => {},
   updateGameSettings: () => {},
-  completeGameSetup: () => false
+  completeGameSetup: () => false,
+  startGame: () => {},
+  endRound: () => {},
+  endGame: () => {},
+  correctAnswer: () => {},
+  skipCard: () => {},
+  tabooUsed: () => {},
+  resetGame: () => {},
+  resetGameCompletely: () => {},
+  resetUsedCards: () => {},
+  setRoundTime: () => {}
 };
 
 const GameContext = createContext<GameContextType>(defaultContext);
@@ -121,6 +129,8 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [gameSetupComplete, setGameSetupComplete] = useState(false);
   
   const [currentTeam, setCurrentTeam] = useState(0);
+  const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
+  const [showPlayerTurn, setShowPlayerTurn] = useState(false);
   const [cards, setCards] = useState<TabooCard[]>([]);
   const [currentCard, setCurrentCard] = useState<TabooCard | null>(null);
   const [roundTime, setRoundTime] = useState(60); // seconds
@@ -399,15 +409,21 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       }));
     }
 
+    // Mostra la schermata del turno del giocatore
+    setShowPlayerTurn(true);
+  };
+  
+  const startRoundAfterPlayerScreen = () => {
+    setShowPlayerTurn(false);
+    
     // Resetta i pass usati all'inizio di ogni turno
     setPassesUsed(0);
     
-    // Non resettiamo il currentTeam, così continua dalla squadra corrente
+    // Avvio effettivo del round
     shuffleCards();
     drawCard();
     setTimeLeft(roundTime);
     setIsPlaying(true);
-    
   };
 
   const endRound = () => {
@@ -438,16 +454,30 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const nextTeam = () => {
-    const nextTeamIndex = (currentTeam + 1) % teams.length;
-    setCurrentTeam(nextTeamIndex);
+    // Aggiorna l'indice del giocatore corrente, ma solo se la squadra ha giocatori
+    if (teams[currentTeam].players.length > 0) {
+      // Passa al giocatore successivo nella stessa squadra
+      setCurrentPlayerIndex(prevIndex => {
+        const nextIndex = (prevIndex + 1) % teams[currentTeam].players.length;
+        // Se torniamo al primo giocatore, passa alla squadra successiva
+        if (nextIndex === 0) {
+          const nextTeamIndex = (currentTeam + 1) % teams.length;
+          setCurrentTeam(nextTeamIndex);
+        }
+        return nextIndex;
+      });
+    } else {
+      // Se la squadra non ha giocatori, passa direttamente alla squadra successiva
+      const nextTeamIndex = (currentTeam + 1) % teams.length;
+      setCurrentTeam(nextTeamIndex);
+      setCurrentPlayerIndex(0);
+    }
+    
+    // Mostra la schermata del turno del giocatore
+    setShowPlayerTurn(true);
     
     // Resetta i pass usati all'inizio di ogni turno
     setPassesUsed(0);
-    
-    toast({
-      title: "Cambio turno",
-      description: `Tocca a ${teams[nextTeamIndex].name}!`
-    });
     
     drawCard();
     setTimeLeft(roundTime);
@@ -510,6 +540,8 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     })));
     
     // Non resettiamo currentTeam per mantenere il turno tra le partite
+    setCurrentPlayerIndex(0); // Reset dell'indice del giocatore
+    setShowPlayerTurn(false); // Nascondi la schermata del turno
     shuffleCards();
     setCurrentCard(null);
     setIsPlaying(false);
@@ -531,6 +563,8 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setPlayers([]);
     // Resettiamo anche il turno per iniziare sempre dalla prima squadra
     setCurrentTeam(0);
+    setCurrentPlayerIndex(0);
+    setShowPlayerTurn(false);
     shuffleCards();
     setCurrentCard(null);
     setIsPlaying(false);
@@ -562,38 +596,44 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   return (
-    <GameContext.Provider value={{
-      teams,
-      currentTeam,
-      currentCard,
-      cards,
-      roundTime,
-      isPlaying,
-      timeLeft,
-      passesUsed,
-      gameSettings,
-      players,
-      gameSetupComplete,
-      addTeam,
-      removeTeam,
-      startGame,
-      endGame,
-      nextTeam,
-      correctAnswer,
-      skipCard,
-      tabooUsed,
-      setRoundTime: setRoundTimeHandler,
-      resetGame,
-      resetGameCompletely,
-      resetUsedCards,
-      usedCardsCount: usedCardIds.length,
-      availableCardsCount: availableCards.length,
-      addPlayer,
-      removePlayer,
-      assignPlayersToTeams,
-      updateGameSettings,
-      completeGameSetup
-    }}>
+    <GameContext.Provider
+      value={{
+        players,
+        teams,
+        currentTeam,
+        currentPlayerIndex,
+        showPlayerTurn,
+        setShowPlayerTurn,
+        startRoundAfterPlayerScreen,
+        cards,
+        currentCard,
+        roundTime,
+        timeLeft,
+        isPlaying,
+        passesUsed,
+        gameSettings,
+        gameSetupComplete,
+        usedCardsCount: usedCardIds.length,
+        availableCardsCount: availableCards.length,
+        addTeam,
+        removeTeam,
+        addPlayer,
+        removePlayer,
+        assignPlayersToTeams,
+        updateGameSettings,
+        completeGameSetup,
+        startGame,
+        endRound,
+        endGame,
+        correctAnswer,
+        skipCard,
+        tabooUsed,
+        resetGame,
+        resetGameCompletely,
+        resetUsedCards,
+        setRoundTime: setRoundTimeHandler
+      }}
+    >
       {children}
     </GameContext.Provider>
   );

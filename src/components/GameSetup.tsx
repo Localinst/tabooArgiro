@@ -32,6 +32,7 @@ const GameSetup: React.FC = () => {
   
   // Stato temporaneo per gli assegnamenti dei giocatori alle squadre
   const [teamAssignments, setTeamAssignments] = useState<Record<number, number[]>>({});
+  const [isDragging, setIsDragging] = useState(false);
 
   // Inizializza le assegnazioni delle squadre
   useEffect(() => {
@@ -114,6 +115,20 @@ const GameSetup: React.FC = () => {
     addPlayersSequentially();
   }, []);
 
+  // Previene il comportamento di pull-to-refresh durante il trascinamento
+  useEffect(() => {
+    const preventPullToRefresh = (e: TouchEvent) => {
+      if (isDragging) {
+        e.preventDefault();
+      }
+    };
+
+    document.addEventListener('touchmove', preventPullToRefresh, { passive: false });
+    return () => {
+      document.removeEventListener('touchmove', preventPullToRefresh);
+    };
+  }, [isDragging]);
+
   const handleAddPlayer = () => {
     if (newPlayerName.trim()) {
       addPlayer(newPlayerName.trim());
@@ -121,7 +136,12 @@ const GameSetup: React.FC = () => {
     }
   };
 
+  const handleDragStart = () => {
+    setIsDragging(true);
+  };
+
   const handleDragEnd = (result: any) => {
+    setIsDragging(false);
     if (!result.destination) return;
 
     const { source, destination } = result;
@@ -157,19 +177,13 @@ const GameSetup: React.FC = () => {
   const handleSaveTeams = () => {
     assignPlayersToTeams(teamAssignments);
     setActiveTab('gamemode');
-    toast({
-      title: "Squadre salvate",
-      description: "Le squadre sono state aggiornate con successo"
-    });
+   
   };
 
   const handleCompleteSetup = () => {
     const isComplete = completeGameSetup();
     if (isComplete) {
-      toast({
-        title: "Configurazione completata",
-        description: "Ora puoi iniziare il gioco!"
-      });
+      
     }
   };
 
@@ -241,7 +255,7 @@ const GameSetup: React.FC = () => {
         
         {/* Tab Squadre */}
         <TabsContent value="teams" className="p-4">
-          <DragDropContext onDragEnd={handleDragEnd}>
+          <DragDropContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
             <div className="space-y-6">
               <div>
                 <h3 className="text-sm font-medium mb-2">Giocatori non assegnati</h3>

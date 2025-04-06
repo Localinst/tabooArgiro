@@ -7,11 +7,18 @@ import Timer from '../components/Timer';
 import ScoreBoard from '../components/ScoreBoard';
 import GameControls from '../components/GameControls';
 import GameSetup from '../components/GameSetup';
+import PlayerTurnScreen from '../components/PlayerTurnScreen';
 import { useGameContext } from '../context/GameContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 const GameContent: React.FC = () => {
-  const { currentCard, isPlaying, gameSetupComplete } = useGameContext();
+  const { 
+    currentCard, 
+    isPlaying, 
+    gameSetupComplete, 
+    showPlayerTurn,
+    startRoundAfterPlayerScreen
+  } = useGameContext();
   const isMobile = useIsMobile();
 
   return (
@@ -44,6 +51,11 @@ const GameContent: React.FC = () => {
               <ScoreBoard />
             </div>
           </div>
+        )}
+        
+        {/* Mostra la schermata del turno del giocatore quando necessario */}
+        {showPlayerTurn && gameSetupComplete && (
+          <PlayerTurnScreen onContinue={startRoundAfterPlayerScreen} />
         )}
       </div>
     </div>
