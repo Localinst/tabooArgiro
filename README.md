@@ -64,6 +64,33 @@ This project is built with:
 
 Simply open [Lovable](https://lovable.dev/projects/9e001ec8-e33e-412a-a5b5-92e593dd6bfc) and click on Share -> Publish.
 
+### Deploy su Netlify
+
+Questo progetto è configurato per essere facilmente deployato su Netlify. Per procedere:
+
+1. Crea un account su [Netlify](https://www.netlify.com/) se non ne hai già uno
+2. Collega il tuo repository GitHub a Netlify
+3. Configura le impostazioni di deploy:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+4. Netlify riconoscerà automaticamente il file `netlify.toml` e applicherà le configurazioni necessarie
+5. Le tue route React Router funzioneranno correttamente grazie ai file `_redirects` e alle regole di reindirizzamento configurate
+
+Per deployare manualmente tramite CLI di Netlify:
+```sh
+# Installa la CLI di Netlify
+npm install -g netlify-cli
+
+# Effettua il login
+netlify login
+
+# Inizializza un nuovo sito
+netlify init
+
+# Esegui il deploy
+netlify deploy --prod
+```
+
 ## Can I connect a custom domain to my Lovable project?
 
 Yes it is!
