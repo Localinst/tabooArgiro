@@ -456,7 +456,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
  const nextTeam = () => {
   const totalPlayers = teams[0].players.length; // Assumiamo squadre bilanciate
   setCurrentPlayerIndex(prevPlayerIndex => {
-    const nextPlayerIndex = (prevPlayerIndex + 1) % totalPlayers;
+    const nextPlayerIndex = (prevPlayerIndex ) % totalPlayers;
     setCurrentTeam(prevTeam => (prevTeam + 1) % teams.length); // Alterna team ogni turno
     return nextPlayerIndex;
   });
