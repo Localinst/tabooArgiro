@@ -2,6 +2,7 @@
 import React from 'react';
 import { useGameContext } from '../context/GameContext';
 import { Progress } from '@/components/ui/progress';
+import { cn } from '@/lib/utils';
 
 const Timer: React.FC = () => {
   const { timeLeft, roundTime, isPlaying } = useGameContext();
@@ -26,8 +27,8 @@ const Timer: React.FC = () => {
       </div>
       <Progress 
         value={percentage} 
-        className="h-3 bg-gray-200" 
-        indicatorClassName={`${getColorClass()} transition-all duration-300`}
+        className="h-3 bg-gray-200"
+        // Use custom style for the Progress component
       />
     </div>
   );
