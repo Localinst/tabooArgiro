@@ -6,6 +6,11 @@ import { toast } from "@/hooks/use-toast";
 // Chiave per salvare le carte utilizzate nel localStorage
 const USED_CARDS_KEY = 'taboo-used-cards';
 
+// Estendo l'interfaccia TabooCard per includere uniqueId
+interface ExtendedTabooCard extends TabooCard {
+  uniqueId: string;
+}
+
 // Tipo per un giocatore
 interface Player {
   id: number;
@@ -42,8 +47,8 @@ type GameContextType = {
   showPlayerTurn: boolean;
   setShowPlayerTurn: (show: boolean) => void;
   startRoundAfterPlayerScreen: () => void;
-  cards: TabooCard[];
-  currentCard: TabooCard | null;
+  cards: ExtendedTabooCard[];
+  currentCard: ExtendedTabooCard | null;
   roundTime: number;
   timeLeft: number;
   isPlaying: boolean;
@@ -131,8 +136,8 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [currentTeam, setCurrentTeam] = useState(0);
   const [currentPlayerIndex, setCurrentPlayerIndex] = useState(0);
   const [showPlayerTurn, setShowPlayerTurn] = useState(false);
-  const [cards, setCards] = useState<TabooCard[]>([]);
-  const [currentCard, setCurrentCard] = useState<TabooCard | null>(null);
+  const [cards, setCards] = useState<ExtendedTabooCard[]>([]);
+  const [currentCard, setCurrentCard] = useState<ExtendedTabooCard | null>(null);
   const [roundTime, setRoundTime] = useState(60); // seconds
   const [timeLeft, setTimeLeft] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -149,7 +154,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
   
   // Stato per le carte utilizzate (ID delle carte)
-  const [usedCardIds, setUsedCardIds] = useState<number[]>(() => {
+  const [usedCardIds, setUsedCardIds] = useState<string[]>(() => {
     try {
       const savedIds = localStorage.getItem(USED_CARDS_KEY);
       return savedIds ? JSON.parse(savedIds) : [];
@@ -159,11 +164,22 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   });
 
-  // Combiniamo i due set di parole
-  const allTabooCards = [...originalCards, ...extendedCards];
+  // Combiniamo i due set di parole assicurandoci che gli ID siano univoci
+  // Aggiungiamo un prefisso per differenziare gli ID delle carte originali da quelle estese
+  const originalCardsWithUniqueIds = originalCards.map(card => ({
+    ...card,
+    uniqueId: `original_${card.id}`
+  }));
+  
+  const extendedCardsWithUniqueIds = extendedCards.map(card => ({
+    ...card,
+    uniqueId: `extended_${card.id}`
+  }));
+  
+  const allTabooCards: ExtendedTabooCard[] = [...originalCardsWithUniqueIds, ...extendedCardsWithUniqueIds];
   
   // Carte disponibili (non ancora utilizzate)
-  const availableCards = allTabooCards.filter(card => !usedCardIds.includes(card.id));
+  const availableCards = allTabooCards.filter(card => !usedCardIds.includes(card.uniqueId));
 
   // Salva le carte utilizzate nel localStorage quando cambia lo stato
   useEffect(() => {
@@ -237,7 +253,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
     
     // Filtriamo le carte per assicurarci di escludere tutte quelle già utilizzate
-    const unusedCards = allTabooCards.filter(card => !usedCardIds.includes(card.id));
+    const unusedCards = allTabooCards.filter(card => !usedCardIds.includes(card.uniqueId));
     
     // Mescoliamo le carte non utilizzate
     const shuffled = [...unusedCards].sort(() => Math.random() - 0.5);
@@ -265,12 +281,12 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (newDeck.length > 0) {
         const nextCard = newDeck[0];
         // Verifichiamo che la carta non sia già stata utilizzata
-        if (!usedCardIds.includes(nextCard.id)) {
+        if (!usedCardIds.includes(nextCard.uniqueId)) {
           setCurrentCard(nextCard);
           // Rimuoviamo la carta dal mazzo
           setCards(prevCards => prevCards.slice(1));
           // Aggiungiamo l'ID alla lista delle carte utilizzate
-          setUsedCardIds(prev => [...prev, nextCard.id]);
+          setUsedCardIds(prev => [...prev, nextCard.uniqueId]);
         } else {
           // Se la carta è già stata utilizzata, ritentiamo
           console.warn("Carta già utilizzata trovata, ritento...");
@@ -280,12 +296,12 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     } else {
       const nextCard = cards[0];
       // Verifichiamo che la carta non sia già stata utilizzata
-      if (!usedCardIds.includes(nextCard.id)) {
+      if (!usedCardIds.includes(nextCard.uniqueId)) {
         setCurrentCard(nextCard);
         // Rimuoviamo la carta dal mazzo
         setCards(prevCards => prevCards.slice(1));
         // Aggiungiamo l'ID alla lista delle carte utilizzate
-        setUsedCardIds(prev => [...prev, nextCard.id]);
+        setUsedCardIds(prev => [...prev, nextCard.uniqueId]);
       } else {
         // Se la carta è già stata utilizzata, la rimuoviamo e ritentiamo
         console.warn("Carta già utilizzata trovata, ritento...");
@@ -297,10 +313,15 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const resetUsedCards = () => {
     setUsedCardIds([]);
+    // Svuota anche il localStorage per assicurare che i dati siano puliti
+    localStorage.removeItem(USED_CARDS_KEY);
     toast({
       title: "Reset completato",
       description: "La lista delle carte utilizzate è stata azzerata. Tutte le carte sono ora disponibili."
     });
+    // Assicuriamoci che le carte vengano ri-mescolate
+    shuffleCards();
+    // Resettiamo la partita per applicare le modifiche
     resetGame();
   };
 
