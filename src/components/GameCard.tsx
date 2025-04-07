@@ -42,7 +42,6 @@ const GameCard: React.FC<GameCardProps> = ({ card }) => {
       </CardHeader>
       <CardContent className={`${isMobile ? "p-4" : "p-8"}`}>
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold text-taboo-secondary">Parole Taboo:</h3>
           <div className="flex flex-col space-y-2">
             {card.tabooWords.map((word, index) => (
               <Badge key={index} variant="outline" className="w-full justify-center text-md py-1.5 px-3 bg-taboo-wrong/10 text-taboo-wrong border-taboo-wrong/30">

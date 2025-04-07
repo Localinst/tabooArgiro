@@ -106,16 +106,7 @@ const GameControls: React.FC = () => {
           </div>
           
           {/* Badge per il conteggio dei pass */}
-          <div className="flex justify-center">
-            <Badge 
-              variant={passesUsed >= gameSettings.maxPasses ? "destructive" : "secondary"} 
-              className="text-xs"
-            >
-              {passesUsed >= gameSettings.maxPasses 
-                ? `Limite pass raggiunto (${passesUsed}/${gameSettings.maxPasses})` 
-                : `Pass usati: ${passesUsed}/${gameSettings.maxPasses}`}
-            </Badge>
-          </div>
+         
           
           <Button 
             variant="outline"
@@ -129,7 +120,16 @@ const GameControls: React.FC = () => {
           >
             {passesUsed >= gameSettings.maxPasses ? "Salta" : "Salta Carta"}
           </Button>
-          
+          <div className="flex justify-center">
+            <Badge 
+              variant={passesUsed >= gameSettings.maxPasses ? "destructive" : "secondary"} 
+              className="text-xs"
+            >
+              {passesUsed >= gameSettings.maxPasses 
+                ? `Limite pass raggiunto (${passesUsed}/${gameSettings.maxPasses})` 
+                : `Pass usati: ${passesUsed}/${gameSettings.maxPasses}`}
+            </Badge>
+          </div>
           <Button 
             variant="outline"
             size={isMobile ? "sm" : "default"}
