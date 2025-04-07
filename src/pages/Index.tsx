@@ -8,7 +8,7 @@ const Index: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-24 md:pt-32">
       <div className="text-center px-4 w-full max-w-sm mx-auto">
         <h1 className="text-7xl font-bold text-taboo-primary mb-16 animate-bounce-light">
           PAROLE TABOO
