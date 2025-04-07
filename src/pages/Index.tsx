@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
+import AdSense from '@/components/AdSense';
 
 const Index: React.FC = () => {
   const isMobile = useIsMobile();
@@ -21,6 +21,15 @@ const Index: React.FC = () => {
             INIZIA
           </Button>
         </Link>
+        
+        {/* Annuncio AdSense */}
+        <div className="mt-10">
+          <AdSense
+            style={{ display: 'block', minHeight: '250px' }}
+            format="rectangle"
+            className="mx-auto"
+          />
+        </div>
       </div>
     </div>
   );
