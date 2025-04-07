@@ -90,14 +90,14 @@ const GameControls: React.FC = () => {
         <>
           <div className="grid grid-cols-2 gap-3">
             <Button 
-              className="w-full bg-taboo-correct hover:bg-taboo-correct/90 text-white"
+              className="w-full space-y-2 bg-taboo-correct hover:bg-taboo-correct/90 text-white"
               size={isMobile ? "sm" : "default"}
               onClick={correctAnswer}
             >
               Corretto
             </Button>
             <Button 
-              className="w-full bg-taboo-wrong hover:bg-taboo-wrong/90 text-white"
+              className="w-full space-y-2 bg-taboo-wrong hover:bg-taboo-wrong/90 text-white"
               size={isMobile ? "sm" : "default"}
               onClick={tabooUsed}
             >
@@ -111,7 +111,7 @@ const GameControls: React.FC = () => {
           <Button 
             variant="outline"
             size={isMobile ? "sm" : "default"}
-            className={`w-full ${
+            className={`w-full space-y-2 ${
               passesUsed >= gameSettings.maxPasses 
                 ? "border-taboo-wrong text-taboo-wrong" 
                 : "border-taboo-secondary text-taboo-secondary"
