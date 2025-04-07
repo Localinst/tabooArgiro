@@ -27,7 +27,7 @@ const GameContent: React.FC = () => {
       <div className="container max-w-5xl px-4 py-4 md:py-8 mx-auto">
         <header className="flex justify-between items-center mb-4 md:mb-8">
           <h1 className={`${isMobile ? "text-xl" : "text-3xl"} font-bold text-taboo-primary`}>
-            TABOO
+            PAROLE TABOO
           </h1>
           <Link to="/">
             <Button variant="outline" size={isMobile ? "sm" : "default"} className="border-taboo-primary/30 text-taboo-primary">

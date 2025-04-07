@@ -11,7 +11,7 @@ const Index: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-center">
       <div className="text-center px-4 w-full max-w-sm mx-auto">
         <h1 className="text-7xl font-bold text-taboo-primary mb-16 animate-bounce-light">
-          TABOO
+          PAROLE TABOO
         </h1>
         
         <Link to="/game" className="w-full block">
