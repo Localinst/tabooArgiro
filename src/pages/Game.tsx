@@ -10,6 +10,7 @@ import GameSetup from '../components/GameSetup';
 import PlayerTurnScreen from '../components/PlayerTurnScreen';
 import { useGameContext } from '../context/GameContext';
 import { useIsMobile } from '@/hooks/use-mobile';
+import AdSense from '@/components/AdSense';
 
 const GameContent: React.FC = () => {
   const { 
@@ -49,6 +50,17 @@ const GameContent: React.FC = () => {
             
             <div className={`${isMobile ? "mt-6" : ""}`}>
               <ScoreBoard />
+              
+              {/* Annuncio AdSense */}
+              {!isPlaying && (
+                <div className="mt-6">
+                  <AdSense
+                    style={{ display: 'block', minHeight: '250px' }}
+                    format="rectangle"
+                    className="mx-auto"
+                  />
+                </div>
+              )}
             </div>
           </div>
         )}
