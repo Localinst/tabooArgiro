@@ -98,3 +98,30 @@ Yes it is!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## Testing della logica del gioco
+
+Per verificare che la logica del mescolamento e della selezione delle carte funzioni correttamente, è disponibile una suite di test.
+
+### Installazione delle dipendenze per i test
+
+Prima di eseguire i test, è necessario installare Jest e ts-jest:
+
+```bash
+npm install --save-dev jest ts-jest @types/jest
+```
+
+### Esecuzione dei test
+
+Per eseguire i test, utilizzare il comando:
+
+```bash
+npm test
+```
+
+Questo eseguirà i test che verificano:
+- La corretta combinazione delle carte con ID univoci
+- Il mescolamento casuale delle carte
+- La rimozione delle carte usate dal mazzo disponibile
+- L'assenza di duplicati nelle carte mostrate durante una partita
+- Il corretto funzionamento del reset delle carte

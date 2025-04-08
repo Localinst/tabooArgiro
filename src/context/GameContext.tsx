@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
-import { tabooCards as originalCards, TabooCard } from '../data/words';
-import { tabooCards as extendedCards } from '../data/taboo_words.js';
+import { TabooCard } from '../data/types';
+import { tabooCards } from '../data/taboo_words.js';
 import { toast } from "@/hooks/use-toast";
 
 // Chiave per salvare le carte utilizzate nel localStorage
@@ -164,19 +164,13 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   });
 
-  // Combiniamo i due set di parole assicurandoci che gli ID siano univoci
-  // Aggiungiamo un prefisso per differenziare gli ID delle carte originali da quelle estese
-  const originalCardsWithUniqueIds = originalCards.map(card => ({
+  // Aggiungiamo un prefisso per generare ID univoci per le carte
+  const tabooCardsWithUniqueIds = tabooCards.map(card => ({
     ...card,
-    uniqueId: `original_${card.id}`
+    uniqueId: `taboo_${card.id}`
   }));
   
-  const extendedCardsWithUniqueIds = extendedCards.map(card => ({
-    ...card,
-    uniqueId: `extended_${card.id}`
-  }));
-  
-  const allTabooCards: ExtendedTabooCard[] = [...originalCardsWithUniqueIds, ...extendedCardsWithUniqueIds];
+  const allTabooCards: ExtendedTabooCard[] = tabooCardsWithUniqueIds;
   
   // Carte disponibili (non ancora utilizzate)
   const availableCards = allTabooCards.filter(card => !usedCardIds.includes(card.uniqueId));

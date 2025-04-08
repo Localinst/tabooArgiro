@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabooCard } from '../data/words';
+import { TabooCard } from '../data/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useIsMobile } from '@/hooks/use-mobile';
