@@ -187,6 +187,12 @@ const GameSetup: React.FC = () => {
     }
   };
 
+  const isTeamsBalanced = () => {
+    const teamSizes = teams.map(team => team.players.length);
+    const uniqueSizes = new Set(teamSizes);
+    return uniqueSizes.size === 1;
+  };
+
   return (
     <Card className="w-full shadow-md">
       <CardHeader className="bg-taboo-primary/10">
@@ -385,14 +391,27 @@ const GameSetup: React.FC = () => {
                 className="space-y-3"
               >
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value={GameMode.ROUNDS} id="mode-rounds" />
-                  <Label htmlFor="mode-rounds">Gioca a round</Label>
+                  <RadioGroupItem 
+                    value={GameMode.ROUNDS} 
+                    id="mode-rounds"
+                    disabled={!isTeamsBalanced()}
+                  />
+                  <Label 
+                    htmlFor="mode-rounds"
+                    className={!isTeamsBalanced() ? "text-muted-foreground" : ""}
+                  >
+                    Gioca a round
+                    {!isTeamsBalanced() && (
+                      <span className="text-xs text-muted-foreground ml-2">
+                        (richiede squadre bilanciate)
+                      </span>
+                    )}
+                  </Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value={GameMode.SCORE} id="mode-score" />
                   <Label htmlFor="mode-score">Gioca a punteggio</Label>
                 </div>
-                
               </RadioGroup>
             </div>
             
@@ -404,7 +423,7 @@ const GameSetup: React.FC = () => {
                 </div>
                 <Slider 
                   min={3} 
-                  max={30}
+                  max={50}
                   step={1}
                   value={[gameSettings.targetScore || 10]}
                   onValueChange={(value) => updateGameSettings({ targetScore: value[0] })}

@@ -114,7 +114,7 @@ const GameControls: React.FC = () => {
             className={`w-full space-y-2 ${
               passesUsed >= gameSettings.maxPasses 
                 ? "border-taboo-wrong text-taboo-wrong" 
-                : "border-taboo-secondary text-taboo-secondary"
+                : "bg-taboo-accent hover:bg-taboo-accent/90 text-white"
             }`}
             onClick={skipCard}
           >
@@ -130,14 +130,7 @@ const GameControls: React.FC = () => {
                 : `Pass usati: ${passesUsed}/${gameSettings.maxPasses}`}
             </Badge>
           </div>
-          <Button 
-            variant="outline"
-            size={isMobile ? "sm" : "default"}
-            className="w-full border-taboo-primary/30 text-taboo-primary/70"
-            onClick={endGame}
-          >
-            Termina Gioco
-          </Button>
+         
         </>
       )}
       

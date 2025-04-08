@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { TabooCard } from '../data/types';
-import { tabooCards } from '../data/taboo_words.js';
+import { tabooCards } from '../data/taboo_words';
 import { toast } from "@/hooks/use-toast";
 
 // Chiave per salvare le carte utilizzate nel localStorage
@@ -93,6 +93,7 @@ const defaultContext: GameContextType = {
     mode: GameMode.SCORE,
     targetScore: 10,
     currentRound: 0,
+    totalRounds: 5,
     maxPasses: 3,
     roundTime: 60
   },
@@ -149,6 +150,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     mode: GameMode.SCORE,
     targetScore: 10,
     currentRound: 0,
+    totalRounds: 5,
     maxPasses: 3,
     roundTime: 60
   });
@@ -383,7 +385,11 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     // Verifica che ci siano almeno 2 squadre con almeno 1 giocatore ciascuna
     const validTeams = teams.filter(team => team.players.length > 0);
     if (validTeams.length < 2) {
-      
+      toast({
+        title: "Configurazione incompleta",
+        description: "È necessario avere almeno due squadre con almeno un giocatore ciascuna",
+        variant: "destructive"
+      });
       return false;
     }
     
@@ -397,13 +403,30 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return false;
     }
     
-    if (gameSettings.mode === GameMode.ROUNDS && (!gameSettings.totalRounds || gameSettings.totalRounds <= 0)) {
-      toast({
-        title: "Configurazione incompleta",
-        description: "Imposta un numero di round valido",
-        variant: "destructive"
-      });
-      return false;
+    if (gameSettings.mode === GameMode.ROUNDS) {
+      // Verifica il numero di round
+      if (!gameSettings.totalRounds || gameSettings.totalRounds <= 0) {
+        toast({
+          title: "Configurazione incompleta",
+          description: "Imposta un numero di round valido",
+          variant: "destructive"
+        });
+        return false;
+      }
+
+      // Verifica che le squadre siano bilanciate in modalità round
+      const teamSizes = validTeams.map(team => team.players.length);
+      const maxSize = Math.max(...teamSizes);
+      const minSize = Math.min(...teamSizes);
+      
+      if (maxSize - minSize > 1) {
+        toast({
+          title: "Configurazione non valida",
+          description: "In modalità round, le squadre devono avere un numero di giocatori bilanciato (differenza massima di 1)",
+          variant: "destructive"
+        });
+        return false;
+      }
     }
     
     setGameSetupComplete(true);
@@ -439,8 +462,9 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       });
     }
 
-    // In modalità round, incrementa il contatore dei round
-    if (gameSettings.mode === GameMode.ROUNDS) {
+    // In modalità round, incrementa il contatore dei round solo se siamo all'inizio
+    // cioè quando il round corrente è 0 (prima partita) o quando torna alla prima squadra e primo giocatore
+    if (gameSettings.mode === GameMode.ROUNDS && (gameSettings.currentRound === 0 || (currentTeam === 0 && currentPlayerIndex === 0))) {
       setGameSettings(prev => ({
         ...prev,
         currentRound: prev.currentRound + 1
@@ -500,6 +524,15 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   if (nextTeamIndex === 0) {
     // Se torniamo alla prima squadra, incrementiamo l'indice del giocatore
     nextPlayerIndex = (currentPlayerIndex + 1) % Math.max(1, teams[0].players.length);
+    
+    // Se torniamo al primo giocatore della prima squadra
+    // e siamo in modalità ROUNDS, incrementiamo il round
+    if (nextPlayerIndex === 0 && gameSettings.mode === GameMode.ROUNDS) {
+      setGameSettings(prev => ({
+        ...prev,
+        currentRound: prev.currentRound + 1
+      }));
+    }
   }
   
   // Aggiorniamo gli stati
@@ -615,6 +648,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       mode: GameMode.SCORE,
       targetScore: 10,
       currentRound: 0,
+      totalRounds: 5,
       maxPasses: 3,
       roundTime: 60
     });

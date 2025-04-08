@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -65,7 +64,7 @@ export default {
 				},
 				// Game specific colors
 				taboo: {
-					primary: '#8B5CF6',    // Purple
+					primary: '#DC143C',    // Crimson
 					secondary: '#F97316',  // Orange
 					accent: '#0EA5E9',     // Blue
 					card: '#F8FAFC',       // Light background for cards
