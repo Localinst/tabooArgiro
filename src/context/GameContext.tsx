@@ -127,8 +127,8 @@ export { GameMode };
 
 export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [teams, setTeams] = useState<Team[]>([
-    { id: 1, name: "Squadra 1", score: 0, players: [] },
-    { id: 2, name: "Squadra 2", score: 0, players: [] }
+    { id: 1, name: "Squadra A", score: 0, players: [] },
+    { id: 2, name: "Squadra B", score: 0, players: [] }
   ]);
   
   const [players, setPlayers] = useState<Player[]>([]);
@@ -631,8 +631,8 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const resetGameCompletely = () => {
     setTeams([
-      { id: 1, name: "Squadra 1", score: 0, players: [] },
-      { id: 2, name: "Squadra 2", score: 0, players: [] }
+      { id: 1, name: "Squadra A", score: 0, players: [] },
+      { id: 2, name: "Squadra B", score: 0, players: [] }
     ]);
     setPlayers([]);
     // Resettiamo anche il turno per iniziare sempre dalla prima squadra

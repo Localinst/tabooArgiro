@@ -10,8 +10,8 @@ import { Slider } from "@/components/ui/slider";
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { toast } from '@/hooks/use-toast';
 
-// Nomi predefiniti che devono essere sempre disponibili
-const DEFAULT_PLAYERS = ["Giuseppe", "Mattia", "Sofia", "Leonardo", "Davide", "Alessandro"];
+// Rimuovo i nomi predefiniti
+const DEFAULT_PLAYERS: string[] = [];
 
 const GameSetup: React.FC = () => {
   const { 
@@ -27,12 +27,10 @@ const GameSetup: React.FC = () => {
 
   const [newPlayerName, setNewPlayerName] = useState('');
   const [activeTab, setActiveTab] = useState('players');
-  const initRef = useRef(false);
-  const playersAddedRef = useRef<string[]>([]);
+  const [isDragging, setIsDragging] = useState(false);
   
   // Stato temporaneo per gli assegnamenti dei giocatori alle squadre
   const [teamAssignments, setTeamAssignments] = useState<Record<number, number[]>>({});
-  const [isDragging, setIsDragging] = useState(false);
 
   // Inizializza le assegnazioni delle squadre
   useEffect(() => {
@@ -42,78 +40,6 @@ const GameSetup: React.FC = () => {
     });
     setTeamAssignments(assignments);
   }, [teams]);
-
-  // Aggiunge i giocatori predefiniti all'avvio, una sola volta
-  useEffect(() => {
-    if (initRef.current) return;
-    
-    console.log("Inizializzazione giocatori predefiniti...");
-    initRef.current = true;
-    
-    // Rimuovi tutti i giocatori esistenti
-    const playersToRemove = [...players];
-    playersToRemove.forEach(player => {
-      removePlayer(player.id);
-    });
-    
-    console.log("Aggiungo i giocatori predefiniti:", DEFAULT_PLAYERS);
-    
-    // Aggiungiamo i giocatori uno dopo l'altro in sequenza
-    const addPlayersSequentially = async () => {
-      // Reset dell'array di riferimento
-      playersAddedRef.current = [];
-      
-      // Attendiamo un attimo per assicurarci che i giocatori siano stati rimossi
-      await new Promise(resolve => setTimeout(resolve, 300));
-      
-      // Aggiungiamo i giocatori uno alla volta con attesa
-      for (const name of DEFAULT_PLAYERS) {
-        if (!playersAddedRef.current.includes(name)) {
-          const playerId = addPlayer(name);
-          playersAddedRef.current.push(name);
-          console.log(`Aggiunto giocatore ${name} con ID ${playerId}`);
-          // Attendiamo che il giocatore sia stato aggiunto
-          await new Promise(resolve => setTimeout(resolve, 100));
-        }
-      }
-      
-      // Diamo tempo al context di aggiornare lo stato
-      setTimeout(() => {
-        // Prepara le assegnazioni per le squadre
-        const newAssignments: Record<number, number[]> = {};
-        teams.forEach(team => {
-          newAssignments[team.id] = [];
-        });
-        
-        // Distribuisci i giocatori tra le squadre in modo equilibrato
-        players.forEach((player, index) => {
-          const teamId = teams[index % teams.length].id;
-          newAssignments[teamId].push(player.id);
-        });
-        
-        // Aggiorna lo stato delle assegnazioni
-        setTeamAssignments(newAssignments);
-        
-        // Applica le assegnazioni
-        assignPlayersToTeams(newAssignments);
-        
-        console.log("Inizializzazione completata");
-        
-        // Auto-completa la configurazione
-        setTimeout(() => {
-          console.log("Auto-completo la configurazione");
-          
-          
-          setTimeout(() => {
-            completeGameSetup();
-          }, 200);
-        }, 300);
-      }, 500);
-    };
-    
-    // Avvia l'inizializzazione
-    addPlayersSequentially();
-  }, []);
 
   // Previene il comportamento di pull-to-refresh durante il trascinamento
   useEffect(() => {
