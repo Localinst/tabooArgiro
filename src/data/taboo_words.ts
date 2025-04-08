@@ -8109,5 +8109,2755 @@ export const tabooCards: TabooCard[] = [
       "SESSANTA",
       "HIPPIE"
     ]
+  },
+  {
+    "id": 738,
+    "word": "SPOILERONE",
+    "tabooWords": [
+      "ANTICIPAZIONE",
+      "RIVELAZIONE",
+      "TRAMA",
+      "FINALE",
+      "FILM"
+    ]
+  },
+  {
+    "id": 739,
+    "word": "CALABRESE",
+    "tabooWords": [
+      "REGIONE",
+      "NDUJA",
+      "BERGAMOTTO",
+      "SUD",
+      "ITALIA"
+    ]
+  },
+  {
+    "id": 740,
+    "word": "DOOMSCROLLING",
+    "tabooWords": [
+      "SOCIAL",
+      "NOTIZIE",
+      "NEGATIVE",
+      "TELEFONO",
+      "SCORRERE"
+    ]
+  },
+  {
+    "id": 741,
+    "word": "MANDOLINO",
+    "tabooWords": [
+      "STRUMENTO",
+      "NAPOLI",
+      "MUSICALE",
+      "CORDE",
+      "PIZZICARE"
+    ]
+  },
+  {
+    "id": 742,
+    "word": "CATFISHING",
+    "tabooWords": [
+      "PROFILO",
+      "FALSO",
+      "TRUFFA",
+      "DATING",
+      "IDENTITÀ"
+    ]
+  },
+  {
+    "id": 743,
+    "word": "PANETTONE",
+    "tabooWords": [
+      "NATALE",
+      "DOLCE",
+      "CANDITI",
+      "UVETTA",
+      "MILANO"
+    ]
+  },
+  {
+    "id": 744,
+    "word": "GHOSTBUSTERS",
+    "tabooWords": [
+      "FILM",
+      "ACCHIAPPAFANTASMI",
+      "SLIMER",
+      "MARSHMALLOW",
+      "PROTON"
+    ]
+  },
+  {
+    "id": 745,
+    "word": "PALEOLÍTICO",
+    "tabooWords": [
+      "ERA",
+      "UOMO",
+      "PRIMITIVO",
+      "PIETRA",
+      "PREISTORIA"
+    ]
+  },
+  {
+    "id": 746,
+    "word": "KARAOKE",
+    "tabooWords": [
+      "CANTARE",
+      "MICROFONO",
+      "TESTO",
+      "LOCALE",
+      "MUSICA"
+    ]
+  },
+  {
+    "id": 747,
+    "word": "NOSTALGIA",
+    "tabooWords": [
+      "PASSATO",
+      "RICORDO",
+      "SENTIMENTO",
+      "MALINCONIA",
+      "TEMPO"
+    ]
+  },
+  {
+    "id": 748,
+    "word": "QUARTERBACK",
+    "tabooWords": [
+      "FOOTBALL",
+      "AMERICANO",
+      "PALLA",
+      "LANCIO",
+      "SQUADRA"
+    ]
+  },
+  {
+    "id": 749,
+    "word": "PANDEMIA",
+    "tabooWords": [
+      "VIRUS",
+      "MONDIALE",
+      "CONTAGIO",
+      "EMERGENZA",
+      "COVID"
+    ]
+  },
+  {
+    "id": 750,
+    "word": "ORIGAMI",
+    "tabooWords": [
+      "CARTA",
+      "PIEGHE",
+      "GIAPPONESE",
+      "ARTE",
+      "GRU"
+    ]
+  },
+  {
+    "id": 751,
+    "word": "BITCOIN",
+    "tabooWords": [
+      "CRIPTOVALUTA",
+      "DIGITALE",
+      "MONETA",
+      "BLOCKCHAIN",
+      "INVESTIMENTO"
+    ]
+  },
+  {
+    "id": 752,
+    "word": "SPUGNOSO",
+    "tabooWords": [
+      "CONSISTENZA",
+      "MORBIDO",
+      "ASSORBENTE",
+      "POROSITÀ",
+      "TESSUTO"
+    ]
+  },
+  {
+    "id": 753,
+    "word": "ARCHIMEDE",
+    "tabooWords": [
+      "MATEMATICO",
+      "EUREKA",
+      "VASCA",
+      "PITAGORA",
+      "SIRACUSA"
+    ]
+  },
+  {
+    "id": 754,
+    "word": "RISOTTO",
+    "tabooWords": [
+      "RISO",
+      "MANTECATO",
+      "CREMOSO",
+      "MILANESE",
+      "PIATTO"
+    ]
+  },
+  {
+    "id": 755,
+    "word": "MATRIOSKA",
+    "tabooWords": [
+      "RUSSA",
+      "BAMBOLA",
+      "CONTENITORE",
+      "NIDIFICARE",
+      "LEGNO"
+    ]
+  },
+  {
+    "id": 756,
+    "word": "GONDOLA",
+    "tabooWords": [
+      "VENEZIA",
+      "CANALE",
+      "IMBARCAZIONE",
+      "VOGATORE",
+      "ACQUA"
+    ]
+  },
+  {
+    "id": 757,
+    "word": "TATAMI",
+    "tabooWords": [
+      "GIAPPONESE",
+      "PAVIMENTO",
+      "DOJO",
+      "TRADIZIONALE",
+      "STUOIA"
+    ]
+  },
+  {
+    "id": 758,
+    "word": "ADRENALINA",
+    "tabooWords": [
+      "ORMONE",
+      "ECCITAZIONE",
+      "PAURA",
+      "PERICOLO",
+      "BRIVIDO"
+    ]
+  },
+  {
+    "id": 759,
+    "word": "ETICHETTA",
+    "tabooWords": [
+      "REGOLE",
+      "GALATEO",
+      "COMPORTAMENTO",
+      "FORMALITÀ",
+      "EDUCAZIONE"
+    ]
+  },
+  {
+    "id": 760,
+    "word": "ASTRONAUTA",
+    "tabooWords": [
+      "SPAZIO",
+      "TUTA",
+      "MISSIONE",
+      "NAVICELLA",
+      "VOLARE"
+    ]
+  },
+  {
+    "id": 761,
+    "word": "TRAMONTO",
+    "tabooWords": [
+      "SOLE",
+      "SERA",
+      "ORIZZONTE",
+      "ROSSO",
+      "CREPUSCOLO"
+    ]
+  },
+  {
+    "id": 762,
+    "word": "GEROGLIFICO",
+    "tabooWords": [
+      "EGITTO",
+      "ANTICHI",
+      "SIMBOLI",
+      "SCRITTURA",
+      "FARAONI"
+    ]
+  },
+  {
+    "id": 763,
+    "word": "MENHIR",
+    "tabooWords": [
+      "PIETRA",
+      "VERTICALE",
+      "ANTICA",
+      "CELTI",
+      "MEGALITE"
+    ]
+  },
+  {
+    "id": 764,
+    "word": "STONARE",
+    "tabooWords": [
+      "MUSICA",
+      "NOTA",
+      "SBAGLIATA",
+      "VOCE",
+      "DISARMONIA"
+    ]
+  },
+  {
+    "id": 765,
+    "word": "CONFETTI",
+    "tabooWords": [
+      "MATRIMONIO",
+      "BOMBONIERE",
+      "MANDORLE",
+      "COLORATI",
+      "LANCIARE"
+    ]
+  },
+  {
+    "id": 766,
+    "word": "BURLESQUE",
+    "tabooWords": [
+      "SPETTACOLO",
+      "SEXY",
+      "PIUME",
+      "CABARET",
+      "IRONIA"
+    ]
+  },
+  {
+    "id": 767,
+    "word": "ANAGRAMMA",
+    "tabooWords": [
+      "LETTERE",
+      "PAROLA",
+      "COMPORRE",
+      "MISCELARE",
+      "GIOCO"
+    ]
+  },
+  {
+    "id": 768,
+    "word": "TEMPESTA",
+    "tabooWords": [
+      "PIOGGIA",
+      "VENTO",
+      "TUONI",
+      "FULMINI",
+      "METEO"
+    ]
+  },
+  {
+    "id": 769,
+    "word": "SUPERCAZZOLA",
+    "tabooWords": [
+      "PAROLE",
+      "SENZA",
+      "SENSO",
+      "MONICELLI",
+      "AMICI"
+    ]
+  },
+  {
+    "id": 770,
+    "word": "BABYSITTER",
+    "tabooWords": [
+      "BAMBINI",
+      "BADARE",
+      "CUSTODIRE",
+      "SERA",
+      "GENITORI"
+    ]
+  },
+  {
+    "id": 771,
+    "word": "FRITTELLA",
+    "tabooWords": [
+      "FRITTA",
+      "CARNEVALE",
+      "DOLCE",
+      "PASTELLA",
+      "ZUCCHERO"
+    ]
+  },
+  {
+    "id": 772,
+    "word": "ORIGLIARE",
+    "tabooWords": [
+      "NASCOSTO",
+      "ASCOLTARE",
+      "CURIOSITÀ",
+      "SPIARE",
+      "PORTA"
+    ]
+  },
+  {
+    "id": 773,
+    "word": "PATERNOSTER",
+    "tabooWords": [
+      "ASCENSORE",
+      "CABINA",
+      "CONTINUO",
+      "MOVIMENTO",
+      "ANTICO"
+    ]
+  },
+  {
+    "id": 774,
+    "word": "JUKEBOX",
+    "tabooWords": [
+      "MUSICA",
+      "MONETA",
+      "SELEZIONE",
+      "RETRO",
+      "VINILE"
+    ]
+  },
+  {
+    "id": 775,
+    "word": "PISOLINO",
+    "tabooWords": [
+      "DORMIRE",
+      "BREVE",
+      "POMERIGGIO",
+      "RIPOSO",
+      "SONNO"
+    ]
+  },
+  {
+    "id": 776,
+    "word": "BECCHINO",
+    "tabooWords": [
+      "CIMITERO",
+      "SEPOLTURA",
+      "TOMBA",
+      "MORTO",
+      "LAVORO"
+    ]
+  },
+  {
+    "id": 777,
+    "word": "ZAFFIRO",
+    "tabooWords": [
+      "GEMMA",
+      "BLU",
+      "PREZIOSA",
+      "GIOIELLO",
+      "PIETRA"
+    ]
+  },
+  {
+    "id": 778,
+    "word": "CLAUSTROFOBIA",
+    "tabooWords": [
+      "PAURA",
+      "SPAZI",
+      "CHIUSI",
+      "ASCENSORE",
+      "ANSIA"
+    ]
+  },
+  {
+    "id": 779,
+    "word": "MELANZANA",
+    "tabooWords": [
+      "VERDURA",
+      "VIOLA",
+      "PARMIGIANA",
+      "ORTAGGIO",
+      "PANATA"
+    ]
+  },
+  {
+    "id": 780,
+    "word": "TATUATORE",
+    "tabooWords": [
+      "DISEGNO",
+      "PELLE",
+      "INCHIOSTRO",
+      "AGO",
+      "STUDIO"
+    ]
+  },
+  {
+    "id": 781,
+    "word": "BARITONO",
+    "tabooWords": [
+      "VOCE",
+      "MASCHILE",
+      "OPERA",
+      "CANTO",
+      "TONO"
+    ]
+  },
+  {
+    "id": 782,
+    "word": "PARMIGIANO",
+    "tabooWords": [
+      "FORMAGGIO",
+      "REGGIANO",
+      "GRATTUGIARE",
+      "PASTA",
+      "STAGIONATO"
+    ]
+  },
+  {
+    "id": 783,
+    "word": "CAPPUCCINO",
+    "tabooWords": [
+      "CAFFÈ",
+      "LATTE",
+      "COLAZIONE",
+      "SCHIUMA",
+      "ITALIANO"
+    ]
+  },
+  {
+    "id": 784,
+    "word": "BAKLAVA",
+    "tabooWords": [
+      "DOLCE",
+      "TURCO",
+      "MIELE",
+      "PISTACCHI",
+      "FOGLIE"
+    ]
+  },
+  {
+    "id": 785,
+    "word": "FLAMENCO",
+    "tabooWords": [
+      "DANZA",
+      "SPAGNA",
+      "CHITARRA",
+      "PASSIONE",
+      "CASTAGNETTE"
+    ]
+  },
+  {
+    "id": 786,
+    "word": "BARZELLETTA",
+    "tabooWords": [
+      "RIDERE",
+      "STORIA",
+      "COMICA",
+      "RACCONTARE",
+      "BATTUTA"
+    ]
+  },
+  {
+    "id": 787,
+    "word": "LAMPONE",
+    "tabooWords": [
+      "FRUTTO",
+      "ROSSO",
+      "BOSCO",
+      "DOLCE",
+      "PICCOLO"
+    ]
+  },
+  {
+    "id": 788,
+    "word": "KITESURF",
+    "tabooWords": [
+      "SPORT",
+      "TAVOLA",
+      "AQUILONE",
+      "MARE",
+      "VENTO"
+    ]
+  },
+  {
+    "id": 789,
+    "word": "PORCELLANA",
+    "tabooWords": [
+      "CERAMICA",
+      "FRAGILE",
+      "PREZIOSA",
+      "FINE",
+      "TAZZA"
+    ]
+  },
+  {
+    "id": 790,
+    "word": "SOTTACETO",
+    "tabooWords": [
+      "CONSERVA",
+      "VERDURE",
+      "ACETO",
+      "BARATTOLO",
+      "AGRODOLCE"
+    ]
+  },
+  {
+    "id": 791,
+    "word": "GRATTACIELO",
+    "tabooWords": [
+      "ALTO",
+      "EDIFICIO",
+      "PIANO",
+      "CITTÀ",
+      "SKYLINE"
+    ]
+  },
+  {
+    "id": 792,
+    "word": "PENNICHELLA",
+    "tabooWords": [
+      "RIPOSINO",
+      "SIESTA",
+      "POMERIGGIO",
+      "DORMIRE",
+      "BREVE"
+    ]
+  },
+  {
+    "id": 793,
+    "word": "ROMPICAPO",
+    "tabooWords": [
+      "PROBLEMA",
+      "DIFFICILE",
+      "SOLUZIONE",
+      "PUZZA",
+      "GIOCO"
+    ]
+  },
+  {
+    "id": 794,
+    "word": "PARAPENDIO",
+    "tabooWords": [
+      "VOLARE",
+      "MONTAGNA",
+      "ARIA",
+      "LANCIO",
+      "SPORT"
+    ]
+  },
+  {
+    "id": 795,
+    "word": "CAMELOT",
+    "tabooWords": [
+      "CASTELLO",
+      "ARTÙ",
+      "CAVALIERI",
+      "TAVOLA",
+      "ROTONDA"
+    ]
+  },
+  {
+    "id": 796,
+    "word": "BAIONETTA",
+    "tabooWords": [
+      "FUCILE",
+      "ARMA",
+      "LAMA",
+      "GUERRA",
+      "SOLDATO"
+    ]
+  },
+  {
+    "id": 797,
+    "word": "ABRACADABRA",
+    "tabooWords": [
+      "MAGIA",
+      "FORMULA",
+      "MAGO",
+      "PAROLA",
+      "INCANTESIMO"
+    ]
+  },
+  {
+    "id": 798,
+    "word": "CORNAMUSA",
+    "tabooWords": [
+      "STRUMENTO",
+      "SCOZZESE",
+      "FIATO",
+      "MUSICA",
+      "SACCA"
+    ]
+  },
+  {
+    "id": 799,
+    "word": "ESKIMO",
+    "tabooWords": [
+      "GIACCA",
+      "FREDDO",
+      "CAPPUCCIO",
+      "INVERNALE",
+      "PELO"
+    ]
+  },
+  {
+    "id": 800,
+    "word": "UKULELE",
+    "tabooWords": [
+      "STRUMENTO",
+      "PICCOLO",
+      "CHITARRA",
+      "HAWAII",
+      "CORDE"
+    ]
+  },
+  {
+    "id": 801,
+    "word": "YOGURT",
+    "tabooWords": [
+      "LATTE",
+      "FERMENTI",
+      "COLAZIONE",
+      "BIANCO",
+      "CREMOSO"
+    ]
+  },
+  {
+    "id": 802,
+    "word": "PAPARAZZO",
+    "tabooWords": [
+      "FOTO",
+      "CELEBRITÀ",
+      "GOSSIP",
+      "NASCOSTO",
+      "RIVISTA"
+    ]
+  },
+  {
+    "id": 803,
+    "word": "PIROETTA",
+    "tabooWords": [
+      "GIRO",
+      "BALLETTO",
+      "DANZA",
+      "ROTAZIONE",
+      "PATTINAGGIO"
+    ]
+  },
+  {
+    "id": 804,
+    "word": "XILOFONO",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "BACCHETTE",
+      "LEGNO",
+      "PERCUSSIONE"
+    ]
+  },
+  {
+    "id": 805,
+    "word": "VENTAGLIO",
+    "tabooWords": [
+      "ARIA",
+      "CALDO",
+      "ESTATE",
+      "SVENTOLARE",
+      "MANO"
+    ]
+  },
+  {
+    "id": 806,
+    "word": "BRADISISMO",
+    "tabooWords": [
+      "FENOMENO",
+      "TERRENO",
+      "ABBASSAMENTO",
+      "INNALZAMENTO",
+      "LENTO"
+    ]
+  },
+  {
+    "id": 807,
+    "word": "EQUINOZIO",
+    "tabooWords": [
+      "GIORNO",
+      "NOTTE",
+      "STAGIONE",
+      "ASTRONOMIA",
+      "SOLE"
+    ]
+  },
+  {
+    "id": 808,
+    "word": "QUARESIMA",
+    "tabooWords": [
+      "PERIODO",
+      "PASQUA",
+      "RELIGIOSO",
+      "DIGIUNO",
+      "CRISTIANO"
+    ]
+  },
+  {
+    "id": 809,
+    "word": "TALEGGIO",
+    "tabooWords": [
+      "FORMAGGIO",
+      "ODORE",
+      "MOLLE",
+      "CROSTA",
+      "LOMBARDIA"
+    ]
+  },
+  {
+    "id": 810,
+    "word": "EQUATORE",
+    "tabooWords": [
+      "TERRA",
+      "LINEA",
+      "EMISFERO",
+      "TROPICALE",
+      "CALDO"
+    ]
+  },
+  {
+    "id": 811,
+    "word": "BRACCIALE",
+    "tabooWords": [
+      "GIOIELLO",
+      "POLSO",
+      "INDOSSARE",
+      "CIONDOLO",
+      "MANO"
+    ]
+  },
+  {
+    "id": 812,
+    "word": "TRAMPOLINO",
+    "tabooWords": [
+      "SALTARE",
+      "ELASTICO",
+      "PISCINA",
+      "OLIMPIADI",
+      "ALTEZZA"
+    ]
+  },
+  {
+    "id": 813,
+    "word": "ACCONTO",
+    "tabooWords": [
+      "PAGAMENTO",
+      "ANTICIPO",
+      "COMPLETO",
+      "CAPARRA",
+      "VENDITA"
+    ]
+  },
+  {
+    "id": 814,
+    "word": "MARITOZZO",
+    "tabooWords": [
+      "DOLCE",
+      "PANNA",
+      "ROMANO",
+      "COLAZIONE",
+      "PASTA"
+    ]
+  },
+  {
+    "id": 815,
+    "word": "TACCHINO",
+    "tabooWords": [
+      "UCCELLO",
+      "NATALE",
+      "CARNE",
+      "AMERICANO",
+      "RINGRAZIAMENTO"
+    ]
+  },
+  {
+    "id": 816,
+    "word": "BAROCCO",
+    "tabooWords": [
+      "STILE",
+      "ARTE",
+      "SECOLO",
+      "ARCHITETTURA",
+      "DECORAZIONE"
+    ]
+  },
+  {
+    "id": 817,
+    "word": "BARATTOLO",
+    "tabooWords": [
+      "VETRO",
+      "CONSERVA",
+      "CONTENITORE",
+      "CHIUSURA",
+      "CUCINA"
+    ]
+  },
+  {
+    "id": 818,
+    "word": "CAVIALE",
+    "tabooWords": [
+      "UOVA",
+      "PESCE",
+      "LUSSO",
+      "NERO",
+      "PREGIATO"
+    ]
+  },
+  {
+    "id": 819,
+    "word": "CORIANDOLI",
+    "tabooWords": [
+      "CARNEVALE",
+      "FESTA",
+      "COLORATI",
+      "LANCIARE",
+      "CARTA"
+    ]
+  },
+  {
+    "id": 820,
+    "word": "CICOGNA",
+    "tabooWords": [
+      "UCCELLO",
+      "NEONATO",
+      "PORTARE",
+      "NIDO",
+      "LUNGO"
+    ]
+  },
+  {
+    "id": 821,
+    "word": "PARACADUTE",
+    "tabooWords": [
+      "CADERE",
+      "CIELO",
+      "APRIRE",
+      "LANCIO",
+      "SICUREZZA"
+    ]
+  },
+  {
+    "id": 822,
+    "word": "CRICETO",
+    "tabooWords": [
+      "ANIMALE",
+      "RUOTA",
+      "GABBIA",
+      "PICCOLO",
+      "DOMESTICO"
+    ]
+  },
+  {
+    "id": 823,
+    "word": "AVOCADO",
+    "tabooWords": [
+      "FRUTTO",
+      "VERDE",
+      "GUACAMOLE",
+      "ESOTICO",
+      "TOAST"
+    ]
+  },
+  {
+    "id": 824,
+    "word": "TSUNAMI",
+    "tabooWords": [
+      "ONDA",
+      "GIGANTE",
+      "MARE",
+      "DISASTRO",
+      "GIAPPONE"
+    ]
+  },
+  {
+    "id": 825,
+    "word": "DOMOTICA",
+    "tabooWords": [
+      "CASA",
+      "TECNOLOGIA",
+      "SMART",
+      "AUTOMATIZZARE",
+      "CONTROLLO"
+    ]
+  },
+  {
+    "id": 826,
+    "word": "PAPARAZZI",
+    "tabooWords": [
+      "FOTOGRAFI",
+      "FAMOSI",
+      "CELEBRITÀ",
+      "FOTO",
+      "GOSSIP"
+    ]
+  },
+  {
+    "id": 827,
+    "word": "BURRASCA",
+    "tabooWords": [
+      "MARE",
+      "TEMPESTA",
+      "VENTO",
+      "ONDE",
+      "NAVIGAZIONE"
+    ]
+  },
+  {
+    "id": 828,
+    "word": "BARRETTA",
+    "tabooWords": [
+      "SNACK",
+      "ENERGETICA",
+      "CEREALI",
+      "CIOCCOLATO",
+      "MANGIARE"
+    ]
+  },
+  {
+    "id": 829,
+    "word": "SINGHIOZZO",
+    "tabooWords": [
+      "DISTURBO",
+      "DIAFRAMMA",
+      "FASTIDIOSO",
+      "RIPETUTO",
+      "RESPIRO"
+    ]
+  },
+  {
+    "id": 830,
+    "word": "PIFFERAIO",
+    "tabooWords": [
+      "MAGICO",
+      "TOPI",
+      "FIABA",
+      "STRUMENTO",
+      "HAMELIN"
+    ]
+  },
+  {
+    "id": 831,
+    "word": "DISSONANZA",
+    "tabooWords": [
+      "MUSICA",
+      "ACCORDO",
+      "NOTE",
+      "STONARE",
+      "DISTURBO"
+    ]
+  },
+  {
+    "id": 832,
+    "word": "BARRACUDA",
+    "tabooWords": [
+      "PESCE",
+      "AGGRESSIVO",
+      "PREDATORE",
+      "MARE",
+      "DENTI"
+    ]
+  },
+  {
+    "id": 833,
+    "word": "ZENZERO",
+    "tabooWords": [
+      "RADICE",
+      "PICCANTE",
+      "SPEZIA",
+      "TISANA",
+      "AROMATICO"
+    ]
+  },
+  {
+    "id": 834,
+    "word": "CHUTNEY",
+    "tabooWords": [
+      "SALSA",
+      "INDIANA",
+      "AGRODOLCE",
+      "SPEZIATA",
+      "MANGO"
+    ]
+  },
+  {
+    "id": 835,
+    "word": "BARATTIERE",
+    "tabooWords": [
+      "SCAMBIARE",
+      "PERMUTARE",
+      "CEDERE",
+      "OGGETTI",
+      "COMMERCIO"
+    ]
+  },
+  {
+    "id": 836,
+    "word": "SEPPUKU",
+    "tabooWords": [
+      "GIAPPONESE",
+      "SUICIDIO",
+      "RITUALE",
+      "SAMURAI",
+      "ONORE"
+    ]
+  },
+  {
+    "id": 837,
+    "word": "TAMARINDO",
+    "tabooWords": [
+      "FRUTTO",
+      "ESOTICO",
+      "ACIDO",
+      "TROPICALE",
+      "DOLCE"
+    ]
+  },
+  {
+    "id": 838,
+    "word": "ABBIOCCO",
+    "tabooWords": [
+      "SONNOLENZA",
+      "STANCHEZZA",
+      "PASTO",
+      "DIGESTIONE",
+      "POMERIDIANO"
+    ]
+  },
+  {
+    "id": 839,
+    "word": "BRANZINO",
+    "tabooWords": [
+      "PESCE",
+      "MARE",
+      "BIANCO",
+      "RISTORANTE",
+      "MEDITERRANEO"
+    ]
+  },
+  {
+    "id": 840,
+    "word": "CARTAPESTA",
+    "tabooWords": [
+      "MATERIALE",
+      "ARTIGIANALE",
+      "MASCHERE",
+      "MANUFATTI",
+      "COLLA"
+    ]
+  },
+  {
+    "id": 841,
+    "word": "CICCHETTO",
+    "tabooWords": [
+      "ALCOL",
+      "PICCOLO",
+      "DRINK",
+      "BICCHIERINO",
+      "APERITIVO"
+    ]
+  },
+  {
+    "id": 842,
+    "word": "DISCANTO",
+    "tabooWords": [
+      "MUSICA",
+      "VOCE",
+      "ACUTA",
+      "CANTO",
+      "MELODIA"
+    ]
+  },
+  {
+    "id": 843,
+    "word": "BASSORILIEVO",
+    "tabooWords": [
+      "SCULTURA",
+      "SUPERFICIE",
+      "SPORGENTE",
+      "ARTE",
+      "PROFONDITÀ"
+    ]
+  },
+  {
+    "id": 844,
+    "word": "BARBECUE",
+    "tabooWords": [
+      "GRIGLIARE",
+      "CARNE",
+      "GIARDINO",
+      "FUOCO",
+      "ESTATE"
+    ]
+  },
+  {
+    "id": 845,
+    "word": "ECLISSI",
+    "tabooWords": [
+      "SOLE",
+      "LUNA",
+      "ASTRONOMIA",
+      "BUIO",
+      "FENOMENO"
+    ]
+  },
+  {
+    "id": 846,
+    "word": "FRANGIFLUTTI",
+    "tabooWords": [
+      "COSTA",
+      "MARE",
+      "BARRIERA",
+      "ONDE",
+      "PROTEZIONE"
+    ]
+  },
+  {
+    "id": 847,
+    "word": "ECCHIMOSI",
+    "tabooWords": [
+      "LIVIDO",
+      "PELLE",
+      "SANGUE",
+      "BOTTA",
+      "BLU"
+    ]
+  },
+  {
+    "id": 848,
+    "word": "CAFFELLATTE",
+    "tabooWords": [
+      "COLAZIONE",
+      "BEVANDA",
+      "CALDA",
+      "MATTINA",
+      "TAZZA"
+    ]
+  },
+  {
+    "id": 849,
+    "word": "BALUARDO",
+    "tabooWords": [
+      "DIFESA",
+      "FORTIFICAZIONE",
+      "PROTEZIONE",
+      "MURAGLIA",
+      "PROTETTIVO"
+    ]
+  },
+  {
+    "id": 850,
+    "word": "TARTUFO",
+    "tabooWords": [
+      "FUNGO",
+      "PREGIATO",
+      "RICERCA",
+      "CANE",
+      "BIANCO"
+    ]
+  },
+  {
+    "id": 851,
+    "word": "BATTICUORE",
+    "tabooWords": [
+      "EMOZIONE",
+      "PAURA",
+      "PALPITAZIONE",
+      "CUORE",
+      "SENTIMENTO"
+    ]
+  },
+  {
+    "id": 852,
+    "word": "TABELLONE",
+    "tabooWords": [
+      "GIOCO",
+      "SEGNAPUNTI",
+      "INFORMAZIONI",
+      "GRANDE",
+      "VISUALIZZARE"
+    ]
+  },
+  {
+    "id": 853,
+    "word": "SOTTOMESSO",
+    "tabooWords": [
+      "DOMINANTE",
+      "OBBEDIENTE",
+      "UBBIDIENTE",
+      "REMISSIVO",
+      "RELAZIONE"
+    ]
+  },
+  {
+    "id": 854,
+    "word": "ESOFAGO",
+    "tabooWords": [
+      "CORPO",
+      "TUBO",
+      "GOLA",
+      "STOMACO",
+      "DEGLUTIRE"
+    ]
+  },
+  {
+    "id": 855,
+    "word": "CERBOTTANA",
+    "tabooWords": [
+      "SOFFIARE",
+      "DARDI",
+      "TUBO",
+      "CACCIA",
+      "COLPIRE"
+    ]
+  },
+  {
+    "id": 856,
+    "word": "COCOMERO",
+    "tabooWords": [
+      "FRUTTO",
+      "ROSSO",
+      "ESTATE",
+      "ANGURIA",
+      "SEMI"
+    ]
+  },
+  {
+    "id": 857,
+    "word": "CATAMARANO",
+    "tabooWords": [
+      "BARCA",
+      "DOPPIO",
+      "SCAFO",
+      "NAVIGARE",
+      "VELOCE"
+    ]
+  },
+  {
+    "id": 858,
+    "word": "ZUCCA",
+    "tabooWords": [
+      "ARANCIONE",
+      "HALLOWEEN",
+      "ORTAGGIO",
+      "SEMI",
+      "INTAGLIARE"
+    ]
+  },
+  {
+    "id": 859,
+    "word": "PETTEGOLEZZO",
+    "tabooWords": [
+      "CHIACCHIERE",
+      "MALDICENZA",
+      "VOCE",
+      "GOSSIP",
+      "SPARLARE"
+    ]
+  },
+  {
+    "id": 860,
+    "word": "POLTERGEIST",
+    "tabooWords": [
+      "SPIRITO",
+      "FANTASMA",
+      "FENOMENO",
+      "PARANORMALE",
+      "DISTURBARE"
+    ]
+  },
+  {
+    "id": 861,
+    "word": "CALAMARO",
+    "tabooWords": [
+      "MARE",
+      "MOLLUSCO",
+      "TENTACOLI",
+      "NERO",
+      "FRITTURA"
+    ]
+  },
+  {
+    "id": 862,
+    "word": "SCONFIGGERE",
+    "tabooWords": [
+      "BATTERE",
+      "VINCERE",
+      "NEMICO",
+      "SUPERARE",
+      "AVVERSARIO"
+    ]
+  },
+  {
+    "id": 863,
+    "word": "PINGUINO",
+    "tabooWords": [
+      "ANTARTICO",
+      "FREDDO",
+      "GHIACCIO",
+      "UCCELLO",
+      "SMOKIN"
+    ]
+  },
+  {
+    "id": 864,
+    "word": "BINOCOLO",
+    "tabooWords": [
+      "OSSERVARE",
+      "LONTANO",
+      "LENTI",
+      "AVVISTARE",
+      "INGRANDIMENTO"
+    ]
+  },
+  {
+    "id": 865,
+    "word": "CAVATAPPI",
+    "tabooWords": [
+      "VINO",
+      "BOTTIGLIA",
+      "APRIRE",
+      "SUGHERO",
+      "ATTREZZO"
+    ]
+  },
+  {
+    "id": 866,
+    "word": "POMATA",
+    "tabooWords": [
+      "CREMA",
+      "APPLICARE",
+      "PELLE",
+      "UNGUENTO",
+      "SPALMARE"
+    ]
+  },
+  {
+    "id": 867,
+    "word": "PARABREZZA",
+    "tabooWords": [
+      "AUTO",
+      "VETRO",
+      "ANTERIORE",
+      "TERGICRISTALLO",
+      "PROTEZIONE"
+    ]
+  },
+  {
+    "id": 868,
+    "word": "GIRANDOLA",
+    "tabooWords": [
+      "VENTO",
+      "COLORATA",
+      "GIRARE",
+      "BAMBINI",
+      "RUOTARE"
+    ]
+  },
+  {
+    "id": 869,
+    "word": "PARAPSICOLOGIA",
+    "tabooWords": [
+      "FENOMENI",
+      "PARANORMALI",
+      "MENTE",
+      "SCIENZA",
+      "TELEPATIA"
+    ]
+  },
+  {
+    "id": 870,
+    "word": "PAILLETTES",
+    "tabooWords": [
+      "BRILLANTE",
+      "VESTITO",
+      "LUSTRINI",
+      "ABITO",
+      "DISCOTECA"
+    ]
+  },
+  {
+    "id": 871,
+    "word": "TIRAMISU",
+    "tabooWords": [
+      "DOLCE",
+      "MASCARPONE",
+      "SAVOIARDI",
+      "CAFFÈ",
+      "CACAO"
+    ]
+  },
+  {
+    "id": 872,
+    "word": "CAMIONCINO",
+    "tabooWords": [
+      "PICCOLO",
+      "TRASPORTO",
+      "MERCI",
+      "FURGONE",
+      "VEICOLO"
+    ]
+  },
+  {
+    "id": 873,
+    "word": "INFARINARE",
+    "tabooWords": [
+      "CUCINARE",
+      "FARINA",
+      "PASSAGGIO",
+      "COSPARGERE",
+      "IMPANARE"
+    ]
+  },
+  {
+    "id": 874,
+    "word": "PARGOLO",
+    "tabooWords": [
+      "BAMBINO",
+      "PICCOLO",
+      "INFANTE",
+      "BIMBO",
+      "FIGLIOLETTO"
+    ]
+  },
+  {
+    "id": 875,
+    "word": "BAVAGLINO",
+    "tabooWords": [
+      "BAMBINO",
+      "MANGIARE",
+      "PROTEGGERE",
+      "SPORCARE",
+      "COLLO"
+    ]
+  },
+  {
+    "id": 876,
+    "word": "MARZAPANE",
+    "tabooWords": [
+      "DOLCE",
+      "MANDORLE",
+      "PASTA",
+      "DOLCIARIO",
+      "DECORAZIONE"
+    ]
+  },
+  {
+    "id": 877,
+    "word": "PARANOIA",
+    "tabooWords": [
+      "PENSIERO",
+      "PERSECUZIONE",
+      "DISTURBO",
+      "OSSESSIONE",
+      "SOSPETTO"
+    ]
+  },
+  {
+    "id": 878,
+    "word": "PASSEPARTOUT",
+    "tabooWords": [
+      "CHIAVE",
+      "UNIVERSALE",
+      "APRIRE",
+      "ACCESSO",
+      "SERRATURA"
+    ]
+  },
+  {
+    "id": 879,
+    "word": "BASILICO",
+    "tabooWords": [
+      "PIANTA",
+      "VERDE",
+      "AROMATICA",
+      "PESTO",
+      "FOGLIE"
+    ]
+  },
+  {
+    "id": 880,
+    "word": "PARAGRAFO",
+    "tabooWords": [
+      "TESTO",
+      "SEZIONE",
+      "PARTE",
+      "SCRITTURA",
+      "DOCUMENTO"
+    ]
+  },
+  {
+    "id": 881,
+    "word": "CAZZUOLA",
+    "tabooWords": [
+      "MURATORE",
+      "MALTA",
+      "ATTREZZO",
+      "COSTRUZIONE",
+      "MURO"
+    ]
+  },
+  {
+    "id": 882,
+    "word": "BAVARESE",
+    "tabooWords": [
+      "DOLCE",
+      "CREMA",
+      "DESSERT",
+      "PANNA",
+      "GELATINA"
+    ]
+  },
+  {
+    "id": 883,
+    "word": "FARFALLA",
+    "tabooWords": [
+      "INSETTO",
+      "VOLARE",
+      "COLORATA",
+      "ALI",
+      "BRUCO"
+    ]
+  },
+  {
+    "id": 884,
+    "word": "INCHINO",
+    "tabooWords": [
+      "SALUTO",
+      "RISPETTO",
+      "PIEGARSI",
+      "RIVERENZA",
+      "FORMALE"
+    ]
+  },
+  {
+    "id": 885,
+    "word": "IMBUTO",
+    "tabooWords": [
+      "VERSARE",
+      "BOCCA",
+      "STRETTA",
+      "LIQUIDO",
+      "CANALIZZARE"
+    ]
+  },
+  {
+    "id": 886,
+    "word": "CREPUSCOLO",
+    "tabooWords": [
+      "SERA",
+      "LUCE",
+      "ATTENUATA",
+      "TRAMONTO",
+      "GIORNO"
+    ]
+  },
+  {
+    "id": 887,
+    "word": "CAVALCAVIA",
+    "tabooWords": [
+      "STRADA",
+      "PONTE",
+      "SOPRAELEVATA",
+      "PASSARE",
+      "SOPRA"
+    ]
+  },
+  {
+    "id": 888,
+    "word": "BANCARELLA",
+    "tabooWords": [
+      "MERCATO",
+      "VENDITORE",
+      "AMBULANTE",
+      "ESPOSIZIONE",
+      "MERCE"
+    ]
+  },
+  {
+    "id": 889,
+    "word": "MALINCONIA",
+    "tabooWords": [
+      "TRISTEZZA",
+      "SENTIMENTO",
+      "NOSTALGIA",
+      "DOLCE",
+      "RIFLESSIVO"
+    ]
+  },
+  {
+    "id": 890,
+    "word": "PARMIGIANA",
+    "tabooWords": [
+      "MELANZANE",
+      "PIATTO",
+      "SUGO",
+      "FORMAGGIO",
+      "SUD"
+    ]
+  },
+  {
+    "id": 891,
+    "word": "BASETTE",
+    "tabooWords": [
+      "PELI",
+      "VISO",
+      "BARBA",
+      "LATERALI",
+      "GUANCE"
+    ]
+  },
+  {
+    "id": 892,
+    "word": "CAVALLETTO",
+    "tabooWords": [
+      "PITTURA",
+      "SOSTEGNO",
+      "TELA",
+      "SUPPORTO",
+      "ARTISTA"
+    ]
+  },
+  {
+    "id": 893,
+    "word": "CESELLO",
+    "tabooWords": [
+      "INCISIONE",
+      "METALLO",
+      "ORAFO",
+      "DECORARE",
+      "PRECISIONE"
+    ]
+  },
+  {
+    "id": 894,
+    "word": "BALALAIKA",
+    "tabooWords": [
+      "STRUMENTO",
+      "RUSSO",
+      "MUSICALE",
+      "CORDE",
+      "TRIANGOLARE"
+    ]
+  },
+  {
+    "id": 895,
+    "word": "PARENTESI",
+    "tabooWords": [
+      "GRAFFA",
+      "TONDA",
+      "SIMBOLO",
+      "SCRITTURA",
+      "FRASE"
+    ]
+  },
+  {
+    "id": 896,
+    "word": "CALLIGRAFIA",
+    "tabooWords": [
+      "SCRITTURA",
+      "ELEGANTE",
+      "BELLA",
+      "PENNA",
+      "ARTE"
+    ]
+  },
+  {
+    "id": 897,
+    "word": "CAVALLINA",
+    "tabooWords": [
+      "GINNASTICA",
+      "SALTO",
+      "SPORT",
+      "ACROBATICO",
+      "ESERCIZIO"
+    ]
+  },
+  {
+    "id": 898,
+    "word": "BARCHETTA",
+    "tabooWords": [
+      "PICCOLA",
+      "NAVIGARE",
+      "CARTA",
+      "ORIGAMI",
+      "ACQUA"
+    ]
+  },
+  {
+    "id": 899,
+    "word": "IMBOSCATA",
+    "tabooWords": [
+      "AGGUATO",
+      "SORPRESA",
+      "ATTACCO",
+      "NASCOSTO",
+      "ATTESA"
+    ]
+  },
+  {
+    "id": 900,
+    "word": "CARABATTOLA",
+    "tabooWords": [
+      "OGGETTO",
+      "INUTILE",
+      "VECCHIO",
+      "CIARPAME",
+      "ANTICAGLIA"
+    ]
+  },
+  {
+    "id": 901,
+    "word": "PAREIDOLIA",
+    "tabooWords": [
+      "FENOMENO",
+      "IMMAGINI",
+      "ILLUSIONE",
+      "PERCEPIRE",
+      "RICONOSCERE"
+    ]
+  },
+  {
+    "id": 902,
+    "word": "CALLIGRAFO",
+    "tabooWords": [
+      "ARTISTA",
+      "SCRITTURA",
+      "PENNINO",
+      "ELEGANTE",
+      "CARATTERI"
+    ]
+  },
+  {
+    "id": 903,
+    "word": "BATTIGIA",
+    "tabooWords": [
+      "SPIAGGIA",
+      "MARE",
+      "ONDE",
+      "SABBIA",
+      "BAGNASCIUGA"
+    ]
+  },
+  {
+    "id": 904,
+    "word": "BANDOLIERA",
+    "tabooWords": [
+      "FASCIA",
+      "SPALLA",
+      "CINGHIA",
+      "TRASVERSALE",
+      "CARTUCCE"
+    ]
+  },
+  {
+    "id": 905,
+    "word": "TARANTELLA",
+    "tabooWords": [
+      "DANZA",
+      "NAPOLETANA",
+      "BALLO",
+      "TRADIZIONALE",
+      "TAMBURELLO"
+    ]
+  },
+  {
+    "id": 906,
+    "word": "CESOIA",
+    "tabooWords": [
+      "FORBICE",
+      "TAGLIARE",
+      "GRANDE",
+      "GIARDINAGGIO",
+      "ATTREZZO"
+    ]
+  },
+  {
+    "id": 907,
+    "word": "CALEMBOUR",
+    "tabooWords": [
+      "GIOCO",
+      "PAROLE",
+      "DOPPIO",
+      "SENSO",
+      "UMORISTICO"
+    ]
+  },
+  {
+    "id": 908,
+    "word": "CENOTAFIO",
+    "tabooWords": [
+      "TOMBA",
+      "VUOTA",
+      "MONUMENTO",
+      "COMMEMORATIVO",
+      "FUNERARIO"
+    ]
+  },
+  {
+    "id": 909,
+    "word": "CASCAMORTO",
+    "tabooWords": [
+      "CORTEGGIARE",
+      "ESAGERATO",
+      "RIDICOLO",
+      "INSISTENTE",
+      "ATTEGGIAMENTO"
+    ]
+  },
+  {
+    "id": 910,
+    "word": "BALDACCHINO",
+    "tabooWords": [
+      "LETTO",
+      "TENDA",
+      "TESSUTO",
+      "COPERTURA",
+      "DECORATIVO"
+    ]
+  },
+  {
+    "id": 911,
+    "word": "PARABRACCIO",
+    "tabooWords": [
+      "PROTEZIONE",
+      "ARMATURA",
+      "MEDIEVALE",
+      "BRACCIO",
+      "DIFESA"
+    ]
+  },
+  {
+    "id": 912,
+    "word": "TARTARUGA",
+    "tabooWords": [
+      "LENTA",
+      "GUSCIO",
+      "RETTILE",
+      "LONGEVITÀ",
+      "CARAPACE"
+    ]
+  },
+  {
+    "id": 913,
+    "word": "PARGOLETTO",
+    "tabooWords": [
+      "BAMBINO",
+      "PICCOLO",
+      "TENERO",
+      "INFANTE",
+      "POETICO"
+    ]
+  },
+  {
+    "id": 914,
+    "word": "BAIONETTA",
+    "tabooWords": [
+      "ARMA",
+      "FUCILE",
+      "LAMA",
+      "SOLDATO",
+      "ATTACCO"
+    ]
+  },
+  {
+    "id": 915,
+    "word": "BARDATURA",
+    "tabooWords": [
+      "CAVALLO",
+      "FINIMENTI",
+      "SELLA",
+      "CAVALCARE",
+      "EQUIPAGGIAMENTO"
+    ]
+  },
+  {
+    "id": 916,
+    "word": "CACOFONIA",
+    "tabooWords": [
+      "SUONO",
+      "SGRADEVOLE",
+      "DISARMONIA",
+      "RUMORE",
+      "STONATO"
+    ]
+  },
+  {
+    "id": 917,
+    "word": "CADUCEO",
+    "tabooWords": [
+      "SIMBOLO",
+      "MEDICINA",
+      "MERCURIO",
+      "SERPENTI",
+      "BASTONE"
+    ]
+  },
+  {
+    "id": 918,
+    "word": "PAGLIACCETTO",
+    "tabooWords": [
+      "VESTITO",
+      "BAMBINO",
+      "INTERO",
+      "TUTINA",
+      "NEONATO"
+    ]
+  },
+  {
+    "id": 919,
+    "word": "CAZZEGGIARE",
+    "tabooWords": [
+      "PERDERE",
+      "TEMPO",
+      "OZIARE",
+      "DIVERTIMENTO",
+      "PIGRIZIA"
+    ]
+  },
+  {
+    "id": 920,
+    "word": "BAVAGLIO",
+    "tabooWords": [
+      "IMBAVAGLIARE",
+      "BOCCA",
+      "COPRIRE",
+      "CENSURA",
+      "IMPEDIRE"
+    ]
+  },
+  {
+    "id": 921,
+    "word": "PARANORMALE",
+    "tabooWords": [
+      "FENOMENO",
+      "INSPIEGABILE",
+      "SOPRANNATURALE",
+      "FANTASMA",
+      "MISTERO"
+    ]
+  },
+  {
+    "id": 922,
+    "word": "TACHIMETRO",
+    "tabooWords": [
+      "VELOCITÀ",
+      "AUTO",
+      "INDICATORE",
+      "MISURARE",
+      "CRUSCOTTO"
+    ]
+  },
+  {
+    "id": 923,
+    "word": "TABERNACOLO",
+    "tabooWords": [
+      "CHIESA",
+      "SACRO",
+      "EUCARISTIA",
+      "ALTARE",
+      "CONSERVARE"
+    ]
+  },
+  {
+    "id": 924,
+    "word": "CARABINIERE",
+    "tabooWords": [
+      "ARMA",
+      "FORZA",
+      "ORDINE",
+      "MILITARE",
+      "DIVISA"
+    ]
+  },
+  {
+    "id": 925,
+    "word": "PARRUCCA",
+    "tabooWords": [
+      "CAPELLI",
+      "FINTI",
+      "TESTA",
+      "COPRIRE",
+      "INDOSSARE"
+    ]
+  },
+  {
+    "id": 926,
+    "word": "CATENACCIO",
+    "tabooWords": [
+      "CHIUDERE",
+      "PORTA",
+      "SERRATURA",
+      "SICUREZZA",
+      "DIFESA"
+    ]
+  },
+  {
+    "id": 927,
+    "word": "BARUFFA",
+    "tabooWords": [
+      "LITE",
+      "DISCUSSIONE",
+      "ALTERCO",
+      "CONFUSIONE",
+      "DISORDINE"
+    ]
+  },
+  {
+    "id": 928,
+    "word": "PARLOTTARE",
+    "tabooWords": [
+      "BISBIGLIARE",
+      "SOTTOVOCE",
+      "CHIACCHIERARE",
+      "SEGRETO",
+      "SOMMESSO"
+    ]
+  },
+  {
+    "id": 929,
+    "word": "BALOCCO",
+    "tabooWords": [
+      "GIOCO",
+      "ANTICO",
+      "BAMBINO",
+      "SEMPLICE",
+      "GIOCATTOLO"
+    ]
+  },
+  {
+    "id": 930,
+    "word": "TAROCCO",
+    "tabooWords": [
+      "FALSO",
+      "CONTRAFFATTO",
+      "INGANNO",
+      "CARTE",
+      "IMITAZIONE"
+    ]
+  },
+  {
+    "id": 931,
+    "word": "BACCANALE",
+    "tabooWords": [
+      "FESTA",
+      "SFRENATA",
+      "ANTICA",
+      "ROMANA",
+      "VINO"
+    ]
+  },
+  {
+    "id": 932,
+    "word": "CASSAPANCA",
+    "tabooWords": [
+      "MOBILE",
+      "LEGNO",
+      "CONTENITORE",
+      "ANTICO",
+      "SEDUTA"
+    ]
+  },
+  {
+    "id": 933,
+    "word": "PARALLELISMO",
+    "tabooWords": [
+      "LINEE",
+      "CONCETTI",
+      "SIMILI",
+      "GEOMETRIA",
+      "PARALLELO"
+    ]
+  },
+  {
+    "id": 934,
+    "word": "BALESTRA",
+    "tabooWords": [
+      "ARMA",
+      "FRECCIA",
+      "MEDIEVALE",
+      "CACCIA",
+      "TIRARE"
+    ]
+  },
+  {
+    "id": 935,
+    "word": "PINOCCHIO",
+    "tabooWords": [
+      "BURATTINO",
+      "NASO",
+      "COLLODI",
+      "FIABA",
+      "BUGIA"
+    ]
+  },
+  {
+    "id": 936,
+    "word": "PARAFRASI",
+    "tabooWords": [
+      "TESTO",
+      "RISCRIVERE",
+      "SPIEGARE",
+      "CONCETTO",
+      "PROPRIE"
+    ]
+  },
+  {
+    "id": 937,
+    "word": "TACCHEGGIO",
+    "tabooWords": [
+      "RUBARE",
+      "NEGOZIO",
+      "SOTTRAZIONE",
+      "FURTO",
+      "MERCE"
+    ]
+  },
+  {
+    "id": 938,
+    "word": "CAMERLENGO",
+    "tabooWords": [
+      "VATICANO",
+      "CARDINALE",
+      "PAPA",
+      "CHIESA",
+      "SEDE"
+    ]
+  },
+  {
+    "id": 939,
+    "word": "PARALOGISMO",
+    "tabooWords": [
+      "RAGIONAMENTO",
+      "ERRATO",
+      "FALSO",
+      "LOGICA",
+      "FALLACE"
+    ]
+  },
+  {
+    "id": 940,
+    "word": "BABBEO",
+    "tabooWords": [
+      "SCIOCCO",
+      "INGENUO",
+      "CREDULONE",
+      "SEMPLICIOTTO",
+      "STUPIDO"
+    ]
+  },
+  {
+    "id": 941,
+    "word": "PARANCO",
+    "tabooWords": [
+      "SOLLEVARE",
+      "CORDA",
+      "PULEGGIA",
+      "PESO",
+      "MECCANISMO"
+    ]
+  },
+  {
+    "id": 942,
+    "word": "BATISCAFO",
+    "tabooWords": [
+      "SOTTOMARINO",
+      "ESPLORARE",
+      "ABISSI",
+      "PROFONDITÀ",
+      "MARE"
+    ]
+  },
+  {
+    "id": 943,
+    "word": "CATARSI",
+    "tabooWords": [
+      "PURIFICAZIONE",
+      "LIBERAZIONE",
+      "EMOZIONI",
+      "ARISTOTELE",
+      "TRAGEDIA"
+    ]
+  },
+  {
+    "id": 944,
+    "word": "BANCONE",
+    "tabooWords": [
+      "NEGOZIO",
+      "SERVIRE",
+      "APPOGGIO",
+      "BAR",
+      "CLIENTE"
+    ]
+  },
+  {
+    "id": 945,
+    "word": "PASSAMONTAGNA",
+    "tabooWords": [
+      "COPERTURA",
+      "VISO",
+      "FREDDO",
+      "LANA",
+      "MASCHERA"
+    ]
+  },
+  {
+    "id": 946,
+    "word": "TAGLIATELLE",
+    "tabooWords": [
+      "PASTA",
+      "EMILIA",
+      "FRESCA",
+      "LARGA",
+      "UOVO"
+    ]
+  },
+  {
+    "id": 947,
+    "word": "CADREGANTE",
+    "tabooWords": [
+      "PORTANTINA",
+      "SEDIA",
+      "TRASPORTARE",
+      "ANTICA",
+      "NOBILTÀ"
+    ]
+  },
+  {
+    "id": 948,
+    "word": "CALABRONE",
+    "tabooWords": [
+      "INSETTO",
+      "VOLARE",
+      "PUNTURA",
+      "GROSSO",
+      "RONZIO"
+    ]
+  },
+  {
+    "id": 949,
+    "word": "ZAMPONE",
+    "tabooWords": [
+      "MAIALE",
+      "COTECHINO",
+      "CAPODANNO",
+      "LENTICCHIE",
+      "MODENA"
+    ]
+  },
+  {
+    "id": 950,
+    "word": "CASCINA",
+    "tabooWords": [
+      "FATTORIA",
+      "CAMPAGNA",
+      "RURALE",
+      "AGRICOLA",
+      "CONTADINA"
+    ]
+  },
+  {
+    "id": 951,
+    "word": "BASILISCO",
+    "tabooWords": [
+      "MITOLOGIA",
+      "SERPENTE",
+      "MORTALE",
+      "LEGGENDA",
+      "CREATURA"
+    ]
+  },
+  {
+    "id": 952,
+    "word": "PARABREZZA",
+    "tabooWords": [
+      "AUTO",
+      "VETRO",
+      "ANTERIORE",
+      "VISUALE",
+      "TERGICRISTALLO"
+    ]
+  },
+  {
+    "id": 953,
+    "word": "BASSOFONDO",
+    "tabooWords": [
+      "MARE",
+      "POCO",
+      "PROFONDO",
+      "PERICOLOSO",
+      "NAVIGAZIONE"
+    ]
+  },
+  {
+    "id": 954,
+    "word": "TAGLIENTE",
+    "tabooWords": [
+      "AFFILATO",
+      "LAMA",
+      "COLTELLO",
+      "APPUNTITO",
+      "TAGLIARE"
+    ]
+  },
+  {
+    "id": 955,
+    "word": "CADETTO",
+    "tabooWords": [
+      "MILITARE",
+      "ACCADEMIA",
+      "GIOVANE",
+      "ALLIEVO",
+      "UFFICIALE"
+    ]
+  },
+  {
+    "id": 956,
+    "word": "BARCAMENARSI",
+    "tabooWords": [
+      "DESTREGGIARSI",
+      "CAVARSELA",
+      "ARRANGIARE",
+      "SOPRAVVIVERE",
+      "SITUAZIONE"
+    ]
+  },
+  {
+    "id": 957,
+    "word": "PASSATEMPO",
+    "tabooWords": [
+      "HOBBY",
+      "SVAGO",
+      "DIVERTIRSI",
+      "TEMPO",
+      "LIBERO"
+    ]
+  },
+  {
+    "id": 958,
+    "word": "BATACCHIO",
+    "tabooWords": [
+      "PORTA",
+      "BUSSARE",
+      "CAMPANELLO",
+      "ANTICO",
+      "MARTELLO"
+    ]
+  },
+  {
+    "id": 959,
+    "word": "TAGLIERINO",
+    "tabooWords": [
+      "ATTREZZO",
+      "LAMA",
+      "TAGLIARE",
+      "CARTA",
+      "PRECISO"
+    ]
+  },
+  {
+    "id": 960,
+    "word": "PARGHEGGINO",
+    "tabooWords": [
+      "BAMBINO",
+      "PICCOLO",
+      "VEZZEGGIATIVO",
+      "AFFETTUOSO",
+      "BIMBO"
+    ]
+  },
+  {
+    "id": 961,
+    "word": "BARACCONE",
+    "tabooWords": [
+      "GRANDE",
+      "FIERA",
+      "SPETTACOLO",
+      "ITINERANTE",
+      "LUNA"
+    ]
+  },
+  {
+    "id": 962,
+    "word": "TAVOLOZZA",
+    "tabooWords": [
+      "PITTORE",
+      "COLORI",
+      "MESCOLARE",
+      "DIPINGERE",
+      "ARTE"
+    ]
+  },
+  {
+    "id": 963,
+    "word": "BALANDRANO",
+    "tabooWords": [
+      "MANTELLO",
+      "ABITO",
+      "ANTICO",
+      "LARGO",
+      "COPRIRE"
+    ]
+  },
+  {
+    "id": 964,
+    "word": "PARLANTINA",
+    "tabooWords": [
+      "SCIOLTEZZA",
+      "ELOQUENZA",
+      "LOQUACE",
+      "DIALETTICA",
+      "CHIACCHIERARE"
+    ]
+  },
+  {
+    "id": 965,
+    "word": "CALDERONE",
+    "tabooWords": [
+      "GRANDE",
+      "PENTOLA",
+      "CUCINARE",
+      "BOLLIRE",
+      "METALLO"
+    ]
+  },
+  {
+    "id": 966,
+    "word": "PARACARRI",
+    "tabooWords": [
+      "STRADA",
+      "SEGNALARE",
+      "PROTEZIONE",
+      "BORDO",
+      "PIETRA"
+    ]
+  },
+  {
+    "id": 967,
+    "word": "TAVERNA",
+    "tabooWords": [
+      "LOCALE",
+      "ANTICO",
+      "MANGIARE",
+      "BERE",
+      "RUSTICO"
+    ]
+  },
+  {
+    "id": 968,
+    "word": "BARITONO",
+    "tabooWords": [
+      "VOCE",
+      "MASCHILE",
+      "OPERA",
+      "GRAVE",
+      "CANTO"
+    ]
+  },
+  {
+    "id": 969,
+    "word": "CALLIOPE",
+    "tabooWords": [
+      "MUSA",
+      "POESIA",
+      "MITOLOGIA",
+      "GRECA",
+      "ISPIRAZIONE"
+    ]
+  },
+  {
+    "id": 970,
+    "word": "CALDARROSTE",
+    "tabooWords": [
+      "CASTAGNE",
+      "INVERNO",
+      "CALDE",
+      "ABBRUSTOLITE",
+      "STRADA"
+    ]
+  },
+  {
+    "id": 971,
+    "word": "PARRAFIATA",
+    "tabooWords": [
+      "DISCORSO",
+      "LUNGO",
+      "INTERMINABILE",
+      "NOIOSO",
+      "SPROLOQUIO"
+    ]
+  },
+  {
+    "id": 972,
+    "word": "BABBUINO",
+    "tabooWords": [
+      "SCIMMIA",
+      "PRIMATE",
+      "ANIMALE",
+      "GRANDE",
+      "AFRICANO"
+    ]
+  },
+  {
+    "id": 973,
+    "word": "TASMANIA",
+    "tabooWords": [
+      "ISOLA",
+      "AUSTRALIA",
+      "STATO",
+      "DIAVOLO",
+      "OCEANIA"
+    ]
+  },
+  {
+    "id": 974,
+    "word": "BARBABIETOLA",
+    "tabooWords": [
+      "ORTAGGIO",
+      "ROSSA",
+      "ZUCCHERINA",
+      "RADICE",
+      "COLORANTE"
+    ]
+  },
+  {
+    "id": 975,
+    "word": "CACIOCAVALLO",
+    "tabooWords": [
+      "FORMAGGIO",
+      "SUD",
+      "ITALIA",
+      "FORMA",
+      "STAGIONATO"
+    ]
+  },
+  {
+    "id": 976,
+    "word": "BADILANTE",
+    "tabooWords": [
+      "OPERAIO",
+      "BADILE",
+      "SCAVARE",
+      "CANTIERE",
+      "MANUALE"
+    ]
+  },
+  {
+    "id": 977,
+    "word": "PANTALONI",
+    "tabooWords": [
+      "INDUMENTO",
+      "GAMBE",
+      "VESTIRE",
+      "CINTURA",
+      "ABBIGLIAMENTO"
+    ]
+  },
+  {
+    "id": 978,
+    "word": "BARGIGLIO",
+    "tabooWords": [
+      "GALLO",
+      "CARNE",
+      "ROSSA",
+      "PENDERE",
+      "COLLO"
+    ]
+  },
+  {
+    "id": 979,
+    "word": "CAFEAULEAIT",
+    "tabooWords": [
+      "CAFFÈ",
+      "LATTE",
+      "FRANCESE",
+      "BEVANDA",
+      "COLAZIONE"
+    ]
+  },
+  {
+    "id": 980,
+    "word": "BARBAGIANNI",
+    "tabooWords": [
+      "GUFO",
+      "UCCELLO",
+      "RAPACE",
+      "NOTTURNO",
+      "BIANCO"
+    ]
+  },
+  {
+    "id": 981,
+    "word": "CADREGHIN",
+    "tabooWords": [
+      "SEDIA",
+      "DIALETTO",
+      "MILANESE",
+      "PICCOLA",
+      "LOMBARDIA"
+    ]
+  },
+  {
+    "id": 982,
+    "word": "CAPARBIETÀ",
+    "tabooWords": [
+      "OSTINAZIONE",
+      "TESTARDAGGINE",
+      "CAPARBIA",
+      "INSISTENZA",
+      "DETERMINAZIONE"
+    ]
+  },
+  {
+    "id": 983,
+    "word": "TAMARRAGGINE",
+    "tabooWords": [
+      "VOLGARITÀ",
+      "GROSSOLANITÀ",
+      "ECCESSO",
+      "CATTIVO",
+      "GUSTO"
+    ]
+  },
+  {
+    "id": 984,
+    "word": "PAREO",
+    "tabooWords": [
+      "VESTITO",
+      "MARE",
+      "COPRIRE",
+      "TESSUTO",
+      "COSTUME"
+    ]
+  },
+  {
+    "id": 985,
+    "word": "BATRACOMIOMACHIA",
+    "tabooWords": [
+      "BATTAGLIA",
+      "RANE",
+      "TOPI",
+      "POEMA",
+      "GRECO"
+    ]
+  },
+  {
+    "id": 986,
+    "word": "CALAMISTRO",
+    "tabooWords": [
+      "ARRICCIARE",
+      "CAPELLI",
+      "STRUMENTO",
+      "ANTICO",
+      "CALDO"
+    ]
+  },
+  {
+    "id": 987,
+    "word": "PASTASCIUTTA",
+    "tabooWords": [
+      "PASTA",
+      "PIATTO",
+      "SUGO",
+      "ITALIANA",
+      "PRIMO"
+    ]
   }
 ];
