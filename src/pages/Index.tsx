@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 import AdSense from '@/components/AdSense';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlayCircle, Users, Timer, Trophy } from 'lucide-react';
+import { PlayCircle, Users, Timer, Trophy, BookOpen, Info } from 'lucide-react';
 
 const Index: React.FC = () => {
   const isMobile = useIsMobile();
@@ -81,8 +81,24 @@ const Index: React.FC = () => {
                 <p>4. Guadagna punti per ogni parola indovinata</p>
                 <p>5. Perdi punti se usi una parola taboo</p>
               </div>
+              <Link to="/rules" className="inline-flex items-center mt-4 text-taboo-primary hover:text-taboo-primary/80">
+                <BookOpen className="w-4 h-4 mr-2" />
+                Leggi le regole complete
+              </Link>
             </CardContent>
           </Card>
+        </section>
+
+        {/* Link utili */}
+        <section aria-label="Link utili" className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+          <Link to="/about" className="inline-flex items-center justify-center p-4 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/70 transition-colors">
+            <Info className="w-5 h-5 mr-2 text-taboo-primary" />
+            Chi siamo
+          </Link>
+          <Link to="/rules" className="inline-flex items-center justify-center p-4 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/70 transition-colors">
+            <BookOpen className="w-5 h-5 mr-2 text-taboo-primary" />
+            Regole complete
+          </Link>
         </section>
         
         {/* Annuncio AdSense */}
