@@ -23,36 +23,36 @@ const Index: React.FC = () => {
         </header>
 
         {/* Caratteristiche del gioco */}
-        <section aria-label="Caratteristiche del gioco" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+        <section aria-label="Caratteristiche del gioco" className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4 mt-4 md:mt-8">
           <Card className="bg-white/50 backdrop-blur-sm">
-            <CardContent className="p-4 flex flex-col items-center space-y-2">
-              <Users className="w-8 h-8 text-taboo-primary" aria-hidden="true" />
-              <h2 className="font-semibold">Gioco di Squadra</h2>
-              <p className="text-sm text-muted-foreground">Gioca con amici e famiglia</p>
+            <CardContent className={`flex flex-col items-center space-y-0.5 ${isMobile ? 'p-1' : 'p-4'}`}>
+              <Users className={`${isMobile ? 'w-4 h-4' : 'w-8 h-8'} text-taboo-primary`} aria-hidden="true" />
+              <h2 className={`font-semibold ${isMobile ? 'text-xs' : ''}`}>Gioco di Squadra</h2>
+              <p className={`${isMobile ? 'text-[10px]' : 'text-sm'} text-muted-foreground`}>Gioca con amici e famiglia</p>
             </CardContent>
           </Card>
 
           <Card className="bg-white/50 backdrop-blur-sm">
-            <CardContent className="p-4 flex flex-col items-center space-y-2">
-              <Timer className="w-8 h-8 text-taboo-primary" aria-hidden="true" />
-              <h2 className="font-semibold">Contro il Tempo</h2>
-              <p className="text-sm text-muted-foreground">Turni cronometrati</p>
+            <CardContent className={`flex flex-col items-center space-y-0.5 ${isMobile ? 'p-1' : 'p-4'}`}>
+              <Timer className={`${isMobile ? 'w-4 h-4' : 'w-8 h-8'} text-taboo-primary`} aria-hidden="true" />
+              <h2 className={`font-semibold ${isMobile ? 'text-xs' : ''}`}>Contro il Tempo</h2>
+              <p className={`${isMobile ? 'text-[10px]' : 'text-sm'} text-muted-foreground`}>Turni cronometrati</p>
             </CardContent>
           </Card>
 
           <Card className="bg-white/50 backdrop-blur-sm">
-            <CardContent className="p-4 flex flex-col items-center space-y-2">
-              <Trophy className="w-8 h-8 text-taboo-primary" aria-hidden="true" />
-              <h2 className="font-semibold">Competizione</h2>
-              <p className="text-sm text-muted-foreground">Vinci punti e round</p>
+            <CardContent className={`flex flex-col items-center space-y-0.5 ${isMobile ? 'p-1' : 'p-4'}`}>
+              <Trophy className={`${isMobile ? 'w-4 h-4' : 'w-8 h-8'} text-taboo-primary`} aria-hidden="true" />
+              <h2 className={`font-semibold ${isMobile ? 'text-xs' : ''}`}>Competizione</h2>
+              <p className={`${isMobile ? 'text-[10px]' : 'text-sm'} text-muted-foreground`}>Vinci punti e round</p>
             </CardContent>
           </Card>
 
           <Card className="bg-white/50 backdrop-blur-sm">
-            <CardContent className="p-4 flex flex-col items-center space-y-2">
-              <PlayCircle className="w-8 h-8 text-taboo-primary" aria-hidden="true" />
-              <h2 className="font-semibold">Divertimento</h2>
-              <p className="text-sm text-muted-foreground">Risata garantita</p>
+            <CardContent className={`flex flex-col items-center space-y-0.5 ${isMobile ? 'p-1' : 'p-4'}`}>
+              <PlayCircle className={`${isMobile ? 'w-4 h-4' : 'w-8 h-8'} text-taboo-primary`} aria-hidden="true" />
+              <h2 className={`font-semibold ${isMobile ? 'text-xs' : ''}`}>Divertimento</h2>
+              <p className={`${isMobile ? 'text-[10px]' : 'text-sm'} text-muted-foreground`}>Risata garantita</p>
             </CardContent>
           </Card>
         </section>
