@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
-import AdSense from '@/components/AdSense';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlayCircle, Users, Timer, Trophy, BookOpen, Info } from 'lucide-react';
 
@@ -14,7 +13,7 @@ const Index: React.FC = () => {
       <div className="text-center px-4 w-full max-w-2xl mx-auto space-y-8">
         {/* Logo e Titolo */}
         <header className="space-y-4">
-          <h1 className="text-7xl font-bold text-taboo-primary animate-bounce-light">
+          <h1 className="text-7xl font-bold text-taboo-primary">
             PAROLE TABOO
           </h1>
           <p className="text-xl text-muted-foreground">
@@ -96,15 +95,6 @@ const Index: React.FC = () => {
             Regole complete
           </Link>
         </section>
-        
-        {/* Annuncio AdSense */}
-        <aside className="mt-10">
-          <AdSense
-            style={{ display: 'block', minHeight: '250px' }}
-            format="rectangle"
-            className="mx-auto"
-          />
-        </aside>
       </div>
     </main>
   );
