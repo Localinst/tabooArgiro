@@ -90,11 +90,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Link utili */}
-        <section aria-label="Link utili" className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-          <Link to="/about" className="inline-flex items-center justify-center p-4 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/70 transition-colors">
-            <Info className="w-5 h-5 mr-2 text-taboo-primary" />
-            Chi siamo
-          </Link>
+        <section aria-label="Link utili" className="grid grid-cols-1 md:grid-cols-1 gap-4 mt-8">
           <Link to="/rules" className="inline-flex items-center justify-center p-4 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/70 transition-colors">
             <BookOpen className="w-5 h-5 mr-2 text-taboo-primary" />
             Regole complete
