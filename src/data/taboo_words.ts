@@ -10859,5 +10859,5450 @@ export const tabooCards: TabooCard[] = [
       "ITALIANA",
       "PRIMO"
     ]
+  },
+  {
+    "id": 988,
+    "word": "DADDARE",
+    "tabooWords": [
+      "PADRE",
+      "PAPÀ",
+      "GENITORE",
+      "CHIAMARE",
+      "SLANG"
+    ]
+  },
+  {
+    "id": 989,
+    "word": "BRIZZ",
+    "tabooWords": [
+      "APERITIVO",
+      "DRINK",
+      "GIOVANI",
+      "TENDENZA",
+      "MODA"
+    ]
+  },
+  {
+    "id": 990,
+    "word": "RONALDO",
+    "tabooWords": [
+      "CALCIO",
+      "CRISTIANO",
+      "JUVENTUS",
+      "PORTOGALLO",
+      "CAMPIONE"
+    ]
+  },
+  {
+    "id": 991,
+    "word": "BERLINO",
+    "tabooWords": [
+      "GERMANIA",
+      "MURO",
+      "CAPITALE",
+      "BRANDEBURGO",
+      "EUROPA"
+    ]
+  },
+  {
+    "id": 992,
+    "word": "GHOSTARE",
+    "tabooWords": [
+      "IGNORARE",
+      "SPARIRE",
+      "SOCIAL",
+      "MESSAGGI",
+      "RISPONDERE"
+    ]
+  },
+  {
+    "id": 993,
+    "word": "DISSARE",
+    "tabooWords": [
+      "INSULTARE",
+      "RAP",
+      "SCONTRO",
+      "BATTAGLIA",
+      "CRITICARE"
+    ]
+  },
+  {
+    "id": 994,
+    "word": "MESSI",
+    "tabooWords": [
+      "CALCIO",
+      "BARCELLONA",
+      "ARGENTINA",
+      "PALLONE",
+      "CAMPIONE"
+    ]
+  },
+  {
+    "id": 995,
+    "word": "VENEZIA",
+    "tabooWords": [
+      "GONDOLA",
+      "CANALI",
+      "ACQUA",
+      "CARNEVALE",
+      "ITALIA"
+    ]
+  },
+  {
+    "id": 996,
+    "word": "CRUSH",
+    "tabooWords": [
+      "COTTA",
+      "INNAMORAMENTO",
+      "INTERESSE",
+      "AMOROSO",
+      "PERSONA"
+    ]
+  },
+  {
+    "id": 997,
+    "word": "STANNARE",
+    "tabooWords": [
+      "SOSTENERE",
+      "FAN",
+      "IDOLO",
+      "SEGUIRE",
+      "SUPPORTARE"
+    ]
+  },
+  {
+    "id": 998,
+    "word": "BEZOS",
+    "tabooWords": [
+      "AMAZON",
+      "MILIARDARIO",
+      "SPAZIO",
+      "JEFF",
+      "ECOMMERCE"
+    ]
+  },
+  {
+    "id": 999,
+    "word": "PARIGI",
+    "tabooWords": [
+      "FRANCIA",
+      "TORRE",
+      "EIFFEL",
+      "SENNA",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 1000,
+    "word": "BOMBARE",
+    "tabooWords": [
+      "STUDIARE",
+      "ESAME",
+      "PREPARARE",
+      "INTENSAMENTE",
+      "UNIVERSITÀ"
+    ]
+  },
+  {
+    "id": 1001,
+    "word": "CRINGE",
+    "tabooWords": [
+      "IMBARAZZANTE",
+      "DISAGIO",
+      "VERGOGNA",
+      "FASTIDIOSO",
+      "SITUAZIONE"
+    ]
+  },
+  {
+    "id": 1002,
+    "word": "GATES",
+    "tabooWords": [
+      "MICROSOFT",
+      "BILL",
+      "COMPUTER",
+      "MILIARDARIO",
+      "FONDAZIONE"
+    ]
+  },
+  {
+    "id": 1003,
+    "word": "AMSTERDAM",
+    "tabooWords": [
+      "OLANDA",
+      "CANALI",
+      "BICICLETTE",
+      "TULIPANI",
+      "MULINI"
+    ]
+  },
+  {
+    "id": 1004,
+    "word": "SCIALLA",
+    "tabooWords": [
+      "TRANQUILLO",
+      "RILASSATO",
+      "CALMO",
+      "SERENO",
+      "SLANG"
+    ]
+  },
+  {
+    "id": 1005,
+    "word": "POGGERS",
+    "tabooWords": [
+      "ENTUSIASMO",
+      "VIDEOGIOCHI",
+      "TWITCH",
+      "STREAMING",
+      "SUCCESSO"
+    ]
+  },
+  {
+    "id": 1006,
+    "word": "FEDERER",
+    "tabooWords": [
+      "TENNIS",
+      "SVIZZERA",
+      "WIMBLEDON",
+      "CAMPIONE",
+      "ROGER"
+    ]
+  },
+  {
+    "id": 1007,
+    "word": "KYOTO",
+    "tabooWords": [
+      "GIAPPONE",
+      "TEMPLI",
+      "TRADIZIONALE",
+      "GEISHE",
+      "ANTICA"
+    ]
+  },
+  {
+    "id": 1008,
+    "word": "SPOILERARE",
+    "tabooWords": [
+      "RIVELARE",
+      "ANTICIPARE",
+      "FILM",
+      "SERIE",
+      "TRAMA"
+    ]
+  },
+  {
+    "id": 1009,
+    "word": "SCLERO",
+    "tabooWords": [
+      "ARRABBIATURA",
+      "NERVOSO",
+      "FURIOSO",
+      "PERDERE",
+      "CONTROLLO"
+    ]
+  },
+  {
+    "id": 1010,
+    "word": "PICASSO",
+    "tabooWords": [
+      "ARTE",
+      "CUBISMO",
+      "PITTORE",
+      "SPAGNA",
+      "PABLO"
+    ]
+  },
+  {
+    "id": 1011,
+    "word": "BARCELLONA",
+    "tabooWords": [
+      "SPAGNA",
+      "SAGRADA",
+      "FAMILIA",
+      "CALCIO",
+      "CATALUNYA"
+    ]
+  },
+  {
+    "id": 1012,
+    "word": "FLEXARE",
+    "tabooWords": [
+      "OSTENTARE",
+      "VANTARSI",
+      "MOSTRARE",
+      "RICCHEZZA",
+      "ESIBIRE"
+    ]
+  },
+  {
+    "id": 1013,
+    "word": "BOOMER",
+    "tabooWords": [
+      "ANZIANO",
+      "GENERAZIONE",
+      "VECCHIO",
+      "MENTALITÀ",
+      "SUPERATO"
+    ]
+  },
+  {
+    "id": 1014,
+    "word": "EINSTEIN",
+    "tabooWords": [
+      "RELATIVITÀ",
+      "SCIENZIATO",
+      "GENIO",
+      "FISICA",
+      "ALBERT"
+    ]
+  },
+  {
+    "id": 1015,
+    "word": "DUBAI",
+    "tabooWords": [
+      "EMIRATI",
+      "GRATTACIELI",
+      "LUSSO",
+      "DESERTO",
+      "BURJ"
+    ]
+  },
+  {
+    "id": 1016,
+    "word": "TAGGARE",
+    "tabooWords": [
+      "SOCIAL",
+      "FOTO",
+      "MENZIONARE",
+      "IDENTIFICARE",
+      "ETICHETTARE"
+    ]
+  },
+  {
+    "id": 1017,
+    "word": "TRIGGERARE",
+    "tabooWords": [
+      "PROVOCARE",
+      "REAZIONE",
+      "IRRITARE",
+      "SCATENARE",
+      "EMOTIVITÀ"
+    ]
+  },
+  {
+    "id": 1018,
+    "word": "MADONNA",
+    "tabooWords": [
+      "CANTANTE",
+      "POP",
+      "MUSICA",
+      "ICONA",
+      "REGINA"
+    ]
+  },
+  {
+    "id": 1019,
+    "word": "ISTANBUL",
+    "tabooWords": [
+      "TURCHIA",
+      "BOSFORO",
+      "MOSCHEE",
+      "ORIENTE",
+      "COSTANTINOPOLI"
+    ]
+  },
+  {
+    "id": 1020,
+    "word": "BUFU",
+    "tabooWords": [
+      "INGANNO",
+      "RAGGIRO",
+      "SCHERZO",
+      "PRESA",
+      "GIRO"
+    ]
+  },
+  {
+    "id": 1021,
+    "word": "FRIENDZONARE",
+    "tabooWords": [
+      "AMICIZIA",
+      "RIFIUTARE",
+      "AMORE",
+      "RELAZIONE",
+      "ZONA"
+    ]
+  },
+  {
+    "id": 1022,
+    "word": "ZUCKERBERG",
+    "tabooWords": [
+      "FACEBOOK",
+      "META",
+      "SOCIAL",
+      "MILIARDARIO",
+      "MARK"
+    ]
+  },
+  {
+    "id": 1023,
+    "word": "SYDNEY",
+    "tabooWords": [
+      "AUSTRALIA",
+      "OPERA",
+      "HOUSE",
+      "OCEANIA",
+      "PORTO"
+    ]
+  },
+  {
+    "id": 1024,
+    "word": "SHIPPARE",
+    "tabooWords": [
+      "COPPIA",
+      "RELAZIONE",
+      "DESIDERARE",
+      "FICTION",
+      "IMMAGINARE"
+    ]
+  },
+  {
+    "id": 1025,
+    "word": "GHOSTBUSTING",
+    "tabooWords": [
+      "SCOPRIRE",
+      "EVITARE",
+      "CONTATTO",
+      "SMASCHERARE",
+      "INSEGUIRE"
+    ]
+  },
+  {
+    "id": 1026,
+    "word": "BEYONCÉ",
+    "tabooWords": [
+      "CANTANTE",
+      "MUSICA",
+      "DIVA",
+      "AMERICA",
+      "QUEEN"
+    ]
+  },
+  {
+    "id": 1027,
+    "word": "LISBONA",
+    "tabooWords": [
+      "PORTOGALLO",
+      "TRAM",
+      "COLLINE",
+      "ATLANTICO",
+      "PASTEIS"
+    ]
+  },
+  {
+    "id": 1028,
+    "word": "TAMARRO",
+    "tabooWords": [
+      "CAFONE",
+      "PACCHIANO",
+      "CAFONI",
+      "VOLGARE",
+      "TRASH"
+    ]
+  },
+  {
+    "id": 1029,
+    "word": "KILLARE",
+    "tabooWords": [
+      "UCCIDERE",
+      "GIOCO",
+      "ELIMINARE",
+      "NEMICO",
+      "VIDEOGAME"
+    ]
+  },
+  {
+    "id": 1030,
+    "word": "MUSK",
+    "tabooWords": [
+      "TESLA",
+      "SPACEX",
+      "ELON",
+      "MILIARDARIO",
+      "TWITTER"
+    ]
+  },
+  {
+    "id": 1031,
+    "word": "PRAGA",
+    "tabooWords": [
+      "REPUBBLICA",
+      "CECA",
+      "CASTELLO",
+      "PONTE",
+      "CARLO"
+    ]
+  },
+  {
+    "id": 1032,
+    "word": "SALTARE",
+    "tabooWords": [
+      "APPUNTAMENTO",
+      "BUCA",
+      "EVITARE",
+      "INCONTRO",
+      "ASSENTE"
+    ]
+  },
+  {
+    "id": 1033,
+    "word": "SNIFFARE",
+    "tabooWords": [
+      "CERCARE",
+      "TROVARE",
+      "SCOPRIRE",
+      "SCOVARE",
+      "FIUTARE"
+    ]
+  },
+  {
+    "id": 1034,
+    "word": "TRUMP",
+    "tabooWords": [
+      "PRESIDENTE",
+      "AMERICA",
+      "DONALD",
+      "MILIARDARIO",
+      "POLITICA"
+    ]
+  },
+  {
+    "id": 1035,
+    "word": "BUDAPEST",
+    "tabooWords": [
+      "UNGHERIA",
+      "DANUBIO",
+      "TERME",
+      "PARLAMENTO",
+      "EUROPA"
+    ]
+  },
+  {
+    "id": 1036,
+    "word": "SWIPPARE",
+    "tabooWords": [
+      "SCORRERE",
+      "DITO",
+      "TELEFONO",
+      "DATING",
+      "SCHERMO"
+    ]
+  },
+  {
+    "id": 1037,
+    "word": "BLASTARE",
+    "tabooWords": [
+      "CRITICARE",
+      "DURAMENTE",
+      "PUBBLICA",
+      "SOCIAL",
+      "UMILIARE"
+    ]
+  },
+  {
+    "id": 1038,
+    "word": "HAMILTON",
+    "tabooWords": [
+      "FORMULA",
+      "PILOTA",
+      "LEWIS",
+      "CAMPIONE",
+      "MERCEDES"
+    ]
+  },
+  {
+    "id": 1039,
+    "word": "VIENNA",
+    "tabooWords": [
+      "AUSTRIA",
+      "MUSICA",
+      "IMPERO",
+      "DANUBIO",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 1040,
+    "word": "BRUTTO",
+    "tabooWords": [
+      "PESSIMO",
+      "INSOPPORTABILE",
+      "SGRADEVOLE",
+      "TERRIBILE",
+      "ORRENDO"
+    ]
+  },
+  {
+    "id": 1041,
+    "word": "STALKERARE",
+    "tabooWords": [
+      "SEGUIRE",
+      "OSSESSIVAMENTE",
+      "SOCIAL",
+      "CONTROLLARE",
+      "SPIARE"
+    ]
+  },
+  {
+    "id": 1042,
+    "word": "JACKSON",
+    "tabooWords": [
+      "MICHAEL",
+      "CANTANTE",
+      "POP",
+      "THRILLER",
+      "RE"
+    ]
+  },
+  {
+    "id": 1043,
+    "word": "ATENE",
+    "tabooWords": [
+      "GRECIA",
+      "ACROPOLI",
+      "ANTICA",
+      "PARTENONE",
+      "MITOLOGIA"
+    ]
+  },
+  {
+    "id": 1044,
+    "word": "SVAPARE",
+    "tabooWords": [
+      "SIGARETTA",
+      "ELETTRONICA",
+      "FUMARE",
+      "VAPORE",
+      "NICOTINA"
+    ]
+  },
+  {
+    "id": 1045,
+    "word": "SMEZZARE",
+    "tabooWords": [
+      "DIVIDERE",
+      "METÀ",
+      "CONDIVIDERE",
+      "SPARTIRE",
+      "OGGETTO"
+    ]
+  },
+  {
+    "id": 1046,
+    "word": "SPIELBERG",
+    "tabooWords": [
+      "REGISTA",
+      "CINEMA",
+      "HOLLYWOOD",
+      "STEVEN",
+      "FILM"
+    ]
+  },
+  {
+    "id": 1047,
+    "word": "MADRID",
+    "tabooWords": [
+      "SPAGNA",
+      "CAPITALE",
+      "PRADO",
+      "PUERTA",
+      "PLAZA"
+    ]
+  },
+  {
+    "id": 1048,
+    "word": "APERICENA",
+    "tabooWords": [
+      "APERITIVO",
+      "CENA",
+      "DRINK",
+      "BUFFET",
+      "SOCIALIZZARE"
+    ]
+  },
+  {
+    "id": 1049,
+    "word": "BINGE-WATCHING",
+    "tabooWords": [
+      "SERIE",
+      "TELEVISIONE",
+      "EPISODI",
+      "MARATONA",
+      "GUARDARE"
+    ]
+  },
+  {
+    "id": 1050,
+    "word": "QUEEN",
+    "tabooWords": [
+      "FREDDIE",
+      "MERCURY",
+      "ROCK",
+      "BAND",
+      "MUSICA"
+    ]
+  },
+  {
+    "id": 1051,
+    "word": "FIRENZE",
+    "tabooWords": [
+      "ITALIA",
+      "TOSCANA",
+      "RINASCIMENTO",
+      "DUOMO",
+      "UFFIZI"
+    ]
+  },
+  {
+    "id": 1052,
+    "word": "BRANDIZZARE",
+    "tabooWords": [
+      "MARCHIO",
+      "LOGO",
+      "PROMUOVERE",
+      "IMMAGINE",
+      "MARKETING"
+    ]
+  },
+  {
+    "id": 1053,
+    "word": "SPAMMARE",
+    "tabooWords": [
+      "MESSAGGI",
+      "RIPETERE",
+      "INSISTENZA",
+      "PUBBLICITÀ",
+      "INVIARE"
+    ]
+  },
+  {
+    "id": 1054,
+    "word": "PELÉ",
+    "tabooWords": [
+      "CALCIO",
+      "BRASILE",
+      "LEGGENDA",
+      "CAMPIONE",
+      "EDSON"
+    ]
+  },
+  {
+    "id": 1055,
+    "word": "SHANGHAI",
+    "tabooWords": [
+      "CINA",
+      "METROPOLI",
+      "GRATTACIELI",
+      "ASIA",
+      "FIUME"
+    ]
+  },
+  {
+    "id": 1056,
+    "word": "OVERSIZE",
+    "tabooWords": [
+      "VESTITI",
+      "GRANDE",
+      "MODA",
+      "ABBIGLIAMENTO",
+      "LARGO"
+    ]
+  },
+  {
+    "id": 1057,
+    "word": "TWERKARE",
+    "tabooWords": [
+      "BALLARE",
+      "SEDERE",
+      "MOVIMENTO",
+      "TWERKING",
+      "SCUOTERE"
+    ]
+  },
+  {
+    "id": 1058,
+    "word": "BIEBER",
+    "tabooWords": [
+      "JUSTIN",
+      "CANTANTE",
+      "POP",
+      "MUSICA",
+      "CANADESE"
+    ]
+  },
+  {
+    "id": 1059,
+    "word": "BANGKOK",
+    "tabooWords": [
+      "THAILANDIA",
+      "TEMPLI",
+      "ASIA",
+      "ORIENTALE",
+      "FIUME"
+    ]
+  },
+  {
+    "id": 1060,
+    "word": "CINEMATIC",
+    "tabooWords": [
+      "EFFETTO",
+      "FILTRO",
+      "VIDEO",
+      "FILM",
+      "REGIA"
+    ]
+  },
+  {
+    "id": 1061,
+    "word": "SIMPING",
+    "tabooWords": [
+      "CORTEGGIARE",
+      "ECCESSIVO",
+      "ADULARE",
+      "OSSESSIONE",
+      "ADORARE"
+    ]
+  },
+  {
+    "id": 1062,
+    "word": "ARMSTRONG",
+    "tabooWords": [
+      "LUNA",
+      "ASTRONAUTA",
+      "NEIL",
+      "SPAZIO",
+      "APOLLO"
+    ]
+  },
+  {
+    "id": 1063,
+    "word": "NAPOLI",
+    "tabooWords": [
+      "ITALIA",
+      "VESUVIO",
+      "PIZZA",
+      "MARE",
+      "GOLFO"
+    ]
+  },
+  {
+    "id": 1064,
+    "word": "NERDARE",
+    "tabooWords": [
+      "APPASSIONARSI",
+      "TECNOLOGIA",
+      "CULTURA",
+      "FUMETTI",
+      "VIDEOGIOCHI"
+    ]
+  },
+  {
+    "id": 1065,
+    "word": "ZILLENNIAL",
+    "tabooWords": [
+      "GENERAZIONE",
+      "MILLENNIAL",
+      "GENZ",
+      "MEZZO",
+      "GIOVANI"
+    ]
+  },
+  {
+    "id": 1066,
+    "word": "WOODS",
+    "tabooWords": [
+      "TIGER",
+      "GOLF",
+      "CAMPIONE",
+      "SPORT",
+      "AMERICANO"
+    ]
+  },
+  {
+    "id": 1067,
+    "word": "MARRAKECH",
+    "tabooWords": [
+      "MAROCCO",
+      "MEDINA",
+      "SOUK",
+      "AFRICA",
+      "MINARETI"
+    ]
+  },
+  {
+    "id": 1068,
+    "word": "SHARARE",
+    "tabooWords": [
+      "CONDIVIDERE",
+      "SOCIAL",
+      "PUBBLICARE",
+      "CONTENUTO",
+      "DIFFONDERE"
+    ]
+  },
+  {
+    "id": 1069,
+    "word": "MUTARE",
+    "tabooWords": [
+      "DISATTIVARE",
+      "AUDIO",
+      "MICROFONO",
+      "CHIAMATA",
+      "SILENZIO"
+    ]
+  },
+  {
+    "id": 1070,
+    "word": "NEWTON",
+    "tabooWords": [
+      "FISICA",
+      "SCIENZIATO",
+      "GRAVITÀ",
+      "ISAAC",
+      "MELA"
+    ]
+  },
+  {
+    "id": 1071,
+    "word": "TORONTO",
+    "tabooWords": [
+      "CANADA",
+      "ONTARIO",
+      "TORRE",
+      "AMERICA",
+      "LAGHI"
+    ]
+  },
+  {
+    "id": 1072,
+    "word": "SNITCHARE",
+    "tabooWords": [
+      "SPIFFERARE",
+      "TRADIRE",
+      "RIVELARE",
+      "CONFIDENZA",
+      "SEGRETO"
+    ]
+  },
+  {
+    "id": 1073,
+    "word": "FLOPPARE",
+    "tabooWords": [
+      "FALLIRE",
+      "INSUCCESSO",
+      "SBAGLIARE",
+      "FIASCO",
+      "DELUDERE"
+    ]
+  },
+  {
+    "id": 1074,
+    "word": "NADAL",
+    "tabooWords": [
+      "TENNIS",
+      "SPAGNA",
+      "CAMPIONE",
+      "RAFAEL",
+      "TERRA"
+    ]
+  },
+  {
+    "id": 1075,
+    "word": "SINGAPORE",
+    "tabooWords": [
+      "ASIA",
+      "ISOLA",
+      "CITTÀ",
+      "STATO",
+      "GRATTACIELI"
+    ]
+  },
+  {
+    "id": 1076,
+    "word": "PEZZOTTO",
+    "tabooWords": [
+      "FALSO",
+      "CONTRAFFATTO",
+      "IMITAZIONE",
+      "ILLEGALE",
+      "PIRATATO"
+    ]
+  },
+  {
+    "id": 1077,
+    "word": "DROPPARE",
+    "tabooWords": [
+      "RILASCIARE",
+      "PUBBLICARE",
+      "LASCIAR",
+      "CADERE",
+      "NUOVO"
+    ]
+  },
+  {
+    "id": 1078,
+    "word": "TOLKIEN",
+    "tabooWords": [
+      "SIGNORE",
+      "ANELLI",
+      "HOBBIT",
+      "SCRITTORE",
+      "FANTASY"
+    ]
+  },
+  {
+    "id": 1079,
+    "word": "SEOUL",
+    "tabooWords": [
+      "COREA",
+      "ASIA",
+      "CAPITALE",
+      "METROPOLI",
+      "KPOP"
+    ]
+  },
+  {
+    "id": 1080,
+    "word": "CAPYBARA",
+    "tabooWords": [
+      "ANIMALE",
+      "RODITORE",
+      "SUDAMERICA",
+      "GRANDE",
+      "ACQUATICO"
+    ]
+  },
+  {
+    "id": 1081,
+    "word": "MAINSPLAINING",
+    "tabooWords": [
+      "SPIEGARE",
+      "UOMO",
+      "CONDISCENDENTE",
+      "SACCENTE",
+      "SUPERIORE"
+    ]
+  },
+  {
+    "id": 1082,
+    "word": "HEMINGWAY",
+    "tabooWords": [
+      "SCRITTORE",
+      "AMERICANO",
+      "NOBEL",
+      "ERNEST",
+      "ROMANZI"
+    ]
+  },
+  {
+    "id": 1083,
+    "word": "LONDRA",
+    "tabooWords": [
+      "INGHILTERRA",
+      "TAMIGI",
+      "BIG",
+      "BEN",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 1084,
+    "word": "ZOOMARE",
+    "tabooWords": [
+      "AVVICINARE",
+      "INGRANDIRE",
+      "VIDEOCHIAMATE",
+      "DETTAGLIO",
+      "VISUALE"
+    ]
+  },
+  {
+    "id": 1085,
+    "word": "CRUSHARE",
+    "tabooWords": [
+      "INVAGHIRSI",
+      "COTTA",
+      "INTERESSE",
+      "ATTRAZIONE",
+      "PERSONA"
+    ]
+  },
+  {
+    "id": 1086,
+    "word": "EINSTEIN",
+    "tabooWords": [
+      "FISICO",
+      "TEORIA",
+      "RELATIVITÀ",
+      "GENIO",
+      "SCIENZIATO"
+    ]
+  },
+  {
+    "id": 1087,
+    "word": "OSLO",
+    "tabooWords": [
+      "NORVEGIA",
+      "FIORDI",
+      "SCANDINAVIA",
+      "NORDICA",
+      "FREDDO"
+    ]
+  },
+  {
+    "id": 1088,
+    "word": "MEMATO",
+    "tabooWords": [
+      "MEME",
+      "RIDICOLIZZATO",
+      "VIRALE",
+      "INTERNET",
+      "BATTUTA"
+    ]
+  },
+  {
+    "id": 1089,
+    "word": "CHILLARE",
+    "tabooWords": [
+      "RILASSARSI",
+      "TRANQUILLO",
+      "CALMARSI",
+      "RIPOSARE",
+      "DISTESO"
+    ]
+  },
+  {
+    "id": 1090,
+    "word": "BOLT",
+    "tabooWords": [
+      "GIAMAICA",
+      "VELOCISTA",
+      "USAIN",
+      "OLIMPIADI",
+      "ATLETICA"
+    ]
+  },
+  {
+    "id": 1091,
+    "word": "BERLINO",
+    "tabooWords": [
+      "GERMANIA",
+      "MURO",
+      "CAPITALE",
+      "EUROPA",
+      "PORTA"
+    ]
+  },
+  {
+    "id": 1092,
+    "word": "SCIALLANZA",
+    "tabooWords": [
+      "TRANQUILLITÀ",
+      "CALMA",
+      "SERENITÀ",
+      "PACE",
+      "RELAX"
+    ]
+  },
+  {
+    "id": 1093,
+    "word": "BAITARE",
+    "tabooWords": [
+      "PROVOCARE",
+      "TRAPPOLA",
+      "ATTIRARE",
+      "REAZIONE",
+      "ESCA"
+    ]
+  },
+  {
+    "id": 1094,
+    "word": "FREUD",
+    "tabooWords": [
+      "PSICOANALISI",
+      "PSICOLOGIA",
+      "SIGMUND",
+      "INCONSCIO",
+      "VIENNA"
+    ]
+  },
+  {
+    "id": 1095,
+    "word": "CAIRO",
+    "tabooWords": [
+      "EGITTO",
+      "PIRAMIDI",
+      "NILO",
+      "SFINGE",
+      "FARAONI"
+    ]
+  },
+  {
+    "id": 1096,
+    "word": "RIZZARE",
+    "tabooWords": [
+      "ATTRARRE",
+      "FASCINO",
+      "INTERESSE",
+      "SESSUALE",
+      "ECCITARE"
+    ]
+  },
+  {
+    "id": 1097,
+    "word": "DOXXARE",
+    "tabooWords": [
+      "PUBBLICARE",
+      "DATI",
+      "PERSONALI",
+      "PRIVACY",
+      "IDENTITÀ"
+    ]
+  },
+  {
+    "id": 1098,
+    "word": "BANKSY",
+    "tabooWords": [
+      "ARTISTA",
+      "STREET",
+      "MURALES",
+      "ANONIMO",
+      "GRAFFITI"
+    ]
+  },
+  {
+    "id": 1099,
+    "word": "MOSCA",
+    "tabooWords": [
+      "RUSSIA",
+      "CREMLINO",
+      "PIAZZA",
+      "ROSSA",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 1100,
+    "word": "MOOD",
+    "tabooWords": [
+      "ATMOSFERA",
+      "UMORE",
+      "SENSAZIONE",
+      "STATO",
+      "ANIMO"
+    ]
+  },
+  {
+    "id": 1101,
+    "word": "SEGGARE",
+    "tabooWords": [
+      "BOCCIARE",
+      "FALLIRE",
+      "SCUOLA",
+      "ESAME",
+      "INSUFFICIENZA"
+    ]
+  },
+  {
+    "id": 1102,
+    "word": "CHAPLIN",
+    "tabooWords": [
+      "CINEMA",
+      "MUTO",
+      "CHARLIE",
+      "ATTORE",
+      "COMICO"
+    ]
+  },
+  {
+    "id": 1103,
+    "word": "DELHI",
+    "tabooWords": [
+      "INDIA",
+      "ASIA",
+      "INQUINAMENTO",
+      "CAOTICA",
+      "TAJ"
+    ]
+  },
+  {
+    "id": 1104,
+    "word": "VIBECHECKING",
+    "tabooWords": [
+      "ANALIZZARE",
+      "ATMOSFERA",
+      "SITUAZIONE",
+      "SENSAZIONE",
+      "MOOD"
+    ]
+  },
+  {
+    "id": 1105,
+    "word": "CASTARE",
+    "tabooWords": [
+      "SELEZIONARE",
+      "SCEGLIERE",
+      "ATTORI",
+      "PROVINO",
+      "RUOLO"
+    ]
+  },
+  {
+    "id": 1106,
+    "word": "CLINTON",
+    "tabooWords": [
+      "PRESIDENTE",
+      "BILL",
+      "HILLARY",
+      "AMERICA",
+      "POLITICA"
+    ]
+  },
+  {
+    "id": 1107,
+    "word": "OSAKA",
+    "tabooWords": [
+      "GIAPPONE",
+      "CITTÀ",
+      "ASIA",
+      "CASTELLO",
+      "COMMERCIO"
+    ]
+  },
+  {
+    "id": 1108,
+    "word": "SPOTTARE",
+    "tabooWords": [
+      "VEDERE",
+      "NOTARE",
+      "INDIVIDUARE",
+      "AVVISTARE",
+      "RICONOSCERE"
+    ]
+  },
+  {
+    "id": 1109,
+    "word": "SKIPPARE",
+    "tabooWords": [
+      "SALTARE",
+      "EVITARE",
+      "PASSARE",
+      "IGNORARE",
+      "SUPERARE"
+    ]
+  },
+  {
+    "id": 1110,
+    "word": "CUMBERBATCH",
+    "tabooWords": [
+      "ATTORE",
+      "SHERLOCK",
+      "BENEDICT",
+      "INGLESE",
+      "CINEMA"
+    ]
+  },
+  {
+    "id": 1111,
+    "word": "BOLOGNA",
+    "tabooWords": [
+      "ITALIA",
+      "UNIVERSITÀ",
+      "TORRI",
+      "EMILIA",
+      "ROSSA"
+    ]
+  },
+  {
+    "id": 1112,
+    "word": "RATIO",
+    "tabooWords": [
+      "PROPORZIONE",
+      "CONFRONTO",
+      "VINCITA",
+      "SOCIAL",
+      "DISCUSSIONE"
+    ]
+  },
+  {
+    "id": 1113,
+    "word": "MEZZARE",
+    "tabooWords": [
+      "DIVIDERE",
+      "SPARTIRE",
+      "METÀ",
+      "CONDIVIDERE",
+      "MEZZO"
+    ]
+  },
+  {
+    "id": 1114,
+    "word": "JOHANSSON",
+    "tabooWords": [
+      "ATTRICE",
+      "SCARLETT",
+      "HOLLYWOOD",
+      "AVENGERS",
+      "AMERICANA"
+    ]
+  },
+  {
+    "id": 1115,
+    "word": "HELSINKI",
+    "tabooWords": [
+      "FINLANDIA",
+      "SCANDINAVIA",
+      "BALTICO",
+      "NORDICA",
+      "SAUNA"
+    ]
+  },
+  {
+    "id": 1116,
+    "word": "SPOTKEEN",
+    "tabooWords": [
+      "CERCARE",
+      "TROVARE",
+      "DESIDERARE",
+      "SCOPRIRE",
+      "INDIDUARE"
+    ]
+  },
+  {
+    "id": 1117,
+    "word": "CAPPARE",
+    "tabooWords": [
+      "LIMITARE",
+      "MASSIMO",
+      "QUANTITÀ",
+      "TETTO",
+      "IMPORRE"
+    ]
+  },
+  {
+    "id": 1118,
+    "word": "ANGELINA",
+    "tabooWords": [
+      "JOLIE",
+      "ATTRICE",
+      "HOLLYWOOD",
+      "AMERICANA",
+      "CINEMA"
+    ]
+  },
+  {
+    "id": 1119,
+    "word": "LIONE",
+    "tabooWords": [
+      "FRANCIA",
+      "CITTÀ",
+      "RODANO",
+      "GASTRONOMIA",
+      "SETA"
+    ]
+  },
+  {
+    "id": 1120,
+    "word": "BUGGATO",
+    "tabooWords": [
+      "DIFETTOSO",
+      "ERRORE",
+      "MALFUNZIONAMENTO",
+      "VIDEOGIOCO",
+      "TECNICO"
+    ]
+  },
+  {
+    "id": 1121,
+    "word": "FARMABILE",
+    "tabooWords": [
+      "RACCOGLIERE",
+      "RISORSE",
+      "GIOCO",
+      "COLTIVARE",
+      "RIPETERE"
+    ]
+  },
+  {
+    "id": 1122,
+    "word": "EDISON",
+    "tabooWords": [
+      "INVENTORE",
+      "LAMPADINA",
+      "THOMAS",
+      "ELETTRICITÀ",
+      "SCIENZIATO"
+    ]
+  },
+  {
+    "id": 1123,
+    "word": "EDIMBURGO",
+    "tabooWords": [
+      "SCOZIA",
+      "CASTELLO",
+      "FESTIVAL",
+      "HIGHLANDS",
+      "BRITANNICA"
+    ]
+  },
+  {
+    "id": 1124,
+    "word": "SBOCCIARE",
+    "tabooWords": [
+      "BERE",
+      "ALCOL",
+      "UBRIACARSI",
+      "BOTTIGLIA",
+      "FESTA"
+    ]
+  },
+  {
+    "id": 1125,
+    "word": "DROPSHIPPING",
+    "tabooWords": [
+      "VENDERE",
+      "SPEDIRE",
+      "ECOMMERCE",
+      "BUSINESS",
+      "ONLINE"
+    ]
+  },
+  {
+    "id": 1126,
+    "word": "MARADONA",
+    "tabooWords": [
+      "CALCIO",
+      "ARGENTINA",
+      "NAPOLI",
+      "MANO",
+      "DIEGO"
+    ]
+  },
+  {
+    "id": 1127,
+    "word": "ZURIGO",
+    "tabooWords": [
+      "SVIZZERA",
+      "BANCHE",
+      "LAGO",
+      "ALPINA",
+      "FINANZIARIA"
+    ]
+  },
+  {
+    "id": 1128,
+    "word": "TRASHATA",
+    "tabooWords": [
+      "VOLGARE",
+      "CATTIVO",
+      "GUSTO",
+      "PACCHIANO",
+      "RIDICOLO"
+    ]
+  },
+  {
+    "id": 1129,
+    "word": "HOOKUP",
+    "tabooWords": [
+      "INCONTRO",
+      "OCCASIONALE",
+      "APPUNTAMENTO",
+      "ROMANTICO",
+      "AVVENTURA"
+    ]
+  },
+  {
+    "id": 1130,
+    "word": "PUTIN",
+    "tabooWords": [
+      "PRESIDENTE",
+      "RUSSIA",
+      "VLADIMIR",
+      "CREMLINO",
+      "POLITICA"
+    ]
+  },
+  {
+    "id": 1131,
+    "word": "DUBLINO",
+    "tabooWords": [
+      "IRLANDA",
+      "GUINNESS",
+      "VERDE",
+      "CELTICA",
+      "EUROPEA"
+    ]
+  },
+  {
+    "id": 1132,
+    "word": "CRINGEY",
+    "tabooWords": [
+      "IMBARAZZANTE",
+      "FASTIDIOSO",
+      "SCOMODO",
+      "RIDICOLO",
+      "DISAGIO"
+    ]
+  },
+  {
+    "id": 1133,
+    "word": "PALLARE",
+    "tabooWords": [
+      "INVIARE",
+      "PALLA",
+      "MESSAGGIO",
+      "PASSARE",
+      "CONSEGNARE"
+    ]
+  },
+  {
+    "id": 1134,
+    "word": "TOTTI",
+    "tabooWords": [
+      "CALCIATORE",
+      "ROMA",
+      "FRANCESCO",
+      "CUCCHIAIO",
+      "CAPITANO"
+    ]
+  },
+  {
+    "id": 1135,
+    "word": "TAIPEI",
+    "tabooWords": [
+      "TAIWAN",
+      "CINA",
+      "ASIA",
+      "ISOLA",
+      "ORIENTALE"
+    ]
+  },
+  {
+    "id": 1136,
+    "word": "BEEFING",
+    "tabooWords": [
+      "LITIGARE",
+      "SCONTRO",
+      "DISCUSSIONE",
+      "CONFLITTO",
+      "RIVALITÀ"
+    ]
+  },
+  {
+    "id": 1137,
+    "word": "CRAFTARE",
+    "tabooWords": [
+      "CREARE",
+      "COSTRUIRE",
+      "FABBRICARE",
+      "REALIZZARE",
+      "MINECRAFT"
+    ]
+  },
+  {
+    "id": 1138,
+    "word": "MCCARTNEY",
+    "tabooWords": [
+      "BEATLES",
+      "PAUL",
+      "MUSICA",
+      "CANTANTE",
+      "BAND"
+    ]
+  },
+  {
+    "id": 1139,
+    "word": "CRACOVIA",
+    "tabooWords": [
+      "POLONIA",
+      "MEDIEVALE",
+      "EUROPA",
+      "ORIENTALE",
+      "VISTOLA"
+    ]
+  },
+  {
+    "id": 1140,
+    "word": "SHAREABLE",
+    "tabooWords": [
+      "CONDIVISIBILE",
+      "SOCIAL",
+      "VIRALE",
+      "INTERESSANTE",
+      "PUBBLICARE"
+    ]
+  },
+  {
+    "id": 1141,
+    "word": "SBATTERE",
+    "tabooWords": [
+      "FATICARE",
+      "IMPEGNARSI",
+      "LAVORARE",
+      "SUDARE",
+      "SFORZO"
+    ]
+  },
+  {
+    "id": 1142,
+    "word": "HAWKING",
+    "tabooWords": [
+      "SCIENZIATO",
+      "STEPHEN",
+      "FISICA",
+      "TEMPO",
+      "DISABILITÀ"
+    ]
+  },
+  {
+    "id": 1143,
+    "word": "MILANO",
+    "tabooWords": [
+      "ITALIA",
+      "MODA",
+      "DUOMO",
+      "GALLERIA",
+      "LOMBARDIA"
+    ]
+  },
+  {
+    "id": 1144,
+    "word": "TOSSICO",
+    "tabooWords": [
+      "NEGATIVO",
+      "FASTIDIOSO",
+      "DANNOSO",
+      "INSOPPORTABILE",
+      "RELAZIONE"
+    ]
+  },
+  {
+    "id": 1145,
+    "word": "WALLARE",
+    "tabooWords": [
+      "IGNORARE",
+      "RISPONDERE",
+      "MURO",
+      "VISUALIZZARE",
+      "MESSAGGI"
+    ]
+  },
+  {
+    "id": 1146,
+    "word": "MANDELA",
+    "tabooWords": [
+      "SUDAFRICA",
+      "NELSON",
+      "APARTHEID",
+      "LIBERTÀ",
+      "PACE"
+    ]
+  },
+  {
+    "id": 1147,
+    "word": "GENOVA",
+    "tabooWords": [
+      "ITALIA",
+      "PORTO",
+      "LIGURIA",
+      "MARE",
+      "LANTERNA"
+    ]
+  },
+  {
+    "id": 1148,
+    "word": "COPING",
+    "tabooWords": [
+      "AFFRONTARE",
+      "STRATEGIA",
+      "PROBLEMA",
+      "GESTIRE",
+      "MECCANISMO"
+    ]
+  },
+  {
+    "id": 1149,
+    "word": "SIMP",
+    "tabooWords": [
+      "ADORATORE",
+      "SOTTOMESSO",
+      "CORTEGGIATORE",
+      "ECCESSIVO",
+      "OSSESSIONATO"
+    ]
+  },
+  {
+    "id": 1150,
+    "word": "OBAMA",
+    "tabooWords": [
+      "PRESIDENTE",
+      "BARACK",
+      "AMERICA",
+      "POLITICA",
+      "DEMOCRATICO"
+    ]
+  },
+  {
+    "id": 1151,
+    "word": "DUBLINO",
+    "tabooWords": [
+      "IRLANDA",
+      "CAPITALE",
+      "GUINESS",
+      "VERDE",
+      "LIFFEY"
+    ]
+  },
+  {
+    "id": 1152,
+    "word": "SCAMMATO",
+    "tabooWords": [
+      "TRUFFATO",
+      "INGANNATO",
+      "FREGATO",
+      "RAGGIRO",
+      "SOLDI"
+    ]
+  },
+  {
+    "id": 1153,
+    "word": "DRIPPARSI",
+    "tabooWords": [
+      "VESTIRSI",
+      "ELEGANTE",
+      "MODA",
+      "ABBIGLIAMENTO",
+      "STILE"
+    ]
+  },
+  {
+    "id": 1154,
+    "word": "MALALA",
+    "tabooWords": [
+      "ATTIVISTA",
+      "PAKISTANA",
+      "NOBEL",
+      "ISTRUZIONE",
+      "DIRITTI"
+    ]
+  },
+  {
+    "id": 1155,
+    "word": "ATENE",
+    "tabooWords": [
+      "GRECIA",
+      "ACROPOLI",
+      "ANTICA",
+      "PARTENONE",
+      "OLIMPIADI"
+    ]
+  },
+  {
+    "id": 1156,
+    "word": "CRACKARE",
+    "tabooWords": [
+      "VIOLARE",
+      "HACKER",
+      "SICUREZZA",
+      "ACCESSO",
+      "PASSWORD"
+    ]
+  },
+  {
+    "id": 1157,
+    "word": "STALKARE",
+    "tabooWords": [
+      "SPIARE",
+      "OSSESSIVAMENTE",
+      "CONTROLLARE",
+      "MONITORARE",
+      "SEGUIRE"
+    ]
+  },
+  {
+    "id": 1158,
+    "word": "GANDHI",
+    "tabooWords": [
+      "INDIA",
+      "MAHATMA",
+      "PACE",
+      "INDIPENDENZA",
+      "NONVIOLENZA"
+    ]
+  },
+  {
+    "id": 1159,
+    "word": "MELBOURNE",
+    "tabooWords": [
+      "AUSTRALIA",
+      "VICTORIA",
+      "OCEANIA",
+      "TENNIS",
+      "SPORT"
+    ]
+  },
+  {
+    "id": 1160,
+    "word": "BRODIÈ",
+    "tabooWords": [
+      "AMICO",
+      "FRATELLO",
+      "COMPAGNO",
+      "CONFIDENTE",
+      "ALLEATO"
+    ]
+  },
+  {
+    "id": 1161,
+    "word": "INFLUENCER",
+    "tabooWords": [
+      "SOCIAL",
+      "SEGUACI",
+      "SPONSORIZZAZIONI",
+      "CONTENUTI",
+      "FOLLOWERS"
+    ]
+  },
+  {
+    "id": 1162,
+    "word": "ROWLING",
+    "tabooWords": [
+      "POTTER",
+      "HARRY",
+      "SCRITTRICE",
+      "LIBRI",
+      "JOANNE"
+    ]
+  },
+  {
+    "id": 1163,
+    "word": "FRANCOFORTE",
+    "tabooWords": [
+      "GERMANIA",
+      "FINANZIARIA",
+      "MENO",
+      "EUROPEA",
+      "BANCHE"
+    ]
+  },
+  {
+    "id": 1164,
+    "word": "WEEBIT",
+    "tabooWords": [
+      "POCO",
+      "PICCOLO",
+      "QUANTITÀ",
+      "MINIMA",
+      "LEGGERO"
+    ]
+  },
+  {
+    "id": 1165,
+    "word": "SFITNESS",
+    "tabooWords": [
+      "FORMA",
+      "FISICA",
+      "SCARSA",
+      "ALLENAMENTO",
+      "PIGRIZIA"
+    ]
+  },
+  {
+    "id": 1166,
+    "word": "HITCHCOCK",
+    "tabooWords": [
+      "CINEMA",
+      "ALFRED",
+      "REGISTA",
+      "THRILLER",
+      "SUSPENSE"
+    ]
+  },
+  {
+    "id": 1167,
+    "word": "MONTERREY",
+    "tabooWords": [
+      "MESSICO",
+      "AMERICA",
+      "LATINA",
+      "MONTAGNE",
+      "INDUSTRIALE"
+    ]
+  },
+  {
+    "id": 1168,
+    "word": "CRINGEFEST",
+    "tabooWords": [
+      "SITUAZIONE",
+      "IMBARAZZANTE",
+      "SERIE",
+      "DISAGIO",
+      "SCOMODA"
+    ]
+  },
+  {
+    "id": 1169,
+    "word": "CLOUT",
+    "tabooWords": [
+      "FAMA",
+      "INFLUENZA",
+      "NOTORIETÀ",
+      "POPOLARITÀ",
+      "PRESTIGIO"
+    ]
+  },
+  {
+    "id": 1170,
+    "word": "MOZART",
+    "tabooWords": [
+      "MUSICA",
+      "CLASSICA",
+      "WOLFGANG",
+      "COMPOSITORE",
+      "SALISBURGO"
+    ]
+  },
+  {
+    "id": 1171,
+    "word": "BRUXELLES",
+    "tabooWords": [
+      "BELGIO",
+      "EUROPEA",
+      "CAPITALE",
+      "ATOMIUM",
+      "GRAND"
+    ]
+  },
+  {
+    "id": 1172,
+    "word": "YEET",
+    "tabooWords": [
+      "LANCIARE",
+      "BUTTARE",
+      "ESCLAMAZIONE",
+      "SLANG",
+      "INTERNET"
+    ]
+  },
+  {
+    "id": 1173,
+    "word": "UNFOLLOWATA",
+    "tabooWords": [
+      "SMETTERE",
+      "SEGUIRE",
+      "SOCIAL",
+      "ACCOUNTS",
+      "ABBANDONARE"
+    ]
+  },
+  {
+    "id": 1174,
+    "word": "VERSACE",
+    "tabooWords": [
+      "MODA",
+      "STILISTA",
+      "LUSSO",
+      "GIANNI",
+      "MEDUSA"
+    ]
+  },
+  {
+    "id": 1175,
+    "word": "VARSAVIA",
+    "tabooWords": [
+      "POLONIA",
+      "EUROPA",
+      "ORIENTALE",
+      "VISTOLA",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 1176,
+    "word": "CAPPATO",
+    "tabooWords": [
+      "LIMITATO",
+      "RISTRETTO",
+      "BLOCCATO",
+      "MASSIMO",
+      "TETTO"
+    ]
+  },
+  {
+    "id": 1177,
+    "word": "TILTATO",
+    "tabooWords": [
+      "NERVOSO",
+      "AGITATO",
+      "ARRABBIATO",
+      "VIDEOGIOCHI",
+      "SCONVOLTO"
+    ]
+  },
+  {
+    "id": 1178,
+    "word": "TIGER",
+    "tabooWords": [
+      "WOODS",
+      "GOLF",
+      "CAMPIONE",
+      "SPORT",
+      "AMERICANO"
+    ]
+  },
+  {
+    "id": 1179,
+    "word": "BRATISLAVA",
+    "tabooWords": [
+      "SLOVACCHIA",
+      "DANUBIO",
+      "EUROPA",
+      "CASTELLO",
+      "ORIENTALE"
+    ]
+  },
+  {
+    "id": 1180,
+    "word": "ROASTARE",
+    "tabooWords": [
+      "DERIDERE",
+      "CRITICARE",
+      "PRENDERE",
+      "GIRO",
+      "UMILIARE"
+    ]
+  },
+  {
+    "id": 1181,
+    "word": "POSTARE",
+    "tabooWords": [
+      "PUBBLICARE",
+      "CONDIVIDERE",
+      "SOCIAL",
+      "INTERNET",
+      "FOTO"
+    ]
+  },
+  {
+    "id": 1182,
+    "word": "JORDAN",
+    "tabooWords": [
+      "BASKET",
+      "MICHAEL",
+      "CHICAGO",
+      "CAMPIONE",
+      "NBA"
+    ]
+  },
+  {
+    "id": 1183,
+    "word": "MONTEVIDEO",
+    "tabooWords": [
+      "URUGUAY",
+      "SUDAMERICA",
+      "LATINA",
+      "ATLANTICO",
+      "CAPITALE"
+    ]
+  },
+  {
+    "id": 1184,
+    "word": "DRIPPO",
+    "tabooWords": [
+      "STILE",
+      "ABBIGLIAMENTO",
+      "MODA",
+      "ELEGANZA",
+      "SWAG"
+    ]
+  },
+  {
+    "id": 1185,
+    "word": "SHOPPARE",
+    "tabooWords": [
+      "COMPRARE",
+      "ACQUISTARE",
+      "SHOPPING",
+      "NEGOZIO",
+      "SPENDERE"
+    ]
+  },
+  {
+    "id": 1186,
+    "word": "BOWIE",
+    "tabooWords": [
+      "DAVID",
+      "CANTANTE",
+      "ROCK",
+      "MUSICISTA",
+      "ZIGGY"
+    ]
+  },
+  {
+    "id": 1187,
+    "word": "DENVER",
+    "tabooWords": [
+      "AMERICA",
+      "COLORADO",
+      "MONTAGNE",
+      "STATI",
+      "UNITI"
+    ]
+  },
+  {
+    "id": 1188,
+    "word": "PUFFO",
+    "tabooWords": [
+      "BLU",
+      "PICCOLO",
+      "PERSONAGGIO",
+      "CARTONE",
+      "CAPPELLO"
+    ]
+  },
+  {
+    "id": 1189,
+    "word": "BARATTOLO",
+    "tabooWords": [
+      "VETRO",
+      "CONTENITORE",
+      "CONSERVARE",
+      "CHIUDERE",
+      "CUCINA"
+    ]
+  },
+  {
+    "id": 1190,
+    "word": "PARACADUTE",
+    "tabooWords": [
+      "VOLARE",
+      "SALTARE",
+      "ARIA",
+      "SICUREZZA",
+      "EMERGENZA"
+    ]
+  },
+  {
+    "id": 1191,
+    "word": "ORIGANO",
+    "tabooWords": [
+      "ERBA",
+      "AROMATICA",
+      "PIZZA",
+      "CUCINA",
+      "SPEZIA"
+    ]
+  },
+  {
+    "id": 1192,
+    "word": "MUMMIA",
+    "tabooWords": [
+      "EGITTO",
+      "BENDE",
+      "ANTICO",
+      "FARAONE",
+      "SARCOFAGO"
+    ]
+  },
+  {
+    "id": 1193,
+    "word": "ALGORITMO",
+    "tabooWords": [
+      "MATEMATICA",
+      "CALCOLO",
+      "INFORMATICA",
+      "PROBLEMA",
+      "SOLUZIONE"
+    ]
+  },
+  {
+    "id": 1194,
+    "word": "VORTICE",
+    "tabooWords": [
+      "ROTAZIONE",
+      "ACQUA",
+      "VENTO",
+      "TORNADO",
+      "SPIRALE"
+    ]
+  },
+  {
+    "id": 1195,
+    "word": "CIAMBELLA",
+    "tabooWords": [
+      "DOLCE",
+      "ZUCCHERO",
+      "BUCO",
+      "GLASSA",
+      "FRITTO"
+    ]
+  },
+  {
+    "id": 1196,
+    "word": "CIANFRUSAGLIA",
+    "tabooWords": [
+      "OGGETTO",
+      "INUTILE",
+      "VECCHIO",
+      "CONFUSIONE",
+      "DISORDINE"
+    ]
+  },
+  {
+    "id": 1197,
+    "word": "PINGUINO",
+    "tabooWords": [
+      "ANTARTICO",
+      "FREDDO",
+      "UCCELLO",
+      "NERO",
+      "BIANCO"
+    ]
+  },
+  {
+    "id": 1198,
+    "word": "SASSOFONO",
+    "tabooWords": [
+      "STRUMENTO",
+      "JAZZ",
+      "MUSICALE",
+      "FIATO",
+      "OTTONE"
+    ]
+  },
+  {
+    "id": 1199,
+    "word": "OMBRELLONE",
+    "tabooWords": [
+      "SPIAGGIA",
+      "SOLE",
+      "MARE",
+      "OMBRA",
+      "ESTATE"
+    ]
+  },
+  {
+    "id": 1200,
+    "word": "CATAPULTA",
+    "tabooWords": [
+      "LANCIARE",
+      "ARMA",
+      "MEDIEVALE",
+      "PROIETTILE",
+      "ASSEDIO"
+    ]
+  },
+  {
+    "id": 1201,
+    "word": "DINOSAURO",
+    "tabooWords": [
+      "ESTINTO",
+      "PREISTORICO",
+      "GRANDE",
+      "FOSSILE",
+      "REPTILE"
+    ]
+  },
+  {
+    "id": 1202,
+    "word": "MICROSCOPIO",
+    "tabooWords": [
+      "INGRANDIRE",
+      "SCIENZA",
+      "LABORATORIO",
+      "LENTE",
+      "OSSERVARE"
+    ]
+  },
+  {
+    "id": 1203,
+    "word": "LICANTROPO",
+    "tabooWords": [
+      "LUPO",
+      "MANNARO",
+      "LUNA",
+      "TRASFORMAZIONE",
+      "LEGGENDA"
+    ]
+  },
+  {
+    "id": 1204,
+    "word": "ORIGAMI",
+    "tabooWords": [
+      "CARTA",
+      "PIEGARE",
+      "GIAPPONESE",
+      "ARTE",
+      "FIGURE"
+    ]
+  },
+  {
+    "id": 1205,
+    "word": "LUCCIOLA",
+    "tabooWords": [
+      "INSETTO",
+      "LUMINOSO",
+      "NOTTE",
+      "BRILLARE",
+      "ESTATE"
+    ]
+  },
+  {
+    "id": 1206,
+    "word": "RINOCERONTE",
+    "tabooWords": [
+      "ANIMALE",
+      "CORNO",
+      "GRANDE",
+      "AFRICANO",
+      "MAMMIFERO"
+    ]
+  },
+  {
+    "id": 1207,
+    "word": "TARANTOLA",
+    "tabooWords": [
+      "RAGNO",
+      "VELENOSO",
+      "PELOSO",
+      "PAURA",
+      "ARACNIDE"
+    ]
+  },
+  {
+    "id": 1208,
+    "word": "GIOCOLIERE",
+    "tabooWords": [
+      "CIRCO",
+      "PALLINE",
+      "LANCIARE",
+      "ABILITÀ",
+      "SPETTACOLO"
+    ]
+  },
+  {
+    "id": 1209,
+    "word": "FISARMONICA",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "TASTIERA",
+      "MANTICE",
+      "SUONARE"
+    ]
+  },
+  {
+    "id": 1210,
+    "word": "SEMAFORO",
+    "tabooWords": [
+      "STRADA",
+      "ROSSO",
+      "VERDE",
+      "GIALLO",
+      "ATTRAVERSARE"
+    ]
+  },
+  {
+    "id": 1211,
+    "word": "PAGLIACCIO",
+    "tabooWords": [
+      "CIRCO",
+      "NASO",
+      "ROSSO",
+      "TRUCCO",
+      "DIVERTENTE"
+    ]
+  },
+  {
+    "id": 1212,
+    "word": "ELICOTTERO",
+    "tabooWords": [
+      "VOLARE",
+      "PALE",
+      "VELIVOLO",
+      "TRASPORTO",
+      "ROTORE"
+    ]
+  },
+  {
+    "id": 1213,
+    "word": "GRANCHIO",
+    "tabooWords": [
+      "MARE",
+      "CHELE",
+      "CROSTACEO",
+      "SABBIA",
+      "CAMMINARE"
+    ]
+  },
+  {
+    "id": 1214,
+    "word": "MICROSCOPIO",
+    "tabooWords": [
+      "LENTE",
+      "INGRANDIRE",
+      "SCIENZA",
+      "CELLULA",
+      "OSSERVARE"
+    ]
+  },
+  {
+    "id": 1215,
+    "word": "ANANAS",
+    "tabooWords": [
+      "FRUTTA",
+      "TROPICALE",
+      "DOLCE",
+      "ESOTICO",
+      "HAWAII"
+    ]
+  },
+  {
+    "id": 1216,
+    "word": "PARAFULMINE",
+    "tabooWords": [
+      "ELETTRICITÀ",
+      "PROTEZIONE",
+      "FULMINE",
+      "TEMPESTA",
+      "SICUREZZA"
+    ]
+  },
+  {
+    "id": 1217,
+    "word": "DENTIFRICIO",
+    "tabooWords": [
+      "DENTI",
+      "LAVARE",
+      "PASTA",
+      "SPAZZOLINO",
+      "MENTA"
+    ]
+  },
+  {
+    "id": 1218,
+    "word": "PARRUCCA",
+    "tabooWords": [
+      "CAPELLI",
+      "FINTI",
+      "INDOSSARE",
+      "TRAVESTIMENTO",
+      "TESTA"
+    ]
+  },
+  {
+    "id": 1219,
+    "word": "POLPETTA",
+    "tabooWords": [
+      "CARNE",
+      "CIBO",
+      "SUGO",
+      "CUCINARE",
+      "ROTONDA"
+    ]
+  },
+  {
+    "id": 1220,
+    "word": "BROCCOLO",
+    "tabooWords": [
+      "VERDURA",
+      "VERDE",
+      "ORTAGGIO",
+      "CAVOLFIORE",
+      "SALUTE"
+    ]
+  },
+  {
+    "id": 1221,
+    "word": "PANTOFOLA",
+    "tabooWords": [
+      "CASA",
+      "CALZATURA",
+      "COMODA",
+      "MORBIDA",
+      "PIEDI"
+    ]
+  },
+  {
+    "id": 1222,
+    "word": "PALLONCINO",
+    "tabooWords": [
+      "GONFIARE",
+      "COLORATO",
+      "FESTA",
+      "ELIO",
+      "VOLARE"
+    ]
+  },
+  {
+    "id": 1223,
+    "word": "COLTELLO",
+    "tabooWords": [
+      "TAGLIARE",
+      "LAMA",
+      "CUCINA",
+      "AFFILATO",
+      "UTENSILE"
+    ]
+  },
+  {
+    "id": 1224,
+    "word": "POLTRONA",
+    "tabooWords": [
+      "SEDERE",
+      "COMODA",
+      "SALOTTO",
+      "RELAX",
+      "SEDERSI"
+    ]
+  },
+  {
+    "id": 1225,
+    "word": "CALAMARO",
+    "tabooWords": [
+      "MARE",
+      "TENTACOLI",
+      "PESCE",
+      "MOLLUSCO",
+      "INCHIOSTRO"
+    ]
+  },
+  {
+    "id": 1226,
+    "word": "TRAMPOLINO",
+    "tabooWords": [
+      "SALTARE",
+      "ELASTICO",
+      "RIMBALZARE",
+      "ALTEZZA",
+      "ACROBATICO"
+    ]
+  },
+  {
+    "id": 1227,
+    "word": "AQUILONE",
+    "tabooWords": [
+      "VENTO",
+      "VOLARE",
+      "CORDA",
+      "CIELO",
+      "SPIAGGIA"
+    ]
+  },
+  {
+    "id": 1228,
+    "word": "LAVAGNA",
+    "tabooWords": [
+      "SCUOLA",
+      "SCRIVERE",
+      "GESSO",
+      "CLASSE",
+      "INSEGNANTE"
+    ]
+  },
+  {
+    "id": 1229,
+    "word": "BINOCOLO",
+    "tabooWords": [
+      "GUARDARE",
+      "LONTANO",
+      "INGRANDIRE",
+      "LENTE",
+      "OSSERVARE"
+    ]
+  },
+  {
+    "id": 1230,
+    "word": "PAPPAGALLO",
+    "tabooWords": [
+      "UCCELLO",
+      "PARLARE",
+      "COLORATO",
+      "RIPETERE",
+      "TROPICALE"
+    ]
+  },
+  {
+    "id": 1231,
+    "word": "ASTRONAVE",
+    "tabooWords": [
+      "SPAZIO",
+      "VOLARE",
+      "EXTRATERRESTRE",
+      "UNIVERSO",
+      "VIAGGIO"
+    ]
+  },
+  {
+    "id": 1232,
+    "word": "MACCHINA",
+    "tabooWords": [
+      "AUTO",
+      "GUIDARE",
+      "VEICOLO",
+      "MOTORE",
+      "TRASPORTO"
+    ]
+  },
+  {
+    "id": 1233,
+    "word": "VENTILATORE",
+    "tabooWords": [
+      "ARIA",
+      "FRESCO",
+      "PALE",
+      "ESTATE",
+      "CALDO"
+    ]
+  },
+  {
+    "id": 1234,
+    "word": "TROMBETTA",
+    "tabooWords": [
+      "SUONARE",
+      "FESTA",
+      "RUMORE",
+      "CARNEVALE",
+      "STRUMENTO"
+    ]
+  },
+  {
+    "id": 1235,
+    "word": "SCACCHIERA",
+    "tabooWords": [
+      "GIOCO",
+      "SCACCHI",
+      "QUADRATI",
+      "BIANCO",
+      "NERO"
+    ]
+  },
+  {
+    "id": 1236,
+    "word": "ASTRONAUTA",
+    "tabooWords": [
+      "SPAZIO",
+      "TUTA",
+      "GRAVITÀ",
+      "MISSIONE",
+      "NAVICELLA"
+    ]
+  },
+  {
+    "id": 1237,
+    "word": "ASPIRAPOLVERE",
+    "tabooWords": [
+      "PULIZIA",
+      "CASA",
+      "POLVERE",
+      "ELETTRODOMESTICO",
+      "PAVIMENTO"
+    ]
+  },
+  {
+    "id": 1238,
+    "word": "CARNEVALE",
+    "tabooWords": [
+      "FESTA",
+      "COSTUME",
+      "MASCHERE",
+      "SFILATA",
+      "CORIANDOLI"
+    ]
+  },
+  {
+    "id": 1239,
+    "word": "PIANOFORTE",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "TASTI",
+      "SUONARE",
+      "CLASSICA"
+    ]
+  },
+  {
+    "id": 1240,
+    "word": "COCCODRILLO",
+    "tabooWords": [
+      "ANIMALE",
+      "RETTILE",
+      "DENTI",
+      "ACQUA",
+      "FEROCE"
+    ]
+  },
+  {
+    "id": 1241,
+    "word": "ZANZARA",
+    "tabooWords": [
+      "INSETTO",
+      "PUNGERE",
+      "SANGUE",
+      "RONZIO",
+      "ESTATE"
+    ]
+  },
+  {
+    "id": 1242,
+    "word": "CENTRIFUGA",
+    "tabooWords": [
+      "ASCIUGARE",
+      "BUCATO",
+      "LAVATRICE",
+      "ROTAZIONE",
+      "ELETTRODOMESTICO"
+    ]
+  },
+  {
+    "id": 1243,
+    "word": "GIRASOLE",
+    "tabooWords": [
+      "FIORE",
+      "GRANDE",
+      "GIALLO",
+      "SEMI",
+      "SOLE"
+    ]
+  },
+  {
+    "id": 1244,
+    "word": "SOTTACETO",
+    "tabooWords": [
+      "CONSERVA",
+      "ACETO",
+      "VERDURA",
+      "BARATTOLO",
+      "AGRODOLCE"
+    ]
+  },
+  {
+    "id": 1245,
+    "word": "DIVANO",
+    "tabooWords": [
+      "SEDERE",
+      "SALOTTO",
+      "MORBIDO",
+      "COMODO",
+      "RIPOSO"
+    ]
+  },
+  {
+    "id": 1246,
+    "word": "LUCERTOLA",
+    "tabooWords": [
+      "RETTILE",
+      "CODA",
+      "VERDE",
+      "SOLE",
+      "STRISCIARE"
+    ]
+  },
+  {
+    "id": 1247,
+    "word": "FORMAGGIO",
+    "tabooWords": [
+      "LATTE",
+      "CIBO",
+      "CAGLIATA",
+      "FORMAGGI",
+      "GORGONZOLA"
+    ]
+  },
+  {
+    "id": 1248,
+    "word": "PALLONE",
+    "tabooWords": [
+      "CALCIO",
+      "GIOCARE",
+      "ROTONDO",
+      "SPORT",
+      "GONFIARE"
+    ]
+  },
+  {
+    "id": 1249,
+    "word": "MONGOLFIERA",
+    "tabooWords": [
+      "VOLARE",
+      "ARIA",
+      "CALDA",
+      "CESTO",
+      "CIELO"
+    ]
+  },
+  {
+    "id": 1250,
+    "word": "LUMACA",
+    "tabooWords": [
+      "LENTA",
+      "GUSCIO",
+      "BAVA",
+      "GIARDINO",
+      "CHIOCCIOLA"
+    ]
+  },
+  {
+    "id": 1251,
+    "word": "TELECOMANDO",
+    "tabooWords": [
+      "TELEVISIONE",
+      "PULSANTI",
+      "CONTROLLO",
+      "DISTANZA",
+      "CANALE"
+    ]
+  },
+  {
+    "id": 1252,
+    "word": "TOVAGLIA",
+    "tabooWords": [
+      "TAVOLA",
+      "COPRIRE",
+      "MANGIARE",
+      "STOFFA",
+      "CUCINA"
+    ]
+  },
+  {
+    "id": 1253,
+    "word": "TERMOSIFONE",
+    "tabooWords": [
+      "CALORE",
+      "RISCALDAMENTO",
+      "INVERNO",
+      "CASA",
+      "CALDO"
+    ]
+  },
+  {
+    "id": 1254,
+    "word": "MARMELLATA",
+    "tabooWords": [
+      "FRUTTA",
+      "DOLCE",
+      "BARATTOLO",
+      "COLAZIONE",
+      "PANE"
+    ]
+  },
+  {
+    "id": 1255,
+    "word": "BRICIOLA",
+    "tabooWords": [
+      "PANE",
+      "PICCOLA",
+      "FRAMMENTO",
+      "SPAZZARE",
+      "TAVOLA"
+    ]
+  },
+  {
+    "id": 1256,
+    "word": "PORTACHIAVI",
+    "tabooWords": [
+      "CHIAVI",
+      "ACCESSORIO",
+      "TENERE",
+      "INSIEME",
+      "TASCA"
+    ]
+  },
+  {
+    "id": 1257,
+    "word": "CORRIMANO",
+    "tabooWords": [
+      "SCALE",
+      "APPOGGIARSI",
+      "SICUREZZA",
+      "SOSTEGNO",
+      "SALIRE"
+    ]
+  },
+  {
+    "id": 1258,
+    "word": "MATTARELLO",
+    "tabooWords": [
+      "CUCINA",
+      "PASTA",
+      "STENDERE",
+      "LEGNO",
+      "IMPASTO"
+    ]
+  },
+  {
+    "id": 1259,
+    "word": "CAVALLO",
+    "tabooWords": [
+      "ANIMALE",
+      "GALOPPO",
+      "EQUITAZIONE",
+      "MAMMIFERO",
+      "CRINIERA"
+    ]
+  },
+  {
+    "id": 1260,
+    "word": "BURATTINO",
+    "tabooWords": [
+      "MARIONETTA",
+      "LEGNO",
+      "FILI",
+      "ANIMARE",
+      "SPETTACOLO"
+    ]
+  },
+  {
+    "id": 1261,
+    "word": "COCCINELLA",
+    "tabooWords": [
+      "INSETTO",
+      "ROSSO",
+      "PUNTINI",
+      "FORTUNA",
+      "VOLARE"
+    ]
+  },
+  {
+    "id": 1262,
+    "word": "OMBRELLO",
+    "tabooWords": [
+      "PIOGGIA",
+      "RIPARARE",
+      "COPRIRE",
+      "APRIRE",
+      "ACQUA"
+    ]
+  },
+  {
+    "id": 1263,
+    "word": "PATTINI",
+    "tabooWords": [
+      "SCIVOLARE",
+      "GHIACCIO",
+      "RUOTE",
+      "SPORT",
+      "VELOCITÀ"
+    ]
+  },
+  {
+    "id": 1264,
+    "word": "ARTIGLIO",
+    "tabooWords": [
+      "ANIMALE",
+      "UNGHIA",
+      "GRAFFIARE",
+      "AFFERRARE",
+      "RAPACE"
+    ]
+  },
+  {
+    "id": 1265,
+    "word": "CORNETTO",
+    "tabooWords": [
+      "COLAZIONE",
+      "DOLCE",
+      "PASTA",
+      "SFOGLIA",
+      "CAFFÈ"
+    ]
+  },
+  {
+    "id": 1266,
+    "word": "TOVAGLIOLO",
+    "tabooWords": [
+      "PULIRSI",
+      "BOCCA",
+      "CARTA",
+      "STOFFA",
+      "TAVOLA"
+    ]
+  },
+  {
+    "id": 1267,
+    "word": "FISCHIETTO",
+    "tabooWords": [
+      "ARBITRO",
+      "SUONARE",
+      "SEGNALE",
+      "RICHIAMO",
+      "ATTENZIONE"
+    ]
+  },
+  {
+    "id": 1268,
+    "word": "MULINO",
+    "tabooWords": [
+      "GRANO",
+      "MACINARE",
+      "VENTO",
+      "FARINA",
+      "PALE"
+    ]
+  },
+  {
+    "id": 1269,
+    "word": "FARFALLA",
+    "tabooWords": [
+      "INSETTO",
+      "VOLARE",
+      "COLORATA",
+      "ALI",
+      "BRUCO"
+    ]
+  },
+  {
+    "id": 1270,
+    "word": "CALENDARIO",
+    "tabooWords": [
+      "GIORNI",
+      "MESI",
+      "DATA",
+      "ANNO",
+      "TEMPO"
+    ]
+  },
+  {
+    "id": 1271,
+    "word": "TERMOMETRO",
+    "tabooWords": [
+      "TEMPERATURA",
+      "FEBBRE",
+      "MISURARE",
+      "GRADI",
+      "MERCURIO"
+    ]
+  },
+  {
+    "id": 1272,
+    "word": "CONIGLIO",
+    "tabooWords": [
+      "ANIMALE",
+      "ORECCHIE",
+      "MORBIDO",
+      "CAROTA",
+      "SALTARE"
+    ]
+  },
+  {
+    "id": 1273,
+    "word": "SPAZZOLINO",
+    "tabooWords": [
+      "DENTI",
+      "PULIRE",
+      "IGIENE",
+      "ORALE",
+      "SPAZZOLARE"
+    ]
+  },
+  {
+    "id": 1274,
+    "word": "PENNELLO",
+    "tabooWords": [
+      "DIPINGERE",
+      "COLORE",
+      "PITTURA",
+      "ARTE",
+      "SETOLE"
+    ]
+  },
+  {
+    "id": 1275,
+    "word": "MARTELLO",
+    "tabooWords": [
+      "CHIODO",
+      "BATTERE",
+      "ATTREZZO",
+      "LEGNO",
+      "CARPENTIERE"
+    ]
+  },
+  {
+    "id": 1276,
+    "word": "ZUCCHERO",
+    "tabooWords": [
+      "DOLCE",
+      "BIANCO",
+      "CUCCHIAIO",
+      "CAFFÈ",
+      "GRANELLI"
+    ]
+  },
+  {
+    "id": 1277,
+    "word": "CACCIAVITE",
+    "tabooWords": [
+      "VITE",
+      "AVVITARE",
+      "UTENSILE",
+      "MANUALE",
+      "BRICOLAGE"
+    ]
+  },
+  {
+    "id": 1278,
+    "word": "FUMETTO",
+    "tabooWords": [
+      "DISEGNO",
+      "STORIA",
+      "VIGNETTE",
+      "DIALOGO",
+      "LEGGERE"
+    ]
+  },
+  {
+    "id": 1279,
+    "word": "MANDOLINO",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "CORDE",
+      "NAPOLETANO",
+      "SUONARE"
+    ]
+  },
+  {
+    "id": 1280,
+    "word": "ABBONAMENTO",
+    "tabooWords": [
+      "SERVIZIO",
+      "PAGAMENTO",
+      "PERIODICO",
+      "MENSILE",
+      "ISCRIZIONE"
+    ]
+  },
+  {
+    "id": 1281,
+    "word": "LAMPADA",
+    "tabooWords": [
+      "LUCE",
+      "ILLUMINARE",
+      "ACCENDERE",
+      "LAMPADINA",
+      "INTERRUTTORE"
+    ]
+  },
+  {
+    "id": 1282,
+    "word": "PENTOLA",
+    "tabooWords": [
+      "CUCINARE",
+      "CIBO",
+      "FORNELLO",
+      "METALLO",
+      "COPERCHIO"
+    ]
+  },
+  {
+    "id": 1283,
+    "word": "FORMICHIERE",
+    "tabooWords": [
+      "ANIMALE",
+      "FORMICA",
+      "LINGUA",
+      "MAMMIFERO",
+      "SUDAMERICA"
+    ]
+  },
+  {
+    "id": 1284,
+    "word": "PEPERONE",
+    "tabooWords": [
+      "VERDURA",
+      "ROSSO",
+      "GIALLO",
+      "VERDE",
+      "ORTAGGIO"
+    ]
+  },
+  {
+    "id": 1285,
+    "word": "RACCHETTA",
+    "tabooWords": [
+      "TENNIS",
+      "SPORT",
+      "COLPIRE",
+      "PALLINA",
+      "MANICO"
+    ]
+  },
+  {
+    "id": 1286,
+    "word": "CALAMAIO",
+    "tabooWords": [
+      "INCHIOSTRO",
+      "PENNA",
+      "SCRIVERE",
+      "CONTENITORE",
+      "ANTICO"
+    ]
+  },
+  {
+    "id": 1287,
+    "word": "SALVIETTA",
+    "tabooWords": [
+      "ASCIUGARE",
+      "UMIDA",
+      "PULIRE",
+      "BAGNO",
+      "MANI"
+    ]
+  },
+  {
+    "id": 1288,
+    "word": "CIANOGRAFIA",
+    "tabooWords": [
+      "TECNICA",
+      "STAMPA",
+      "BLU",
+      "DISEGNO",
+      "PROGETTO"
+    ]
+  },
+  {
+    "id": 1289,
+    "word": "POLSINO",
+    "tabooWords": [
+      "CAMICIA",
+      "POLSO",
+      "ABBIGLIAMENTO",
+      "BOTTONE",
+      "GEMELLI"
+    ]
+  },
+  {
+    "id": 1290,
+    "word": "COLLANA",
+    "tabooWords": [
+      "GIOIELLO",
+      "COLLO",
+      "PERLE",
+      "PENDENTE",
+      "ACCESSORIO"
+    ]
+  },
+  {
+    "id": 1291,
+    "word": "MANTELLO",
+    "tabooWords": [
+      "INDOSSARE",
+      "VESTITO",
+      "LUNGO",
+      "COPRIRE",
+      "MEDIEVALE"
+    ]
+  },
+  {
+    "id": 1292,
+    "word": "ACCIUGA",
+    "tabooWords": [
+      "PESCE",
+      "SALATO",
+      "MARE",
+      "PICCOLO",
+      "CONSERVA"
+    ]
+  },
+  {
+    "id": 1293,
+    "word": "FRULLATORE",
+    "tabooWords": [
+      "FRUTTA",
+      "FRULLATO",
+      "ELETTRODOMESTICO",
+      "LAME",
+      "MIXER"
+    ]
+  },
+  {
+    "id": 1294,
+    "word": "IMPERMEABILE",
+    "tabooWords": [
+      "PIOGGIA",
+      "VESTITO",
+      "ACQUA",
+      "PROTEZIONE",
+      "GIACCA"
+    ]
+  },
+  {
+    "id": 1295,
+    "word": "CUSCINO",
+    "tabooWords": [
+      "LETTO",
+      "MORBIDO",
+      "DORMIRE",
+      "DIVANO",
+      "TESTA"
+    ]
+  },
+  {
+    "id": 1296,
+    "word": "LANCETTE",
+    "tabooWords": [
+      "OROLOGIO",
+      "TEMPO",
+      "GIRARE",
+      "MINUTI",
+      "ORE"
+    ]
+  },
+  {
+    "id": 1297,
+    "word": "TENDINA",
+    "tabooWords": [
+      "FINESTRA",
+      "COPRIRE",
+      "LUCE",
+      "TESSUTO",
+      "PRIVACY"
+    ]
+  },
+  {
+    "id": 1298,
+    "word": "PENNELLO",
+    "tabooWords": [
+      "DIPINGERE",
+      "PITTURA",
+      "ARTE",
+      "SETOLE",
+      "COLORE"
+    ]
+  },
+  {
+    "id": 1299,
+    "word": "ACCENDINO",
+    "tabooWords": [
+      "FUOCO",
+      "FIAMMA",
+      "SIGARETTA",
+      "ACCENDERE",
+      "FUMARE"
+    ]
+  },
+  {
+    "id": 1300,
+    "word": "GINOCCHIERA",
+    "tabooWords": [
+      "PROTEZIONE",
+      "GINOCCHIO",
+      "SPORT",
+      "CADUTA",
+      "SICUREZZA"
+    ]
+  },
+  {
+    "id": 1301,
+    "word": "RUBINETTO",
+    "tabooWords": [
+      "ACQUA",
+      "BAGNO",
+      "CUCINA",
+      "LAVANDINO",
+      "APRIRE"
+    ]
+  },
+  {
+    "id": 1302,
+    "word": "GRUCCIA",
+    "tabooWords": [
+      "APPENDERE",
+      "VESTITI",
+      "ARMADIO",
+      "CAMICIA",
+      "APPENDIABITI"
+    ]
+  },
+  {
+    "id": 1303,
+    "word": "TESSERA",
+    "tabooWords": [
+      "DOCUMENTO",
+      "IDENTIFICAZIONE",
+      "PLASTICA",
+      "CARTA",
+      "MEMBRO"
+    ]
+  },
+  {
+    "id": 1304,
+    "word": "SCATOLA",
+    "tabooWords": [
+      "CONTENITORE",
+      "OGGETTI",
+      "CHIUSA",
+      "CARTONE",
+      "CONSERVARE"
+    ]
+  },
+  {
+    "id": 1305,
+    "word": "TELEFONINO",
+    "tabooWords": [
+      "CELLULARE",
+      "CHIAMARE",
+      "PORTATILE",
+      "COMUNICARE",
+      "MESSAGGI"
+    ]
+  },
+  {
+    "id": 1306,
+    "word": "MANDARINO",
+    "tabooWords": [
+      "FRUTTO",
+      "AGRUME",
+      "ARANCIONE",
+      "BUCCIA",
+      "SPICCHI"
+    ]
+  },
+  {
+    "id": 1307,
+    "word": "PENNELLESSA",
+    "tabooWords": [
+      "PITTURA",
+      "GRANDE",
+      "PARETE",
+      "IMBIANCHINO",
+      "DIPINGERE"
+    ]
+  },
+  {
+    "id": 1308,
+    "word": "ZOCCOLO",
+    "tabooWords": [
+      "SCARPA",
+      "LEGNO",
+      "PIEDE",
+      "CALZATURA",
+      "TRADIZIONALE"
+    ]
+  },
+  {
+    "id": 1309,
+    "word": "CLESSIDRA",
+    "tabooWords": [
+      "TEMPO",
+      "SABBIA",
+      "SCORRERE",
+      "MISURARE",
+      "VETRO"
+    ]
+  },
+  {
+    "id": 1310,
+    "word": "LANTERNA",
+    "tabooWords": [
+      "LUCE",
+      "FIAMMA",
+      "PORTATILE",
+      "ILLUMINARE",
+      "BUIO"
+    ]
+  },
+  {
+    "id": 1311,
+    "word": "MAGLIETTA",
+    "tabooWords": [
+      "ABBIGLIAMENTO",
+      "INDOSSARE",
+      "COTONE",
+      "VESTITO",
+      "CAPO"
+    ]
+  },
+  {
+    "id": 1312,
+    "word": "ASCIUGAMANO",
+    "tabooWords": [
+      "BAGNO",
+      "ASCIUGARE",
+      "DOCCIA",
+      "MORBIDO",
+      "SPUGNA"
+    ]
+  },
+  {
+    "id": 1313,
+    "word": "PORTAFOGLIO",
+    "tabooWords": [
+      "SOLDI",
+      "CARTE",
+      "DOCUMENTO",
+      "TASCA",
+      "CONTENERE"
+    ]
+  },
+  {
+    "id": 1314,
+    "word": "BRUGOLA",
+    "tabooWords": [
+      "CHIAVE",
+      "ESAGONALE",
+      "VITE",
+      "UTENSILE",
+      "MONTAGGIO"
+    ]
+  },
+  {
+    "id": 1315,
+    "word": "ZAMPOGNA",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "FIATO",
+      "NATALE",
+      "TRADIZIONALE"
+    ]
+  },
+  {
+    "id": 1316,
+    "word": "AMACA",
+    "tabooWords": [
+      "RIPOSARE",
+      "ALBERI",
+      "DONDOLARE",
+      "SOSPESA",
+      "RELAX"
+    ]
+  },
+  {
+    "id": 1317,
+    "word": "PELLICCIA",
+    "tabooWords": [
+      "ANIMALE",
+      "VESTITO",
+      "CALDO",
+      "PELO",
+      "INVERNO"
+    ]
+  },
+  {
+    "id": 1318,
+    "word": "LUCCHETTO",
+    "tabooWords": [
+      "CHIUDERE",
+      "SICUREZZA",
+      "CATENA",
+      "CHIAVE",
+      "PROTEZIONE"
+    ]
+  },
+  {
+    "id": 1319,
+    "word": "FORMAGGIO",
+    "tabooWords": [
+      "LATTE",
+      "STAGIONATO",
+      "CASEIFICIO",
+      "CAGLIO",
+      "FORMAGGI"
+    ]
+  },
+  {
+    "id": 1320,
+    "word": "STAMPELLA",
+    "tabooWords": [
+      "APPENDERE",
+      "VESTITI",
+      "ARMADIO",
+      "GRUCCIA",
+      "CAMICIA"
+    ]
+  },
+  {
+    "id": 1321,
+    "word": "VOLANTE",
+    "tabooWords": [
+      "GUIDARE",
+      "AUTO",
+      "STERZO",
+      "CIRCOLARE",
+      "MANI"
+    ]
+  },
+  {
+    "id": 1322,
+    "word": "CESTINO",
+    "tabooWords": [
+      "RIFIUTI",
+      "GETTARE",
+      "CONTENITORE",
+      "SPAZZATURA",
+      "RACCOGLIERE"
+    ]
+  },
+  {
+    "id": 1323,
+    "word": "IMBUTO",
+    "tabooWords": [
+      "VERSARE",
+      "LIQUIDO",
+      "BOTTIGLIA",
+      "CONVOGLIARE",
+      "TRASFERIRE"
+    ]
+  },
+  {
+    "id": 1324,
+    "word": "MUFFIN",
+    "tabooWords": [
+      "DOLCE",
+      "PICCOLO",
+      "CIOCCOLATO",
+      "CUPCAKE",
+      "FORNO"
+    ]
+  },
+  {
+    "id": 1325,
+    "word": "PETTINE",
+    "tabooWords": [
+      "CAPELLI",
+      "DISTRICARE",
+      "ACCONCIATURA",
+      "DENTI",
+      "PETTINARE"
+    ]
+  },
+  {
+    "id": 1326,
+    "word": "FORCHETTA",
+    "tabooWords": [
+      "POSATA",
+      "MANGIARE",
+      "PUNTE",
+      "TAVOLA",
+      "UTENSILE"
+    ]
+  },
+  {
+    "id": 1327,
+    "word": "TASTIERA",
+    "tabooWords": [
+      "COMPUTER",
+      "SCRIVERE",
+      "DIGITARE",
+      "TASTI",
+      "LETTERE"
+    ]
+  },
+  {
+    "id": 1328,
+    "word": "TACCUINO",
+    "tabooWords": [
+      "SCRIVERE",
+      "APPUNTI",
+      "PICCOLO",
+      "CARTA",
+      "NOTES"
+    ]
+  },
+  {
+    "id": 1329,
+    "word": "CROSTATA",
+    "tabooWords": [
+      "DOLCE",
+      "PASTA",
+      "FROLLA",
+      "MARMELLATA",
+      "FRUTTA"
+    ]
+  },
+  {
+    "id": 1330,
+    "word": "MICROONDE",
+    "tabooWords": [
+      "RISCALDARE",
+      "CIBO",
+      "ELETTRODOMESTICO",
+      "VELOCE",
+      "CUCINA"
+    ]
+  },
+  {
+    "id": 1331,
+    "word": "GREMBIULE",
+    "tabooWords": [
+      "CUCINA",
+      "PROTEGGERE",
+      "VESTITI",
+      "CUCINARE",
+      "INDOSSARE"
+    ]
+  },
+  {
+    "id": 1332,
+    "word": "VIOLINO",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "ARCHETTO",
+      "CORDE",
+      "CLASSICA"
+    ]
+  },
+  {
+    "id": 1333,
+    "word": "MONOPATTINO",
+    "tabooWords": [
+      "RUOTE",
+      "SPINGERE",
+      "TRASPORTO",
+      "SCOOTER",
+      "GUIDARE"
+    ]
+  },
+  {
+    "id": 1334,
+    "word": "BATTERIA",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "PERCUSSIONE",
+      "TAMBURI",
+      "SUONARE"
+    ]
+  },
+  {
+    "id": 1335,
+    "word": "VENTOSA",
+    "tabooWords": [
+      "ATTACCARE",
+      "VUOTO",
+      "ASPIRARE",
+      "SUPERFICIE",
+      "BAGNO"
+    ]
+  },
+  {
+    "id": 1336,
+    "word": "STUZZICADENTI",
+    "tabooWords": [
+      "PICCOLO",
+      "LEGNO",
+      "BOCCA",
+      "DENTI",
+      "USARE"
+    ]
+  },
+  {
+    "id": 1337,
+    "word": "FRANCOBOLLO",
+    "tabooWords": [
+      "LETTERA",
+      "POSTA",
+      "SPEDIRE",
+      "COLLEZIONE",
+      "AFFRANCATURA"
+    ]
+  },
+  {
+    "id": 1338,
+    "word": "MAPPAMONDO",
+    "tabooWords": [
+      "TERRA",
+      "GLOBO",
+      "GEOGRAFIA",
+      "ROTANTE",
+      "CONTINENTI"
+    ]
+  },
+  {
+    "id": 1339,
+    "word": "BOTTONE",
+    "tabooWords": [
+      "CHIUSURA",
+      "CAMICIA",
+      "PLASTICA",
+      "ABBIGLIAMENTO",
+      "FISSARE"
+    ]
+  },
+  {
+    "id": 1340,
+    "word": "PALETTA",
+    "tabooWords": [
+      "SCAVARE",
+      "SABBIA",
+      "RACCOGLIERE",
+      "BAMBINI",
+      "UTENSILE"
+    ]
+  },
+  {
+    "id": 1341,
+    "word": "CAVATAPPI",
+    "tabooWords": [
+      "VINO",
+      "APRIRE",
+      "BOTTIGLIA",
+      "SUGHERO",
+      "UTENSILE"
+    ]
+  },
+  {
+    "id": 1342,
+    "word": "FIOCCO",
+    "tabooWords": [
+      "REGALO",
+      "NASTRO",
+      "DECORAZIONE",
+      "PACCHETTO",
+      "FESTA"
+    ]
+  },
+  {
+    "id": 1343,
+    "word": "BILANCIA",
+    "tabooWords": [
+      "PESO",
+      "PESARE",
+      "MISURARE",
+      "CUCINA",
+      "BAGNO"
+    ]
+  },
+  {
+    "id": 1344,
+    "word": "SALVAGENTE",
+    "tabooWords": [
+      "MARE",
+      "GALLEGGIARE",
+      "SALVARE",
+      "ANELLO",
+      "ACQUA"
+    ]
+  },
+  {
+    "id": 1345,
+    "word": "CESTELLO",
+    "tabooWords": [
+      "BIANCHERIA",
+      "LAVATRICE",
+      "CONTENITORE",
+      "BUCATO",
+      "VESTITI"
+    ]
+  },
+  {
+    "id": 1346,
+    "word": "ZERBINO",
+    "tabooWords": [
+      "ENTRATA",
+      "PORTA",
+      "PULIRE",
+      "SCARPE",
+      "BENVENUTO"
+    ]
+  },
+  {
+    "id": 1347,
+    "word": "STETOSCOPIO",
+    "tabooWords": [
+      "MEDICO",
+      "ASCOLTARE",
+      "CUORE",
+      "BATTITO",
+      "STRUMENTO"
+    ]
+  },
+  {
+    "id": 1348,
+    "word": "MANIGLIA",
+    "tabooWords": [
+      "PORTA",
+      "APRIRE",
+      "AFFERRARE",
+      "MANOPOLA",
+      "TIRARE"
+    ]
+  },
+  {
+    "id": 1349,
+    "word": "CRAVATTA",
+    "tabooWords": [
+      "ABBIGLIAMENTO",
+      "ELEGANTE",
+      "FORMALE",
+      "COLLO",
+      "NODO"
+    ]
+  },
+  {
+    "id": 1350,
+    "word": "TAGLIERE",
+    "tabooWords": [
+      "CUCINA",
+      "TAGLIARE",
+      "LEGNO",
+      "CIBO",
+      "PREPARARE"
+    ]
+  },
+  {
+    "id": 1351,
+    "word": "SCOPA",
+    "tabooWords": [
+      "PULIRE",
+      "PAVIMENTO",
+      "PULIZIA",
+      "SPAZZARE",
+      "MANICO"
+    ]
+  },
+  {
+    "id": 1352,
+    "word": "CINTURA",
+    "tabooWords": [
+      "PANTALONI",
+      "STRINGERE",
+      "VITA",
+      "ACCESSORIO",
+      "REGOLARE"
+    ]
+  },
+  {
+    "id": 1353,
+    "word": "GIUBBOTTO",
+    "tabooWords": [
+      "VESTITO",
+      "CALDO",
+      "INVERNO",
+      "GIACCA",
+      "PROTEZIONE"
+    ]
+  },
+  {
+    "id": 1354,
+    "word": "SPUGNA",
+    "tabooWords": [
+      "ASSORBIRE",
+      "PULIRE",
+      "MORBIDA",
+      "POROSA",
+      "LAVARE"
+    ]
+  },
+  {
+    "id": 1355,
+    "word": "ROTOLO",
+    "tabooWords": [
+      "CARTA",
+      "CILINDRO",
+      "IGIENICA",
+      "SVOLGERE",
+      "AVVOLGERE"
+    ]
+  },
+  {
+    "id": 1356,
+    "word": "MOLLETTA",
+    "tabooWords": [
+      "BUCATO",
+      "APPENDERE",
+      "FISSARE",
+      "PANNI",
+      "CLIP"
+    ]
+  },
+  {
+    "id": 1357,
+    "word": "PIUMONE",
+    "tabooWords": [
+      "COPERTA",
+      "LETTO",
+      "CALDO",
+      "DORMIRE",
+      "INVERNO"
+    ]
+  },
+  {
+    "id": 1358,
+    "word": "BAVAGLINO",
+    "tabooWords": [
+      "BAMBINO",
+      "COLLO",
+      "PROTEGGERE",
+      "MANGIARE",
+      "SPORCARE"
+    ]
+  },
+  {
+    "id": 1359,
+    "word": "PASTELLO",
+    "tabooWords": [
+      "COLORARE",
+      "BAMBINI",
+      "DISEGNARE",
+      "COLORI",
+      "CERA"
+    ]
+  },
+  {
+    "id": 1360,
+    "word": "STIVALI",
+    "tabooWords": [
+      "SCARPE",
+      "PIOGGIA",
+      "FANGO",
+      "ALTI",
+      "CAMMINARE"
+    ]
+  },
+  {
+    "id": 1361,
+    "word": "GIOIELLO",
+    "tabooWords": [
+      "PREZIOSO",
+      "BRILLANTE",
+      "ANELLO",
+      "COLLANA",
+      "INDOSSARE"
+    ]
+  },
+  {
+    "id": 1362,
+    "word": "SACCHETTO",
+    "tabooWords": [
+      "CONTENITORE",
+      "PLASTICA",
+      "CARTA",
+      "TRASPORTARE",
+      "SPESA"
+    ]
+  },
+  {
+    "id": 1363,
+    "word": "PROFUMO",
+    "tabooWords": [
+      "FRAGRANZA",
+      "SPRUZZARE",
+      "ODORE",
+      "BOTTIGLIA",
+      "ESSENZA"
+    ]
+  },
+  {
+    "id": 1364,
+    "word": "MESTOLO",
+    "tabooWords": [
+      "CUCINA",
+      "SERVIRE",
+      "ZUPPA",
+      "MINESTRA",
+      "UTENSILE"
+    ]
+  },
+  {
+    "id": 1365,
+    "word": "FAZZOLETTO",
+    "tabooWords": [
+      "NASO",
+      "CARTA",
+      "STOFFA",
+      "ASCIUGARE",
+      "LACRIME"
+    ]
+  },
+  {
+    "id": 1366,
+    "word": "FRISBEE",
+    "tabooWords": [
+      "LANCIARE",
+      "GIOCO",
+      "VOLARE",
+      "DISCO",
+      "PRENDERE"
+    ]
+  },
+  {
+    "id": 1367,
+    "word": "TAGLIATELLE",
+    "tabooWords": [
+      "PASTA",
+      "FRESCA",
+      "UOVO",
+      "LUNGA",
+      "PIATTA"
+    ]
+  },
+  {
+    "id": 1368,
+    "word": "FLAUTO",
+    "tabooWords": [
+      "STRUMENTO",
+      "MUSICALE",
+      "FIATO",
+      "SUONARE",
+      "LEGNO"
+    ]
+  },
+  {
+    "id": 1369,
+    "word": "SECCHIELLO",
+    "tabooWords": [
+      "SABBIA",
+      "BAMBINI",
+      "SPIAGGIA",
+      "CONTENITORE",
+      "ACQUA"
+    ]
+  },
+  {
+    "id": 1370,
+    "word": "GOMMONE",
+    "tabooWords": [
+      "BARCA",
+      "GONFIABILE",
+      "MARE",
+      "GALLEGGIARE",
+      "EMERGENZA"
+    ]
+  },
+  {
+    "id": 1371,
+    "word": "STAMPANTE",
+    "tabooWords": [
+      "COMPUTER",
+      "CARTA",
+      "INCHIOSTRO",
+      "STAMPARE",
+      "DOCUMENTO"
+    ]
+  },
+  {
+    "id": 1372,
+    "word": "MAGLIERIA",
+    "tabooWords": [
+      "ABBIGLIAMENTO",
+      "LANA",
+      "MAGLIA",
+      "TESSUTO",
+      "INVERNO"
+    ]
+  },
+  {
+    "id": 1373,
+    "word": "PANETTONE",
+    "tabooWords": [
+      "DOLCE",
+      "NATALE",
+      "UVETTA",
+      "CANDITI",
+      "TRADIZIONALE"
+    ]
+  },
+  {
+    "id": 1374,
+    "word": "MATTONELLA",
+    "tabooWords": [
+      "PAVIMENTO",
+      "CERAMICA",
+      "RIVESTIMENTO",
+      "DECORATA",
+      "BAGNO"
+    ]
+  },
+  {
+    "id": 1375,
+    "word": "BIBITA",
+    "tabooWords": [
+      "BEVANDA",
+      "GASSATA",
+      "FREDDA",
+      "LATTINA",
+      "SETE"
+    ]
+  },
+  {
+    "id": 1376,
+    "word": "LABIRINTO",
+    "tabooWords": [
+      "PERCORSO",
+      "INTRICATO",
+      "USCITA",
+      "PERDERSI",
+      "MINOTAURO"
+    ]
+  },
+  {
+    "id": 1377,
+    "word": "RIFLETTORE",
+    "tabooWords": [
+      "LUCE",
+      "ILLUMINARE",
+      "POTENTE",
+      "TEATRO",
+      "SCENA"
+    ]
+  },
+  {
+    "id": 1378,
+    "word": "PAGAIA",
+    "tabooWords": [
+      "CANOA",
+      "REMARE",
+      "ACQUA",
+      "PROPULSIONE",
+      "NAVIGARE"
+    ]
+  },
+  {
+    "id": 1379,
+    "word": "STENDINO",
+    "tabooWords": [
+      "BUCATO",
+      "ASCIUGARE",
+      "PANNI",
+      "ESTENDERE",
+      "BIANCHERIA"
+    ]
+  },
+  {
+    "id": 1380,
+    "word": "CORIANDOLI",
+    "tabooWords": [
+      "FESTA",
+      "COLORATI",
+      "CARTA",
+      "LANCIARE",
+      "CARNEVALE"
+    ]
+  },
+  {
+    "id": 1381,
+    "word": "CAMPANELLO",
+    "tabooWords": [
+      "SUONARE",
+      "PORTA",
+      "CASA",
+      "VISITATORE",
+      "AVVISO"
+    ]
+  },
+  {
+    "id": 1382,
+    "word": "SIRINGA",
+    "tabooWords": [
+      "INIEZIONE",
+      "MEDICO",
+      "LIQUIDO",
+      "AGO",
+      "FARMACI"
+    ]
+  },
+  {
+    "id": 1383,
+    "word": "NASTRO",
+    "tabooWords": [
+      "AVVOLGERE",
+      "ADESIVO",
+      "REGALO",
+      "PACCHETTO",
+      "DECORAZIONE"
+    ]
+  },
+  {
+    "id": 1384,
+    "word": "CIUCCIO",
+    "tabooWords": [
+      "BAMBINO",
+      "NEONATO",
+      "SUCCHIARE",
+      "CALMARE",
+      "PLASTICA"
+    ]
+  },
+  {
+    "id": 1385,
+    "word": "POMODORO",
+    "tabooWords": [
+      "VERDURA",
+      "ROSSO",
+      "INSALATA",
+      "SUGO",
+      "ORTAGGIO"
+    ]
+  },
+  {
+    "id": 1386,
+    "word": "PIGIAMA",
+    "tabooWords": [
+      "DORMIRE",
+      "VESTITO",
+      "NOTTE",
+      "COMODO",
+      "LETTO"
+    ]
+  },
+  {
+    "id": 1387,
+    "word": "ZAFFERANO",
+    "tabooWords": [
+      "SPEZIA",
+      "GIALLO",
+      "RISOTTO",
+      "AROMA",
+      "CUCINA"
+    ]
+  },
+  {
+    "id": 1388,
+    "word": "FAZZOLETTINO",
+    "tabooWords": [
+      "CARTA",
+      "TESSUTO",
+      "PULIZIA",
+      "NASO",
+      "ASCIUGARE"
+    ]
+  },
+  {
+    "id": 1389,
+    "word": "ARDESIA",
+    "tabooWords": [
+      "NERA",
+      "INSEGNANTE",
+      "CLASSE",
+      "SCUOLA",
+      "GESSETTO"
+    ]
+  },
+  {
+    "id": 1390,
+    "word": "REMO",
+    "tabooWords": [
+      "CANOA",
+      "REMARE",
+      "BARCA",
+      "SPINTA",
+      "ACQUA"
+    ]
+  },
+  {
+    "id": 1391,
+    "word": "UBRIACARSI",
+    "tabooWords": [
+      "ALCOL",
+      "BERE",
+      "SBRONZA",
+      "BOTTIGLIA",
+      "ECCESSO"
+    ]
+  },
+  {
+    "id": 1392,
+    "word": "MARATONA",
+    "tabooWords": [
+      "SERIE",
+      "EPISODI",
+      "CONSECUTIVI",
+      "GUARDARE",
+      "INTERO"
+    ]
+  },
+  {
+    "id": 1393,
+    "word": "DENTELLO",
+    "tabooWords": [
+      "IGIENE",
+      "PULIRE",
+      "DENTIFRICIO",
+      "SETOLE",
+      "ORALE"
+    ]
+  },
+  {
+    "id": 1394,
+    "word": "PROVOCARE",
+    "tabooWords": [
+      "IRRITARE",
+      "REAZIONE",
+      "SCATENARE",
+      "SENSIBILE",
+      "DISTURBARE"
+    ]
+  },
+  {
+    "id": 1395,
+    "word": "MANTELLO",
+    "tabooWords": [
+      "INDOSSARE",
+      "ABITO",
+      "INVERNO",
+      "COPRIRE",
+      "STOFFA"
+    ]
+  },
+  {
+    "id": 1396,
+    "word": "INCHIOSTRO",
+    "tabooWords": [
+      "SCRIVERE",
+      "CONTENITORE",
+      "PENNA",
+      "ANTICO",
+      "STILOGRAFICA"
+    ]
+  },
+  {
+    "id": 1397,
+    "word": "CONDIVIDERE",
+    "tabooWords": [
+      "PUBBLICARE",
+      "DIFFONDERE",
+      "SOCIAL",
+      "POST",
+      "MOSTRARE"
+    ]
+  },
+  {
+    "id": 1398,
+    "word": "STRISCE",
+    "tabooWords": [
+      "ATTRAVERSAMENTO",
+      "STRADA",
+      "PEDONI",
+      "SEGNALETICA",
+      "TRAFFICO"
+    ]
+  },
+  {
+    "id": 1399,
+    "word": "SUCCIONE",
+    "tabooWords": [
+      "FISSARE",
+      "SUPERFICIE",
+      "VENTOSA",
+      "BAGNO",
+      "ATTACCARE"
+    ]
+  },
+  {
+    "id": 1400,
+    "word": "VENTAGLIETTO",
+    "tabooWords": [
+      "ARIA",
+      "PIEGHEVOLE",
+      "ESTATE",
+      "CALDO",
+      "SVENTOLARE"
+    ]
+  },
+  {
+    "id": 1401,
+    "word": "RISPARMIO",
+    "tabooWords": [
+      "DENARO",
+      "SOLDI",
+      "DEPOSITO",
+      "MONETE",
+      "CONSERVARE"
+    ]
+  },
+  {
+    "id": 1402,
+    "word": "RODENTE",
+    "tabooWords": [
+      "RUOTA",
+      "GABBIA",
+      "PICCOLO",
+      "ANIMALE",
+      "HAMSTER"
+    ]
+  },
+  {
+    "id": 1403,
+    "word": "GIRANDELLA",
+    "tabooWords": [
+      "BAMBINI",
+      "FESTA",
+      "ROTAZIONE",
+      "GIOCO",
+      "VENTO"
+    ]
+  },
+  {
+    "id": 1404,
+    "word": "PARACRISTO",
+    "tabooWords": [
+      "LANCIO",
+      "ARIA",
+      "CADERE",
+      "FRENATA",
+      "DISCESA"
+    ]
+  },
+  {
+    "id": 1405,
+    "word": "SCOVOLO",
+    "tabooWords": [
+      "PULIZIA",
+      "MANICO",
+      "SETOLE",
+      "SPORCIZIA",
+      "PAVIMENTO"
+    ]
+  },
+  {
+    "id": 1406,
+    "word": "ACQUA",
+    "tabooWords": [
+      "APRIRE",
+      "CHIUDERE",
+      "DOCCIA",
+      "MISCELATORE",
+      "LAVANDINO"
+    ]
+  },
+  {
+    "id": 1407,
+    "word": "FANTASTICARE",
+    "tabooWords": [
+      "IMMAGINARE",
+      "INSIEME",
+      "PERSONAGGI",
+      "COPPIA",
+      "SPERARE"
+    ]
+  },
+  {
+    "id": 1408,
+    "word": "META",
+    "tabooWords": [
+      "SOCIAL",
+      "AZIENDA",
+      "FACEBOOK",
+      "VIRTUALE",
+      "TECNOLOGIA"
+    ]
+  },
+  {
+    "id": 1409,
+    "word": "CONSERVA",
+    "tabooWords": [
+      "VERDURA",
+      "VASETTO",
+      "SALAMOIA",
+      "AGRODOLCE",
+      "ACETO"
+    ]
+  },
+  {
+    "id": 1410,
+    "word": "PARAFIATO",
+    "tabooWords": [
+      "AUTO",
+      "PIANTONE",
+      "CRISTALLO",
+      "PROTETTIVO",
+      "ANTERIORE"
+    ]
+  },
+  {
+    "id": 1411,
+    "word": "SARCOFAGO",
+    "tabooWords": [
+      "ANTICO",
+      "EGIZIANO",
+      "TOMBA",
+      "FARAONE",
+      "CONTENITORE"
+    ]
+  },
+  {
+    "id": 1412,
+    "word": "ERBA",
+    "tabooWords": [
+      "VERDE",
+      "CAMPO",
+      "NATURA",
+      "TERRA",
+      "TAGLIARE"
+    ]
+  },
+  {
+    "id": 1413,
+    "word": "FERMAGLIO",
+    "tabooWords": [
+      "CARTA",
+      "UFFICIO",
+      "DOCUMENTI",
+      "METALLO",
+      "PICCOLO"
+    ]
+  },
+  {
+    "id": 1414,
+    "word": "FREGATO",
+    "tabooWords": [
+      "RAGGIRO",
+      "TRUFFA",
+      "INGANNATO",
+      "INGANNO",
+      "IMBROGLIATO"
+    ]
+  },
+  {
+    "id": 1415,
+    "word": "PIROETTARE",
+    "tabooWords": [
+      "RUOTARE",
+      "BALLERINA",
+      "GIRO",
+      "DANZA",
+      "CLASSICA"
+    ]
+  },
+  {
+    "id": 1416,
+    "word": "INDUMENTO",
+    "tabooWords": [
+      "NOTTE",
+      "DORMIRE",
+      "BOTTONI",
+      "LETTO",
+      "COTONE"
+    ]
+  },
+  {
+    "id": 1417,
+    "word": "IGNORARE",
+    "tabooWords": [
+      "VISUALIZZARE",
+      "MESSAGGI",
+      "CHAT",
+      "SILENZIO",
+      "RISPOSTA"
+    ]
+  },
+  {
+    "id": 1418,
+    "word": "CATALOGNA",
+    "tabooWords": [
+      "SPAGNA",
+      "REGIONE",
+      "INDIPENDENZA",
+      "CATALANA",
+      "GAUDI"
+    ]
+  },
+  {
+    "id": 1419,
+    "word": "FENDENTE",
+    "tabooWords": [
+      "AFFILATO",
+      "TAGLIO",
+      "CUCINARE",
+      "LAMA",
+      "TAGLIENTE"
+    ]
+  },
+  {
+    "id": 1420,
+    "word": "BESTIA",
+    "tabooWords": [
+      "TRASFORMAZIONE",
+      "LUNA",
+      "LICANTROPIA",
+      "LEGGENDA",
+      "LUPO"
+    ]
+  },
+  {
+    "id": 1421,
+    "word": "BRILLANTE",
+    "tabooWords": [
+      "PREZIOSO",
+      "ANELLO",
+      "ORO",
+      "DIAMANTE",
+      "ACCESSORIO"
+    ]
+  },
+  {
+    "id": 1422,
+    "word": "RIPARO",
+    "tabooWords": [
+      "ACQUA",
+      "PIOGGIA",
+      "APRIRE",
+      "CHIUDERE",
+      "TEMPORALE"
+    ]
+  },
+  {
+    "id": 1423,
+    "word": "HIGHLANDS",
+    "tabooWords": [
+      "SCOZIA",
+      "MONTAGNE",
+      "CORNAMUSA",
+      "KILT",
+      "TERRA"
+    ]
+  },
+  {
+    "id": 1424,
+    "word": "PETTORINA",
+    "tabooWords": [
+      "BAMBINO",
+      "MACCHIE",
+      "MANGIARE",
+      "PROTEGGERE",
+      "NEONATO"
+    ]
+  },
+  {
+    "id": 1425,
+    "word": "KEYBOARD",
+    "tabooWords": [
+      "DIGITARE",
+      "COMPUTER",
+      "SCRIVERE",
+      "TASTI",
+      "DITA"
+    ]
+  },
+  {
+    "id": 1426,
+    "word": "STELLE",
+    "tabooWords": [
+      "COLORATI",
+      "CARTA",
+      "PICCOLI",
+      "BRILLANTINI",
+      "FESTA"
+    ]
+  },
+  {
+    "id": 1427,
+    "word": "SALOTTO",
+    "tabooWords": [
+      "SEDUTA",
+      "MORBIDO",
+      "CUSCINI",
+      "RELAX",
+      "CASA"
+    ]
+  },
+  {
+    "id": 1428,
+    "word": "LEPRE",
+    "tabooWords": [
+      "ORECCHIE",
+      "LUNGO",
+      "CAROTE",
+      "SELVATICO",
+      "PELO"
+    ]
+  },
+  {
+    "id": 1429,
+    "word": "ENIGMA",
+    "tabooWords": [
+      "PROBLEMA",
+      "INDOVINELLO",
+      "COMPLICATO",
+      "SOLUZIONE",
+      "DIFFICILE"
+    ]
+  },
+  {
+    "id": 1430,
+    "word": "MODELLO",
+    "tabooWords": [
+      "MODA",
+      "SFILATA",
+      "COMICO",
+      "STILISTA",
+      "PASSERELLA"
+    ]
+  },
+  {
+    "id": 1431,
+    "word": "LATTINA",
+    "tabooWords": [
+      "GASSATA",
+      "FREDDA",
+      "BEVANDA",
+      "APRIRE",
+      "ALLUMINIO"
+    ]
+  },
+  {
+    "id": 1432,
+    "word": "CERO",
+    "tabooWords": [
+      "FIAMMA",
+      "CERA",
+      "LUCE",
+      "MOCCOLO",
+      "STOPPINO"
+    ]
+  },
+  {
+    "id": 1433,
+    "word": "STENCIL",
+    "tabooWords": [
+      "DISEGNO",
+      "SAGOMA",
+      "PITTURA",
+      "TECNICA",
+      "SPRAY"
+    ]
+  },
+  {
+    "id": 1434,
+    "word": "FRANGIFLUTTI",
+    "tabooWords": [
+      "MARE",
+      "PROTEZIONE",
+      "ONDE",
+      "BARRIERA",
+      "EROSIONE"
+    ]
+  },
+  {
+    "id": 1435,
+    "word": "AROMATERAPIA",
+    "tabooWords": [
+      "ESSENZE",
+      "OLII",
+      "PROFUMI",
+      "BENESSERE",
+      "NATURALE"
+    ]
+  },
+  {
+    "id": 1436,
+    "word": "PINZATURA",
+    "tabooWords": [
+      "DOCUMENTO",
+      "GRAFFETTA",
+      "UNIRE",
+      "UFFICIO",
+      "CARTA"
+    ]
+  },
+  {
+    "id": 1437,
+    "word": "BULBO",
+    "tabooWords": [
+      "FIORE",
+      "PIANTARE",
+      "SOTTOSUOLO",
+      "TULIPANO",
+      "GERMINARE"
+    ]
+  },
+  {
+    "id": 1438,
+    "word": "CIANFRUSAGLIA",
+    "tabooWords": [
+      "OGGETTO",
+      "INUTILE",
+      "DISORDINE",
+      "VECCHIO",
+      "CIARPAME"
+    ]
+  },
+  {
+    "id": 1439,
+    "word": "MELASSA",
+    "tabooWords": [
+      "DOLCE",
+      "ZUCCHERO",
+      "DENSO",
+      "SCIROPPO",
+      "CANNA"
+    ]
+  },
+  {
+    "id": 1440,
+    "word": "QUADRIFOGLIO",
+    "tabooWords": [
+      "FORTUNA",
+      "VERDE",
+      "RARO",
+      "TROVARE",
+      "IRLANDESE"
+    ]
+  },
+  {
+    "id": 1441,
+    "word": "BATTISCOPA",
+    "tabooWords": [
+      "PARETE",
+      "PAVIMENTO",
+      "LEGNO",
+      "RIVESTIMENTO",
+      "BORDO"
+    ]
+  },
+  {
+    "id": 1442,
+    "word": "SCARABOCCHIO",
+    "tabooWords": [
+      "DISEGNO",
+      "CASUALE",
+      "INFANTILE",
+      "ASTRATTO",
+      "INCOMPRENSIBILE"
+    ]
+  },
+  {
+    "id": 1443,
+    "word": "PORTASCIUGAMANI",
+    "tabooWords": [
+      "BAGNO",
+      "ASCIUGAMANO",
+      "APPENDERE",
+      "PARETE",
+      "ACCIAIO"
+    ]
+  },
+  {
+    "id": 1444,
+    "word": "ESAGONO",
+    "tabooWords": [
+      "FIGURA",
+      "GEOMETRICA",
+      "LATI",
+      "FORMA",
+      "REGOLARE"
+    ]
+  },
+  {
+    "id": 1445,
+    "word": "BURROCACAO",
+    "tabooWords": [
+      "LABBRA",
+      "PROTEGGERE",
+      "SCREPOLATE",
+      "IDRATARE",
+      "STICK"
+    ]
+  },
+  {
+    "id": 1446,
+    "word": "BATUFFOLO",
+    "tabooWords": [
+      "COTONE",
+      "MORBIDO",
+      "PICCOLO",
+      "ASSORBENTE",
+      "PULIRE"
+    ]
+  },
+  {
+    "id": 1447,
+    "word": "CERNIERA",
+    "tabooWords": [
+      "VESTITO",
+      "CHIUSURA",
+      "METALLO",
+      "APRIRE",
+      "LAMPO"
+    ]
+  },
+  {
+    "id": 1448,
+    "word": "CARAFFA",
+    "tabooWords": [
+      "ACQUA",
+      "VERSARE",
+      "CONTENITORE",
+      "VETRO",
+      "TAVOLA"
+    ]
+  },
+  {
+    "id": 1449,
+    "word": "TARTUFO",
+    "tabooWords": [
+      "FUNGO",
+      "SOTTERRANEO",
+      "PREGIATO",
+      "CANE",
+      "PROFUMO"
+    ]
+  },
+  {
+    "id": 1450,
+    "word": "BRILLANTINA",
+    "tabooWords": [
+      "CAPELLI",
+      "LUCIDO",
+      "FISSARE",
+      "ACCONCIATURA",
+      "GRASSO"
+    ]
+  },
+  {
+    "id": 1451,
+    "word": "PORTABICCHIERI",
+    "tabooWords": [
+      "SUPPORTO",
+      "BEVANDA",
+      "TAVOLO",
+      "MACCHIA",
+      "PROTEZIONE"
+    ]
+  },
+  {
+    "id": 1452,
+    "word": "CALEIDOSCOPIO",
+    "tabooWords": [
+      "COLORI",
+      "RIFLESSO",
+      "CANNOCCHIALE",
+      "GEOMETRICO",
+      "OTTICO"
+    ]
+  },
+  {
+    "id": 1453,
+    "word": "FORNO",
+    "tabooWords": [
+      "CUOCERE",
+      "CALDO",
+      "ELETTRICO",
+      "CUCINA",
+      "PIETANZA"
+    ]
+  },
+  {
+    "id": 1454,
+    "word": "FILIGRANA",
+    "tabooWords": [
+      "LAVORAZIONE",
+      "METALLO",
+      "FINE",
+      "GIOIELLO",
+      "DETTAGLIO"
+    ]
+  },
+  {
+    "id": 1455,
+    "word": "QUADERNO",
+    "tabooWords": [
+      "SCUOLA",
+      "SCRIVERE",
+      "APPUNTI",
+      "PAGINE",
+      "RIGHE"
+    ]
+  },
+  {
+    "id": 1456,
+    "word": "BANDERUOLA",
+    "tabooWords": [
+      "VENTO",
+      "DIREZIONE",
+      "TETTO",
+      "GIRARE",
+      "METALLO"
+    ]
+  },
+  {
+    "id": 1457,
+    "word": "FOTOSINTESI",
+    "tabooWords": [
+      "PIANTE",
+      "CLOROFILLA",
+      "LUCE",
+      "ENERGIA",
+      "FOGLIE"
+    ]
+  },
+  {
+    "id": 1458,
+    "word": "POSACENERE",
+    "tabooWords": [
+      "SIGARETTA",
+      "CENERE",
+      "FUMARE",
+      "CONTENITORE",
+      "RACCOGLIERE"
+    ]
+  },
+  {
+    "id": 1459,
+    "word": "RASTRELLO",
+    "tabooWords": [
+      "GIARDINO",
+      "FOGLIE",
+      "RACCOGLIERE",
+      "ATTREZZO",
+      "DENTI"
+    ]
+  },
+  {
+    "id": 1460,
+    "word": "FOULARD",
+    "tabooWords": [
+      "COLLO",
+      "SETA",
+      "ACCESSORIO",
+      "ELEGANTE",
+      "AVVOLGERE"
+    ]
+  },
+  {
+    "id": 1461,
+    "word": "CAMALEONTE",
+    "tabooWords": [
+      "COLORE",
+      "CAMBIARE",
+      "RETTILE",
+      "LINGUA",
+      "MIMETIZZARSI"
+    ]
+  },
+  {
+    "id": 1462,
+    "word": "PARALUME",
+    "tabooWords": [
+      "LAMPADA",
+      "LUCE",
+      "ATTENUARE",
+      "ABAT-JOUR",
+      "STOFFA"
+    ]
+  },
+  {
+    "id": 1463,
+    "word": "CONFETTO",
+    "tabooWords": [
+      "MANDORLA",
+      "ZUCCHERO",
+      "MATRIMONIO",
+      "BOMBONIERA",
+      "COLORATO"
+    ]
+  },
+  {
+    "id": 1464,
+    "word": "LIBELLULA",
+    "tabooWords": [
+      "INSETTO",
+      "VOLARE",
+      "ALI",
+      "TRASPARENTI",
+      "STAGNO"
+    ]
+  },
+  {
+    "id": 1465,
+    "word": "SALIERA",
+    "tabooWords": [
+      "SALE",
+      "CONDIMENTO",
+      "TAVOLA",
+      "SCUOTERE",
+      "CONTENITORE"
+    ]
+  },
+  {
+    "id": 1466,
+    "word": "PUNTASPILLI",
+    "tabooWords": [
+      "AGHI",
+      "CUSCINO",
+      "PICCOLO",
+      "SARTORIA",
+      "PUNGERE"
+    ]
+  },
+  {
+    "id": 1467,
+    "word": "GROTTESCO",
+    "tabooWords": [
+      "BIZZARRO",
+      "STRANO",
+      "DEFORME",
+      "INQUIETANTE",
+      "RIDICOLO"
+    ]
+  },
+  {
+    "id": 1468,
+    "word": "PESCECANE",
+    "tabooWords": [
+      "MARE",
+      "PINNA",
+      "FEROCE",
+      "PREDATORE",
+      "DENTI"
+    ]
+  },
+  {
+    "id": 1469,
+    "word": "ACCAPPATOIO",
+    "tabooWords": [
+      "BAGNO",
+      "DOCCIA",
+      "SPUGNA",
+      "ASCIUGARE",
+      "COPRIRE"
+    ]
+  },
+  {
+    "id": 1470,
+    "word": "OROLOGERIA",
+    "tabooWords": [
+      "PRECISIONE",
+      "MECCANICA",
+      "RIPARARE",
+      "INGRANAGGI",
+      "OROLOGI"
+    ]
+  },
+  {
+    "id": 1471,
+    "word": "BIGIOTTERIA",
+    "tabooWords": [
+      "GIOIELLI",
+      "FALSI",
+      "ACCESSORI",
+      "ECONOMICI",
+      "ORNAMENTI"
+    ]
+  },
+  {
+    "id": 1472,
+    "word": "TATUATORE",
+    "tabooWords": [
+      "DISEGNO",
+      "PELLE",
+      "INCHIOSTRO",
+      "STUDIO",
+      "AGHI"
+    ]
+  },
+  {
+    "id": 1473,
+    "word": "SCATOLAME",
+    "tabooWords": [
+      "CONSERVE",
+      "ALIMENTI",
+      "METALLO",
+      "PROVVISTE",
+      "DISPENSA"
+    ]
+  },
+  {
+    "id": 1474,
+    "word": "VENDITORE",
+    "tabooWords": [
+      "NEGOZIO",
+      "COMMESSO",
+      "ACQUISTO",
+      "CLIENTE",
+      "MERCE"
+    ]
+  },
+  {
+    "id": 1475,
+    "word": "ZAMPINO",
+    "tabooWords": [
+      "INTERVENTO",
+      "PICCOLO",
+      "ANIMALE",
+      "COINVOLGIMENTO",
+      "TRACCIA"
+    ]
+  },
+  {
+    "id": 1476,
+    "word": "POMELLATO",
+    "tabooWords": [
+      "GIOIELLO",
+      "PIETRA",
+      "DESIGN",
+      "COLLANA",
+      "ITALIANO"
+    ]
+  },
+  {
+    "id": 1477,
+    "word": "TORCICOLLO",
+    "tabooWords": [
+      "DOLORE",
+      "MUSCOLARE",
+      "COLLO",
+      "RIGIDITÀ",
+      "MOVIMENTO"
+    ]
+  },
+  {
+    "id": 1478,
+    "word": "SOTTOVESTE",
+    "tabooWords": [
+      "INTIMO",
+      "ABITO",
+      "FEMMINILE",
+      "DELICATO",
+      "INDUMENTO"
+    ]
+  },
+  {
+    "id": 1479,
+    "word": "CAPEZZOLO",
+    "tabooWords": [
+      "MAMMELLA",
+      "ROSA",
+      "SENO",
+      "LATTE",
+      "MATERNO"
+    ]
+  },
+  {
+    "id": 1480,
+    "word": "PETTORINA",
+    "tabooWords": [
+      "CANE",
+      "GUINZAGLIO",
+      "PASSEGGIATA",
+      "CONTROLLO",
+      "TIRARE"
+    ]
+  },
+  {
+    "id": 1481,
+    "word": "SCACCIAPENSIERI",
+    "tabooWords": [
+      "OGGETTO",
+      "SUONO",
+      "STRUMENTO",
+      "DISTRAZIONE",
+      "RELAX"
+    ]
+  },
+  {
+    "id": 1482,
+    "word": "ACCIOTTOLATO",
+    "tabooWords": [
+      "STRADA",
+      "PIETRA",
+      "PAVIMENTO",
+      "ANTICO",
+      "SASSI"
+    ]
   }
 ];
