@@ -2,6 +2,15 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { TabooCard } from '../data/types';
 import { tabooCards } from '../data/taboo_words';
 import { toast } from "@/hooks/use-toast";
+import { 
+  trackCorrectAnswer, 
+  trackTabooUsed, 
+  trackSkipCard, 
+  trackCardDrawn,
+  trackRoundStart,
+  trackRoundEnd,
+  trackGameCompleted
+} from '../lib/analytics';
 
 // Chiave per salvare le carte utilizzate nel localStorage
 const USED_CARDS_KEY = 'taboo-used-cards';
@@ -229,6 +238,13 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsPlaying(false);
     if (timerId) clearTimeout(timerId);
     
+    // Tracciamento completamento del gioco
+    trackGameCompleted(
+      gameSettings.mode, 
+      winningTeam.name,
+      gameSettings.currentRound
+    );
+    
     toast({
       title: "Vittoria!",
       description: `${winningTeam.name} ha vinto con ${winningTeam.score} punti!`
@@ -260,51 +276,36 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   };
 
   const drawCard = () => {
-    // Verifichiamo prima se ci sono ancora carte disponibili
-    if (availableCards.length === 0) {
+    // Verifichiamo se ci sono carte disponibili
+    if (cards.length === 0) {
+      // Non ci sono più carte nel mazzo
+      console.error("Non ci sono più carte nel mazzo!");
       toast({
         title: "Attenzione",
-        description: "Tutte le carte sono state utilizzate! Puoi resettare la lista delle carte utilizzate dalle impostazioni.",
+        description: "Non ci sono più carte disponibili nel mazzo!",
         variant: "destructive"
       });
-      setCurrentCard(null);
-      return;
+      return null;
     }
     
-    if (cards.length === 0) {
-      // Se il mazzo è vuoto, rimescoliamo le carte disponibili
-      const newDeck = shuffleCards();
-      if (newDeck.length > 0) {
-        const nextCard = newDeck[0];
-        // Verifichiamo che la carta non sia già stata utilizzata
-        if (!usedCardIds.includes(nextCard.uniqueId)) {
-          setCurrentCard(nextCard);
-          // Rimuoviamo la carta dal mazzo
-          setCards(prevCards => prevCards.slice(1));
-          // Aggiungiamo l'ID alla lista delle carte utilizzate
-          setUsedCardIds(prev => [...prev, nextCard.uniqueId]);
-        } else {
-          // Se la carta è già stata utilizzata, ritentiamo
-          console.warn("Carta già utilizzata trovata, ritento...");
-          drawCard();
-        }
-      }
-    } else {
-      const nextCard = cards[0];
-      // Verifichiamo che la carta non sia già stata utilizzata
-      if (!usedCardIds.includes(nextCard.uniqueId)) {
-        setCurrentCard(nextCard);
-        // Rimuoviamo la carta dal mazzo
-        setCards(prevCards => prevCards.slice(1));
-        // Aggiungiamo l'ID alla lista delle carte utilizzate
-        setUsedCardIds(prev => [...prev, nextCard.uniqueId]);
-      } else {
-        // Se la carta è già stata utilizzata, la rimuoviamo e ritentiamo
-        console.warn("Carta già utilizzata trovata, ritento...");
-        setCards(prevCards => prevCards.slice(1));
-        drawCard();
-      }
+    // Prendiamo la prima carta e la impostiamo come corrente
+    const drawnCard = cards[0];
+    setCurrentCard(drawnCard);
+    
+    // Rimuoviamo la carta dal mazzo
+    setCards(cards.slice(1));
+    
+    // Aggiungiamo l'ID della carta agli ID usati
+    if (drawnCard && !usedCardIds.includes(drawnCard.uniqueId)) {
+      setUsedCardIds(prev => [...prev, drawnCard.uniqueId]);
     }
+    
+    // Quando viene pescata una nuova carta, tracciamo l'evento
+    if (drawnCard) {
+      trackCardDrawn(drawnCard.word);
+    }
+    
+    return drawnCard;
   };
 
   const resetUsedCards = () => {
@@ -473,6 +474,12 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
     // Mostra la schermata del turno del giocatore
     setShowPlayerTurn(true);
+    
+    // Tracciamento inizio round
+    trackRoundStart(
+      gameSettings.currentRound + 1,
+      teams[currentTeam].name
+    );
   };
   
   const startRoundAfterPlayerScreen = () => {
@@ -492,6 +499,13 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setIsPlaying(false);
     if (timerId) clearTimeout(timerId);
     nextTeam();
+    
+    // Tracciamento fine round
+    trackRoundEnd(
+      gameSettings.currentRound,
+      teams[currentTeam].name,
+      teams[currentTeam].score
+    );
   };
 
   const endGame = () => {
@@ -550,21 +564,25 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 };
 
   const correctAnswer = () => {
-    if (!isPlaying) return;
+    if (!currentCard || !isPlaying) return;
     
     // Update score
     setTeams(teams.map((team, index) => 
       index === currentTeam ? { ...team, score: team.score + 1 } : team
     ));
     
+    // Tracciamento risposta corretta
+    trackCorrectAnswer(
+      currentCard.word,
+      teams[currentTeam].name
+    );
+    
     // Draw new card
     drawCard();
-    
-    
   };
 
   const skipCard = () => {
-    if (!isPlaying) return;
+    if (!currentCard || !isPlaying) return;
     
     // Se abbiamo superato il limite di pass, togliamo un punto
     if (passesUsed >= gameSettings.maxPasses) {
@@ -572,29 +590,35 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setTeams(teams.map((team, index) => 
         index === currentTeam ? { ...team, score: Math.max(0, team.score - 1) } : team
       ));
-      
-      
     } else {
       // Incrementa i pass usati
       setPassesUsed(prevPasses => prevPasses + 1);
-      
-      
     }
+    
+    // Tracciamento carta saltata
+    trackSkipCard(
+      currentCard.word,
+      teams[currentTeam].name
+    );
     
     drawCard();
   };
 
   const tabooUsed = () => {
-    if (!isPlaying) return;
+    if (!currentCard || !isPlaying) return;
     
     // Penalty: -1 point
     setTeams(teams.map((team, index) => 
       index === currentTeam ? { ...team, score: Math.max(0, team.score - 1) } : team
     ));
     
-    drawCard();
+    // Tracciamento utilizzo taboo
+    trackTabooUsed(
+      currentCard.word,
+      teams[currentTeam].name
+    );
     
-   
+    drawCard();
   };
 
   const resetGame = () => {
