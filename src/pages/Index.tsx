@@ -98,9 +98,7 @@ const Index: React.FC = () => {
         </section>
 
         {/* Inserisci il componente FeedbackForm qui */}
-        <section aria-label="Feedback" className="mt-12">
-          <FeedbackForm />
-        </section>
+        
       </div>
     </main>
   );
