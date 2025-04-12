@@ -4,12 +4,13 @@ import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlayCircle, Users, Timer, Trophy, BookOpen, Info } from 'lucide-react';
+import FeedbackForm from '@/components/FeedbackForm';
 
 const Index: React.FC = () => {
   const isMobile = useIsMobile();
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20">
+    <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20 pb-12">
       <div className="text-center px-4 w-full max-w-2xl mx-auto space-y-8">
         {/* Logo e Titolo */}
         <header className="space-y-4">
@@ -94,6 +95,11 @@ const Index: React.FC = () => {
             <BookOpen className="w-5 h-5 mr-2 text-taboo-primary" />
             Regole complete
           </Link>
+        </section>
+
+        {/* Inserisci il componente FeedbackForm qui */}
+        <section aria-label="Feedback" className="mt-12">
+          <FeedbackForm />
         </section>
       </div>
     </main>

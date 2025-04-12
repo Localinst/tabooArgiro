@@ -61,7 +61,16 @@ const Rules: React.FC = () => {
               </div>
             </CardContent>
           </Card>
-
+          <section className="text-center py-4">
+          <Link to="/game">
+            <Button 
+              className="bg-taboo-primary hover:bg-taboo-primary/90 text-white text-xl py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              aria-label="Inizia a giocare a Taboo"
+            >
+              INIZIA A GIOCARE
+            </Button>
+          </Link>
+        </section>
           {/* Punteggio */}
           <Card className="bg-white/50 backdrop-blur-sm">
             <CardContent className="p-6 space-y-6">
@@ -104,16 +113,7 @@ const Rules: React.FC = () => {
         </section>
 
         {/* CTA per iniziare a giocare */}
-        <section className="text-center py-8">
-          <Link to="/game">
-            <Button 
-              className="bg-taboo-primary hover:bg-taboo-primary/90 text-white text-xl py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300"
-              aria-label="Inizia a giocare a Taboo"
-            >
-              INIZIA A GIOCARE
-            </Button>
-          </Link>
-        </section>
+        
       </div>
     </main>
   );
