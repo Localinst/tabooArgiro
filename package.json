@@ -9,7 +9,6 @@
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postbuild": "cp public/_redirects dist/",
     "test": "jest"
   },
   "dependencies": {
