@@ -14,9 +14,9 @@
   status = 301
   force = true
 
-# Redirect da .site a .it
+# Redirect da .space a .it
 [[redirects]]
-  from = "https://paroletaboo.site/*"
+  from = "https://paroletaboo.space/*"
   to = "https://paroletaboo.it/:splat"
   status = 301
   force = true
