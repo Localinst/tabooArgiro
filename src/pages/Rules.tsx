@@ -3,10 +3,16 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowLeft, Timer, Users, AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
 const Rules: React.FC = () => {
   return (
     <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20 px-4">
+      <Helmet>
+        <title>Regole del Gioco Taboo | Parole Taboo</title>
+        <link rel="canonical" href="https://paroletaboo.it/rules" />
+        <meta name="description" content="Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!" />
+      </Helmet>
       <div className="w-full max-w-3xl mx-auto space-y-8">
         {/* Header */}
         <header className="text-center space-y-4">
