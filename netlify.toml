@@ -21,7 +21,15 @@
   status = 301
   force = true
 
-# Regola esistente per SPA
+# Prima tenta di servire i file statici generati
+[[redirects]]
+  from = "/rules"
+  to = "/rules/index.html"
+  status = 200
+
+# Aggiungi altri percorsi statici qui se necessario
+
+# Regola esistente per SPA (come fallback)
 [[redirects]]
   from = "/*"
   to = "/index.html"
