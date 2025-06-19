@@ -11,6 +11,7 @@ import PlayerTurnScreen from '../components/PlayerTurnScreen';
 import { useGameContext } from '../context/GameContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 import AdSense from '@/components/AdSense';
+import FeedbackForm from '../components/FeedbackForm';
 
 const GameContent: React.FC = () => {
   const { 
@@ -38,7 +39,10 @@ const GameContent: React.FC = () => {
 
         {!gameSetupComplete ? (
           // Mostra la configurazione del gioco
-          <GameSetup />
+          <>
+            <GameSetup />
+            <FeedbackForm />
+          </>
         ) : (
           // Mostra il gioco
           <div className={`${isMobile ? "space-y-4" : "grid md:grid-cols-3 gap-6"}`}>
@@ -50,7 +54,7 @@ const GameContent: React.FC = () => {
             
             <div className={`${isMobile ? "mt-6" : ""}`}>
               <ScoreBoard />
-              
+              <FeedbackForm />
               {/* Annuncio AdSense */}
               {!isPlaying && (
                 <div className="mt-6">

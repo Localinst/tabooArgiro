@@ -97,8 +97,8 @@ const Index: React.FC = () => {
           </Link>
         </section>
 
-        {/* Inserisci il componente FeedbackForm qui */}
-        
+        {/* Inserisco il componente FeedbackForm qui */}
+        <FeedbackForm />
       </div>
     </main>
   );
