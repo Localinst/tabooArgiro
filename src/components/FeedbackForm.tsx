@@ -5,7 +5,7 @@ import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 
-const WEBHOOK_URL = 'https://discordapp.com/api/webhooks/1385311305015103619/PQELLvCKthltt-9vjy3WTyNNIJ1cFQ4SGJa2BHstePTLHppJRS19vQs_VMBop9HcJfn-';
+const WEBHOOK_URL = 'https://discord.com/api/webhooks/1403803463074320514/MzKEH66k3oHAM2GcOuxf9Dtbn_79pZW5pHu0pP217lsHPkZjUVfmRvvqMObUZMJQK1JF';
 
 const FeedbackForm: React.FC = () => {
   const [email, setEmail] = useState('');
@@ -57,7 +57,15 @@ const FeedbackForm: React.FC = () => {
               </div>
               <div>
                 <Label htmlFor="message">Messaggio</Label>
-                <Textarea id="message" name="message" required value={message} onChange={e => setMessage(e.target.value)} />
+                <Textarea 
+                  id="message" 
+                  name="message" 
+                  required 
+                  value={message} 
+                  onChange={e => setMessage(e.target.value)}
+                  maxLength={100}
+                />
+                <div className="text-sm text-gray-500 mt-1">{message.length}/100 caratteri</div>
               </div>
               {error && <div className="text-red-600 text-center">{error}</div>}
               <Button type="submit" className="w-full bg-taboo-primary hover:bg-taboo-primary/90" disabled={loading}>
