@@ -1,21 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Italian pages -->
   <url>
     <loc>https://paroletaboo.it/</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://paroletaboo.it/en/"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="it"
+      href="https://paroletaboo.it/"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="x-default"
+      href="https://paroletaboo.it/"
+    />
   </url>
   <url>
     <loc>https://paroletaboo.it/game</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://paroletaboo.it/en/game"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="it"
+      href="https://paroletaboo.it/game"
+    />
   </url>
   <url>
     <loc>https://paroletaboo.it/rules</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://paroletaboo.it/en/rules"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="it"
+      href="https://paroletaboo.it/rules"
+    />
   </url>
-</urlset> 
+
+  <!-- English pages -->
+  <url>
+    <loc>https://paroletaboo.it/en/</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://paroletaboo.it/en/"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="it"
+      href="https://paroletaboo.it/"
+    />
+  </url>
+  <url>
+    <loc>https://paroletaboo.it/en/game</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://paroletaboo.it/en/game"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="it"
+      href="https://paroletaboo.it/game"
+    />
+  </url>
+  <url>
+    <loc>https://paroletaboo.it/en/rules</loc>
+    <lastmod>2025-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link 
+      rel="alternate"
+      hreflang="en"
+      href="https://paroletaboo.it/en/rules"
+    />
+    <xhtml:link 
+      rel="alternate"
+      hreflang="it"
+      href="https://paroletaboo.it/rules"
+    />
+  </url>
+</urlset>

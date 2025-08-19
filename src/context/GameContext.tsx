@@ -1,6 +1,8 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { TabooCard } from '../data/types';
 import { tabooCards } from '../data/taboo_words';
+import { tabooCardsEn } from '../data/taboo_words_en';
+import { useLanguage } from './LanguageContext';
 import { toast } from "@/hooks/use-toast";
 import { 
   trackCorrectAnswer, 
@@ -135,6 +137,7 @@ export const useGameContext = () => useContext(GameContext);
 export { GameMode };
 
 export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const { language } = useLanguage();
   const [teams, setTeams] = useState<Team[]>([
     { id: 1, name: "Squadra A", score: 0, players: [] },
     { id: 2, name: "Squadra B", score: 0, players: [] }
@@ -176,10 +179,15 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
   });
 
   // Aggiungiamo un prefisso per generare ID univoci per le carte
-  const tabooCardsWithUniqueIds = tabooCards.map(card => ({
-    ...card,
-    uniqueId: `taboo_${card.id}`
-  }));
+  const getCards = () => {
+    const cards = language === 'it' ? tabooCards : tabooCardsEn;
+    return cards.map(card => ({
+      ...card,
+      uniqueId: `taboo_${card.id}_${language}`
+    }));
+  };
+
+  const tabooCardsWithUniqueIds = getCards();
   
   const allTabooCards: ExtendedTabooCard[] = tabooCardsWithUniqueIds;
   

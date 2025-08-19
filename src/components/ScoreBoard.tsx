@@ -7,9 +7,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from '
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
+import { translations } from '@/data/translations';
 
 const ScoreBoard: React.FC = () => {
   const { teams, currentTeam, addTeam, removeTeam, isPlaying, resetUsedCards, usedCardsCount, availableCardsCount, gameSettings } = useGameContext();
+  const { language } = useLanguage();
+  const t = translations[language].scoreBoard;
   const [isAddTeamOpen, setIsAddTeamOpen] = useState(false);
   const [newTeamName, setNewTeamName] = useState('');
   const [isResetDialogOpen, setIsResetDialogOpen] = useState(false);
@@ -40,7 +44,7 @@ const ScoreBoard: React.FC = () => {
   return (
     <Card className="w-full shadow-md">
       <CardHeader className="bg-taboo-primary/10">
-        <CardTitle className="text-center text-taboo-primary">Punteggio</CardTitle>
+        <CardTitle className="text-center text-taboo-primary">{t.title}</CardTitle>
       </CardHeader>
       <CardContent className="pt-4">
         <div className="space-y-2">
@@ -97,7 +101,7 @@ const ScoreBoard: React.FC = () => {
               {!isPlaying && team.players.length > 0 && (
                 <CollapsibleContent>
                   <div className="ml-5 mt-1 mb-2 text-sm">
-                    <h4 className="text-xs font-medium text-muted-foreground mb-1">Giocatori:</h4>
+                    <h4 className="text-xs font-medium text-muted-foreground mb-1">{t.players}:</h4>
                     <ul className="space-y-1">
                       {team.players.map(player => (
                         <li key={player.id} className="flex items-center text-muted-foreground">
@@ -116,11 +120,11 @@ const ScoreBoard: React.FC = () => {
         {/* Informazioni sulla modalità di gioco - nascoste durante il gioco */}
         {!isPlaying && (
           <div className="mt-4 pt-4 border-t">
-            <div className="text-sm font-medium mb-2">Modalità di gioco:</div>
+            <div className="text-sm font-medium mb-2">{t.gameMode}:</div>
             <div className="text-sm mb-3">
               {gameSettings.mode === GameMode.SCORE 
-                ? `Gioca fino a ${gameSettings.targetScore} punti` 
-                : `Gioca ${gameSettings.totalRounds} round`}
+                ? t.playToScore.replace('${score}', String(gameSettings.targetScore))
+                : t.playRounds.replace('${rounds}', String(gameSettings.totalRounds))}
             </div>
           </div>
         )}
@@ -130,11 +134,11 @@ const ScoreBoard: React.FC = () => {
           {!isPlaying ? (
             <>
               <div className="flex justify-between text-sm text-muted-foreground mb-2">
-                <span>Carte utilizzate:</span>
+                <span>{t.cardsUsed}:</span>
                 <span className="font-medium">{usedCardsCount}</span>
               </div>
               <div className="flex justify-between text-sm text-muted-foreground">
-                <span>Carte disponibili:</span>
+                <span>{t.cardsAvailable}:</span>
                 <span className="font-medium">{availableCardsCount}</span>
               </div>
 
@@ -142,7 +146,7 @@ const ScoreBoard: React.FC = () => {
               {availableCardsCount < 10 && availableCardsCount > 0 && (
                 <Alert className="mt-3 bg-amber-100 text-amber-800 border-amber-300">
                   <AlertDescription>
-                    Attenzione! Rimangono solo {availableCardsCount} carte disponibili.
+                    {t.warningLowCards.replace('${count}', String(availableCardsCount))}
                   </AlertDescription>
                 </Alert>
               )}
@@ -151,14 +155,14 @@ const ScoreBoard: React.FC = () => {
               {availableCardsCount === 0 && (
                 <Alert className="mt-3 bg-red-100 text-red-800 border-red-300">
                   <AlertDescription>
-                    Tutte le carte sono state utilizzate! Usa il pulsante "Reset Carte" per giocare di nuovo.
+                    {t.noCards}
                   </AlertDescription>
                 </Alert>
               )}
             </>
           ) : (
             <div className="flex justify-between text-sm">
-              <span>Carte disponibili:</span>
+              <span>{t.cardsAvailable}:</span>
               <span className="font-medium">{availableCardsCount}</span>
             </div>
           )}
@@ -171,7 +175,7 @@ const ScoreBoard: React.FC = () => {
               className="w-full mt-3 border-taboo-primary/30 text-taboo-primary hover:bg-taboo-primary/10"
               onClick={() => setIsResetDialogOpen(true)}
             >
-              Reset Carte
+              {t.resetCards}
             </Button>
           )}
         </div>
@@ -184,7 +188,7 @@ const ScoreBoard: React.FC = () => {
             className="w-full border-dashed border-taboo-primary/50 text-taboo-primary hover:bg-taboo-primary/10"
             onClick={() => setIsAddTeamOpen(true)}
           >
-            + Aggiungi Squadra
+            + {t.addTeam}
           </Button>
         )}
       </CardFooter>
@@ -193,11 +197,11 @@ const ScoreBoard: React.FC = () => {
       <Dialog open={isAddTeamOpen} onOpenChange={setIsAddTeamOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Aggiungi una nuova squadra</DialogTitle>
+            <DialogTitle>{t.addTeam}</DialogTitle>
           </DialogHeader>
           <div className="py-4">
             <Input
-              placeholder="Nome della squadra"
+              placeholder={t.teamName}
               value={newTeamName}
               onChange={(e) => setNewTeamName(e.target.value)}
               className="w-full"
@@ -205,10 +209,10 @@ const ScoreBoard: React.FC = () => {
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsAddTeamOpen(false)}>
-              Annulla
+              {t.cancel}
             </Button>
             <Button onClick={handleAddTeam}>
-              Aggiungi
+              {t.add}
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -218,17 +222,17 @@ const ScoreBoard: React.FC = () => {
       <Dialog open={isResetDialogOpen} onOpenChange={setIsResetDialogOpen}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>Conferma Reset Carte</DialogTitle>
+            <DialogTitle>{t.resetCards}</DialogTitle>
           </DialogHeader>
           <div className="py-4">
-            <p>Sei sicuro di voler resettare tutte le carte utilizzate? Questa azione renderà tutte le carte disponibili di nuovo.</p>
+            <p>{t.resetCardsConfirm}</p>
           </div>
           <DialogFooter>
             <Button variant="outline" onClick={() => setIsResetDialogOpen(false)}>
-              Annulla
+              {t.cancel}
             </Button>
             <Button variant="destructive" onClick={handleResetUsedCards}>
-              Reset Carte
+              {t.resetCards}
             </Button>
           </DialogFooter>
         </DialogContent>

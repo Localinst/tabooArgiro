@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useGameContext, GameMode } from '../context/GameContext';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
+import React, { useState, useEffect } from 'react';
+import { useGameContext, GameMode } from '../../context/GameContext';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -8,16 +8,8 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
-import { toast } from '@/hooks/use-toast';
-import { useLanguage } from '@/context/LanguageContext';
-import { translations } from '@/data/translations';
-
-// Rimuovo i nomi predefiniti
-const DEFAULT_PLAYERS: string[] = [];
 
 const GameSetup: React.FC = () => {
-  const { language } = useLanguage();
-  const t = translations[language];
   const { 
     players, 
     teams, 
@@ -33,10 +25,10 @@ const GameSetup: React.FC = () => {
   const [activeTab, setActiveTab] = useState('players');
   const [isDragging, setIsDragging] = useState(false);
   
-  // Stato temporaneo per gli assegnamenti dei giocatori alle squadre
+  // Temporary state for player team assignments
   const [teamAssignments, setTeamAssignments] = useState<Record<number, number[]>>({});
 
-  // Inizializza le assegnazioni delle squadre
+  // Initialize team assignments
   useEffect(() => {
     const assignments: Record<number, number[]> = {};
     teams.forEach(team => {
@@ -45,7 +37,7 @@ const GameSetup: React.FC = () => {
     setTeamAssignments(assignments);
   }, [teams]);
 
-  // Previene il comportamento di pull-to-refresh durante il trascinamento
+  // Prevent pull-to-refresh behavior while dragging
   useEffect(() => {
     const preventPullToRefresh = (e: TouchEvent) => {
       if (isDragging) {
@@ -77,23 +69,17 @@ const GameSetup: React.FC = () => {
     const { source, destination } = result;
     const playerId = parseInt(result.draggableId);
 
-    // Rimuovi il giocatore dalla sua squadra originale
+    // Remove player from original team
     Object.keys(teamAssignments).forEach(teamId => {
       const numTeamId = parseInt(teamId);
       teamAssignments[numTeamId] = teamAssignments[numTeamId].filter(id => id !== playerId);
     });
 
-    // Aggiungi il giocatore alla nuova squadra
+    // Add player to new team
     const destTeamId = parseInt(destination.droppableId);
     teamAssignments[destTeamId] = [...(teamAssignments[destTeamId] || []), playerId];
 
     setTeamAssignments({...teamAssignments});
-  };
-
-  const isPlayerAssigned = (playerId: number) => {
-    return Object.values(teamAssignments).some(playerIds => 
-      playerIds.includes(playerId)
-    );
   };
 
   const getUnassignedPlayers = () => {
@@ -107,14 +93,10 @@ const GameSetup: React.FC = () => {
   const handleSaveTeams = () => {
     assignPlayersToTeams(teamAssignments);
     setActiveTab('gamemode');
-   
   };
 
   const handleCompleteSetup = () => {
     const isComplete = completeGameSetup();
-    if (isComplete) {
-      
-    }
   };
 
   const isTeamsBalanced = () => {
@@ -126,35 +108,33 @@ const GameSetup: React.FC = () => {
   return (
     <Card className="w-full shadow-md">
       <CardHeader className="bg-taboo-primary/10">
-        <CardTitle className="text-center text-taboo-primary">
-          {t.gameSetup.title}
-        </CardTitle>
+        <CardTitle className="text-center text-taboo-primary">Game Setup</CardTitle>
       </CardHeader>
       
       <Tabs value={activeTab} onValueChange={setActiveTab}>
         <TabsList className="w-full grid grid-cols-3">
-          <TabsTrigger value="players">{language === 'it' ? 'Giocatori' : 'Players'}</TabsTrigger>
-          <TabsTrigger value="teams">{language === 'it' ? 'Squadre' : 'Teams'}</TabsTrigger>
-          <TabsTrigger value="gamemode">{language === 'it' ? 'Modalità' : 'Game Mode'}</TabsTrigger>
+          <TabsTrigger value="players">Players</TabsTrigger>
+          <TabsTrigger value="teams">Teams</TabsTrigger>
+          <TabsTrigger value="gamemode">Game Mode</TabsTrigger>
         </TabsList>
         
-        {/* Tab Giocatori */}
+        {/* Players Tab */}
         <TabsContent value="players" className="p-4">
           <div className="space-y-4">
             <div className="flex space-x-2">
               <Input
-                placeholder={language === 'it' ? 'Nome giocatore' : 'Player name'}
+                placeholder="Player name"
                 value={newPlayerName}
                 onChange={(e) => setNewPlayerName(e.target.value)}
                 className="w-full"
               />
-              <Button onClick={handleAddPlayer}>{language === 'it' ? 'Aggiungi' : 'Add'}</Button>
+              <Button onClick={handleAddPlayer}>Add</Button>
             </div>
             
             <div className="border rounded-md p-2 max-h-60 overflow-y-auto">
               {players.length === 0 ? (
                 <p className="text-center text-muted-foreground py-8">
-                  {language === 'it' ? 'Nessun giocatore aggiunto' : 'No players added'}
+                  No players added
                 </p>
               ) : (
                 <ul className="space-y-2">
@@ -183,18 +163,18 @@ const GameSetup: React.FC = () => {
                 className="w-full" 
                 onClick={() => setActiveTab('teams')}
               >
-                {language === 'it' ? 'Continua a Squadre' : 'Continue to Teams'}
+                Continue to Teams
               </Button>
             )}
           </div>
         </TabsContent>
         
-        {/* Tab Squadre */}
+        {/* Teams Tab */}
         <TabsContent value="teams" className="p-4">
           <DragDropContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
             <div className="space-y-6">
               <div>
-                <h3 className="text-sm font-medium mb-2">{language === 'it' ? 'Giocatori non assegnati' : 'Unassigned Players'}</h3>
+                <h3 className="text-sm font-medium mb-2">Unassigned Players</h3>
                 <Droppable droppableId="unassigned" direction="horizontal">
                   {(provided) => (
                     <div
@@ -223,7 +203,7 @@ const GameSetup: React.FC = () => {
                       {provided.placeholder}
                       {getUnassignedPlayers().length === 0 && (
                         <p className="text-muted-foreground text-sm italic w-full text-center py-2">
-                          {language === 'it' ? 'Tutti i giocatori sono assegnati alle squadre' : 'All players are assigned to teams'}
+                          All players are assigned to teams
                         </p>
                       )}
                     </div>
@@ -232,7 +212,7 @@ const GameSetup: React.FC = () => {
               </div>
               
               <div className="space-y-4">
-                <h3 className="text-sm font-medium">{language === 'it' ? 'Squadre' : 'Teams'}</h3>
+                <h3 className="text-sm font-medium">Teams</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {teams.map(team => (
                     <div key={team.id} className="space-y-2">
@@ -269,7 +249,7 @@ const GameSetup: React.FC = () => {
                             </div>
                             {teamAssignments[team.id]?.length === 0 && (
                               <p className="text-muted-foreground text-sm italic text-center py-2">
-                                {language === 'it' ? 'Trascina qui i giocatori' : 'Drag players here'}
+                                Drag players here
                               </p>
                             )}
                           </div>
@@ -286,23 +266,21 @@ const GameSetup: React.FC = () => {
                   disabled={getUnassignedPlayers().length > 0}
                   onClick={handleSaveTeams}
                 >
-                  {language === 'it' ? 'Salva Squadre' : 'Save Teams'}
+                  Save Teams
                 </Button>
                 
-                {/* Pulsante per completare rapidamente la configurazione */}
                 {getUnassignedPlayers().length === 0 && (
                   <Button 
                     variant="outline"
                     className="w-full mt-2 border-taboo-primary/30 text-taboo-primary"
                     onClick={() => {
                       handleSaveTeams();
-                      // Usiamo setTimeout per dar tempo al primo handler di completarsi
                       setTimeout(() => {
                         handleCompleteSetup();
                       }, 100);
                     }}
                   >
-                    {language === 'it' ? 'Completa Configurazione Rapidamente' : 'Complete Setup Quickly'}
+                    Complete Setup Quickly
                   </Button>
                 )}
               </div>
@@ -310,11 +288,11 @@ const GameSetup: React.FC = () => {
           </DragDropContext>
         </TabsContent>
         
-        {/* Tab Modalità */}
+        {/* Game Mode Tab */}
         <TabsContent value="gamemode" className="p-4">
           <div className="space-y-6">
             <div>
-              <h3 className="font-medium mb-3">{language === 'it' ? 'Modalità di gioco' : 'Game Mode'}</h3>
+              <h3 className="font-medium mb-3">Game Mode</h3>
               <RadioGroup 
                 value={gameSettings.mode} 
                 onValueChange={(value) => updateGameSettings({ mode: value as GameMode })}
@@ -330,17 +308,17 @@ const GameSetup: React.FC = () => {
                     htmlFor="mode-rounds"
                     className={!isTeamsBalanced() ? "text-muted-foreground" : ""}
                   >
-                    {language === 'it' ? 'Gioca a round' : 'Play rounds'}
+                    Play rounds
                     {!isTeamsBalanced() && (
                       <span className="text-xs text-muted-foreground ml-2">
-                        {language === 'it' ? '(richiede squadre bilanciate)' : '(requires balanced teams)'}
+                        (requires balanced teams)
                       </span>
                     )}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value={GameMode.SCORE} id="mode-score" />
-                  <Label htmlFor="mode-score">{language === 'it' ? 'Gioca a punteggio' : 'Play to score'}</Label>
+                  <Label htmlFor="mode-score">Play to score</Label>
                 </div>
               </RadioGroup>
             </div>
@@ -348,7 +326,7 @@ const GameSetup: React.FC = () => {
             {gameSettings.mode === GameMode.SCORE && (
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <Label>{language === 'it' ? 'Punteggio per vincere' : 'Score to win'}</Label>
+                  <Label>Score to win</Label>
                   <span className="font-medium">{gameSettings.targetScore}</span>
                 </div>
                 <Slider 
@@ -364,7 +342,7 @@ const GameSetup: React.FC = () => {
             {gameSettings.mode === GameMode.ROUNDS && (
               <div className="space-y-3">
                 <div className="flex justify-between">
-                  <Label>{language === 'it' ? 'Numero di round' : 'Number of rounds'}</Label>
+                  <Label>Number of rounds</Label>
                   <span className="font-medium">{gameSettings.totalRounds}</span>
                 </div>
                 <Slider 
@@ -379,7 +357,7 @@ const GameSetup: React.FC = () => {
             
             <div className="space-y-3">
               <div className="flex justify-between">
-                <Label>{language === 'it' ? 'Tempo per turno (secondi)' : 'Time per turn (seconds)'}</Label>
+                <Label>Time per turn (seconds)</Label>
                 <span className="font-medium">{gameSettings.roundTime}</span>
               </div>
               <Slider 
@@ -393,7 +371,7 @@ const GameSetup: React.FC = () => {
             
             <div className="space-y-3">
               <div className="flex justify-between">
-                <Label>{language === 'it' ? 'Numero massimo di pass per turno' : 'Maximum passes per turn'}</Label>
+                <Label>Maximum passes per turn</Label>
                 <span className="font-medium">{gameSettings.maxPasses}</span>
               </div>
               <Slider 
@@ -409,7 +387,7 @@ const GameSetup: React.FC = () => {
               className="w-full" 
               onClick={handleCompleteSetup}
             >
-              {language === 'it' ? 'Completa Configurazione' : 'Complete Setup'}
+              Complete Setup
             </Button>
           </div>
         </TabsContent>
@@ -418,4 +396,4 @@ const GameSetup: React.FC = () => {
   );
 };
 
-export default GameSetup; 
+export default GameSetup;

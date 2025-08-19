@@ -8,6 +8,7 @@ import Game from "./pages/Game";
 import Rules from "./pages/Rules"
 import NotFound from "./pages/NotFound";
 import { HelmetProvider } from 'react-helmet-async';
+import { LanguageProvider } from './context/LanguageContext';
 
 const queryClient = new QueryClient();
 
@@ -18,13 +19,22 @@ const App = () => (
       <Sonner />
       <HelmetProvider>
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/game" element={<Game />} />
-            <Route path="/rules" element={<Rules />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <LanguageProvider>
+            <Routes>
+              {/* Italian routes (default) */}
+              <Route path="/" element={<Index />} />
+              <Route path="/game" element={<Game />} />
+              <Route path="/rules" element={<Rules />} />
+              
+              {/* English routes */}
+              <Route path="/en" element={<Index />} />
+              <Route path="/en/game" element={<Game />} />
+              <Route path="/en/rules" element={<Rules />} />
+              
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </LanguageProvider>
         </BrowserRouter>
       </HelmetProvider>
     </TooltipProvider>
