@@ -4,14 +4,6 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from 'fs';
 
-type Language = 'it' | 'en';
-
-interface PageContent {
-  path: string;
-  title: Record<Language, string>;
-  description: Record<Language, string>;
-}
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: '/',
@@ -36,78 +28,55 @@ export default defineConfig(({ mode }) => ({
         // Solo in modalità produzione
         if (mode !== 'production') return;
         
-        // Copia gli index.html specifici per lingua
-        const languages: ('' | 'en')[] = ['', 'en'];
-        for (const lang of languages) {
-          const sourcePath = `./public${lang ? `/${lang}` : ''}/index.html`;
-          const targetPath = `./dist${lang ? `/${lang}` : ''}/index.html`;
-          
-          // Crea la directory se non esiste
-          if (lang) {
-            fs.mkdirSync(`./dist/${lang}`, { recursive: true });
-          }
-          
-          // Copia il file index.html specifico per la lingua
-          if (fs.existsSync(sourcePath)) {
-            fs.copyFileSync(sourcePath, targetPath);
-            console.log(`Copiato ${sourcePath} in ${targetPath}`);
-          }
-        }
-        
-        // Percorsi e titoli delle pagine multilingua
-        const pages: PageContent[] = [
+        // Percorsi e titoli delle pagine
+        const pages = [
           { 
             path: 'rules', 
-            title: {
-              it: 'Regole del Gioco Taboo | Parole Taboo',
-              en: 'Taboo Game Rules | Taboo Words'
-            },
-            description: {
-              it: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!',
-              en: 'Discover the official rules of the online party game Taboo Words. Learn how to play, score points and win!'
-            }
-          }
+            title: 'Regole del Gioco Taboo | Parole Taboo', 
+            description: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!' 
+          },
+          // Aggiungi altre pagine qui se necessario
         ];
         
-        // Per ogni lingua e pagina definita
-        for (const lang of languages) {
-          const baseLang: Language = lang ? 'en' : 'it';
-          const baseUrl = `https://paroletaboo.it${lang ? `/${lang}` : ''}`;
-          
-          // Leggi il contenuto di index.html della lingua corrente
-          const indexHtml = fs.readFileSync(`./dist${lang ? `/${lang}` : ''}/index.html`, 'utf-8');
-          
-          // Per ogni pagina definita
-          for (const page of pages) {
-            // Crea la directory se non esiste
-            const dirPath = `./dist${lang ? `/${lang}` : ''}/${page.path}`;
+        // Leggi il contenuto di index.html
+        const indexHtml = fs.readFileSync('./dist/index.html', 'utf-8');
+        
+        // Per ogni pagina definita
+        for (const page of pages) {
+          // Crea la directory se non esiste
+          const dirPath = `./dist/${page.path}`;
+          if (!fs.existsSync(dirPath)) {
             fs.mkdirSync(dirPath, { recursive: true });
-            
-            // Sostituisci i meta tag con quelli specifici della pagina
-            let pageHtml = indexHtml;
-            
-            // Sostituisci il tag canonical
-            pageHtml = pageHtml.replace(
-              /<link rel="canonical"[^>]*>/,
-              `<link rel="canonical" href="${baseUrl}/${page.path}" />`
-            );
-            
-            // Sostituisci il titolo
+          }
+          
+          // Sostituisci i meta tag con quelli specifici della pagina
+          let pageHtml = indexHtml;
+          
+          // Sostituisci il tag canonical
+          pageHtml = pageHtml.replace(
+            /<link rel="canonical"[^>]*>/,
+            `<link rel="canonical" href="https://paroletaboo.it/${page.path}" />`
+          );
+          
+          // Sostituisci il titolo
+          if (page.title) {
             pageHtml = pageHtml.replace(
               /<title>.*?<\/title>/,
-              `<title>${page.title[baseLang]}</title>`
+              `<title>${page.title}</title>`
             );
-            
-            // Sostituisci la descrizione
+          }
+          
+          // Sostituisci la descrizione
+          if (page.description) {
             pageHtml = pageHtml.replace(
               /<meta name="description"[^>]*>/,
-              `<meta name="description" content="${page.description[baseLang]}" />`
+              `<meta name="description" content="${page.description}" />`
             );
-            
-            // Scrivi il file index.html nella directory della pagina
-            fs.writeFileSync(`${dirPath}/index.html`, pageHtml);
-            console.log(`Pagina statica generata: ${lang ? `${lang}/` : ''}${page.path}/index.html`);
           }
+          
+          // Scrivi il file index.html nella directory della pagina
+          fs.writeFileSync(`${dirPath}/index.html`, pageHtml);
+          console.log(`Pagina statica generata: ${page.path}/index.html`);
         }
       }
     }
