@@ -20,15 +20,11 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
-    manifest: true,
     rollupOptions: {
       output: {
-        entryFileNames: 'assets/index.js',
+        entryFileNames: 'assets/main.js',
         chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name === 'index.css') return 'assets/index.css';
-          return 'assets/[name].[hash][extname]';
-        }
+        assetFileNames: 'assets/[name][extname]'
       }
     }
   },
