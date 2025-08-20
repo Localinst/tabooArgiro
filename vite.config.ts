@@ -4,17 +4,13 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from 'fs';
 
-type LangConfig = {
-  title: string;
-  description: string;
-};
+type Language = 'it' | 'en';
 
-type PageConfig = {
+interface PageContent {
   path: string;
-  langs: {
-    [key: string]: LangConfig;
-  };
-};
+  title: Record<Language, string>;
+  description: Record<Language, string>;
+}
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -24,12 +20,15 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
-    outDir: 'dist',
-    emptyOutDir: true,
+    manifest: true,
     rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'),
-        en: path.resolve(__dirname, 'public/en/index.html')
+      output: {
+        entryFileNames: 'assets/index.js',
+        chunkFileNames: 'assets/[name].[hash].js',
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'index.css') return 'assets/index.css';
+          return 'assets/[name].[hash][extname]';
+        }
       }
     }
   },
@@ -42,97 +41,86 @@ export default defineConfig(({ mode }) => ({
       closeBundle: async () => {
         // Solo in modalità produzione
         if (mode !== 'production') return;
-
-        // Leggi il contenuto di index.html principale buildato
-        const mainIndexHtml = fs.readFileSync('./dist/index.html', 'utf-8');
         
-        // Estrai i percorsi degli asset dal file principale
-        const scriptMatch = mainIndexHtml.match(/<script[^>]+src="([^"]+)"/);
-        const styleMatch = mainIndexHtml.match(/<link[^>]+href="([^"]+)"[^>]*rel="stylesheet"/);
+        // Copia gli index.html specifici per lingua
+        const languages: ('' | 'en')[] = ['', 'en'];
+        for (const lang of languages) {
+          const sourcePath = `./public${lang ? `/${lang}` : ''}/index.html`;
+          const targetPath = `./dist${lang ? `/${lang}` : ''}/index.html`;
+          
+          // Crea la directory se non esiste
+          if (lang) {
+            fs.mkdirSync(`./dist/${lang}`, { recursive: true });
+          }
+          
+          // Copia il file index.html specifico per la lingua
+          if (fs.existsSync(sourcePath)) {
+            fs.copyFileSync(sourcePath, targetPath);
+            console.log(`Copiato ${sourcePath} in ${targetPath}`);
+          }
+        }
         
-        const mainScript = scriptMatch ? scriptMatch[1] : '';
-        const mainStyle = styleMatch ? styleMatch[1] : '';
-
-        // Definisci le pagine e le loro traduzioni
-        const pages = [
-          {
-            path: 'rules',
-            langs: {
-              it: {
-                title: 'Regole del Gioco Taboo | Parole Taboo',
-                description: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!'
-              },
-              en: {
-                title: 'Taboo Game Rules | Taboo Words',
-                description: 'Discover the official rules of the online party game Taboo Words. Learn how to play, score points and win!'
-              }
+        // Percorsi e titoli delle pagine multilingua
+        const pages: PageContent[] = [
+          { 
+            path: 'rules', 
+            title: {
+              it: 'Regole del Gioco Taboo | Parole Taboo',
+              en: 'Taboo Game Rules | Taboo Words'
+            },
+            description: {
+              it: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!',
+              en: 'Discover the official rules of the online party game Taboo Words. Learn how to play, score points and win!'
             }
           }
         ];
-
-        // Genera le versioni linguistiche
-        const langs = ['it', 'en'];
-        for (const lang of langs) {
-          // Crea directory per la lingua se necessario
-          if (lang !== 'it') {
-            fs.mkdirSync(`./dist/${lang}`, { recursive: true });
-          }
-
-          // Leggi il template HTML per questa lingua
-          const templatePath = lang === 'it' ? './public/index.html' : `./public/${lang}/index.html`;
-          let langIndexHtml = fs.readFileSync(templatePath, 'utf-8');
-
-          // Aggiorna i percorsi degli asset
-          langIndexHtml = langIndexHtml.replace(
-            /src="\/src\/main.tsx"/,
-            `src="${mainScript}"`
-          );
+        
+        // Per ogni lingua e pagina definita
+        for (const lang of languages) {
+          const baseLang: Language = lang ? 'en' : 'it';
+          const baseUrl = `https://paroletaboo.it${lang ? `/${lang}` : ''}`;
           
-          if (mainStyle) {
-            langIndexHtml = langIndexHtml.replace(
-              /<\/head>/,
-              `  <link rel="stylesheet" href="${mainStyle}">\n</head>`
-            );
-          }
-
-          // Scrivi il file index.html per questa lingua
-          const targetPath = lang === 'it' ? './dist/index.html' : `./dist/${lang}/index.html`;
-          fs.writeFileSync(targetPath, langIndexHtml);
-
-          // Genera le pagine statiche per questa lingua
+          // Leggi il contenuto di index.html della lingua corrente
+          const indexHtml = fs.readFileSync(`./dist${lang ? `/${lang}` : ''}/index.html`, 'utf-8');
+          
+          // Per ogni pagina definita
           for (const page of pages) {
-            const dirPath = lang === 'it' ? `./dist/${page.path}` : `./dist/${lang}/${page.path}`;
+            // Crea la directory se non esiste
+            const dirPath = `./dist${lang ? `/${lang}` : ''}/${page.path}`;
             fs.mkdirSync(dirPath, { recursive: true });
-
-            let pageHtml = langIndexHtml;
-            const langData = page.langs[lang as 'it' | 'en'];
-
-            // Aggiorna i meta tag
+            
+            // Sostituisci i meta tag con quelli specifici della pagina
+            let pageHtml = indexHtml;
+            
+            // Sostituisci il tag canonical
             pageHtml = pageHtml.replace(
               /<link rel="canonical"[^>]*>/,
-              `<link rel="canonical" href="https://paroletaboo.it/${lang !== 'it' ? lang + '/' : ''}${page.path}" />`
+              `<link rel="canonical" href="${baseUrl}/${page.path}" />`
             );
-
+            
+            // Sostituisci il titolo
             pageHtml = pageHtml.replace(
               /<title>.*?<\/title>/,
-              `<title>${langData.title}</title>`
+              `<title>${page.title[baseLang]}</title>`
             );
-
+            
+            // Sostituisci la descrizione
             pageHtml = pageHtml.replace(
               /<meta name="description"[^>]*>/,
-              `<meta name="description" content="${langData.description}" />`
+              `<meta name="description" content="${page.description[baseLang]}" />`
             );
-
+            
+            // Scrivi il file index.html nella directory della pagina
             fs.writeFileSync(`${dirPath}/index.html`, pageHtml);
-            console.log(`Pagina statica generata: ${lang !== 'it' ? lang + '/' : ''}${page.path}/index.html`);
-          }          }
+            console.log(`Pagina statica generata: ${lang ? `${lang}/` : ''}${page.path}/index.html`);
+          }
         }
       }
-    
-  ],
+    }
+  ].filter(Boolean),
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "src")
-    }
-  }
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 }));
