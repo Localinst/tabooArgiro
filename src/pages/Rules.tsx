@@ -8,23 +8,30 @@ import { translations } from '@/data/translations';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import SEO from '@/components/SEO';
 
+const seoData = {
+  it: {
+    title: 'Regole del Gioco Taboo | Parole Taboo',
+    description: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!',
+    keywords: 'regole taboo, come giocare a taboo, istruzioni taboo, regolamento taboo, spiegazione taboo'
+  },
+  en: {
+    title: 'Taboo Game Rules | Word Taboo',
+    description: 'Learn the official rules of the online Taboo word game. Learn how to play, score points and win!',
+    keywords: 'taboo rules, how to play taboo, taboo instructions, taboo regulations, taboo explanation'
+  }
+};
+
 const Rules: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
-  
-  const seoTitle = language === 'it' 
-    ? 'Regole del Gioco Taboo | Parole Taboo' 
-    : 'Taboo Game Rules | Word Taboo';
-  
-  const seoDescription = language === 'it'
-    ? 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!'
-    : 'Learn the official rules of the online Taboo word game. Learn how to play, score points and win!';
 
   return (
     <>
       <SEO
-        title={seoTitle}
-        description={seoDescription}
+        title={seoData[language].title}
+        description={seoData[language].description}
+        keywords={seoData[language].keywords}
+        path="/rules"
       />
       <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20 px-4">
       <div className="w-full max-w-3xl mx-auto space-y-8">

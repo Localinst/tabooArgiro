@@ -29,6 +29,19 @@ import PlayerTurnScreenEn from '../components/en/PlayerTurnScreen';
 import ScoreBoard from '../components/ScoreBoard';
 import FeedbackForm from '../components/FeedbackForm';
 
+const seoData = {
+  it: {
+    title: 'Gioca a Taboo Online | Parole Taboo',
+    description: 'Gioca a Taboo online gratuitamente con amici e famiglia. Sfida le altre squadre in questo divertente gioco di parole!',
+    keywords: 'gioca taboo online, gioco taboo gratis, taboo multiplayer, taboo squadre, sfida taboo'
+  },
+  en: {
+    title: 'Play Taboo Online | Word Taboo',
+    description: 'Play Taboo online for free with friends and family. Challenge other teams in this fun word game!',
+    keywords: 'play taboo online, free taboo game, taboo multiplayer, taboo teams, taboo challenge'
+  }
+};
+
 const GameContent: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
@@ -41,19 +54,13 @@ const GameContent: React.FC = () => {
   } = useGameContext();
   const isMobile = useIsMobile();
 
-  const seoTitle = language === 'it' 
-    ? 'Gioca a Taboo Online | Parole Taboo' 
-    : 'Play Taboo Online | Word Taboo';
-  
-  const seoDescription = language === 'it'
-    ? 'Gioca a Taboo online gratuitamente con amici e famiglia. Sfida le altre squadre in questo divertente gioco di parole!'
-    : 'Play Taboo online for free with friends and family. Challenge other teams in this fun word game!';
-
   return (
     <>
       <SEO
-        title={seoTitle}
-        description={seoDescription}
+        title={seoData[language].title}
+        description={seoData[language].description}
+        keywords={seoData[language].keywords}
+        path="/game"
       />
       <div className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5">
         <div className="container max-w-5xl px-4 py-4 md:py-8 mx-auto">

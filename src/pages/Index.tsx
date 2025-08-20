@@ -10,24 +10,30 @@ import { translations } from '@/data/translations';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import SEO from '@/components/SEO';
 
+const seoData = {
+  it: {
+    title: 'Parole Taboo - Gioco di Società Online Gratuito',
+    description: 'Gioca a Taboo online con amici e famiglia. Il divertente gioco di parole dove devi far indovinare parole senza usare quelle proibite!',
+    keywords: 'carte taboo online, taboo, parole taboo, taboo online, gioco taboo, taboo carte, gioco carte taboo online gratis, taboo feste, taboo party game'
+  },
+  en: {
+    title: 'Taboo Words - Free Online Party Game',
+    description: 'Play Taboo online with friends and family. The fun word game where you have to guess words without using the forbidden ones!',
+    keywords: 'taboo cards online, taboo, taboo words, online taboo, taboo game, taboo cards, free online taboo card game, party taboo, taboo party game'
+  }
+};
+
 const Index: React.FC = () => {
   const isMobile = useIsMobile();
   const { language } = useLanguage();
   const t = translations[language];
 
-  const seoTitle = language === 'it' 
-    ? 'Parole Taboo - Gioco di Società Online Gratuito' 
-    : 'Taboo Words - Free Online Party Game';
-  
-  const seoDescription = language === 'it' 
-    ? 'Gioca a Taboo online con amici e famiglia. Il divertente gioco di parole dove devi far indovinare parole senza usare quelle proibite!' 
-    : 'Play Taboo online with friends and family. The fun word game where you have to guess words without using the forbidden ones!';
-
   return (
     <>
       <SEO
-        title={seoTitle}
-        description={seoDescription}
+        title={seoData[language].title}
+        description={seoData[language].description}
+        keywords={seoData[language].keywords}
       />
       <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20 pb-12">
       <div className="text-center px-4 w-full max-w-2xl mx-auto space-y-8">
