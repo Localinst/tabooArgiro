@@ -44,8 +44,21 @@ export default defineConfig(({ mode }) => ({
           // Aggiungi altre pagine qui se necessario
         ];
         
+        // Try to locate the generated index.html in the dist folder (support root and /en)
+        const candidates = [
+          path.resolve(process.cwd(), 'dist', 'index.html'),
+          path.resolve(process.cwd(), 'dist', 'en', 'index.html')
+        ];
+
+        const indexPath = candidates.find(p => fs.existsSync(p));
+
+        if (!indexPath) {
+          console.warn('[generate-static-pages] index.html not found in dist. Skipping static page generation.');
+          return;
+        }
+
         // Leggi il contenuto di index.html
-        const indexHtml = fs.readFileSync('./dist/index.html', 'utf-8');
+        const indexHtml = fs.readFileSync(indexPath, 'utf-8');
         
         // Per ogni pagina definita
         for (const page of pages) {
@@ -68,7 +81,7 @@ export default defineConfig(({ mode }) => ({
           if (page.title) {
             pageHtml = pageHtml.replace(
               /<title>.*?<\/title>/,
-              `<title>${page.title}</title>`
+              `<title>${page.title}<\/title>`
             );
           }
           
