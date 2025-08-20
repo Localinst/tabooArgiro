@@ -21,12 +21,10 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     rollupOptions: {
-      output: {
-        entryFileNames: 'assets/main.js',
-        chunkFileNames: 'assets/[name].[hash].js',
-        assetFileNames: 'assets/[name][extname]'
-      }
-    }
+      input: {
+        main: './index.html',
+      },
+    },
   },
   plugins: [
     react(),
