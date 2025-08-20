@@ -7,6 +7,17 @@
   port = 8080
   targetPort = 8080
 
+# Language-specific redirects
+[[redirects]]
+  from = "/en/*"
+  to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en"
+  to = "/en/index.html"
+  status = 200
+
 # Redirect da .com a .it
 [[redirects]]
   from = "https://paroletaboo.com/*"
@@ -27,10 +38,15 @@
   to = "/rules/index.html"
   status = 200
 
+[[redirects]]
+  from = "/en/rules"
+  to = "/en/rules/index.html"
+  status = 200
+
 # Aggiungi altri percorsi statici qui se necessario
 
 # Regola esistente per SPA (come fallback)
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200 
+  status = 200
