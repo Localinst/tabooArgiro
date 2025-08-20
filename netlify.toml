@@ -7,9 +7,20 @@
   port = 8080
   targetPort = 8080
 
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Assets statici (deve essere prima di tutti i redirect)
 [[redirects]]
   from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+# Serve gli asset dalla cartella dist/assets
+[[redirects]]
+  from = "/dist/assets/*"
   to = "/assets/:splat"
   status = 200
 
