@@ -41,13 +41,19 @@ const GameContent: React.FC = () => {
   } = useGameContext();
   const isMobile = useIsMobile();
 
+  const seoTitle = language === 'it' 
+    ? 'Gioca a Taboo Online | Parole Taboo' 
+    : 'Play Taboo Online | Word Taboo';
+  
+  const seoDescription = language === 'it'
+    ? 'Gioca a Taboo online gratuitamente con amici e famiglia. Sfida le altre squadre in questo divertente gioco di parole!'
+    : 'Play Taboo online for free with friends and family. Challenge other teams in this fun word game!';
+
   return (
     <>
       <SEO
-        title={language === 'it' ? 'Gioca a Taboo Online | Parole Taboo' : 'Play Taboo Online | Word Taboo'}
-        description={language === 'it'
-          ? 'Gioca a Taboo online gratuitamente con amici e famiglia. Sfida le altre squadre in questo divertente gioco di parole!'
-          : 'Play Taboo online for free with friends and family. Challenge other teams in this fun word game!'}
+        title={seoTitle}
+        description={seoDescription}
       />
       <div className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5">
         <div className="container max-w-5xl px-4 py-4 md:py-8 mx-auto">

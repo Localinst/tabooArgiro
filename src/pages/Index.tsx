@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Card, CardContent } from '@/components/ui/card';
-import { PlayCircle, Users, Timer, Trophy, BookOpen, Info } from 'lucide-react';
+import { PlayCircle, Users, Timer, Trophy, BookOpen } from 'lucide-react';
 import FeedbackForm from '@/components/FeedbackForm';
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '@/data/translations';
@@ -15,14 +15,19 @@ const Index: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
 
+  const seoTitle = language === 'it' 
+    ? 'Parole Taboo - Gioco di Società Online Gratuito' 
+    : 'Taboo Words - Free Online Party Game';
+  
+  const seoDescription = language === 'it' 
+    ? 'Gioca a Taboo online con amici e famiglia. Il divertente gioco di parole dove devi far indovinare parole senza usare quelle proibite!' 
+    : 'Play Taboo online with friends and family. The fun word game where you have to guess words without using the forbidden ones!';
+
   return (
     <>
       <SEO
-        title={t.title}
-        description={language === 'it' 
-          ? 'Gioca a Taboo online con amici e famiglia. Il divertente gioco di parole dove devi far indovinare parole senza usare quelle proibite!'
-          : 'Play Taboo online with friends and family. The fun word game where you have to guess words without using the forbidden ones!'
-        }
+        title={seoTitle}
+        description={seoDescription}
       />
       <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20 pb-12">
       <div className="text-center px-4 w-full max-w-2xl mx-auto space-y-8">

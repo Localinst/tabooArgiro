@@ -11,13 +11,20 @@ import SEO from '@/components/SEO';
 const Rules: React.FC = () => {
   const { language } = useLanguage();
   const t = translations[language];
+  
+  const seoTitle = language === 'it' 
+    ? 'Regole del Gioco Taboo | Parole Taboo' 
+    : 'Taboo Game Rules | Word Taboo';
+  
+  const seoDescription = language === 'it'
+    ? 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!'
+    : 'Learn the official rules of the online Taboo word game. Learn how to play, score points and win!';
+
   return (
     <>
       <SEO
-        title={language === 'it' ? 'Regole del Gioco Taboo | Parole Taboo' : 'Taboo Game Rules | Word Taboo'}
-        description={language === 'it'
-          ? 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!'
-          : 'Learn the official rules of the online Taboo word game. Learn how to play, score points and win!'}
+        title={seoTitle}
+        description={seoDescription}
       />
       <main className="min-h-screen bg-gradient-to-b from-taboo-primary/5 to-taboo-accent/5 flex flex-col items-center justify-start pt-12 md:pt-20 px-4">
       <div className="w-full max-w-3xl mx-auto space-y-8">
@@ -145,4 +152,4 @@ const Rules: React.FC = () => {
   );
 };
 
-export default Rules; 
+export default Rules;
