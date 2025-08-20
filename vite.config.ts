@@ -12,11 +12,12 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
+    copyPublicDir: true,
+    outDir: 'dist',
     rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name].[hash][extname]',
-        chunkFileNames: 'assets/[name].[hash].js',
-        entryFileNames: 'assets/[name].[hash].js',
+      input: {
+        main: path.resolve(__dirname, 'index.html'),
+        en: path.resolve(__dirname, 'public/en/index.html')
       },
     },
   },

@@ -18,8 +18,6 @@
   from = "/en/*"
   to = "/en/index.html"
   status = 200
-  force = false
-  conditions = {type = "!file"}
 
 [[redirects]]
   from = "/en"
