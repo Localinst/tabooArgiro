@@ -15,10 +15,15 @@
 
 # Language-specific redirects
 [[redirects]]
+  from = "/en/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
   from = "/en/*"
   to = "/en/index.html"
   status = 200
-
+  
 [[redirects]]
   from = "/en"
   to = "/en/index.html"
