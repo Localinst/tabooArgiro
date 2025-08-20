@@ -4,6 +4,18 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from 'fs';
 
+type LangConfig = {
+  title: string;
+  description: string;
+};
+
+type PageConfig = {
+  path: string;
+  langs: {
+    [key: string]: LangConfig;
+  };
+};
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   base: '/',
@@ -12,14 +24,14 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   build: {
-    copyPublicDir: true,
     outDir: 'dist',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
         en: path.resolve(__dirname, 'public/en/index.html')
-      },
-    },
+      }
+    }
   },
   plugins: [
     react(),
@@ -30,63 +42,97 @@ export default defineConfig(({ mode }) => ({
       closeBundle: async () => {
         // Solo in modalità produzione
         if (mode !== 'production') return;
+
+        // Leggi il contenuto di index.html principale buildato
+        const mainIndexHtml = fs.readFileSync('./dist/index.html', 'utf-8');
         
-        // Percorsi e titoli delle pagine
+        // Estrai i percorsi degli asset dal file principale
+        const scriptMatch = mainIndexHtml.match(/<script[^>]+src="([^"]+)"/);
+        const styleMatch = mainIndexHtml.match(/<link[^>]+href="([^"]+)"[^>]*rel="stylesheet"/);
+        
+        const mainScript = scriptMatch ? scriptMatch[1] : '';
+        const mainStyle = styleMatch ? styleMatch[1] : '';
+
+        // Definisci le pagine e le loro traduzioni
         const pages = [
-          { 
-            path: 'rules', 
-            title: 'Regole del Gioco Taboo | Parole Taboo', 
-            description: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!' 
-          },
-          // Aggiungi altre pagine qui se necessario
-        ];
-        
-        // Leggi il contenuto di index.html
-        const indexHtml = fs.readFileSync('./dist/index.html', 'utf-8');
-        
-        // Per ogni pagina definita
-        for (const page of pages) {
-          // Crea la directory se non esiste
-          const dirPath = `./dist/${page.path}`;
-          if (!fs.existsSync(dirPath)) {
-            fs.mkdirSync(dirPath, { recursive: true });
+          {
+            path: 'rules',
+            langs: {
+              it: {
+                title: 'Regole del Gioco Taboo | Parole Taboo',
+                description: 'Scopri le regole ufficiali del gioco di società online Parole Taboo. Impara a giocare, a fare punti e a vincere!'
+              },
+              en: {
+                title: 'Taboo Game Rules | Taboo Words',
+                description: 'Discover the official rules of the online party game Taboo Words. Learn how to play, score points and win!'
+              }
+            }
           }
-          
-          // Sostituisci i meta tag con quelli specifici della pagina
-          let pageHtml = indexHtml;
-          
-          // Sostituisci il tag canonical
-          pageHtml = pageHtml.replace(
-            /<link rel="canonical"[^>]*>/,
-            `<link rel="canonical" href="https://paroletaboo.it/${page.path}" />`
+        ];
+
+        // Genera le versioni linguistiche
+        const langs = ['it', 'en'];
+        for (const lang of langs) {
+          // Crea directory per la lingua se necessario
+          if (lang !== 'it') {
+            fs.mkdirSync(`./dist/${lang}`, { recursive: true });
+          }
+
+          // Leggi il template HTML per questa lingua
+          const templatePath = lang === 'it' ? './public/index.html' : `./public/${lang}/index.html`;
+          let langIndexHtml = fs.readFileSync(templatePath, 'utf-8');
+
+          // Aggiorna i percorsi degli asset
+          langIndexHtml = langIndexHtml.replace(
+            /src="\/src\/main.tsx"/,
+            `src="${mainScript}"`
           );
           
-          // Sostituisci il titolo
-          if (page.title) {
+          if (mainStyle) {
+            langIndexHtml = langIndexHtml.replace(
+              /<\/head>/,
+              `  <link rel="stylesheet" href="${mainStyle}">\n</head>`
+            );
+          }
+
+          // Scrivi il file index.html per questa lingua
+          const targetPath = lang === 'it' ? './dist/index.html' : `./dist/${lang}/index.html`;
+          fs.writeFileSync(targetPath, langIndexHtml);
+
+          // Genera le pagine statiche per questa lingua
+          for (const page of pages) {
+            const dirPath = lang === 'it' ? `./dist/${page.path}` : `./dist/${lang}/${page.path}`;
+            fs.mkdirSync(dirPath, { recursive: true });
+
+            let pageHtml = langIndexHtml;
+            const langData = page.langs[lang as 'it' | 'en'];
+
+            // Aggiorna i meta tag
+            pageHtml = pageHtml.replace(
+              /<link rel="canonical"[^>]*>/,
+              `<link rel="canonical" href="https://paroletaboo.it/${lang !== 'it' ? lang + '/' : ''}${page.path}" />`
+            );
+
             pageHtml = pageHtml.replace(
               /<title>.*?<\/title>/,
-              `<title>${page.title}</title>`
+              `<title>${langData.title}</title>`
             );
-          }
-          
-          // Sostituisci la descrizione
-          if (page.description) {
+
             pageHtml = pageHtml.replace(
               /<meta name="description"[^>]*>/,
-              `<meta name="description" content="${page.description}" />`
+              `<meta name="description" content="${langData.description}" />`
             );
-          }
-          
-          // Scrivi il file index.html nella directory della pagina
-          fs.writeFileSync(`${dirPath}/index.html`, pageHtml);
-          console.log(`Pagina statica generata: ${page.path}/index.html`);
+
+            fs.writeFileSync(`${dirPath}/index.html`, pageHtml);
+            console.log(`Pagina statica generata: ${lang !== 'it' ? lang + '/' : ''}${page.path}/index.html`);
+          }          }
         }
       }
-    }
-  ].filter(Boolean),
+    
+  ],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
+      "@": path.resolve(__dirname, "src")
+    }
+  }
 }));
