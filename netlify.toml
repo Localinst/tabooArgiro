@@ -7,11 +7,19 @@
   port = 8080
   targetPort = 8080
 
+# Assets statici (deve essere prima di tutti i redirect)
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
 # Language-specific redirects
 [[redirects]]
   from = "/en/*"
   to = "/en/index.html"
   status = 200
+  force = false
+  conditions = {type = "!file"}
 
 [[redirects]]
   from = "/en"
@@ -43,10 +51,10 @@
   to = "/en/rules/index.html"
   status = 200
 
-# Aggiungi altri percorsi statici qui se necessario
-
 # Regola esistente per SPA (come fallback)
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = false
+  conditions = {type = "!file"}

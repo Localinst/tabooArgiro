@@ -4,11 +4,29 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from 'fs';
 
+type Language = 'it' | 'en';
+
+interface PageContent {
+  path: string;
+  title: Record<Language, string>;
+  description: Record<Language, string>;
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  base: '/',
   server: {
     host: "::",
     port: 8080,
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: 'assets/[name]-[hash][extname]',
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+      },
+    },
   },
   plugins: [
     react(),
@@ -21,7 +39,7 @@ export default defineConfig(({ mode }) => ({
         if (mode !== 'production') return;
         
         // Copia gli index.html specifici per lingua
-        const languages = ['', 'en'];
+        const languages: ('' | 'en')[] = ['', 'en'];
         for (const lang of languages) {
           const sourcePath = `./public${lang ? `/${lang}` : ''}/index.html`;
           const targetPath = `./dist${lang ? `/${lang}` : ''}/index.html`;
@@ -39,7 +57,7 @@ export default defineConfig(({ mode }) => ({
         }
         
         // Percorsi e titoli delle pagine multilingua
-        const pages = [
+        const pages: PageContent[] = [
           { 
             path: 'rules', 
             title: {
@@ -51,12 +69,11 @@ export default defineConfig(({ mode }) => ({
               en: 'Discover the official rules of the online party game Taboo Words. Learn how to play, score points and win!'
             }
           }
-          // Aggiungi altre pagine qui se necessario
         ];
         
         // Per ogni lingua e pagina definita
         for (const lang of languages) {
-          const baseLang = lang || 'it';
+          const baseLang: Language = lang ? 'en' : 'it';
           const baseUrl = `https://paroletaboo.it${lang ? `/${lang}` : ''}`;
           
           // Leggi il contenuto di index.html della lingua corrente
@@ -78,20 +95,16 @@ export default defineConfig(({ mode }) => ({
             );
             
             // Sostituisci il titolo
-            if (page.title[baseLang]) {
-              pageHtml = pageHtml.replace(
-                /<title>.*?<\/title>/,
-                `<title>${page.title[baseLang]}</title>`
-              );
-            }
+            pageHtml = pageHtml.replace(
+              /<title>.*?<\/title>/,
+              `<title>${page.title[baseLang]}</title>`
+            );
             
             // Sostituisci la descrizione
-            if (page.description[baseLang]) {
-              pageHtml = pageHtml.replace(
-                /<meta name="description"[^>]*>/,
-                `<meta name="description" content="${page.description[baseLang]}" />`
-              );
-            }
+            pageHtml = pageHtml.replace(
+              /<meta name="description"[^>]*>/,
+              `<meta name="description" content="${page.description[baseLang]}" />`
+            );
             
             // Scrivi il file index.html nella directory della pagina
             fs.writeFileSync(`${dirPath}/index.html`, pageHtml);
