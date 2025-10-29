@@ -24,8 +24,8 @@ const SEO: React.FC<SEOProps> = ({
   
   const canonicalUrl = `${baseUrl}${isEnglish ? '/en' : ''}${currentPath}`;
   const alternateUrls = {
-    it: `${baseUrl}${currentPath.replace('/en', '')}`,
-    en: `${baseUrl}/en${currentPath.replace('/en', '')}`
+    it: `${baseUrl}${cleanPath || '/'}`,
+    en: `${baseUrl}/en${cleanPath || '/'}`
   };
   const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
 
