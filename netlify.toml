@@ -20,6 +20,11 @@
   status = 200
 
 [[redirects]]
+  from = "/tr/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
   from = "/en/*"
   to = "/en/index.html"
   status = 200
@@ -27,6 +32,16 @@
 [[redirects]]
   from = "/en"
   to = "/en/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tr/*"
+  to = "/tr/index.html"
+  status = 200
+  
+[[redirects]]
+  from = "/tr"
+  to = "/tr/index.html"
   status = 200
 
 # Redirect da .com a .it
@@ -52,6 +67,11 @@
 [[redirects]]
   from = "/en/rules"
   to = "/en/rules/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tr/rules"
+  to = "/tr/rules/index.html"
   status = 200
 
 # Regola esistente per SPA (come fallback)
