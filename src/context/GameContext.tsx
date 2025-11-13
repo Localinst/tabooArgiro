@@ -70,6 +70,7 @@ type GameContextType = {
   availableCardsCount: number;
   addTeam: (name: string) => void;
   removeTeam: (id: number) => void;
+  updateTeamName: (id: number, newName: string) => void;
   addPlayer: (name: string) => number;
   removePlayer: (id: number) => void;
   assignPlayersToTeams: (teamAssignments: Record<number, number[]>) => void;
@@ -114,6 +115,7 @@ const defaultContext: GameContextType = {
   availableCardsCount: 0,
   addTeam: () => {},
   removeTeam: () => {},
+  updateTeamName: () => {},
   addPlayer: () => 0,
   removePlayer: () => {},
   assignPlayersToTeams: () => {},
@@ -345,6 +347,12 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return;
     }
     setTeams(teams.filter(team => team.id !== id));
+  };
+
+  const updateTeamName = (id: number, newName: string) => {
+    setTeams(teams.map(team => 
+      team.id === id ? { ...team, name: newName } : team
+    ));
   };
 
   const addPlayer = (name: string) => {
@@ -724,6 +732,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
         availableCardsCount: availableCards.length,
         addTeam,
         removeTeam,
+        updateTeamName,
         addPlayer,
         removePlayer,
         assignPlayersToTeams,

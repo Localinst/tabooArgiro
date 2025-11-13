@@ -7,7 +7,6 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Slider } from "@/components/ui/slider";
-import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd';
 import { toast } from '@/hooks/use-toast';
 import { useLanguage } from '@/context/LanguageContext';
 import { translations } from '@/data/translations';
@@ -23,6 +22,9 @@ const GameSetup: React.FC = () => {
     teams, 
     addPlayer, 
     removePlayer, 
+    addTeam,
+    removeTeam,
+    updateTeamName,
     assignPlayersToTeams,
     gameSettings,
     updateGameSettings,
@@ -30,11 +32,19 @@ const GameSetup: React.FC = () => {
   } = useGameContext();
 
   const [newPlayerName, setNewPlayerName] = useState('');
+  const [newTeamName, setNewTeamName] = useState('');
   const [activeTab, setActiveTab] = useState('players');
-  const [isDragging, setIsDragging] = useState(false);
   
   // Stato temporaneo per gli assegnamenti dei giocatori alle squadre
   const [teamAssignments, setTeamAssignments] = useState<Record<number, number[]>>({});
+  
+  // Stato per il giocatore selezionato e il drag/drop
+  const [selectedPlayerId, setSelectedPlayerId] = useState<number | null>(null);
+  const [draggedPlayerId, setDraggedPlayerId] = useState<number | null>(null);
+  
+  // Stato per la modifica dei nomi delle squadre
+  const [editingTeamId, setEditingTeamId] = useState<number | null>(null);
+  const [editingTeamName, setEditingTeamName] = useState('');
 
   // Inizializza le assegnazioni delle squadre
   useEffect(() => {
@@ -45,19 +55,7 @@ const GameSetup: React.FC = () => {
     setTeamAssignments(assignments);
   }, [teams]);
 
-  // Previene il comportamento di pull-to-refresh durante il trascinamento
-  useEffect(() => {
-    const preventPullToRefresh = (e: TouchEvent) => {
-      if (isDragging) {
-        e.preventDefault();
-      }
-    };
 
-    document.addEventListener('touchmove', preventPullToRefresh, { passive: false });
-    return () => {
-      document.removeEventListener('touchmove', preventPullToRefresh);
-    };
-  }, [isDragging]);
 
   const handleAddPlayer = () => {
     if (newPlayerName.trim()) {
@@ -66,28 +64,128 @@ const GameSetup: React.FC = () => {
     }
   };
 
-  const handleDragStart = () => {
-    setIsDragging(true);
+  const handleAddTeam = () => {
+    const teamName = newTeamName.trim() || `${language === 'it' ? 'Squadra' : 'Team'} ${String.fromCharCode(67 + teams.length)}`;
+    addTeam(teamName);
+    setNewTeamName('');
+    toast({
+      title: language === 'it' ? 'Squadra aggiunta' : 'Team added',
+      description: `${teamName} ${language === 'it' ? 'è stata aggiunta' : 'has been added'}`,
+    });
   };
 
-  const handleDragEnd = (result: any) => {
-    setIsDragging(false);
-    if (!result.destination) return;
+  // Assegna automaticamente i giocatori alle squadre in modo equo
+  const handleAutoAssignPlayers = () => {
+    if (players.length === 0) {
+      toast({
+        title: language === 'it' ? 'Errore' : 'Error',
+        description: language === 'it' ? 'Aggiungi almeno 2 giocatori' : 'Add at least 2 players',
+        variant: 'destructive'
+      });
+      return;
+    }
 
-    const { source, destination } = result;
-    const playerId = parseInt(result.draggableId);
+    if (players.length < teams.length) {
+      toast({
+        title: language === 'it' ? 'Errore' : 'Error',
+        description: language === 'it' ? `Aggiungi almeno ${teams.length} giocatori` : `Add at least ${teams.length} players`,
+        variant: 'destructive'
+      });
+      return;
+    }
 
-    // Rimuovi il giocatore dalla sua squadra originale
-    Object.keys(teamAssignments).forEach(teamId => {
-      const numTeamId = parseInt(teamId);
-      teamAssignments[numTeamId] = teamAssignments[numTeamId].filter(id => id !== playerId);
+    const assignments: Record<number, number[]> = {};
+    teams.forEach(team => {
+      assignments[team.id] = [];
     });
 
-    // Aggiungi il giocatore alla nuova squadra
-    const destTeamId = parseInt(destination.droppableId);
-    teamAssignments[destTeamId] = [...(teamAssignments[destTeamId] || []), playerId];
+    // Distribuisci i giocatori in modo round-robin
+    players.forEach((player, index) => {
+      const teamId = teams[index % teams.length].id;
+      assignments[teamId].push(player.id);
+    });
 
-    setTeamAssignments({...teamAssignments});
+    setTeamAssignments(assignments);
+    toast({
+      title: language === 'it' ? 'Successo' : 'Success',
+      description: language === 'it' ? 'Giocatori assegnati automaticamente' : 'Players automatically assigned',
+    });
+  };
+
+  // Aggiungi un giocatore a una squadra
+  const handleAddPlayerToTeam = (playerId: number, teamId: number) => {
+    setTeamAssignments(prev => {
+      const updated = { ...prev };
+      // Rimuovi il giocatore da tutte le squadre
+      Object.keys(updated).forEach(id => {
+        updated[parseInt(id)] = updated[parseInt(id)].filter(id => id !== playerId);
+      });
+      // Aggiungi il giocatore alla nuova squadra
+      updated[teamId] = [...(updated[teamId] || []), playerId];
+      return updated;
+    });
+  };
+
+  // Rimuovi un giocatore da una squadra
+  const handleRemovePlayerFromTeam = (playerId: number) => {
+    setTeamAssignments(prev => {
+      const updated = { ...prev };
+      Object.keys(updated).forEach(teamId => {
+        updated[parseInt(teamId)] = updated[parseInt(teamId)].filter(id => id !== playerId);
+      });
+      return updated;
+    });
+  };
+
+  // Seleziona un giocatore per assegnarlo con click su squadra
+  const handleSelectPlayer = (playerId: number) => {
+    setSelectedPlayerId(selectedPlayerId === playerId ? null : playerId);
+  };
+
+  // Assegna il giocatore selezionato a una squadra
+  const handleAssignSelectedPlayerToTeam = (teamId: number) => {
+    if (selectedPlayerId !== null) {
+      handleAddPlayerToTeam(selectedPlayerId, teamId);
+      setSelectedPlayerId(null);
+    }
+  };
+
+  // Drag and drop handlers
+  const handleDragStart = (e: React.DragEvent, playerId: number) => {
+    setDraggedPlayerId(playerId);
+    e.dataTransfer.effectAllowed = 'move';
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+  };
+
+  const handleDropOnTeam = (e: React.DragEvent, teamId: number) => {
+    e.preventDefault();
+    if (draggedPlayerId !== null) {
+      handleAddPlayerToTeam(draggedPlayerId, teamId);
+      setDraggedPlayerId(null);
+    }
+  };
+
+  // Gestione modifica nome squadra
+  const handleStartEditTeam = (teamId: number, currentName: string) => {
+    setEditingTeamId(teamId);
+    setEditingTeamName(currentName);
+  };
+
+  const handleSaveTeamName = (teamId: number) => {
+    if (editingTeamName.trim()) {
+      updateTeamName(teamId, editingTeamName.trim());
+    }
+    setEditingTeamId(null);
+    setEditingTeamName('');
+  };
+
+  const handleCancelEditTeam = () => {
+    setEditingTeamId(null);
+    setEditingTeamName('');
   };
 
   const isPlayerAssigned = (playerId: number) => {
@@ -191,123 +289,210 @@ const GameSetup: React.FC = () => {
         
         {/* Tab Squadre */}
         <TabsContent value="teams" className="p-4">
-          <DragDropContext onDragStart={handleDragStart} onDragEnd={handleDragEnd}>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-sm font-medium mb-2">{language === 'it' ? 'Giocatori non assegnati' : 'Unassigned Players'}</h3>
-                <Droppable droppableId="unassigned" direction="horizontal">
-                  {(provided) => (
+          <div className="space-y-6">
+            {/* Giocatori Non Assegnati */}
+            <div>
+              <h3 className="text-sm font-medium mb-3 text-muted-foreground">
+                {language === 'it' ? 'Giocatori disponibili' : 'Available Players'} ({getUnassignedPlayers().length})
+                {selectedPlayerId && <span className="text-taboo-primary ml-2">{language === 'it' ? '- Clicca su una squadra' : '- Click on a team'}</span>}
+              </h3>
+              <div className="flex flex-wrap gap-2 p-3 bg-muted rounded-md min-h-16">
+                {getUnassignedPlayers().length === 0 ? (
+                  <p className="text-muted-foreground text-sm italic w-full text-center py-4">
+                    {language === 'it' ? 'Tutti i giocatori sono assegnati!' : 'All players are assigned!'}
+                  </p>
+                ) : (
+                  getUnassignedPlayers().map(player => (
                     <div
-                      {...provided.droppableProps}
-                      ref={provided.innerRef}
-                      className="border rounded-md p-2 min-h-16 flex flex-wrap gap-2"
+                      key={player.id}
+                      draggable
+                      onDragStart={(e) => handleDragStart(e, player.id)}
+                      onDragEnd={() => setDraggedPlayerId(null)}
+                      onClick={() => handleSelectPlayer(player.id)}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg cursor-move transition-all ${
+                        selectedPlayerId === player.id
+                          ? 'bg-taboo-primary text-white ring-2 ring-taboo-primary shadow-lg scale-105'
+                          : draggedPlayerId === player.id
+                          ? 'bg-taboo-primary/50 text-white opacity-70'
+                          : 'bg-background border hover:shadow-sm hover:border-taboo-primary'
+                      }`}
+                      title={language === 'it' ? 'Clicca per selezionare o trascina su una squadra' : 'Click to select or drag to a team'}
                     >
-                      {getUnassignedPlayers().map((player, index) => (
-                        <Draggable 
-                          key={player.id} 
-                          draggableId={player.id.toString()} 
-                          index={index}
-                        >
-                          {(provided) => (
-                            <div
-                              ref={provided.innerRef}
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              className="bg-taboo-primary/10 text-sm py-1 px-3 rounded-full"
-                            >
-                              {player.name}
-                            </div>
-                          )}
-                        </Draggable>
-                      ))}
-                      {provided.placeholder}
-                      {getUnassignedPlayers().length === 0 && (
-                        <p className="text-muted-foreground text-sm italic w-full text-center py-2">
-                          {language === 'it' ? 'Tutti i giocatori sono assegnati alle squadre' : 'All players are assigned to teams'}
-                        </p>
-                      )}
+                      <span className="text-sm font-medium flex-1">{player.name}</span>
                     </div>
-                  )}
-                </Droppable>
-              </div>
-              
-              <div className="space-y-4">
-                <h3 className="text-sm font-medium">{language === 'it' ? 'Squadre' : 'Teams'}</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {teams.map(team => (
-                    <div key={team.id} className="space-y-2">
-                      <h4 className="font-semibold text-taboo-primary">{team.name}</h4>
-                      <Droppable droppableId={team.id.toString()}>
-                        {(provided) => (
-                          <div
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                            className="border rounded-md p-2 min-h-24"
-                          >
-                            <div className="flex flex-wrap gap-2">
-                              {players
-                                .filter(player => teamAssignments[team.id]?.includes(player.id))
-                                .map((player, index) => (
-                                  <Draggable 
-                                    key={player.id} 
-                                    draggableId={player.id.toString()} 
-                                    index={index}
-                                  >
-                                    {(provided) => (
-                                      <div
-                                        ref={provided.innerRef}
-                                        {...provided.draggableProps}
-                                        {...provided.dragHandleProps}
-                                        className="bg-taboo-primary/20 text-sm py-1 px-3 rounded-full"
-                                      >
-                                        {player.name}
-                                      </div>
-                                    )}
-                                  </Draggable>
-                                ))}
-                              {provided.placeholder}
-                            </div>
-                            {teamAssignments[team.id]?.length === 0 && (
-                              <p className="text-muted-foreground text-sm italic text-center py-2">
-                                {language === 'it' ? 'Trascina qui i giocatori' : 'Drag players here'}
-                              </p>
-                            )}
-                          </div>
-                        )}
-                      </Droppable>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              
-              <div className="space-y-4">
-                <Button 
-                  className="w-full" 
-                  disabled={getUnassignedPlayers().length > 0}
-                  onClick={handleSaveTeams}
-                >
-                  {language === 'it' ? 'Salva Squadre' : 'Save Teams'}
-                </Button>
-                
-                {/* Pulsante per completare rapidamente la configurazione */}
-                {getUnassignedPlayers().length === 0 && (
-                  <Button 
-                    variant="outline"
-                    className="w-full mt-2 border-taboo-primary/30 text-taboo-primary"
-                    onClick={() => {
-                      handleSaveTeams();
-                      // Usiamo setTimeout per dar tempo al primo handler di completarsi
-                      setTimeout(() => {
-                        handleCompleteSetup();
-                      }, 100);
-                    }}
-                  >
-                    {language === 'it' ? 'Completa Configurazione Rapidamente' : 'Complete Setup Quickly'}
-                  </Button>
+                  ))
                 )}
               </div>
             </div>
-          </DragDropContext>
+
+            {/* Pulsante Assegnazione Automatica */}
+            {getUnassignedPlayers().length > 0 && (
+              <Button 
+                onClick={handleAutoAssignPlayers}
+                variant="outline"
+                className="w-full border-taboo-primary/30 text-taboo-primary hover:bg-taboo-primary/5"
+              >
+                {language === 'it' ? '⚡ Assegna Automaticamente' : '⚡ Auto-Assign All'}
+              </Button>
+            )}
+
+            {/* Gestione Squadre */}
+            <div className="space-y-3 border-t pt-4">
+              <h3 className="text-sm font-medium">{language === 'it' ? 'Gestisci Squadre' : 'Manage Teams'}</h3>
+              <div className="flex gap-2">
+                <Input
+                  placeholder={language === 'it' ? 'Nome squadra (opzionale)' : 'Team name (optional)'}
+                  value={newTeamName}
+                  onChange={(e) => setNewTeamName(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleAddTeam()}
+                  className="flex-1"
+                />
+                <Button 
+                  onClick={handleAddTeam}
+                  variant="outline"
+                  className="border-taboo-primary/30 text-taboo-primary hover:bg-taboo-primary/5"
+                >
+                  {language === 'it' ? '+ Squadra' : '+ Team'}
+                </Button>
+              </div>
+              
+              {/* Modifica nomi squadre */}
+              <div className="space-y-2">
+                {teams.map(team => (
+                  <div key={team.id} className="flex items-center gap-2">
+                    {editingTeamId === team.id ? (
+                      <>
+                        <Input
+                          value={editingTeamName}
+                          onChange={(e) => setEditingTeamName(e.target.value)}
+                          onKeyPress={(e) => {
+                            if (e.key === 'Enter') handleSaveTeamName(team.id);
+                            if (e.key === 'Escape') handleCancelEditTeam();
+                          }}
+                          className="flex-1 h-8 text-sm"
+                          autoFocus
+                        />
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-8 px-2 text-green-600 hover:bg-green-100"
+                          onClick={() => handleSaveTeamName(team.id)}
+                        >
+                          ✓
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-8 px-2 text-red-600 hover:bg-red-100"
+                          onClick={handleCancelEditTeam}
+                        >
+                          ✕
+                        </Button>
+                      </>
+                    ) : (
+                      <>
+                        <div className="flex-1 flex items-center gap-2 bg-taboo-primary/10 px-3 py-2 rounded-lg">
+                          <span className="text-sm font-medium">{team.name}</span>
+                        </div>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          className="h-8 px-2 text-muted-foreground hover:text-taboo-primary"
+                          onClick={() => handleStartEditTeam(team.id, team.name)}
+                          title={language === 'it' ? 'Modifica nome' : 'Edit name'}
+                        >
+                          ✎
+                        </Button>
+                        {teams.length > 2 && (
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            className="h-8 px-2 text-muted-foreground hover:text-taboo-wrong"
+                            onClick={() => removeTeam(team.id)}
+                            title={language === 'it' ? 'Rimuovi squadra' : 'Remove team'}
+                          >
+                            ✕
+                          </Button>
+                        )}
+                      </>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Squadre */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-medium">{language === 'it' ? 'Squadre' : 'Teams'}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {teams.map(team => (
+                  <div 
+                    key={team.id}
+                    onDragOver={handleDragOver}
+                    onDrop={(e) => handleDropOnTeam(e, team.id)}
+                    onClick={() => {
+                      if (selectedPlayerId !== null) {
+                        handleAssignSelectedPlayerToTeam(team.id);
+                      }
+                    }}
+                    className={`border-2 rounded-lg p-4 bg-card transition-all ${
+                      selectedPlayerId !== null
+                        ? 'border-taboo-primary/50 cursor-pointer hover:border-taboo-primary hover:shadow-lg hover:bg-taboo-primary/5'
+                        : draggedPlayerId !== null
+                        ? 'border-taboo-primary/50 cursor-drop'
+                        : 'border-border hover:shadow-sm'
+                    }`}
+                  >
+                    <h4 className="font-semibold text-taboo-primary mb-3">
+                      {team.name} 
+                      <span className="ml-2 text-xs font-normal text-muted-foreground">
+                        ({teamAssignments[team.id]?.length || 0})
+                      </span>
+                    </h4>
+                    <div className="space-y-2">
+                      {teamAssignments[team.id]?.length === 0 ? (
+                        <p className="text-muted-foreground text-sm italic text-center py-4">
+                          {language === 'it' ? 'Nessun giocatore' : 'No players'}
+                        </p>
+                      ) : (
+                        teamAssignments[team.id]?.map(playerId => {
+                          const player = players.find(p => p.id === playerId);
+                          return (
+                            <div
+                              key={playerId}
+                              className="flex items-center justify-between bg-taboo-primary/5 rounded px-3 py-2 group hover:bg-taboo-primary/10 transition-colors"
+                            >
+                              <span className="text-sm font-medium">{player?.name}</span>
+                              <Button
+                                variant="ghost"
+                                size="sm"
+                                className="h-6 w-6 p-0 text-muted-foreground hover:text-taboo-wrong opacity-0 group-hover:opacity-100 transition-opacity"
+                                onClick={() => handleRemovePlayerFromTeam(playerId)}
+                                title={language === 'it' ? 'Rimuovi' : 'Remove'}
+                              >
+                                ✕
+                              </Button>
+                            </div>
+                          );
+                        })
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Pulsanti di Azione */}
+            <div className="space-y-3">
+              <Button 
+                className="w-full" 
+                disabled={getUnassignedPlayers().length > 0}
+                onClick={handleSaveTeams}
+              >
+                {language === 'it' ? 'Continua a Modalità Gioco' : 'Continue to Game Mode'}
+              </Button>
+            </div>
+          </div>
         </TabsContent>
         
         {/* Tab Modalità */}

@@ -26,8 +26,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+  
     {
       name: 'generate-static-pages',
       closeBundle: async () => {
@@ -43,7 +42,7 @@ export default defineConfig(({ mode }) => ({
           },
           {
             path: 'en/rules',
-            title: 'Taboo Rules — Play Taboo Online | Taboo Words',
+            title: 'Taboo Rules - Play Taboo Online | Taboo Words',
             description: 'Learn the official rules of the Taboo party game. Discover how to play Taboo online, score points and win!'
           },
           // Aggiungi altre pagine qui se necessario
@@ -65,8 +64,46 @@ export default defineConfig(({ mode }) => ({
         // Leggi il contenuto di index.html
         const indexHtml = fs.readFileSync(indexPath, 'utf-8');
         
+        // Pagine da generare
+        const pagesWithSeo = [
+          ...pages,
+          { path: 'en', title: 'Taboo Online: Free Party Game', description: 'Play Taboo Online free! The fun board game with cards to guess words without saying the Taboo ones. Perfect for parties, friends and evenings. Lots of Taboo words!' }
+        ];
+
         // Per ogni pagina definita
         const seoContentMap: Record<string, string> = {
+          'en': `
+    <div class="seo-content">
+      <h1>Taboo Online: Free Party Game</h1>
+      <p>🎮 Discover the fun of the classic Taboo game online! Our digital version of Taboo is completely free and requires no registration. Play with Taboo cards online—perfect for parties, evenings with friends and as a party game. Make your gatherings more fun with this fantastic online board game!</p>
+      
+      <h2>How to Play Taboo Online</h2>
+      <p>The Taboo game is a classic, simple and intuitive party game: you must make your team guess a keyword while avoiding the 'Taboo words' (the forbidden words) shown on the card. The more Taboo words you guess, the more points you earn! It's the perfect party game.</p>
+      
+      <h2>Main Features of Taboo Online</h2>
+      <ul>
+        <li>Intuitive and responsive Taboo interface to play anywhere</li>
+        <li>Plenty of Taboo cards constantly updated</li>
+        <li>Multiplayer Taboo mode to play in groups</li>
+        <li>Customizable Taboo timer for each match</li>
+        <li>Taboo online completely free and without registration</li>
+        <li>Perfect as a Taboo party game and for social gatherings</li>
+        <li>Great for playing Taboo board game online</li>
+        <li>Taboo game updated with new Taboo words</li>
+      </ul>
+
+      <h2>Why Choose Our Free Taboo</h2>
+      <p>Our Taboo online game is designed to give you the best experience of the classic board game. With a user-friendly Taboo interface and many Taboo words, it's the ideal party game. Organizing a party or a night with friends? Our free Taboo online is the perfect choice for hours of fun!</p>
+
+      <h2>FAQ - Frequently Asked Questions about Taboo Online</h2>
+      <ul>
+        <li><strong>Do I need to register to play Taboo?</strong> No, Taboo online is completely free and does not require registration.</li>
+        <li><strong>How many people can play this board game?</strong> Taboo is perfect for groups, ideally 4 people and up.</li>
+        <li><strong>Is Taboo available on mobile?</strong> Yes, Taboo online is fully responsive and works on all devices.</li>
+        <li><strong>How do you win Taboo?</strong> The team that scores the most points by guessing the Taboo words without using the forbidden terms wins.</li>
+      </ul>
+    </div>
+          `,
           'rules': `
     <div class="seo-content">
       <h1>Taboo Online: Gioco di Società Gratis</h1>
