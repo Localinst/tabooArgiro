@@ -57,7 +57,7 @@ const Rules: React.FC = () => {
 
         {/* Back button */}
         <div className="flex justify-start">
-          <Link to={language === 'en' ? '/en' : '/'}>
+          <Link to={language === 'en' ? '/en' : language === 'tr' ? '/tr' : '/'}>
             <Button variant="ghost" className="flex items-center gap-2">
               <ArrowLeft className="w-4 h-4" />
               {t.backToHome}
@@ -99,7 +99,7 @@ const Rules: React.FC = () => {
             </CardContent>
           </Card>
           <section className="text-center py-4">
-          <Link to={language === 'en' ? '/en/game' : '/game'}>
+          <Link to={language === 'en' ? '/en/game' : language === 'tr' ? '/tr/game' : '/game'}>
             <Button 
               className="bg-taboo-primary hover:bg-taboo-primary/90 text-white text-xl py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300"
               aria-label={t.startPlaying}
@@ -149,7 +149,7 @@ const Rules: React.FC = () => {
 
         {/* Start playing CTA */}
         <section className="text-center py-4">
-          <Link to={language === 'en' ? '/en/game' : '/game'}>
+          <Link to={language === 'en' ? '/en/game' : language === 'tr' ? '/tr/game' : '/game'}>
             <Button 
               className="bg-taboo-primary hover:bg-taboo-primary/90 text-white text-xl py-6 px-8 shadow-lg hover:shadow-xl transition-all duration-300"
               aria-label={t.startPlaying}

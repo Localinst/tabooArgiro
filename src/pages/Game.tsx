@@ -82,7 +82,7 @@ const GameContent: React.FC = () => {
           </h1>
           <div className="flex items-center gap-4">
             <LanguageSwitcher />
-            <Link to={language === 'en' ? '/en' : '/'}>
+            <Link to={language === 'en' ? '/en' : language === 'tr' ? '/tr' : '/'}>
               <Button variant="outline" size={isMobile ? "sm" : "default"} className="border-taboo-primary/30 text-taboo-primary">
                 {t.homeButton}
               </Button>

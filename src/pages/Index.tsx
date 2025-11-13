@@ -94,7 +94,7 @@ const Index: React.FC = () => {
 
         {/* Start Button */}
         <section aria-label={language === 'it' ? "Inizia a giocare" : "Start playing"}>
-          <Link to={language === 'en' ? '/en/game' : '/game'} className="w-full block">
+          <Link to={language === 'en' ? '/en/game' : language === 'tr' ? '/tr/game' : '/game'} className="w-full block">
             <Button 
               className="w-full bg-taboo-primary hover:bg-taboo-primary/90 text-white text-xl py-6 shadow-lg hover:shadow-xl transition-all duration-300"
               aria-label={t.startPlaying}
@@ -114,7 +114,7 @@ const Index: React.FC = () => {
                   <p key={index}>{`${index + 1}. ${rule}`}</p>
                 ))}
               </div>
-              <Link to={language === 'en' ? '/en/rules' : '/rules'} className="inline-flex items-center mt-4 text-taboo-primary hover:text-taboo-primary/80">
+              <Link to={language === 'en' ? '/en/rules' : language === 'tr' ? '/tr/rules' : '/rules'} className="inline-flex items-center mt-4 text-taboo-primary hover:text-taboo-primary/80">
                 <BookOpen className="w-4 h-4 mr-2" />
                 {t.readFullRules}
               </Link>
@@ -124,9 +124,9 @@ const Index: React.FC = () => {
 
         {/* Link utili */}
         <section aria-label={language === 'it' ? "Link utili" : "Useful links"} className="grid grid-cols-1 md:grid-cols-1 gap-4 mt-8">
-          <Link to={language === 'en' ? '/en/rules' : '/rules'} className="inline-flex items-center justify-center p-4 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/70 transition-colors">
+          <Link to={language === 'en' ? '/en/rules' : language === 'tr' ? '/tr/rules' : '/rules'} className="inline-flex items-center justify-center p-4 bg-white/50 backdrop-blur-sm rounded-lg hover:bg-white/70 transition-colors">
             <BookOpen className="w-5 h-5 mr-2 text-taboo-primary" />
-            {language === 'it' ? 'Regole complete' : 'Complete Rules'}
+            {language === 'it' ? 'Regole complete' : language === 'tr' ? 'Tam Kurallar' : 'Complete Rules'}
           </Link>
         </section>
 
