@@ -12,8 +12,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Percorsi dei file
-const csvFilePath = path.resolve(__dirname, '../src/data/dataen.csv');
-const outputPath = path.resolve(__dirname, '../src/data/taboo_words_en.ts');
+const csvFilePath = path.resolve(__dirname, '../src/data/datatr.csv');
+const outputPath = path.resolve(__dirname, '../src/data/taboo_words_tr.ts');
 
 try {
   // Leggi il file CSV

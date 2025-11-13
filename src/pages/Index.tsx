@@ -20,6 +20,11 @@ const seoData = {
     title: 'Taboo Words - Free Online Party Game',
     description: 'Play Taboo online with friends and family. The fun word game where you have to guess words without using the forbidden ones!',
     keywords: 'taboo cards online, taboo, taboo words, online taboo, taboo game, taboo cards, free online taboo card game, party taboo, taboo party game'
+  },
+  tr: {
+    title: 'Taboo Oyunu - Ücretsiz Çevrimiçi Parti Oyunu',
+    description: 'Taboo oyununu arkadaşlar ve ailenizle çevrimiçi oynayın. Yasak kelimeleri kullanmadan kelimeleri tahmin etmeniz gereken eğlenceli kelime oyunu!',
+    keywords: 'taboo kartları çevrimiçi, taboo, taboo kelimeleri, çevrimiçi taboo, taboo oyunu, taboo kartları, ücretsiz çevrimiçi taboo kart oyunu, parti taboo, taboo parti oyunu'
   }
 };
 

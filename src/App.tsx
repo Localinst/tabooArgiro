@@ -31,6 +31,11 @@ const App = () => (
               <Route path="/en/game" element={<Game />} />
               <Route path="/en/rules" element={<Rules />} />
               
+              {/* Turkish routes */}
+              <Route path="/tr" element={<Index />} />
+              <Route path="/tr/game" element={<Game />} />
+              <Route path="/tr/rules" element={<Rules />} />
+              
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

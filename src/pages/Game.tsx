@@ -25,6 +25,13 @@ import GameControlsEn from '../components/en/GameControls';
 import GameSetupEn from '../components/en/GameSetup';
 import PlayerTurnScreenEn from '../components/en/PlayerTurnScreen';
 
+// Turkish components
+import GameCardTr from '../components/tr/GameCard';
+import TimerTr from '../components/tr/Timer';
+import GameControlsTr from '../components/tr/GameControls';
+import GameSetupTr from '../components/tr/GameSetup';
+import PlayerTurnScreenTr from '../components/tr/PlayerTurnScreen';
+
 // Common components
 import ScoreBoard from '../components/ScoreBoard';
 import FeedbackForm from '../components/FeedbackForm';
@@ -39,6 +46,11 @@ const seoData = {
     title: 'Play Taboo Online | Word Taboo',
     description: 'Play Taboo online for free with friends and family. Challenge other teams in this fun word game!',
     keywords: 'play taboo online, free taboo game, taboo multiplayer, taboo teams, taboo challenge'
+  },
+  tr: {
+    title: 'Taboo Oyununu Çevrimiçi Oyna | Taboo Oyunu',
+    description: 'Taboo oyununu arkadaşlar ve ailenizle ücretsiz olarak çevrimiçi oynayın. Diğer takımlarla bu eğlenceli kelime oyununda rekabet edin!',
+    keywords: 'taboo oyununu çevrimiçi oyna, ücretsiz taboo oyunu, taboo çoklu oyuncu, taboo takımları, taboo yarışması'
   }
 };
 
@@ -81,7 +93,7 @@ const GameContent: React.FC = () => {
         {!gameSetupComplete ? (
           // Mostra la configurazione del gioco
           <>
-            {language === 'en' ? <GameSetupEn /> : <GameSetupIt />}
+            {language === 'en' ? <GameSetupEn /> : language === 'tr' ? <GameSetupTr /> : <GameSetupIt />}
             <FeedbackForm />
           </>
         ) : (
@@ -95,12 +107,19 @@ const GameContent: React.FC = () => {
                   {isPlaying && <TimerIt />}
                   <GameControlsIt />
                 </>
-              ) : (
+              ) : language === 'en' ? (
                 // Componenti in inglese
                 <>
                   <GameCardEn card={currentCard} />
                   {isPlaying && <TimerEn />}
                   <GameControlsEn />
+                </>
+              ) : (
+                // Componenti in turco
+                <>
+                  <GameCardTr card={currentCard} />
+                  {isPlaying && <TimerTr />}
+                  <GameControlsTr />
                 </>
               )}
             </div>
@@ -126,8 +145,10 @@ const GameContent: React.FC = () => {
         {showPlayerTurn && gameSetupComplete && (
           language === 'it' ? (
             <PlayerTurnScreenIt onContinue={startRoundAfterPlayerScreen} />
-          ) : (
+          ) : language === 'en' ? (
             <PlayerTurnScreenEn onContinue={startRoundAfterPlayerScreen} />
+          ) : (
+            <PlayerTurnScreenTr onContinue={startRoundAfterPlayerScreen} />
           )
         )}
       </div>

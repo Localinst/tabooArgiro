@@ -18,6 +18,11 @@ const seoData = {
     title: 'Taboo Game Rules | Word Taboo',
     description: 'Learn the official rules of the online Taboo word game. Learn how to play, score points and win!',
     keywords: 'taboo rules, how to play taboo, taboo instructions, taboo regulations, taboo explanation'
+  },
+  tr: {
+    title: 'Taboo Oyunu Kuralları | Taboo Oyunu',
+    description: 'Çevrimiçi Taboo kelime oyununun resmi kurallarını öğrenin. Nasıl oynanacağını, puan kazanacağını ve kazanacağını öğrenin!',
+    keywords: 'taboo kuralları, taboo nasıl oynanır, taboo talimatları, taboo düzenlemeleri, taboo açıklaması'
   }
 };
 

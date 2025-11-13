@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { TabooCard } from '../data/types';
 import { tabooCards } from '../data/taboo_words';
 import { tabooCardsEn } from '../data/taboo_words_en';
+import {tabooCardsTr} from '../data/taboo_words_tr';
 import { useLanguage } from './LanguageContext';
 import { toast } from "@/hooks/use-toast";
 import { 
@@ -182,7 +183,7 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   // Aggiungiamo un prefisso per generare ID univoci per le carte
   const getCards = () => {
-    const cards = language === 'it' ? tabooCards : tabooCardsEn;
+    const cards = language === 'en' ? tabooCardsEn : language === 'tr' ? tabooCardsTr : tabooCards;
     return cards.map(card => ({
       ...card,
       uniqueId: `taboo_${card.id}_${language}`

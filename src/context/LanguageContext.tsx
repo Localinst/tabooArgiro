@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-type Language = 'it' | 'en';
+type Language = 'it' | 'en' | 'tr';
 
 interface LanguageContextType {
   language: Language;
@@ -16,8 +16,11 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   
   // Initialize language based on URL path
   const [language, setLanguage] = useState<Language>(() => {
+    const isTurkishPath = location.pathname.startsWith('/tr');
     const isEnglishPath = location.pathname.startsWith('/en');
-    return isEnglishPath ? 'en' : 'it';
+    if (isTurkishPath) return 'tr';
+    if (isEnglishPath) return 'en';
+    return 'it';
   });
 
   // Handle language changes and URL updates
@@ -25,21 +28,26 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setLanguage(newLang);
     const currentPath = location.pathname;
     
-    if (newLang === 'en' && !currentPath.startsWith('/en')) {
-      // Switch to English - add /en prefix
-      const newPath = currentPath === '/' ? '/en' : `/en${currentPath}`;
+    if (newLang === 'tr' && !currentPath.startsWith('/tr')) {
+      // Switch to Turkish - add /tr prefix
+      const newPath = currentPath === '/' ? '/tr' : `/tr${currentPath.replace(/^\/(en)\/?/, '/')}`;
       navigate(newPath);
-    } else if (newLang === 'it' && currentPath.startsWith('/en')) {
-      // Switch to Italian - remove /en prefix
-      const newPath = currentPath.replace('/en', '') || '/';
+    } else if (newLang === 'en' && !currentPath.startsWith('/en')) {
+      // Switch to English - add /en prefix
+      const newPath = currentPath === '/' ? '/en' : `/en${currentPath.replace(/^\/(tr)\/?/, '/')}`;
+      navigate(newPath);
+    } else if (newLang === 'it' && (currentPath.startsWith('/en') || currentPath.startsWith('/tr'))) {
+      // Switch to Italian - remove /en or /tr prefix
+      const newPath = currentPath.replace(/^\/(en|tr)/, '') || '/';
       navigate(newPath);
     }
   };
 
   // Keep language in sync with URL changes
   useEffect(() => {
+    const isTurkishPath = location.pathname.startsWith('/tr');
     const isEnglishPath = location.pathname.startsWith('/en');
-    const newLang = isEnglishPath ? 'en' : 'it';
+    const newLang: Language = isTurkishPath ? 'tr' : isEnglishPath ? 'en' : 'it';
     if (newLang !== language) {
       setLanguage(newLang);
     }

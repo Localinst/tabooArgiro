@@ -236,5 +236,124 @@ export const translations = {
       },
       characters: 'characters'
     }
+  },
+  tr: {
+    // Home page
+    title: 'TABOO KÖK',
+    subtitle: 'Kelime açıklama becerilerinizi test eden parti oyunu!',
+    features: {
+      teamPlay: {
+        title: 'Takım Oyunu',
+        description: 'Arkadaşlar ve aile ile oyna'
+      },
+      timeChallenge: {
+        title: 'Zamana Karşı',
+        description: 'Zamanlı turlar'
+      },
+      competition: {
+        title: 'Rekabet',
+        description: 'Puan ve tur kazanın'
+      },
+      fun: {
+        title: 'Eğlence',
+        description: 'Gülüş garantili'
+      }
+    },
+    startPlaying: 'OYNAMAYA BAŞLA',
+    howToPlay: 'Nasıl Oynanır?',
+    quickRules: [
+      'Oyuncuları iki takıma ayırın',
+      'Sırayla bir oyuncu takımının bir kelimeyi tahmin etmesini sağlamalıdır',
+      'Kartta gösterilen "yasak" kelimeleri kullanamazsınız',
+      'Doğru tahmin edilen her kelime için puan kazanın',
+      'Yasak bir kelime kullanırsanız puan kaybedersiniz'
+    ],
+    readFullRules: 'Tam kuralları oku',
+
+    // Rules page
+    rulesTitle: 'Taboo Oyunu Kuralları',
+    rulesSubtitle: 'Klasik parti oyunu Taboo\'yu çevrimiçi olarak nasıl oyunacağınızı öğrenin',
+    backToHome: 'Eve Dön',
+    howToPlayTitle: 'Nasıl Oynanır',
+    teams: {
+      title: 'Takım Oluşturma',
+      description: 'Oyuncuları iki takıma ayırın. Her takım, oyuncuların kelimeyi tahmin etmesini sağlayacak bir oyuncu seçer.'
+    },
+    turns: {
+      title: 'Oyun Turları',
+      description: 'Her tur 60 saniye sürer. Oyuncu takımının mümkün olduğunca çok kelimeyi tahmin etmesini sağlamalıdır.'
+    },
+    tabooWords: {
+      title: 'Yasak Kelimeler',
+      description: 'Her kartta ana kelime ve ana kelimeyi açıklamak için KULLANILAMAYACak 5 "yasak" kelime vardır.'
+    },
+    scoring: {
+      title: 'Puanlama',
+      positive: {
+        title: 'Pozitif Puanlar',
+        description: 'Takım tarafından doğru tahmin edilen her kelime için +1 puan.'
+      },
+      negative: {
+        title: 'Negatif Puanlar',
+        description: 'Açıklama sırasında kullanılan her "yasak" kelime için -1 puan.'
+      }
+    },
+    tips: {
+      title: 'Kazanmak İçin İpuçları',
+      list: [
+        'Yasak kelimeleri önlemek için eşanlamlılar ve yaratıcı açıklamalar kullanın',
+        'Mümkün olduğunda sözsüz iletişime odaklanın',
+        'Tahmin edilen kelimelerin sayısını maksimuma çıkarmak için hızlı bir tempo tutun',
+        'Yasak kelimeleri önceden tahmin etmek için kartları öğrenin',
+        'Takım olarak çalışın ve takım arkadaşlarınızın önerilerini dinleyin'
+      ]
+    },
+
+    // Game page
+    homeButton: '← Eve',
+    score: 'Puan',
+    timer: 'Zamanlayıcı',
+    next: 'Sonraki',
+    skip: 'Atla',
+    correct: 'Doğru',
+    wrong: 'Yanlış',
+    teamTurn: 'Takımın Sırası',
+    ready: 'Hazır!',
+    gameSetup: {
+      title: 'Oyun Kurulumu',
+      teamOne: 'Takım 1 Adı',
+      teamTwo: 'Takım 2 Adı',
+      startGame: 'Oyunu Başlat'
+    },
+    scoreBoard: {
+      title: 'Puan',
+      addTeam: 'Takım Ekle',
+      teamName: 'Takım adı',
+      cancel: 'İptal',
+      add: 'Ekle',
+      gameMode: 'Oyun Modu',
+      playToScore: '${score} puanı kadar oyna',
+      playRounds: '${rounds} tur oyna',
+      cardsUsed: 'Kullanılan Kartlar',
+      cardsAvailable: 'Mevcut Kartlar',
+      warningLowCards: 'Uyarı: Kartlar azalıyor!',
+      noCards: 'Daha fazla kart yok. Oynamaya devam etmek için desteyi sıfırlayın.',
+      resetCards: 'Kartları Sıfırla',
+      resetCardsConfirm: 'Kullanılan tüm kartları sıfırlamak istediğinizden emin misiniz? Bu işlem tüm kartları yeniden kullanılabilir hale getirecektir.',
+      players: 'Oyuncular'
+    },
+    feedback: {
+      title: 'Geri Bildirim Bırakın',
+      emailLabel: 'E-posta (isteğe bağlı, cevap için)',
+      messageLabel: 'İleti',
+      submit: 'Geri Bildirim Gönder',
+      sending: 'Gönderiliyor...',
+      success: 'Geri bildiriminiz için teşekkürler!',
+      error: {
+        network: 'Ağ hatası.',
+        general: 'Geri bildirim gönderilirken hata oluştu. Lütfen tekrar deneyin.'
+      },
+      characters: 'karakter'
+    }
   }
 };
