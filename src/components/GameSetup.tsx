@@ -244,6 +244,7 @@ const GameSetup: React.FC = () => {
                 placeholder={language === 'it' ? 'Nome giocatore' : 'Player name'}
                 value={newPlayerName}
                 onChange={(e) => setNewPlayerName(e.target.value)}
+                onKeyPress={(e) => e.key === 'Enter' && handleAddPlayer()}
                 className="w-full"
               />
               <Button onClick={handleAddPlayer}>{language === 'it' ? 'Aggiungi' : 'Add'}</Button>
