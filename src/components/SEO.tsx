@@ -24,19 +24,23 @@ const SEO: React.FC<SEOProps> = ({
   // Extract clean path without language prefix
   const cleanPath = currentPath.replace(/^\/(en|tr)/, '');
   
-  // Build canonical URL based on language
-  const canonicalUrl = language === 'en' 
-    ? `${baseUrl}/en${cleanPath}`
-    : language === 'tr'
-    ? `${baseUrl}/tr${cleanPath}`
-    : `${baseUrl}${cleanPath}`;
+  // Check if it's a home page (no path or just /)
+  const isHomePage = !cleanPath || cleanPath === '/';
   
-  // Build alternate URLs for all languages
+  // Build canonical URL based on language
+  // Add trailing slash for home pages of languages
+  const canonicalUrl = language === 'en' 
+    ? `${baseUrl}/en${cleanPath}${isHomePage ? '/' : ''}`
+    : language === 'tr'
+    ? `${baseUrl}/tr${cleanPath}${isHomePage ? '/' : ''}`
+    : `${baseUrl}${cleanPath}${isHomePage ? '/' : ''}`;
+  
+  // Build alternate URLs for all languages with trailing slash for home pages
   const alternateUrls = {
-    it: `${baseUrl}${cleanPath}`,
-    en: `${baseUrl}/en${cleanPath}`,
-    tr: `${baseUrl}/tr${cleanPath}`,
-    'x-default': `${baseUrl}${cleanPath}`
+    it: `${baseUrl}${cleanPath}${isHomePage ? '/' : ''}`,
+    en: `${baseUrl}/en${cleanPath}${isHomePage ? '/' : ''}`,
+    tr: `${baseUrl}/tr${cleanPath}${isHomePage ? '/' : ''}`,
+    'x-default': `${baseUrl}${cleanPath}${isHomePage ? '/' : ''}`
   };
   
   const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
@@ -47,7 +51,7 @@ const SEO: React.FC<SEOProps> = ({
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     'name': isEnglish ? 'Word Taboo' : isTurkish ? 'Taboo Oyunu' : 'Parole Taboo',
-    'url': baseUrl,
+    'url': canonicalUrl,
     'description': description,
     'applicationCategory': 'Game',
     'operatingSystem': 'Web Browser',
