@@ -14,12 +14,14 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       input: {
         main: './index.html',
-        en: './en/index.html'
+        en: './en/index.html',
+        tr: './tr/index.html'
       },
       output: {
         manualChunks: undefined,
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'en') return 'en/[name].[hash].js';
+          if (chunkInfo.name === 'tr') return 'tr/[name].[hash].js';
           return '[name].[hash].js';
         },
         chunkFileNames: `assets/[name].[hash].js`,
