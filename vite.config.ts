@@ -19,7 +19,11 @@ export default defineConfig(({ mode }) => ({
       },
       output: {
         manualChunks: undefined,
-        entryFileNames: `assets/[name].[hash].js`,
+        entryFileNames: (chunkInfo) => {
+          if (chunkInfo.name === 'en') return 'en/[name].[hash].js';
+          if (chunkInfo.name === 'tr') return 'tr/[name].[hash].js';
+          return '[name].[hash].js';
+        },
         chunkFileNames: `assets/[name].[hash].js`,
         assetFileNames: `assets/[name].[hash].[ext]`
       }

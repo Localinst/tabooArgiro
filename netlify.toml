@@ -13,7 +13,6 @@
   to = "/assets/:splat"
   status = 200
 
-# Language-specific redirects
 [[redirects]]
   from = "/en/assets/*"
   to = "/assets/:splat"
@@ -24,6 +23,23 @@
   to = "/assets/:splat"
   status = 200
 
+# Prima tenta di servire i file statici generati (PRIMA dei catch-all)
+[[redirects]]
+  from = "/rules"
+  to = "/rules/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/rules"
+  to = "/en/rules/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/tr/rules"
+  to = "/tr/rules/index.html"
+  status = 200
+
+# Language-specific redirects
 [[redirects]]
   from = "/en/*"
   to = "/en/index.html"
@@ -57,22 +73,6 @@
   to = "https://paroletaboo.it/:splat"
   status = 301
   force = true
-
-# Prima tenta di servire i file statici generati
-[[redirects]]
-  from = "/rules"
-  to = "/rules/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/en/rules"
-  to = "/en/rules/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/tr/rules"
-  to = "/tr/rules/index.html"
-  status = 200
 
 # Regola esistente per SPA (come fallback)
 [[redirects]]
