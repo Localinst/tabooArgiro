@@ -21,26 +21,27 @@ const SEO: React.FC<SEOProps> = ({
   const baseUrl = 'https://paroletaboo.it';
   const currentPath = path || (typeof window !== 'undefined' ? window.location.pathname : '');
   
-  // Extract clean path without language prefix
-  const cleanPath = currentPath.replace(/^\/(en|tr)/, '');
+  // Extract clean path without language prefix and leading slash
+  const cleanPath = currentPath.replace(/^\/(en|tr)/, '') || '/';
   
-  // Check if it's a home page (no path or just /)
-  const isHomePage = !cleanPath || cleanPath === '/';
+  // Check if it's a home page (path is just / or empty)
+  const isHomePage = cleanPath === '/';
   
   // Build canonical URL based on language
-  // Add trailing slash for home pages of languages
+  // For home pages: add language prefix with trailing slash
+  // For other pages: add language prefix + path (no extra slash)
   const canonicalUrl = language === 'en' 
-    ? `${baseUrl}/en${cleanPath}${isHomePage ? '/' : ''}`
+    ? isHomePage ? `${baseUrl}/en/` : `${baseUrl}/en${cleanPath}`
     : language === 'tr'
-    ? `${baseUrl}/tr${cleanPath}${isHomePage ? '/' : ''}`
-    : `${baseUrl}${cleanPath}${isHomePage ? '/' : ''}`;
+    ? isHomePage ? `${baseUrl}/tr/` : `${baseUrl}/tr${cleanPath}`
+    : isHomePage ? `${baseUrl}/` : `${baseUrl}${cleanPath}`;
   
-  // Build alternate URLs for all languages with trailing slash for home pages
+  // Build alternate URLs for all languages
   const alternateUrls = {
-    it: `${baseUrl}${cleanPath}${isHomePage ? '/' : ''}`,
-    en: `${baseUrl}/en${cleanPath}${isHomePage ? '/' : ''}`,
-    tr: `${baseUrl}/tr${cleanPath}${isHomePage ? '/' : ''}`,
-    'x-default': `${baseUrl}${cleanPath}${isHomePage ? '/' : ''}`
+    it: isHomePage ? `${baseUrl}/` : `${baseUrl}${cleanPath}`,
+    en: isHomePage ? `${baseUrl}/en/` : `${baseUrl}/en${cleanPath}`,
+    tr: isHomePage ? `${baseUrl}/tr/` : `${baseUrl}/tr${cleanPath}`,
+    'x-default': isHomePage ? `${baseUrl}/` : `${baseUrl}${cleanPath}`
   };
   
   const imageUrl = image.startsWith('http') ? image : `${baseUrl}${image}`;
