@@ -14,14 +14,12 @@ export default defineConfig(({ mode }) => ({
     rollupOptions: {
       input: {
         main: './index.html',
-        en: './en/index.html',
-        tr: './public/tr/index.html'
+        en: './en/index.html'
       },
       output: {
         manualChunks: undefined,
         entryFileNames: (chunkInfo) => {
           if (chunkInfo.name === 'en') return 'en/[name].[hash].js';
-          if (chunkInfo.name === 'tr') return 'tr/[name].[hash].js';
           return '[name].[hash].js';
         },
         chunkFileNames: `assets/[name].[hash].js`,
@@ -271,7 +269,7 @@ export default defineConfig(({ mode }) => ({
           `
         };
 
-        for (const page of pages) {
+        for (const page of pagesWithSeo) {
           // Crea la directory se non esiste
           const dirPath = `./dist/${page.path}`;
           if (!fs.existsSync(dirPath)) {
