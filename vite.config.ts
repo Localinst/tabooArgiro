@@ -73,6 +73,18 @@ export default defineConfig(({ mode }) => ({
         // Leggi il contenuto di index.html
         const indexHtml = fs.readFileSync(indexPath, 'utf-8');
         
+        // Funzione per ottenere il file source corretto in base alla lingua
+        const getSourceHtmlForPage = (pagePath: string) => {
+          if (pagePath.startsWith('en')) {
+            const enPath = path.resolve(process.cwd(), 'dist', 'en', 'index.html');
+            if (fs.existsSync(enPath)) return fs.readFileSync(enPath, 'utf-8');
+          } else if (pagePath.startsWith('tr')) {
+            const trPath = path.resolve(process.cwd(), 'dist', 'tr', 'index.html');
+            if (fs.existsSync(trPath)) return fs.readFileSync(trPath, 'utf-8');
+          }
+          return indexHtml;
+        };
+        
         // Pagine da generare
         const pagesWithSeo = [
           ...pages,
@@ -277,13 +289,39 @@ export default defineConfig(({ mode }) => ({
           }
           
           // Sostituisci i meta tag con quelli specifici della pagina
-          let pageHtml = indexHtml;
+          let pageHtml = getSourceHtmlForPage(page.path);
           
-          // Sostituisci il tag canonical
+          // Determina la lingua della pagina in base al path
+          let pageLang = 'it';
+          if (page.path.startsWith('en')) {
+            pageLang = 'en';
+          } else if (page.path.startsWith('tr')) {
+            pageLang = 'tr';
+          }
+          
+          // Aggiorna il lang attribute
+          pageHtml = pageHtml.replace(
+            /<html[^>]*lang="[^"]*"/,
+            `<html lang="${pageLang}"`
+          );
+          
+          // Sostituisci il tag canonical - aggiungi slash finale per home pages
+          const canonicalUrl = page.path === 'en' || page.path === 'tr' 
+            ? `https://paroletaboo.it/${page.path}/`
+            : `https://paroletaboo.it/${page.path}`;
           pageHtml = pageHtml.replace(
             /<link rel="canonical"[^>]*>/,
-            `<link rel="canonical" href="https://paroletaboo.it/${page.path}" />`
+            `<link rel="canonical" href="${canonicalUrl}" />`
           );
+          
+          // Se è una home page (en o tr), aggiorna l'hreflang self-reference
+          if (page.path === 'en' || page.path === 'tr') {
+            const correctHreflang = `<link rel="alternate" hreflang="${pageLang}" href="https://paroletaboo.it/${page.path}/" />`;
+            pageHtml = pageHtml.replace(
+              new RegExp(`<link rel="alternate" hreflang="${pageLang}"[^>]*>`, 'g'),
+              correctHreflang
+            );
+          }
           
           // Sostituisci il titolo
           if (page.title) {
