@@ -10,12 +10,12 @@
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en"
+      href="https://paroletaboo.it/en/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr"
+      href="https://paroletaboo.it/tr/"
     />
     <xhtml:link 
       rel="alternate"
@@ -73,19 +73,19 @@
 
   <!-- English pages -->
   <url>
-    <loc>https://paroletaboo.it/en</loc>
+    <loc>https://paroletaboo.it/en/</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en"
+      href="https://paroletaboo.it/en/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr"
+      href="https://paroletaboo.it/tr/"
     />
     <xhtml:link 
       rel="alternate"
@@ -138,19 +138,19 @@
 
   <!-- Turkish pages -->
   <url>
-    <loc>https://paroletaboo.it/tr</loc>
+    <loc>https://paroletaboo.it/tr/</loc>
     <lastmod>2025-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en"
+      href="https://paroletaboo.it/en/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr"
+      href="https://paroletaboo.it/tr/"
     />
     <xhtml:link 
       rel="alternate"
