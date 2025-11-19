@@ -91,7 +91,7 @@ export default defineConfig(({ mode }) => ({
         const pagesWithSeo = [
           ...pages,
           { path: 'en', title: 'Taboo Online: Free Party Game', description: 'Play Taboo Online free! The fun board game with cards to guess words without saying the Taboo ones. Perfect for parties, friends and evenings. Lots of Taboo words!' },
-          { path: 'tr', title: 'Taboo Oyunu Çevrimiçi: Ücretsiz Parti Oyunu', description: 'Taboo oyununu çevrimiçi oyna! Yasak kelimeleri söylemeden kelimeleri tahmin etmek için kartları olan eğlenceli masa oyunu. Partiler, arkadaşlar ve akşamlar için mükemmel.' }
+          { path: 'tr', title: 'Tabu Oyunu Oyna: Ücretsiz Parti Oyunu', description: 'Taboo oyununu çevrimiçi oyna! Yasak kelimeleri söylemeden kelimeleri tahmin etmek için kartları olan eğlenceli masa oyunu. Partiler, arkadaşlar ve akşamlar için mükemmel.' }
         ];
 
         // Per ogni pagina definita
