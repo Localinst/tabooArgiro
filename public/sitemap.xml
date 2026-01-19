@@ -4,7 +4,7 @@
   <!-- Italian pages -->
   <url>
     <loc>https://paroletaboo.it/</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://paroletaboo.it/game</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link 
@@ -51,7 +51,7 @@
   </url>
   <url>
     <loc>https://paroletaboo.it/rules</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link 
@@ -74,7 +74,7 @@
   <!-- English pages -->
   <url>
     <loc>https://paroletaboo.it/en/</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
@@ -95,7 +95,7 @@
   </url>
   <url>
     <loc>https://paroletaboo.it/en/game</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link 
@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://paroletaboo.it/en/rules</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link 
@@ -139,7 +139,7 @@
   <!-- Turkish pages -->
   <url>
     <loc>https://paroletaboo.it/tr/</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
@@ -160,7 +160,7 @@
   </url>
   <url>
     <loc>https://paroletaboo.it/tr/game</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link 
@@ -181,7 +181,7 @@
   </url>
   <url>
     <loc>https://paroletaboo.it/tr/rules</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link 
