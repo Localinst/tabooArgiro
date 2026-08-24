@@ -1,49 +1,49 @@
 {
   "cleanUrls": true,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/assets/:path*",
-      "destination": "/assets/:path*"
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
     },
     {
-      "source": "/en/assets/:path*",
-      "destination": "/assets/:path*"
+      "src": "/en/assets/(.*)",
+      "dest": "/assets/$1"
     },
     {
-      "source": "/tr/assets/:path*",
-      "destination": "/assets/:path*"
+      "src": "/tr/assets/(.*)",
+      "dest": "/assets/$1"
     },
     {
-      "source": "/rules",
-      "destination": "/rules/index.html"
+      "src": "/rules",
+      "dest": "/rules/index.html"
     },
     {
-      "source": "/en/rules",
-      "destination": "/en/rules/index.html"
+      "src": "/en/rules",
+      "dest": "/en/rules/index.html"
     },
     {
-      "source": "/tr/rules",
-      "destination": "/tr/rules/index.html"
+      "src": "/tr/rules",
+      "dest": "/tr/rules/index.html"
     },
     {
-      "source": "/en",
-      "destination": "/en/index.html"
+      "src": "/en",
+      "dest": "/en/index.html"
     },
     {
-      "source": "/en/:path*",
-      "destination": "/en/index.html"
+      "src": "/en/(.*)",
+      "dest": "/en/index.html"
     },
     {
-      "source": "/tr",
-      "destination": "/tr/index.html"
+      "src": "/tr",
+      "dest": "/tr/index.html"
     },
     {
-      "source": "/tr/:path*",
-      "destination": "/tr/index.html"
+      "src": "/tr/(.*)",
+      "dest": "/tr/index.html"
     },
     {
-      "source": "/((?!assets|rules|en|tr).*)/?",
-      "destination": "/index.html"
+      "src": "/((?!assets|rules|en|tr).*)/?",
+      "dest": "/index.html"
     }
   ]
 }
