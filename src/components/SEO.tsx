@@ -18,7 +18,7 @@ const SEO: React.FC<SEOProps> = ({
   image = '/og-image.jpg'
 }) => {
   const { language } = useLanguage();
-  const baseUrl = 'https://paroletaboo.it';
+  const baseUrl = 'https://paroletaboo.vercel.app';
   const currentPath = path || (typeof window !== 'undefined' ? window.location.pathname : '');
   
   // Extract clean path without language prefix and leading slash

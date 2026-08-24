@@ -3,201 +3,201 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <!-- Italian pages -->
   <url>
-    <loc>https://paroletaboo.it/</loc>
+    <loc>https://paroletaboo.vercel.app/</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/"
+      href="https://paroletaboo.vercel.app/en/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/"
+      href="https://paroletaboo.vercel.app/tr/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/"
+      href="https://paroletaboo.vercel.app/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="x-default"
-      href="https://paroletaboo.it/"
+      href="https://paroletaboo.vercel.app/"
     />
   </url>
   <url>
-    <loc>https://paroletaboo.it/game</loc>
+    <loc>https://paroletaboo.vercel.app/game</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/game"
+      href="https://paroletaboo.vercel.app/en/game"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/game"
+      href="https://paroletaboo.vercel.app/tr/game"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/game"
+      href="https://paroletaboo.vercel.app/game"
     />
   </url>
   <url>
-    <loc>https://paroletaboo.it/rules</loc>
+    <loc>https://paroletaboo.vercel.app/rules</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/rules"
+      href="https://paroletaboo.vercel.app/en/rules"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/rules"
+      href="https://paroletaboo.vercel.app/tr/rules"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/rules"
+      href="https://paroletaboo.vercel.app/rules"
     />
   </url>
 
   <!-- English pages -->
   <url>
-    <loc>https://paroletaboo.it/en/</loc>
+    <loc>https://paroletaboo.vercel.app/en/</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/"
+      href="https://paroletaboo.vercel.app/en/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/"
+      href="https://paroletaboo.vercel.app/tr/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/"
+      href="https://paroletaboo.vercel.app/"
     />
   </url>
   <url>
-    <loc>https://paroletaboo.it/en/game</loc>
+    <loc>https://paroletaboo.vercel.app/en/game</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/game"
+      href="https://paroletaboo.vercel.app/en/game"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/game"
+      href="https://paroletaboo.vercel.app/tr/game"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/game"
+      href="https://paroletaboo.vercel.app/game"
     />
   </url>
   <url>
-    <loc>https://paroletaboo.it/en/rules</loc>
+    <loc>https://paroletaboo.vercel.app/en/rules</loc>
     <lastmod>2025-10-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/rules"
+      href="https://paroletaboo.vercel.app/en/rules"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/rules"
+      href="https://paroletaboo.vercel.app/tr/rules"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/rules"
+      href="https://paroletaboo.vercel.app/rules"
     />
   </url>
 
   <!-- Turkish pages -->
   <url>
-    <loc>https://paroletaboo.it/tr/</loc>
+    <loc>https://paroletaboo.vercel.app/tr/</loc>
     <lastmod>2025-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/"
+      href="https://paroletaboo.vercel.app/en/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/"
+      href="https://paroletaboo.vercel.app/tr/"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/"
+      href="https://paroletaboo.vercel.app/"
     />
   </url>
   <url>
-    <loc>https://paroletaboo.it/tr/game</loc>
+    <loc>https://paroletaboo.vercel.app/tr/game</loc>
     <lastmod>2025-11-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/game"
+      href="https://paroletaboo.vercel.app/en/game"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/game"
+      href="https://paroletaboo.vercel.app/tr/game"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/game"
+      href="https://paroletaboo.vercel.app/game"
     />
   </url>
   <url>
-    <loc>https://paroletaboo.it/tr/rules</loc>
+    <loc>https://paroletaboo.vercel.app/tr/rules</loc>
     <lastmod>2025-11-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link 
       rel="alternate"
       hreflang="en"
-      href="https://paroletaboo.it/en/rules"
+      href="https://paroletaboo.vercel.app/en/rules"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="tr"
-      href="https://paroletaboo.it/tr/rules"
+      href="https://paroletaboo.vercel.app/tr/rules"
     />
     <xhtml:link 
       rel="alternate"
       hreflang="it"
-      href="https://paroletaboo.it/rules"
+      href="https://paroletaboo.vercel.app/rules"
     />
   </url>
 </urlset>

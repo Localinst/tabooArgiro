@@ -309,8 +309,8 @@ export default defineConfig(({ mode }) => ({
           
           // Sostituisci il tag canonical - aggiungi slash finale per home pages
           const canonicalUrl = page.path === 'en' || page.path === 'tr' 
-            ? `https://paroletaboo.it/${page.path}/`
-            : `https://paroletaboo.it/${page.path}`;
+            ? `https://paroletaboo.vercel.app/${page.path}/`
+            : `https://paroletaboo.vercel.app/${page.path}`;
           pageHtml = pageHtml.replace(
             /<link rel="canonical"[^>]*>/,
             `<link rel="canonical" href="${canonicalUrl}" />`
@@ -318,7 +318,7 @@ export default defineConfig(({ mode }) => ({
           
           // Se è una home page (en o tr), aggiorna l'hreflang self-reference
           if (page.path === 'en' || page.path === 'tr') {
-            const correctHreflang = `<link rel="alternate" hreflang="${pageLang}" href="https://paroletaboo.it/${page.path}/" />`;
+            const correctHreflang = `<link rel="alternate" hreflang="${pageLang}" href="https://paroletaboo.vercel.app/${page.path}/" />`;
             pageHtml = pageHtml.replace(
               new RegExp(`<link rel="alternate" hreflang="${pageLang}"[^>]*>`, 'g'),
               correctHreflang

@@ -1,0 +1,49 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/en/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/tr/assets/:path*",
+      "destination": "/assets/:path*"
+    },
+    {
+      "source": "/rules",
+      "destination": "/rules/index.html"
+    },
+    {
+      "source": "/en/rules",
+      "destination": "/en/rules/index.html"
+    },
+    {
+      "source": "/tr/rules",
+      "destination": "/tr/rules/index.html"
+    },
+    {
+      "source": "/en",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/en/:path*",
+      "destination": "/en/index.html"
+    },
+    {
+      "source": "/tr",
+      "destination": "/tr/index.html"
+    },
+    {
+      "source": "/tr/:path*",
+      "destination": "/tr/index.html"
+    },
+    {
+      "source": "/((?!assets|rules|en|tr).*)/?",
+      "destination": "/index.html"
+    }
+  ]
+}

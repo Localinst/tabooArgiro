@@ -4,4 +4,4 @@ Allow: /game
 Allow: /rules
 Allow: /about
 
-Sitemap: https://paroletaboo.it/sitemap.xml
+Sitemap: https://paroletaboo.vercel.app/sitemap.xml
