@@ -9,6 +9,7 @@ import Rules from "./pages/Rules"
 import NotFound from "./pages/NotFound";
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from './context/LanguageContext';
+import { Analytics } from '@vercel/analytics/react';
 
 const queryClient = new QueryClient();
 
@@ -42,6 +43,7 @@ const App = () => (
           </LanguageProvider>
         </BrowserRouter>
       </HelmetProvider>
+      <Analytics />
     </TooltipProvider>
   </QueryClientProvider>
 );
